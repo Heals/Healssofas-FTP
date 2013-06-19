@@ -1,0 +1,18 @@
+==============================================================================<cr>
+<venda_ebizname> Password Reminder<cr>
+==============================================================================<cr><cr>
+
+Dear <venda_title> <venda_fname> <venda_lname>,<cr><cr>
+
+As requested please find below your account login password for Heals.co.uk.<cr><cr>
+
+Password: 
+<venda_block label=3,password=notnull>
+<venda_password>
+</venda_block label=3>
+<cr><cr>
+Please ensure that you keep your login details and password safe. For security purposes do not share this password with anyone.
+Should you wish to change your password to something more memorable you can do so in the 'My Account' section of the website.<cr>
+<venda_codehttps>?ex=co_wizr-register&bsref=<venda_bsref><cr><cr>
+
+<venda_inctemplate name=textEmailFooter,type=includes/email>

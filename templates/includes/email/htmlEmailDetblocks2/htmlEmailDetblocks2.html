@@ -1,0 +1,122 @@
+<venda_detblock1>
+<venda_block label=40,pkshipreq=1>
+	<!-- start delivery details -->
+	<thead>
+	<tr>
+		<th scope="col" colspan="5">Delivery Details</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr>
+		<th scope="row">Recipient:</th>
+		<td colspan="4"><span class="addrName"><venda_pktitle> <venda_pkfname> <venda_block label=75,pkmname=notnull><venda_pkmname> </venda_block label=75><venda_pklname></span></td>
+	</tr>
+	<tr>
+		<th scope="row">Delivery Address:</th>
+		<td colspan="4">
+		<venda_block label=77,pkcompany=notnull><venda_pkcompany><br></venda_block label=77>
+		<venda_pknum> <venda_pkaddr1><br>
+		<venda_block label=72,pkaddr2=notnull><venda_pkaddr2><br></venda_block label=72>
+		
+		<!-- if country is US or US entities display this formatting -->
+		<venda_block label=999,mode=value,<venda_pkcntry>=United States,<venda_pkcntry>=United States Non-48,<venda_pkcntry>=United States Armed Forces,operator=or>
+		<venda_block label=184,pkcity=notnull><venda_pkcity>, </venda_block label=184>
+		<venda_block label=185,pkstate=notnull><venda_pkstate> </venda_block label=185><venda_pkzipc><br>
+		</venda_block label=999>
+
+		<!-- if country is NOT US or US entities display this formatting -->
+		<venda_block label=9991,mode=value,<venda_pkcntry>!=United States,<venda_pkcntry>!=United States Non-48,<venda_pkcntry>!=United States Armed Forces,operator=and>
+		<venda_block label=184,pkcity=notnull><venda_pkcity><br></venda_block label=184>
+		<venda_block label=185,pkstate=notnull><venda_pkstate> </venda_block label=185><venda_pkzipc><venda_block label=1234,pkstate=notnull,pkzipc=notnull,operator=or><br></venda_block label=1234>
+		</venda_block label=9991>
+	
+		<venda_pkcntry>
+		<venda_block label=76,pkarea=notnull><br><span class="addrPhone"><venda_pkarea> <venda_pkphone></span></venda_block label=76>
+		</td>
+	</tr>
+	<venda_block label=41,pkshipmthd=notnull>
+	<tr>
+		<th scope="row">Delivery Method:</th>
+		<td colspan="4"><venda_pkshipmthd></td>
+	</tr>
+	</venda_block label=41>
+	<venda_extflds exfldtype=order,ref=<venda_ohrfnbr>,template=htmlEmailOrxfieldsDisplay,type=includes,group=1,displayonly=1>
+	<venda_extflds exfldtype=order,ref=<venda_ohrfnbr>,template=htmlEmailOrxfieldsDisplay,type=includes,group=2,displayonly=1>
+	<venda_extflds exfldtype=order,ref=<venda_ohrfnbr>,template=htmlEmailOrxfieldsDisplay,type=includes,group=3,displayonly=1>
+	<venda_extflds exfldtype=order,ref=<venda_ohrfnbr>,template=htmlEmailOrxfieldsDisplay,type=includes,group=4,displayonly=1>
+	<venda_extflds exfldtype=order,ref=<venda_ohrfnbr>,template=htmlEmailOrxfieldsDisplay,type=includes,group=5,displayonly=1>
+	<venda_extflds exfldtype=order,ref=<venda_ohrfnbr>,template=htmlEmailOrxfieldsDisplay,type=includes,group=6,displayonly=1>
+	<venda_extflds exfldtype=order,ref=<venda_ohrfnbr>,template=htmlEmailOrxfieldsDisplay,type=includes,group=7,displayonly=1>
+	<venda_extflds exfldtype=order,ref=<venda_ohrfnbr>,template=htmlEmailOrxfieldsDisplay,type=includes,group=8,displayonly=1>
+	</tbody>
+	<!-- end delivery details -->
+</venda_block label=40>
+<!-- start items loop -->
+<thead>
+<tr>
+	<th scope="col">Product Name</th>
+	<th scope="col">Price Each</th>
+	<th scope="col">Qty</th>
+	<th scope="col">Total Price</th>
+	<th scope="col">Status</th>
+</tr>
+</thead>
+<tbody>
+<venda_detail2>
+</tbody>
+<!-- end items loop -->
+</venda_detblock1>
+
+
+
+<venda_detblock2>
+<tr>
+	<td><venda_oiivname><venda_block label=111,invtatt1=notnull> (<venda_invtatt1><venda_block label=112,invtatt2=notnull>, <venda_invtatt2></venda_block label=112>)</venda_block label=111><venda_block label=221,oigwref=notnull> (gift wrapped)</venda_block label=221> 
+<venda_extflds exfldtype=orderitem,group=1,template=htmlEmailOixfieldsDisplay,type=includes,ref=<venda_invtref>,displayonly=1><venda_extflds exfldtype=orderitem,group=2,template=htmlEmailOixfieldsDisplay,type=includes,ref=<venda_invtref>,displayonly=1></td>
+	<td><venda_symoisub></td>
+	<td><venda_oiqty></td>
+	<td><venda_ohcursym><venda_oiextsub></td>
+	<td>
+
+	<venda_block label=10,oistatus=2><venda_text id=site.order_status.in_progress></venda_block label=10>
+	<!-- furniture,furniturerange will be display Processed -->
+	<venda_block label=11,oistatus=3>Released for Dispatch</venda_block label=11>
+	<venda_block label=12,oistatus=4><venda_text id=site.order_status.backordered></venda_block label=12>
+	<!-- Tracking Number -->
+	<venda_block label=13,oistatus=5><venda_block label=114,num=notnull>Tracking #: <venda_num></venda_block label=114><venda_text id=site.order_status.delivered> <venda_stmp></venda_block label=13>
+	<venda_block label=14,oistatus=6><venda_text id=site.order_status.returned> <venda_stmp></venda_block label=14>
+	<venda_block label=15,oistatus=7><venda_text id=site.order_status.cancelled></venda_block label=15>
+	<venda_block label=16,oistatus=8>RMA #: <venda_num> <venda_text id=site.order_status.delivered> <venda_stmp></venda_block label=16>
+
+	</td>
+</tr>
+<venda_block label=45,oiitype=3>
+<tr>
+	<td colspan="5">
+	Sent to: <venda_gcto> at <venda_gcemail><br>
+	<venda_block label=880,gcexpires=notnull>Expiry date: <venda_gcexpires><br></venda_block label=880>
+	Message: <venda_oicmt>
+	</td>
+</tr>
+</venda_block label=45>
+</venda_detblock2>
+
+
+<venda_detblock3>
+<tr>
+	<td colspan="5"><venda_ckname> (-&#163;<venda_cktotal>)</td>
+</tr>
+</venda_detblock3>
+
+
+
+
+
+
+
+
+
+
+
+
+

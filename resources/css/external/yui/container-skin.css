@@ -1,0 +1,161 @@
+/*
+Copyright (c) 2007, Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://developer.yahoo.net/yui/license.txt
+version: 2.3.0
+*/
+
+@import "/venda-support/js/external/yui/build/container/assets/container.css"; /* This MUST be left in place as it defines the base styling */
+
+/* Panel modality mask styles */
+/* See http://developer.yahoo.com/yui/examples/container/panelskin1.html for skining tutorial*/
+
+/* general panel */
+.yui-panel { border:none; background-color:transparent; }
+
+/* popup panel */
+#popupcontent_panel.yui-panel, #lightboxcontent_panel.yui-panel, #signin_panel.yui-panel { border: 1px solid #E6E6E6; background-color:transparent;}
+
+/* modal mask */
+#popupcontent_panel_mask, #lightboxcontent_panel_mask, #wait_panel_mask, #signin_panel_mask {background-color:#000;}
+
+/* underlay */
+#popupcontent_panel_c.yui-panel-container.shadow .underlay, #minicart_detail_c.yui-panel-container.shadow .underlay, #lightboxcontent_panel_c.yui-panel-container.shadow .underlay { top: 3px; bottom: -3px; right: -3px; left: 3px; background-color: #000; opacity: .12; filter: alpha(opacity=0); }
+
+/* header */
+/* margin-left matches width of corner graphic */
+#popupcontent_panel.yui-panel .hd, #lightboxcontent_panel.yui-panel .hd, #wait_panel.yui-panel .hd, #signin_panel.yui-panel .hd { padding:0; border:none; background-color:#FFF; color:#FFF; height:20px; margin-left:8px; margin-right:8px; font-size:1em; font-weight:normal; overflow:visible;}
+#popupcontent_panel.yui-panel .hd span, #lightboxcontent_panel.yui-panel .hd span, #wait_panel.yui-panel .hd span, #signin_panel.yui-panel .hd span {line-height:20px; padding-left:3px; color: #666666;}
+#popupcontent_panel.yui-panel .hd .tl, #lightboxcontent_panel.yui-panel .hd .tl, #wait_panel.yui-panel .hd .tl, #signin_panel.yui-panel .hd .tl { width:8px; height:20px; top:0; left:0; background-color:#FFF;  position:absolute; }
+#popupcontent_panel.yui-panel .hd .tr, #lightboxcontent_panel.yui-panel .hd .tr, #wait_panel.yui-panel .hd .tr, #signin_panel.yui-panel .hd .tr {width:8px; height:20px; top:0; right:0; background-color:#FFF;  position:absolute; }
+/* close window button */
+#popupcontent_panel.yui-panel .container-close, #lightboxcontent_panel.yui-panel .container-close, #signin_panel.yui-panel .container-close { top:2px; right:4px; height:17px; width:17px; background-image:url(../../../images/popup_hd_bt_closeover.gif); }
+#popupcontent_panel.yui-panel .container-close:hover, #lightboxcontent_panel.yui-panel .container-close:hover, #signin_panel.yui-panel .container-close:hover { background-image:url(../../../images/popup_hd_bt_closeover.gif); }
+	
+/* body */
+#popupcontent_panel.yui-panel .bd, #lightboxcontent_panel.yui-panel .bd, #wait_panel.yui-panel .bd{ padding:10px; background-color:#FFF; }
+#popupcontent_panel #buttons, #lightboxcontent_panel #buttons { width:350px; }
+
+/* product list specific */
+#icat_popup #popupcontent_panel.yui-panel { width: 430px; }
+#icat_popup #popupcontent_panel.yui-panel .bd { height: 425px; overflow: auto; }
+
+/* product detail specific */
+#invt_popup #popupcontent_panel.yui-panel { width: 500px; }
+#invt_popup #popupcontent_panel.yui-panel .bd { overflow:hidden; }
+#invt_popup #popupcontent_panel h1 { display:none; } /* hide the title because it is already supplied in the popup header */
+
+/* lightbox - product detail */
+#lightbox_holder #lightboxcontent_panel.yui-panel .bd { overflow:hidden;width:663px; height:510px; }
+#lightbox_holder #lightboxcontent_panel h1 { display:none; } /* hide the title because it is already supplied in the */
+#lightboxflash { display:block;width:663px;}
+
+*:first-child+html #lightbox_holder #lightboxcontent_panel.yui-panel .bd { width:auto;height:auto; }
+*html #lightbox_holder { width:663px; }  /* fix the panel width issue on ie6  */
+*:first-child+html #lightbox_holder { width:663px;}  /* fix the panel width issue on ie7  */
+
+#lightboxcontent_panel_c.yui-panel-container.shadow {
+width:683px;
+z-index:100000;
+}
+
+/* loading panel */
+#wait_panel.yui-panel {
+background-color: white;
+overflow: hidden;
+padding: 10px;
+}
+#wait_panel.yui-panel .bd #loadPanelImg {
+background-image: url(../../../images/loading.gif);
+background-position: 50% 50%;
+display: block;
+height: 50px;
+width: 300px;
+}
+
+/* minicart detail */
+#popupcart .item_empty {margin: 0; padding: 0;}
+
+#minicart_element {}
+/* if you are using the static minicart detail only and NOT the popup version, delete the line above */
+
+#minicart_detail { position:absolute; top:0px; right:0px; width:284px; font-size:1em; color:#333; z-index:4000;} /* add the z-index for IE to float popup above Element heading graphics */
+#minicart_detail #popupcart_panel {overflow:hidden;} /*leave overflow hidden when using animation*/
+#minicart_detail #popupcart_panel.yui-panel { width: 282px !important; border: 1px solid #E6E6E6; background-color: #FFFFFF;} /* obsolete after 5_3_16 */
+
+/* header */
+/* margin-left matches width of corner graphic */
+#minicart_detail .yui-panel .hd { padding:0; border:none; background-color:#E6E6E6; color:#FFF; height:20px; margin-left:8px; margin-right:8px; font-weight:bold; font-size:1em; overflow:visible; }
+#minicart_detail .yui-panel .hd span {line-height:20px; padding-left:18px; background: url(../../../images/ico_minicart.gif) 0 0 no-repeat; color: #666666;}
+#minicart_detail .yui-panel .hd .tl { width:8px; height:20px; top:0; left:0; background-color:#E6E6E6;  position:absolute; }
+#minicart_detail .yui-panel .hd .tr { width:8px; height:20px; top:0; right:0; background-color:#E6E6E6;  position:absolute; }
+
+/* body */
+#minicart_detail .yui-panel .bd { padding:5px; background-color:#FFF; }
+/* products */
+#minicart_detail ul { width: 100%; overflow: hidden; clear: both; }
+#popupcart div.exh2 {display: none;}
+ul#minicart_products { margin:5px 0; }
+ul#minicart_products li { width: 252px; padding:3px 0; clear: both; overflow:hidden; border-bottom: 1px solid #999999;}
+ul#minicart_products h9 { background: none; display: block; margin: 0; padding: 0; font-size:1em; -webkit-margin-before: 0.83em; -webkit-margin-after: 0.83em; -webkit-margin-start: 0px; -webkit-margin-end: 0px; font-weight: bold;}
+ul#minicart_products p { margin: 0; padding: 0; }
+ul#minicart_products .image { float: left;}
+ul#minicart_products .details { float: right; width: 195px; }
+ul#minicart_products .details p {clear: both;}
+ul#minicart_products img { width:50px; }
+
+/* links */
+#minicart_detail ul.items_added, #minicart_detail ul.items_empty {float: none;}
+
+/*ul#minicart_totals .items_added, ul#minicart_totals .items_empty {padding-top:4px; margin-right: 0px; padding-right: 16px; * padding-right: 0; text-align:right;}*/
+ul#minicart_links { width:100%; } /* We add this because IE6 doesn't like float right on li.checkout without it */
+ul#minicart_totals {margin-bottom: 20px;}
+ul#minicart_totals li.items {float:left; display:inline; font-weight: normal;}
+ul#minicart_totals li.total {float: left; display:inline; font-weight: normal;}
+ul#minicart_totals li.items a, ul#minicart_totals li.total a {color: #666666 !important;}
+ul#minicart_totals li.items a span, ul#minicart_totals li.total a span {font-weight: bold !important;}
+
+ul#minicart_links li.viewbasket { float:left; display:inline; font-weight: normal !important; background: url(../../../images/bt_minicart_viewbasket.gif); height: 19px; width: 134px; text-indent: -5000px;}
+ul#minicart_links li.checkout { float:right; display:inline; font-weight: normal !important;  background: url(../../../images/bt_minicart_checkout.gif); height: 19px; width: 134px; text-indent: -5000px;}
+ul#minicart_links li.viewbasket a, ul#minicart_links li.checkout a {display: block;height: 19px; width: 134px; }
+
+
+/* close window button */
+#minicart-close { top:2px; right:-15px; height:17px; width:17px; background-image:url(../../../images/popup_hd_bt_closeover.gif) !important; position:absolute; z-index:6; margin:0px; padding:0px; cursor:pointer; visibility:inherit; background-repeat:no-repeat; }
+#minicart-close:hover { background-image:url(../../../images/popup_hd_bt_closeover.gif); }
+
+
+/* sign in */
+#signin_popup {text-align: left;}
+#iframewrapper {margin:0 auto; padding-top:0; text-align: left; position: relative;}
+#iframewrapper .checkoutR, #signin_popup .checkoutR {display:none;} /* hides the help & info section */
+#iframewrapper h1, #signin_popup h1 {display:none;} /* hides the title sourced in the popup */
+#iframewrapper fieldset.f-loginemail div {margin:10px 0;}
+#iframewrapper .dontFloat {float:none;width:auto;}
+#signin_popup #signInPanelIframe1 {width:505px; height:220px;}
+#signin_popup .containerpwrm, #signin_popup .containerpwrmthankyou {margin: 10px;}
+
+/* underlay */
+#popupcart_panel_c.yui-panel-container.shadow .underlay, #signin_panel_c.yui-panel-container.shadow .underlay {left:3px;right:-3px;top:3px;bottom:-3px;position:absolute;background-color:#000;opacity:0.12;filter:alpha(opacity=12);}
+
+
+/* body */
+#signin_panel .bd { padding:10px; height:230px; border-bottom:none; border-top:1px solid #343434; border-left:1px solid #343434; border-right:1px solid #343434; background-color:#FFF; }
+#signin_panel .bd #loadPanelImg { background-image:url(../../../images/loading_bar.gif); display:block; width:220px; height:19px; }
+
+/* footer */
+#signin_panel .ft { padding:0 10px 10px 10px; border-top:none; border-bottom:1px solid #343434; border-left:1px solid #343434; border-right:1px solid #343434; background-color:#FFF; font-size:0.9em; overflow:visible;}
+#signin_panel .ft p { padding:0; margin:0;}
+div#popupcart {color:#000!important;}
+div#popupcart a{color:#000!important;}
+
+/***** hack opera9.5 ******/
+
+@media all and (-webkit-min-device-pixel-ratio:10000),
+
+                              not all and (-webkit-min-device-pixel-ratio:0)
+
+        {
+
+                       :root #lightbox_holder #lightboxcontent_panel.yui-panel .bd{width:660px; height:507px;}
+         }

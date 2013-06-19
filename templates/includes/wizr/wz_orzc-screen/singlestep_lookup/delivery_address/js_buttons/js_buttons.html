@@ -1,0 +1,89 @@
+<script type="text/javascript">
+<!-- 
+function nextPage() {
+	if (validateFields()) {
+		document.wizform.curstep.value='newadd'; //Set curstep=newadd so delivery address can be added on this template (wz_orzc-screen)
+		<venda_block label=14,workflow!=shopcart> //not shopcart
+			<venda_block label=142,curstep=zipcodedelivery> //if didnt click lookup
+				document.wizform.nolookup.value='1';
+				<venda_wizbutton step=shipadd,mode=process,param1=delivery,callonly=yes>
+			</venda_block label=142>
+			<venda_block label=145,curstep=zipcoderesults,param1=notnull> //if did click lookup
+				document.wizform.editadd.value="<venda_param1>";
+				<venda_wizbutton step=shipadd,mode=process,param1=delivery,param2=editadd,callonly=yes>
+			</venda_block label=145>
+		</venda_block label=14>
+				
+		<venda_block label=15,workflow=shopcart> //in shopcart
+			<venda_block label=152,curstep=zipcodedelivery> //if didnt click lookup
+				document.wizform.nolookup.value='1';
+				document.wizform.htxt.value='<venda_htxt mode=make,step=3>';
+				<venda_block label=561,param2!=multiple>
+					<venda_wizbutton step=confirm,mode=process,param1=delivery,param2=password,callonly=yes>
+				</venda_block label=561>
+				<venda_block label=562,param2=multiple> // if adding multiple delivery address
+					<venda_wizbutton step=itemship,mode=process,param1=delivery,callonly=yes>
+				</venda_block label=562>
+			</venda_block label=152>
+			<venda_block label=155,curstep=zipcoderesults,param1=notnull> //if did click lookup
+				<venda_wizbutton step=confirm,mode=process,param1=delivery,callonly=yes>
+			</venda_block label=155>
+		</venda_block label=15>
+	}
+}
+<venda_block label=259,curstep=zipcodedelivery,errors=null>
+	blankFields('delivery');
+</venda_block label=259>
+<venda_block label=270,curstep=zipcodedelivery,errors=notnull>
+	blankFields('address');
+</venda_block label=270>
+
+<venda_block label=291,curstep=zipcoderesults>
+	//if address found then focus on address name else focus on address line 1
+	if (document.wizform.addr1.value!='') {
+		<venda_block label=4800,mode=value,<venda_glxt mode=get,name=glxtusertype>!=p>
+			document.wizform.addrname.focus();
+		</venda_block label=4800>
+	} else {
+		document.wizform.addr1.focus();
+	}
+	</venda_block label=291>
+// -->
+</script>
+<div id="buttons" class="deliverybuttons">
+<venda_block workflow=manageaddresses>
+    <a href="<venda_codehttps>?ex=co_wizr-manageaddresses&bsref=<venda_bsref>"><img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/bt_previous.gif" alt="Previous" border="0" class="left hide"></a>
+</venda_block>
+<venda_block label=321,workflow=shopcart>
+	<venda_block label=322,mode=value,<venda_htxt mode=get,name=prevbtn>=adbook>
+	<a href="#" onclick='<venda_wizbutton step=shipadd,param2=adbook,mode=display,callonly=yes> return false;'><img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/bt_previous.gif" alt="Previous" border="0" class="left hide"></a>
+	</venda_block label=322>
+	<venda_block label=323,mode=value,<venda_htxt mode=get,name=prevbtn>=multiple>
+	<a href="#" onclick='<venda_wizbutton step=itemship,mode=display,callonly=yes> return false;'><img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/bt_previous.gif" alt="Previous" border="0" class="left hide"></a>
+	</venda_block label=323>
+</venda_block label=321>
+<input type="image" onClick="nextPage(); return false;" src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/bt_continuelarge.gif" alt="<venda_text id=site.button.continue>" class="right">
+</div>
+
+<script type="text/javascript">
+function swapLabel(){
+        var stateLabel = document.getElementById("stateLabel");
+        var zipcLabel = document.getElementById("zipcLabel");
+        var cntryLabel = document.getElementById("countryLabel");
+        var country = document.getElementById("cntrylist");
+                if(country.value == "United States"){
+                        stateLabel.innerHTML = '<venda_text id=site.contact_address.label.us_state>:<span class="re-waiHide"> (required)</span> <span class="required">*</span>';
+                        zipcLabel.innerHTML = '<venda_text id=site.contact_address.zipc.us_zipcode>:<span class="re-waiHide"> (required)</span> <span class="required">*</span>';
+                }
+                else if(country.value == "United Kingdom"){
+                        stateLabel.innerHTML = '<venda_text id=site.contact_address.label.uk_county>:';
+                        zipcLabel.innerHTML = '<venda_text id=site.contact_address.zipc.non_us_postcode>:<span class="re-waiHide"> (required)</span> <span class="required">*</span>';
+                }
+                else {
+                        stateLabel.innerHTML = '<venda_text id=site.contact_address.label.non_us_uk_region>:';
+                        zipcLabel.innerHTML = '<venda_text id=site.contact_address.zipc.non_us_postcode>:';
+                }
+}
+                window.onload = swapLabel;
+                addEvent(document.wizform.cntry, 'change', swapLabel, true);
+</script>

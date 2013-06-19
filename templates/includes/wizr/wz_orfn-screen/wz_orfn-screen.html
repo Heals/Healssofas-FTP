@@ -1,0 +1,42 @@
+<!-- YOU ARE ONLY PERMITTED TO CHANGE THE ORDER OF THE INCTEMPLATE TAGS WITHIN THIS TEMPLATE. YOU MAY NOT ADD OR CHANGE ANY OTHER CODE. -->
+<div id="orderreceipt">
+	<venda_category rec=elementcat,ref=orfntopcontent>
+	<div class="checkoutorfnL">
+	<venda_block label=603,mode=value,<venda_setting type=ebiz,name=tracktagvbm>=1>
+	</venda_block label=603>
+	<venda_inctemplate type=includes/wizr/wz_orfn-screen,name=heading_intro>
+	<venda_inctemplate type=includes/wizr/wz_orfn-screen,name=package_summary>
+	<venda_inctemplate type=includes/wizr/wz_orfn-screen,name=order_summary>
+	<venda_inctemplate type=includes/wizr/wz_orfn-screen,name=promotions>
+	<venda_inctemplate type=includes/wizr/wz_orfn-screen,name=js_buttons>
+	<venda_inctemplate type=includes/wizr/wz_orfn-screen,name=featured_products>
+	<venda_category rec=elementcat,ref=orfncolone>
+	</div>
+	<div class="checkoutorfnR">
+	<venda_tpcomment>
+	<!-- Replace payment types with new tag-->
+	<!-- venda_inctemplate type=includes/wizr/wz_orfn-screen,name=payment_details -->
+	</venda_tpcomment>	
+	<venda_paymenttypes templatetype=paytype/frontend,template=paymenttypes_display,ohrfnbr=<venda_ohrfnbr>>
+
+	<venda_inctemplate type=includes/wizr/wz_orfn-screen,name=contact_details>
+	<venda_category rec=elementcat,ref=orfncoltwo>
+	</div>
+	<venda_category rec=elementcat,ref=orfncolonetwo>
+</div>
+<venda_category rec=elementcat,ref=orderreceiptcolone>
+
+<venda_block label=20,workflow=instore>
+<venda_tpxt mode=set,name=instore,value=1>
+</venda_block label=20>
+
+<!-- 
+workflow: <venda_workflow>
+step: <venda_curstep>
+param1: <venda_param1>
+param2: <venda_param2>
+page: wz_orfn-screen.html
+ -->
+<venda_tpxt mode=set,name=track,value=orderreceipt>
+<venda_inctemplate name=TrackingReceipt,type=includes>
+<venda_inctemplate name=cmDisplayShop9s,type=includes/tracking/coremetrics>

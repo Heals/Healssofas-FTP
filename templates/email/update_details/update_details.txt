@@ -1,0 +1,16 @@
+==============================================================================<cr>
+Heal's Update Confirmation<cr>
+==============================================================================<cr><cr>
+
+Dear <venda_fname> <venda_lname>,<cr><cr>
+
+Thank you for updating your account details for Heals.co.uk.<cr><cr>
+
+If you wish to amend any other account details you can do so in the 'My Account' section of the website.<cr><cr>
+
+Regards,<cr><cr>
+<venda_ebizname> Customer Services<cr>
+<venda_ebizurl><cr>
+Contact Us - customerservices@heals.co.uk or 08700 240 780
+Heal & Son Limited, 196 Tottenham Court Road, London W1T 7LQ<cr>
+VAT NO: GB 524 3006 89<cr><cr>

@@ -1,0 +1,21 @@
+<div id="thankyou">
+	<venda_block label=14,mode=value,<venda_htxt mode=get,name=foo>=tellafriend>
+	<div id="tellafriendthankyou">
+	<span style="font-size:20px;color:#666666;"><venda_text id=site.tell_friend.heading></span>
+		<p style="margin:10px 0 0 0;"><venda_text id=site.tell_friend.thankyou></p>
+		<p class="hide"><a href="<venda_dispview invt=<venda_invtref>>" id="back_link"><venda_text id=site.link.close></a></p>
+	</div>
+	</venda_block label=14>
+	
+	<venda_block label=13,mode=value,<venda_htxt mode=get,name=foo>=emailinstock>
+	<div id="emailinstockthankyou">
+		<span style="font-size:20px;color:#666666;"><venda_text id=site.email_when_in_stock.heading></span>
+		<p style="margin:10px 0 0 0;"><venda_text id=site.email_when_in_stock.thankyou></p>
+		<p class="hide"><a href="<venda_dispview invt=<venda_invtref>>" id="back_link"><venda_text id=site.link.close></a></p>
+	</div>
+	</venda_block label=13>
+</div>
+
+<!-- tpxt used for crumbtrail -->
+<venda_tpxt mode=set,name=invtname,value=<venda_invtname>>
+<venda_tpxt mode=set,name=track,value=thankyou>

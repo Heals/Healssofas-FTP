@@ -1,0 +1,31 @@
+<fieldset>
+	<legend class="orzcadddetail"><venda_text id=site.contact_address.legend.address_details></legend>
+	<p><venda_text id=site.contact_address.instructions></p>
+	<venda_block label=11,param2!=uk,errors=notnull,operator=or>
+		<venda_block label=124,mode=value,<venda_setting type=ebiz,name=showcompany>=1><div><label for="company"><venda_text id=site.contact_address.label.company><venda_block label=122,usgrref=press> <span class="required">*</span></venda_block label=122></label> <venda_company field=text,size=25,maxlength=100></div></venda_block label=124>
+		<venda_block label=121,usgrref=press><venda_page page=usxtregister></venda_block label=121>
+		
+		<venda_block label=75,workflow!=shopcart>
+		<venda_block label=88,mode=value,<venda_setting type=ebiz,name=nohousenum>!=1><div class="housenum>"><label for="num"><venda_text id=site.contact_address.label.house_name_flat_number> <span class="required">*</span></label> <venda_num field=text,size=25,maxlength=20></div></venda_block label=88>			
+		<div><label for="addr1"><venda_text id=site.contact_address.label.address> <span class="required">*</span></label> <venda_addr1 field=text,size=25,maxlength=50></div>
+		<div><label for="addr2"><venda_text id=site.contact_address.label.address2></label> <venda_addr2 field=text,size=25,maxlength=50></div>
+		</venda_block label=75>
+<venda_block label=80,workflow=shopcart>
+		<div><label for="addr1"><venda_text id=site.contact_address.label.address1> <span class="required">*</span></label> <venda_addr1 field=text,size=25,maxlength=50></div>		
+		<div><label for="addr2"><venda_text id=site.contact_address.label.address2></label> <venda_addr2 field=text,size=25,maxlength=50></div>
+</venda_block label=80>
+		<div><label for="city"><venda_text id=site.contact_address.label.city> <span class="required">*</span></label> <venda_city field=text,size=25,maxlength=30></div>
+		<div id="stateDiv"><label for="state" id="stateLabel"><venda_text id=site.contact_address.label.county></label> <span id="stateField"><venda_state field=text,size=25,maxlength=20></span></div>
+		<div id="zipcDiv"><label for="zipc" id="zipcLabel"><venda_text id=site.contact_address.label.postcode> <span class="required">*</span></label><venda_zipc field=text,size=25,maxlength=20><venda_block label=751,workflow!=shopcart></venda_block label=751></div>
+		<div id="countryDiv"><label for="cntry" id="countryLabel"><venda_text id=site.contact_address.label.country> <span class="required">*</span></label> <venda_cntry field=combo,ship=1></div>
+	</venda_block label=11>
+<venda_block label=2199,<venda_setting type=ebiz,name=billingdeliveryonly>!=1,mode=value>
+<venda_block label=15,workflow=shopcart,workflow=instore,operator=or>
+<div><input type="checkbox" name="differentaddress" id="differentaddress"><label for="differentaddress" class="dontFloat"><venda_text id=site.contact_address.different_delivery_address></label></div>
+</venda_block label=15>
+</venda_block label=2199>
+<venda_block label=2200,<venda_setting type=ebiz,name=billingdeliveryonly>=1,mode=value>
+<input type="hidden" name="differentaddress" id="differentaddress">
+</venda_block label=2200>
+</fieldset>
+

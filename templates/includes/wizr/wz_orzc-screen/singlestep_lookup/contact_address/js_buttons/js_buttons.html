@@ -1,0 +1,119 @@
+<script type="text/javascript">
+<!--
+function nextStep(then) {
+	if (validateFields()) {
+		if(then==1){ // contact details of register workflow	
+			document.wizform.nolookup.value='1';
+			<venda_wizbutton step=--page-checkgroup,mode=process,param1=details,param2=uk,callonly=yes,secure=yes>
+	    } else if(then==2) { // billing details of shopcart workflow		
+			document.wizform.curstep.value='billto'; //specify curstep to be billto to allow address details to be captured
+			document.wizform.nolookup.value='1';
+			document.wizform.editadd.value="<venda_babrfnbr>";
+			if (document.wizform.differentaddress.checked) { //If different delivery address is checked
+				document.wizform.htxt.value='<venda_htxt mode=make,step=2>';
+				<venda_block label=30,param1=nopswdlookup><venda_wizbutton step=zipcodedelivery,mode=process,param1=delivery,param2=editadd,callonly=yes></venda_block label=30>
+				<venda_block label=31,param1!=nopswdlookup><venda_wizbutton step=zipcodedelivery,mode=process,param2=editadd,callonly=yes></venda_block label=31>
+			} else { //If different delivery address is NOT checked
+		        <venda_wizbutton step=confirm,mode=process,callonly=yes>
+			}
+	    }
+	}
+}
+
+<venda_block label=291,curstep=zipcoderesults>
+	//if address found then focus on area code else focus on address line 1
+	if (document.wizform.addr1.value!='') {
+		document.wizform.area.focus();
+	} else {
+		document.wizform.addr1.focus();
+	}
+</venda_block label=291>
+
+// -->
+</script>
+<div id="buttons">
+
+	<venda_block label=292,mode=value,<venda_glxt mode=get,name=glxtusertype>=p>
+	<venda_block label=121,mode=value,<venda_usgrref>!=press>
+	<fieldset>
+	<!-- <venda_ustandc required=yes> -->
+	<div><input type="checkbox" name="ustandc" id="ustandc" value="1"> <label for="ustandc" class="dontFloat"><venda_text id=site.contact_address.label.read_and_agreed> <a href="<venda_dispview page=terms>" onclick="popup('<venda_dispview page=terms>&layout=empty','large','scrollbars=yes,resizable=yes,width=550,height=450'); return false;"><venda_text id=site.contact_address.label.terms_and_conditions></a></label></div>	</fieldset>
+	</venda_block label=121>
+	<venda_block label=122,mode=value,<venda_usgrref>=press>
+	<fieldset>
+	<input type="checkbox" name="ustandc" id="ustandc" value="1" style="display:none;">
+		</fieldset>
+	</venda_block label=122>
+	</venda_block label=292>
+
+
+
+
+	
+<venda_block label=78,workflow=register>
+	<a class="hide" href="<venda_codehttps>?ex=co_wizr-register&bsref=<venda_bsref>" alt="back"><img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/bt_previous.gif" alt="<venda_text id=site.button.previous>" border="0" class="left"></a><venda_block label=191,mode=value,<venda_glxt mode=get,name=glxtusertype>!=p><input type="image" onClick="nextStep(1); return false;" src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/bt_registerlarge.gif" alt="<venda_text id=site.button.register>" class="right">
+</venda_block label=191><venda_block label=192,mode=value,<venda_glxt mode=get,name=glxtusertype>=p><input type="image" onClick="nextStep(1); return false;" src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/bt_guestchkoutlarge.gif" alt="<venda_text id=site.button.register>" class="right"></venda_block label=192>
+</venda_block label=78>
+			
+<venda_block label=79,workflow=shopcart>
+	<a href="#" onclick='<venda_wizbutton step=billtologin,mode=display,param1=login,callonly=yes> return false;' class="left hide"><img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/bt_previous.gif" alt="<venda_text id=site.button.previous>" border="0" class="left"></a><venda_block label=191,mode=value,<venda_glxt mode=get,name=glxtusertype>!=p><input type="image" onClick="nextStep(2); return false;" src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/bt_registerlarge.gif" alt="<venda_text id=site.button.continue>" class="right"></venda_block label=191><venda_block label=192,mode=value,<venda_glxt mode=get,name=glxtusertype>=p><input type="image" onClick="nextStep(2); return false;" src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/bt_guestchkoutlarge.gif" alt="<venda_text id=site.button.continue>" class="right"></venda_block label=192>
+</venda_block label=79>
+</div>
+
+<script type="text/javascript">
+//State dropdown will be default on template, if default country is NOT US dropdown will be replaced with a text field automatically
+		if(document.getElementById('stateField')){
+			var grabAllStates = document.getElementById('stateField').innerHTML; //global var to get US states when page loads
+		}
+       
+        var swapState = function () {
+                var countryValue = document.wizform.cntry.value; //get value of the country
+                var stateLabelText = document.getElementById('stateLabel'); //set var for State label
+                var zipcLabelText = document.getElementById('zipcLabel'); //set var for Zipc label
+				<venda_block label=81,workflow!=shopcart>
+				var zipcPostcodeLookup = document.getElementById('postcodelookup'); //set var for Post Code Lookup
+				</venda_block label=81>
+                var stateField = document.getElementById('stateField'); //set var for State field
+
+                var replaceStateLabelUS = '<venda_text id=site.contact_address.label.us_state>: <span class="required">*</span>'; //use State for label text for US
+                var replaceStateLabelUK = '<venda_text id=site.contact_address.label.uk_county>:'; //use County for label text for UK
+                var replaceStateLabelOther = '<venda_text id=site.contact_address.label.non_us_uk_region>:'; //use Region for label text for Non US AND Non UK
+
+                var replaceStateField = '<input type="text" name="state" size="25" value="<venda_state>">'; //use text field for State when not US
+
+                var replaceZipcLabelUS = '<venda_text id=site.contact_address.zipc.us_zipcode>: <span class="required">*</span>'; //use Zip Code for label text for US
+                var replaceZipcLabelNonUS = '<venda_text id=site.contact_address.zipc.non_us_postcode>: <span class="required">*</span>'; //use Postcode for label text for Non US
+				
+                switch(countryValue) {
+                        case 'United States':
+                                stateLabelText.innerHTML = replaceStateLabelUS;
+                                stateField.innerHTML = grabAllStates;
+                                document.getElementById('state').style.display = 'inline';
+                                zipcLabelText.innerHTML = replaceZipcLabelUS;
+								<venda_block label=81,workflow!=shopcart>
+								zipcPostcodeLookup.style.display = 'none';
+								</venda_block label=81>
+                                break;
+                        case 'United Kingdom':
+                                stateLabelText.innerHTML = replaceStateLabelUK;
+                                stateField.innerHTML = replaceStateField;
+                                zipcLabelText.innerHTML = replaceZipcLabelNonUS;
+								<venda_block label=81,workflow!=shopcart>
+								zipcPostcodeLookup.style.display = 'inline';
+								</venda_block label=81>
+                                break;
+                        default:
+                                stateLabelText.innerHTML = replaceStateLabelOther;
+                                stateField.innerHTML = replaceStateField;
+                                zipcLabelText.innerHTML = replaceZipcLabelNonUS;
+								<venda_block label=81,workflow!=shopcart>
+								zipcPostcodeLookup.style.display = 'none';
+								</venda_block label=81>
+                                break;
+                }
+        }
+		if(document.getElementById('stateField')){
+	        document.wizform.cntry.onchange = swapState; // changes state/zipc inner HTML depending on the country when the country is changed
+    	    window.onload = swapState; // changes state/zipc inner HTML depending on the country when the page loads
+		}
+</script>	

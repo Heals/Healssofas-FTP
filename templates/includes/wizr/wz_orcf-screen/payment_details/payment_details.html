@@ -1,0 +1,33 @@
+<venda_tpcomment><!-- showpayments is null when the user has store credit that is greater than the value of the order total. In this case store credit (ohpaytype 4) will be the payment method used automatically and there will be no payment --></venda_tpcomment>
+<venda_block label=11,showpayments=notnull>
+<!-- start payment details -->
+<div class="paytypegroup">
+	<venda_paymenttypes templatetype=paytype/frontend,template=paymenttypes_entry,ohrfnbr=<venda_ohrfnbr>,entry=1>
+	<fieldset class="f-paypal"></fieldset>
+	
+	<venda_extflds exfldtype=order,ref=<venda_ohrfnbr>,group=7,template=orxfields_set,type=includes>
+	<venda_extflds exfldtype=order,ref=<venda_ohrfnbr>,group=8,template=orxfields_set,type=includes>
+</div>
+<script type="text/javascript">
+var paylocate;
+for (var i=0; i<document.wizform.ohpaytype.length; i++) {
+		if ( document.wizform.ohpaytype[i].value == 2) {
+			paylocate = i;
+		}
+}
+function autoSelect(objPay) {
+	if (typeof document.wizform.payall!="undefined") {
+		if (objPay.checked == true && objPay.value != 2) {
+			document.wizform.payall.checked = false;
+			document.wizform.sendpaypaid.readOnly = false;
+			document.wizform.sendpaypaid.value = "";
+		}
+	}
+}
+</script>
+<!-- end payment details -->
+</venda_block label=11>
+
+
+
+

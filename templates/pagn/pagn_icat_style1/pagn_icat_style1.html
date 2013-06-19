@@ -1,0 +1,93 @@
+<venda_detblock_pageslist>
+	<venda_block label=1111,mode=value,<venda_currentpage>=<venda_number>>
+		<span class="pagnCurrent"><venda_number></span>
+	</venda_block label=1111>	
+	<venda_block label=1112,mode=value,<venda_currentpage>!=<venda_number>>           
+		<a href="<venda_baseurl>&curpage=<venda_number><venda_block label=1128,mode=value,<venda_pgn_isviewall>=1>&isviewall=1</venda_block label=1128>&itemsperpage=<venda_itemsperpage>" title="<venda_text id=site.page_numbers.gotopage>"><venda_number></a>
+	</venda_block label=1112>
+</venda_detblock_pageslist>
+
+<div class="pagnFirstRow">
+	
+	<div class="pagnLinkNavigate">
+		<div class="pagnNumList">
+			<venda_block label=4,mode=value,<venda_pgn_totalpages>&gt;1>
+
+				<span class="pnumber">
+					Page
+					<!-- show the first page link-->
+				<venda_block label=1115,mode=value,<venda_pgn_windowstartpage>&gt;1>
+					<span class="pagnFirst"><a href="<venda_pgn_baseurl>&curpage=1&itemsperpage=<venda_itemsperpage><venda_block label=1130,mode=value,<venda_pgn_isviewall>=1>&isviewall=1</venda_block label=1130>" title="<venda_text id=site.page_numbers.gotofirstpage>">1</a></span>
+</venda_block label=1115>
+				
+				<venda_block label=1113,mode=value,<venda_pgn_leftgap>&gt;1>
+					<!-- show the left ... -->
+					<span class="pagnEllipsis"><venda_text id=site.page_numbers.ellipsis></span>
+				</venda_block label=1113>
+				
+				<span class="pagnNumbers"><venda_detail_pageslist pgn_window_size=<venda_setting type=ebiz,name=windowsizeicat>></span>	
+		
+				<venda_block label=1114,mode=value,<venda_pgn_rightgap>&gt;1>
+					<!-- show the right ... -->
+					<span class="pagnEllipsis"><venda_text id=site.page_numbers.ellipsis></span>
+				</venda_block label=1114>
+
+				<!-- show the last link -->
+				<venda_block label=1118,mode=value,<venda_pgn_windowendpage>&lt;<venda_pgn_totalpages>>
+					<span class="pagnLast"><a href="<venda_pgn_baseurl>&curpage=<venda_pgn_totalpages>&itemsperpage=<venda_itemsperpage><venda_block label=1131,mode=value,<venda_pgn_isviewall>=1>&isviewall=1</venda_block label=1131>" class="pagnButtonLast" title="<venda_text id=site.page_numbers.gotolastpage>"><venda_pgn_totalpages></a></span>
+				</venda_block label=1118>
+				</span>
+
+				<venda_block label=999,mode=value,<venda_pgn_isviewall>!=1>
+					<venda_block label=1122,mode=value,<venda_setting type=ebiz,name=showproductlistviewall>=1,<venda_pgn_totalpages>&gt;1>
+						<venda_tpcomment><!-- show 'view all' link --></venda_tpcomment>
+						<span class="pagnViewAll">
+							<venda_block label=1125,mode=value,<venda_setting type=ebiz,name=setproductlistviewallvalue>=notnull>
+								<venda_block label=1123,mode=value,<venda_pgn_totalitems>&lt;<venda_setting type=ebiz,name=setproductlistviewallvalue>>
+									<a href="<venda_pgn_baseurl>&itemsperpage=<venda_pgn_totalitems>&isviewall=1" title="<venda_text id=site.page_numbers.showall>"><venda_text id=site.page_numbers.viewall></a>
+								</venda_block label=1123>
+								<venda_block label=1124,mode=value,<venda_pgn_totalitems>&gt;<venda_setting type=ebiz,name=setproductlistviewallvalue>>
+									<a href="<venda_pgn_baseurl>&itemsperpage=<venda_setting type=ebiz,name=setproductlistviewallvalue>&isviewall=1" title="<venda_text id=site.productlist.page_numbers.showallmax>"><venda_text id=site.productlist.page_numbers.viewallmax></a>
+								</venda_block label=1124>
+							</venda_block label=1125>	
+						</span>
+					</venda_block label=1122>
+				</venda_block label=999>
+				
+				<!-- show the next page -->
+				<venda_block label=1116,mode=value,<venda_pgn_currentpage>&lt;<venda_pgn_totalpages>>
+					<span class="pagnNext"><a href="<venda_pgn_baseurl>&curpage=<venda_pgn_nextpage>&itemsperpage=<venda_itemsperpage><venda_block label=1132,mode=value,<venda_pgn_isviewall>=1>&isviewall=1</venda_block label=1132>" title="<venda_text id=site.page_numbers.gotonextpage>"><venda_text id=site.page_numbers.next></a></span>
+				</venda_block label=1116>
+				<venda_block label=11161,mode=value,<venda_pgn_currentpage>=<venda_pgn_totalpages>>
+					<span class="pagnNext-off"><venda_text id=site.page_numbers.next></span>
+				</venda_block label=11161>
+
+				<!-- show the previous link-->
+				<venda_block label=1117,mode=value,<venda_pgn_currentpage>&gt;1>
+					<span class="pagnPrev"><a href="<venda_pgn_baseurl>&curpage=<venda_pgn_previouspage>&itemsperpage=<venda_itemsperpage><venda_block label=1129,mode=value,<venda_pgn_isviewall>=1>&isviewall=1</venda_block label=1129>" title="<venda_text id=site.page_numbers.gotopreviouspage>"><venda_text id=site.page_numbers.previous></a></span>
+				</venda_block label=1117>
+				<venda_block label=11171,mode=value,<venda_pgn_currentpage>=1>
+					<span class="pagnPrev-off"><venda_text id=site.page_numbers.previous></span>
+				</venda_block label=11171>
+
+			</venda_block label=4>
+		<venda_block label=1120,mode=value,<venda_pgn_isviewall>=1>
+			<!-- show paged view -->
+			<span class="pagnShowViewByPaged<venda_block label=1136,mode=value,<venda_pgn_totalpages>=1> setMarginPagedView</venda_block label=1136>"><a href="<venda_pgn_baseurl>&curpage=1&itemsperpage=<venda_setting type=ebiz,name=setproductlistviewbypagevalue>" title="<venda_text id=site.page_numbers.gobacktopagedview>"><venda_text id=site.page_numbers.viewbypage></a></span>
+		</venda_block label=1120>
+		</div>
+	</div><br class="clear-all">
+</div><br class="clear-all">
+<venda_tpcomment><!-- the following glxt is needed for Recent Search History, please do not remove --></venda_tpcomment>
+<!-- <venda_glxt mode=set,name=currentpage,value=<venda_pgn_currentpage>> -->
+
+<venda_tpcomment><!-- the following tpxt is needed for Search Results page, please do not remove --></venda_tpcomment>
+<venda_block label=6,totalpages=1,currentpage=1,operator=or><venda_tpxt mode=set,name=currentpage,value=1></venda_block label=6>
+
+<venda_tpcomment><!-- pass values to title.html template, please do not remove --></venda_tpcomment>
+<venda_tpxt mode=set,name=currentpageTitle,value=<venda_pgn_currentpage>>
+<venda_tpxt mode=set,name=totalpagesTitle,value=<venda_pgn_totalpages>>
+<!--   
+	windowstartpage - <venda_pgn_windowstartpage>
+	windowendpage   - <venda_pgn_windowendpage>
+-->

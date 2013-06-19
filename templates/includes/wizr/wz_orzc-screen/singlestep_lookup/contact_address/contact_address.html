@@ -1,0 +1,58 @@
+<!-- YOU ARE ONLY PERMITTED TO CHANGE THE ORDER OF THE INCTEMPLATE TAGS WITHIN THIS TEMPLATE. YOU MAY NOT ADD OR CHANGE ANY OTHER CODE. -->
+<venda_block label=701,curstep!=zipcodedelivery>   
+	<venda_zones type=countries,template=zoneJs> 
+	<venda_inctemplate type=includes/wizr/wz_orzc-screen/singlestep_lookup/contact_address,name=heading_intro>
+	<venda_form method=post> 	
+	<!-- curparam2 used for conditional on wz_orbt-screen so that system errors appear on orzc and not co_comn-login -->
+	<input type="hidden" name="curparam2" value="singlestep">
+	<input type="hidden" name="layout" value="">
+	<input type="hidden" name="uslgemail" value="">
+	<input type="hidden" name="nolookup" value="">
+	<input type="hidden" name="zipcodelookup" value="1">
+	<venda_block label=18,mode=value,<venda_glxt mode=get,name=glxtusertype>!=p><input type="hidden" name="ustype" value="R"></venda_block label=18>
+	<venda_block label=19,mode=value,<venda_glxt mode=get,name=glxtusertype>=p><input type="hidden" name="ustype" value="P"></venda_block label=19>
+	<input type=hidden name="usrfnbr" value="">
+	<venda_block label=22,workflow=register>
+	<input type="hidden" name="log" value="22">
+	</venda_block label=22>   
+	<venda_block label=33,workflow=shopcart>
+	      <input type="hidden" name="htxt" value="<venda_htxt mode=make,step=1>">
+	<input type="hidden" name="editadd" value="">
+	      </venda_block label=33>
+	<div class="registerheader"><venda_text id=site.contact_address.subheader.contactdetails></div>
+	<div class="registercontent">
+	<venda_inctemplate type=includes/wizr/wz_orzc-screen/singlestep_lookup/contact_address,name=personal_details>
+	<venda_inctemplate type=includes/wizr/wz_orzc-screen/singlestep_lookup/contact_address,name=further_account_details>
+	</div>
+	<div class="registerheader"><venda_text id=site.contact_address.subheader.billingdetails></div>
+	<div class="registercontent">
+	<venda_inctemplate type=includes/wizr/wz_orzc-screen/singlestep_lookup/contact_address,name=address_details>
+	</div>
+
+	<venda_block label=44,mode=value,<venda_glxt mode=get,name=glxtusertype>!=p>
+	<div class="registerheader"><venda_text id=site.contact_address.subheader.accountdetails></div>
+	<div class="registercontent">
+	<venda_inctemplate type=includes/wizr/wz_orzc-screen/singlestep_lookup/contact_address,name=choose_password>
+	<venda_block label=50,instore!=1>
+	<venda_block label=121,mode=value,<venda_usgrref>!=press>
+	<fieldset>
+	<!-- <venda_ustandc required=yes> -->
+	<div><input type="checkbox" name="ustandc" id="ustandc" value="1"> <label for="ustandc" class="dontFloat"><venda_text id=site.contact_address.label.read_and_agreed> <a href="<venda_dispview page=terms>" onclick="popup('<venda_dispview page=terms>&layout=empty','large','scrollbars=yes,resizable=yes,width=550,height=450'); return false;"><venda_text id=site.contact_address.label.terms_and_conditions></a></label></div>	</fieldset>
+	</venda_block label=121>
+	<venda_block label=122,mode=value,<venda_usgrref>=press>
+	<fieldset>
+	<input type="checkbox" name="ustandc" id="ustandc" value="1" style="display:none;">
+		</fieldset>
+	</venda_block label=122>
+</venda_block label=50>
+	</div>
+	</venda_block label=44>
+	
+	<div class="registerheader"><venda_text id=site.contact_address.subheader.communicationoptions></div>
+	<div class="registercontent commopt">
+	<venda_inctemplate type=includes/wizr/wz_orzc-screen/singlestep_lookup/contact_address,name=different_delivery_address>
+	<venda_block label=121,usgrref!=press><venda_page page=usxtregister></venda_block label=121><!-- remains here for backwards compatibility -->	
+	<venda_inctemplate type=includes/wizr/wz_orzc-screen/singlestep_lookup/contact_address,name=js_buttons>
+	</div>
+	</form>
+</venda_block label=701> 

@@ -1,0 +1,46 @@
+<form action="<venda_codehttp>" method="post" name="tellafriendform" id="tellafriendform">								
+<input type="hidden" name="ex" value="co_disp-referfr">
+<input type="hidden" name="bsref" value="<venda_bsref>">
+<input type="hidden" name="from" value="customerservices@heals.co.uk">
+<input type="hidden" name="subject" value="<venda_text id=site.tell_friend.subject>">
+<input type="hidden" name="invt" value="<venda_invtref>">
+<input type="hidden" name="label1" value="">
+<input type="hidden" name="temp" value="thankyou">
+<input type="hidden" name="htxt" value="<venda_htxt mode=make,foo=tellafriend>">
+<input type="hidden" name="layout" value="">
+
+<div class="tellafriend">
+<span style="font-size:20px;color:#666666;"><venda_text id=site.tell_friend.heading></span>
+<venda_block label=1,errors=notnull><h2 class="error"><venda_errors></h2></venda_block label=1>
+<p style="margin:10px 0 0 0;"><venda_text id=site.tell_friend.instructions> <strong><venda_invtname></strong>.</p>
+
+<fieldset>
+<legend><venda_text id=site.tell_friend.legend></legend>
+<div><label for="fname"><venda_text id=site.tell_friend.label.your_name><span class="hideScreenReaderSafe"> <venda_text id=site.accessible.label.required></span> <span class="required">*</span></label> 
+<venda_userinfo>
+<venda_block label=102,ustype!=R><input name="fname" size="20" maxlength="50" value=""></venda_block label=102>
+<venda_block label=103,ustype=R><input name="fname" size="20" maxlength="50" value="<venda_fname>&nbsp;<venda_lname>" readonly="1"></venda_block label=103>
+</venda_userinfo></div>
+<div><label for="name"><venda_text id=site.tell_friend.label.friends_name><span class="hideScreenReaderSafe"> <venda_text id=site.accessible.label.required></span> <span class="required">*</span></label> <input name="name" id="name" size="20" maxlength="50"></div>
+<div><label for="email"><venda_text id=site.tell_friend.label.friends_email><span class="hideScreenReaderSafe"> <venda_text id=site.accessible.label.required></span> <span class="required">*</span></label> <input name="email" id="email" size="20" maxlength="150"></div>
+<div><label for="field1"><venda_text id=site.tell_friend.label.message><span class="hideScreenReaderSafe"> <venda_text id=site.accessible.label.required></span> <span class="required">*</span></label> <textarea cols="46" name="field1" id="field1" rows="3" style="margin: 2px 0 0 2px;"><venda_text id=site.tell_friend.textarea.message></textarea></div>
+</fieldset>
+
+<div>
+<a href="<venda_dispview invt=<venda_invtref>>" id="back_link" class="button left"><img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/my-account/my-account-cancel.gif" alt="Cancel" title="Cancel"></a>
+<input type="image" value="<venda_text id=site.button.continue>" class="button  buttonArrow right submit submitTellafriend" data-track="submit-tellafriend" src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/my-account/my-account-submit.gif">
+</div>
+</div>
+</form>
+
+<div id="JS-tell-a-friend" style="display: none">
+	<div id="tell-a-friend-validation-fname"><venda_text id=site.tell_friend.js_validation.fname></div>
+	<div id="tell-a-friend-validation-name"><venda_text id=site.tell_friend.js_validation.name></div>
+	<div id="tell-a-friend-validation-email-address"><venda_text id=site.tell_friend.js_validation.email_address></div>
+	<div id="tell-a-friend-validation-valid-email-address"><venda_text id=site.tell_friend.js_validation.valid_email_address></div>
+	<div id="tell-a-friend-validation-message"><venda_text id=site.tell_friend.js_validation.message></div>
+</div>
+
+<!-- tpxt used for crumbtrail -->
+<venda_tpxt mode=set,name=invtname,value=<venda_invtname>>
+<venda_tpxt mode=set,name=track,value=tellafriend>

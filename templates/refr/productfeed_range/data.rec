@@ -1,0 +1,1 @@
+ref	productfeed_range	name	productdatafeed	format	plain	transport	ftpclient	user		host		password		filename	productdatafeed_range.txt	path		remotepath		emailto	mtraill@heals.co.uk	emailfrom	vcp@venda.com	subject	Product Range Feed	zippedfilename		zip		maxdesc		rtype	refr

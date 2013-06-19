@@ -1,0 +1,77 @@
+<venda_detblock>
+<style>
+#mainlayout-static #content-default #col-two a {color: #666;}
+.made-for-you ul {list-style:none;}
+.made-for-you li {display: inline;}
+.mfy {width: 200px;height: 249px;background-color: #E6E6E6;position: relative;margin: 9px 1px 0 13px;float: left;}
+.title_mfy {float: left;vertical-align: text-top;padding: 0;margin: 0;height: 26px;width: 196px;overflow: hidden;}
+h2 {text-transform: uppercase;text-align: left;padding: 0px 4px 0px 4px;font-size: 10px;color: #666;margin: 0;}
+.wasprice {color: #6D6D6D;display: block;text-decoration: none;margin: 0;font-size: 11px;height: 0;
+float: left;}
+.nowprice {display: block;font-weight: normal;margin: 0;float: right;color: #C00 !important;font-size: 10px;}
+.fromsaleprice {display: block;text-transform: uppercase;color: #C00;font-size: 10px;margin: 0;padding: 5px 5px 0 0;float: right;}
+.normalprice {display: block;padding: 5px 5px 0 0;font-weight: bold;font-size: 11px;margin: 0;float: right;}
+.fromprice {display: block;padding: 5px 5px 0 4px;font-weight: normal;font-size: 10px;margin: 0;float: right;text-transform: uppercase;}
+.fromprice span {font-weight: bold;font-size: 11px;margin: 0;padding: 0;}
+.nowprice span {font-weight: bold;font-size: 11px;}
+.wasprice span {text-decoration: line-through;font-weight: bold;font-size: 11px;}
+.fromsaleprice span {font-weight: bold;font-size: 11px;margin: 0;padding: 0;}
+</style>
+<li>
+<div class="mfy">
+<!-- product image -->
+<div class="skunu hide"><venda_invtref1></div>
+<div>
+
+<div class="image" style="padding:2px;">
+<venda_block label=4,med-medium1=notnull>
+<a href="<venda_dispview invt=<venda_invtref1>>"><venda_media rec=invt1,type=movie-swf-pict,key=medium,width=196,height=196></a></venda_block label=4>
+<venda_block label=142,med-medium1=null>
+<a href="<venda_dispview invt=<venda_invtref1>>"><img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/no_image_s.gif" alt="<venda_text id=site.link.alt.no_image.icat>"></a></venda_block label=142>
+</div>
+</div>
+
+<div class="title_mfy"><h2><a href="<venda_dispview invt=<venda_invtref1>>"><venda_invtname1></a></h2></div>
+
+<div>
+<!-- Product has no attributes -->
+<venda_block label=12125453,invtivtype1=normal,invtivtype1=gardenfurniture,invtivtype1=furniture,operator=or>
+<div class="pricedetail">
+
+<venda_block label=111,invtsavingonwas1=null>
+<p class="normalprice" style="font-size: 11px;padding: 5px 5px 0 0;"><venda_currsym><venda_invtsell1></p>
+</venda_block label=111>
+						
+<venda_block label=11,invtsavingonwas1=notnull,invtwas!=0.00>
+<p class="nowprice" style="font-size: 10px;padding: 5px 4px 0 0;">NOW <span><venda_currsym><venda_invtsell1></span></p>
+<p class="wasprice" style="font-size: 10px;padding: 5px 0 0 4px;">WAS <span><venda_currsym><venda_invtwas1></span></p>
+</venda_block label=11>
+
+</div>
+</venda_block label=12125453>
+
+<!-- Product has some attribute -->
+<venda_block label=12125454,invtivtype1=range,invtivtype1=furniturerange,invtivtype1=gardenfurniturerange,operator=or>
+<div>
+
+<venda_block label=8001,invtatrminsubwas1=0.00>
+<p class="fromprice" style="font-size: 10px;padding: 5px 5px 0 0;"><venda_block label=35,invtatrminsubsell1&gt;0.00>FROM <span><venda_currsym><venda_invtatrminsubsell1></span></venda_block label=35></p>
+
+<venda_block label=36,invtatrminsubsell1=0.00>
+<p class="normalprice" style="font-size: 10px;padding: 5px 5px 0 0;"><venda_invtsymsell1></p></venda_block label=36>
+</venda_block label=8001>
+
+<venda_block label=8002,invtatrminsubwas1!=0.00>
+<p class="fromsaleprice" style="font-size: 10px;padding: 5px 5px 0 0;">Sale Prices From <span><venda_currsym><venda_invtatrminsubsell1></span></p>
+</venda_block label=8002>
+
+</div>	
+</venda_block label=12125454>
+</div>
+
+</div>
+</li>
+</venda_detblock>
+<ul>
+<venda_detail>
+</ul>

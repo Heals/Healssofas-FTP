@@ -1,0 +1,28 @@
+<form action="<venda_codehttp>" method="get" id="emailmebackform" name="emailmebackform">
+<input type="hidden" name="ex" value="tl_emlinstock-emailme">
+<input type="hidden" name="bsref" value="<venda_bsref>">
+<input type="hidden" name="invtref" value="<venda_invtref>"><input type="hidden" name="dispviewref" value="<venda_invtref>">
+<input type="hidden" name="invt" value="<venda_invtref>">
+<input type="hidden" name="layout" value="">
+<input type="hidden" name="temp" value="thankyou">
+<input type="hidden" name="htxt" value="<venda_htxt mode=make,foo=emailinstock>">
+<input type="hidden" name="page" value="">
+<div id="emailmeback">
+<span style="font-size:20px;color:#666666;"><venda_text id=site.email_when_in_stock.heading></span>
+<div style="margin:30px 0 0 0;"><label for="bisemail"><venda_text id=site.email_when_in_stock.label.email_address></label> <input name="bisemail" value="<venda_userinfo><venda_sesusemail></venda_userinfo>" id="bisemail" maxlength="150" style="width:200px;margin:-5px 0 0 0;padding:4px;"></div>
+	<div class="buttonEMWBIS" style="margin:25px 0 0 0;">
+	<a href="<venda_dispview invt=<venda_invtref>>" id="back_link" class="button left"><img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/my-account/my-account-cancel.gif" alt="Cancel" title="Cancel"></a>
+	<input type="image" alt="<venda_text id=site.button.continue>" id="<venda_text id=site.button.continue>" value="<venda_text id=site.button.continue>" class="button buttonArrow right submit submitEMWBIS" data-track="submit-emwbis" src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/my-account/my-account-submit.gif">
+	</div>
+</div>
+</form>
+
+<div id="JS-email-in-stock" style="display: none">
+<div id="email-when-in-stock-validation"><venda_text id=site.email_when_in_stock.js_validation.email_address></div>
+<div id="email-when-in-stock-invtref"><venda_invtref></div>
+<div id="email-when-in-stock-invtname"><venda_invtname></div>
+</div>
+
+<!-- tpxt used for crumbtrail -->
+<venda_tpxt mode=set,name=invtname,value=<venda_invtname>>
+<venda_tpxt mode=set,name=track,value=emailinstock>

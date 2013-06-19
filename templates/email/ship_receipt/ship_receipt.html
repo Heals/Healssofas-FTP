@@ -1,0 +1,84 @@
+<venda_inctemplate name=htmlEmailDetblocks3,type=includes/email>
+
+<html>
+<head>
+	<title>Heals - Order Process Confirmation - <venda_ohordnum></title>
+</head>
+<body>
+<div id="emailBody">
+<venda_inctemplate name=htmlEmailCssEtc,type=includes/email>
+<div id="logo">
+	<venda_inctemplate name=htmlEmailLogo,type=includes/email>
+	<h1>Order <venda_order ordnum=<venda_ohordnum>,template=ship_receipt_header,templategrp=includes> Confirmation - <venda_ohordnum></h1>
+	<div class="clear">&nbsp;</div>
+</div>
+
+
+<venda_inctemplate name=htmlEmailHeader,type=includes/email>
+
+<p>Thank you for ordering from Heals.co.uk. Please find below details of the items from your order <strong>#<venda_ohordnum></strong> that have been recently <span style="text-transform:lowercase;"><venda_order ordnum=<venda_ohordnum>,template=ship_receipt_header,templategrp=includes></span>.</p>
+
+&nbsp;<strong>Processed date</strong> <venda_nowmonname> <venda_nowdaymon>, <venda_ohdelyear><br>
+
+<table style="text-align:left;" bgcolor="#eeeeee" border="0" cellpadding="4" cellspacing="0" summary="Details for your <venda_ebizname> order">
+<venda_inctemplate name=htmlEmailBody3,type=includes/email>
+</table>
+
+<p>To check the current status of your order, to change your contact details or to view your order history, go to <a href="<venda_codehttps>?ex=co_disp-view&page=myaccount&bsref=<venda_bsref>">'My Account'</a> page.</p>
+
+<p><strong>WHAT HAPPENS NEXT?</strong></p>
+
+<p><strong>Delivery:</strong></p>
+
+<p>If you have any queries regarding the delivery of your order, please check our Delivery FAQs <a href="<venda_dispview page=faqs>">www.heals.co.uk/page/faqs</a>. Alternatively you can contact our customer service team by email delivery <a href="mailto:delivery@heals.co.uk">delivery@heals.co.uk</a> or call 08700 240780</p>
+
+<venda_block label=111,mode=value,<venda_tpxt mode=get,name=notfurniture>=yes,<venda_tpxt mode=get,name=furniture>=,operator=and>
+<venda_page page=conditionnonfurniture>
+</venda_block label=111>
+<venda_block label=111,mode=value,<venda_tpxt mode=get,name=furniture>=yes,<venda_tpxt mode=get,name=notfurniture>=,operator=and>
+<venda_page page=conditionfurniture>
+</venda_block label=111>
+<venda_block label=111,mode=value,<venda_tpxt mode=get,name=notfurniture>=yes,<venda_tpxt mode=get,name=furniture>=yes,operator=and>
+<venda_page page=conditionmixed>
+</venda_block label=111>
+
+<p><strong>Order Tracking:</strong></p>
+
+<p>To track the real time status of your order, please <a href="http://dm.metapack.com/metatrack/track?retailerId=433&orderRef=<venda_ohordnum>" target="_blank">click here</a></p>
+<p>In addition, you will receive an email direct from the carrier company with a parcel tracking number as well as specific delivery times.</p>
+
+<p><strong>Payment:</strong></p> 
+
+<p>All payments are pre-authorised with your bank to ensure that sufficient funds are available to place the order.</p>  
+<p>Payment of non furniture items takes place when the items are processed.</p>  
+<p>Payment of all furniture items takes place when the items are processed, generally this will be within 72 hours of placing your order.</p>  
+<p>If we have any queries or require clarification about access details for large pieces of furniture, we will contact you directly. </p>
+
+<p><strong>Changed your mind?</strong></p> 
+
+<p>Returns and Refunds - returns and refunds are offered on any unsuitable items purchased unseen from our website and returned to us in the original packaging and in perfect condition.</p> 
+
+<p>In order to arrange a refund, return or exchange, you will require a returns authorisation code. You can obtain this by simply emailing: <a href="mailto:returns@heals.co.uk">returns@heals.co.uk</a> or call 08700 240780. You will receive a reply with a returns authorisation code (RMA) that you will need to quote on all subsequent correspondence and instructions on how to proceed with the product return. We recommend using a registered service when returning items to us.</p>
+
+<p>For non furniture items, the goods need to be returned to us within 28 days of receipt of the order. 
+For items of furniture, the goods need to be returned to us within 7 days of receipt of the order. 
+Refunds on unsuitable goods will exclude all delivery costs. 
+</p>
+
+<p>Please note that we are unable to accept returns and issue refunds on any 'Special Order' items unless they are proved to be faulty.</p>
+
+<p>Cancellations - to cancel an order prior to process, please contact our customer service team by email <a href="mailto:cancellations@heals.co.uk">cancellations@heals.co.uk</a> or call 08700 240780</p>
+
+<p><strong>Product Faults and Damage:</strong></p> 
+
+<p>After you have received your order, please carefully inspect the goods. If you have problems or queries relating to your order please contact our customer service team by email <a href="mailto:enquiries@heals.co.uk">enquiries@heals.co.uk</a> or call 08700 240780</p>
+
+<p>To view our Terms and Condition of business, please visit  
+<a href="<venda_dispview page=terms>">www.heals.co.uk/page/terms</a></p>
+
+<p>Once again thank you for choosing to shop with Heals.co.uk</p>
+
+<venda_inctemplate name=htmlEmailFooter,type=includes/email>
+</div>
+</body>
+</html>

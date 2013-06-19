@@ -1,0 +1,65 @@
+<venda_inctemplate name=textEmailDetblocks2,type=includes/email>
+
+==============================================================================<cr>
+<venda_ebizname> -Order Cancellation (<venda_ohordnum>)<cr>
+
+==============================================================================<cr><cr>
+
+<venda_inctemplate name=textEmailHeader,type=includes/email>
+
+We are writing to confirm that part or all of your order #<venda_ohordnum> has been cancelled.<cr><cr>
+
+CONTACT/BILLING DETAILS:<cr><cr>
+Cardholder:<venda_ohtitle> <venda_ohfname> <venda_ohlname>
+Address:<cr><cr>
+<venda_block label=73,ohcompany=notnull><venda_ohcompany><cr></venda_block label=73>
+<venda_ohnum> <venda_ohaddr1><cr>
+<venda_block label=74,ohaddr2=notnull><venda_ohaddr2><cr></venda_block label=74>
+<venda_ohcity><br>
+<venda_block label=75,ohstate=notnull><venda_ohstate><cr></venda_block label=75>
+<venda_ohcntry><cr>
+<venda_ohzipc>
+
+
+<venda_detail1>
+SUB TOTAL: <venda_ohsub> <venda_ohcur><cr>
+<venda_block label=670,ohgwtot&gt;0>
+GIFT WRAPPING: <venda_ohgwtot> <venda_ohcur><cr>
+</venda_block label=670>
+<venda_block label=64,ohdisc!=0.00,ohdisc=notnull>
+DISCOUNT: -<venda_ohdisc> <venda_ohcur><cr>
+</venda_block label=64>
+<venda_block label=65,ohtax!=0.00,ohtax=notnull>
+ESTIMATED TAX: <venda_ohtax> <venda_ohcur><cr>
+</venda_block label=65>
+DELIVERY: <venda_ohship> <venda_ohcur><cr>
+------------------------------------------------------------------------------<cr>
+ORDER TOTAL: <venda_ohtot> <venda_ohcur><cr>
+(including <venda_ohtaxinc> VAT <venda_ohcur>)<cr>
+
+<venda_block label=70,storecreditused&gt;0.00,storecreditused=notnull>
+
+<venda_block label=79,creditaccount&gt;0.00>
+ACCOUNT CREDIT USED: <venda_creditaccount> <venda_ohcur><cr>
+</venda_block label=79>
+
+<venda_block label=65,storecredit&gt;0.00,storecredit=notnull>
+CREDIT REMAINING: <venda_storecredit> <venda_ohcur><cr>
+</venda_block label=65>
+BALANCE PAID: <venda_balance> <venda_ohcur><cr>
+</venda_block label=70>
+<cr>
+-------------------------------------------------------------------------------------------------------------------------------------------------------------<cr><cr>
+
+To view your order history, go to 'My Account'.<cr>
+<venda_codehttps>?ex=co_wizr-register&bsref=<venda_bsref><cr><cr>
+
+
+<cr><cr>
+If you have any queries about this do not hesitate to contact us at customerservices@heals.co.uk<cr><cr>
+Regards,<cr>
+<venda_ebizname> Customer Servicescr><cr>
+<venda_ebizurl>cr><cr>
+Contact Us - <a href="mailto:cancellations@heals.co.uk">cancellations@heals.co.uk or 08700 240 780cr><cr>
+Registered Office: Heal & Son Limited, 196 Tottenham Court Road, London W1T 7LQ<cr><cr>
+VAT Number: GB 524 3006 89<cr><cr>

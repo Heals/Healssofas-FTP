@@ -1,0 +1,21 @@
+<fieldset>
+	<legend class="orzcdaddr-adddetail"><venda_text id=site.contact_address.legend.address_details></legend>
+	<venda_block label=565,curstep=zipcoderesults,param1=notnull>
+		 <input type="hidden" name="copybillto" value="1"> <!--if you're filling out your delivery address and you've clicked lookup write it to the same delivery address-->
+	     </venda_block label=565>
+		<venda_block label=566,curstep=zipcodedelivery,param1=notnull>
+		<input type="hidden" name="deliveryAddress" value="1">
+		</venda_block label=566>
+	<venda_block label=11,param2!=uk,errors=notnull,operator=or>	
+		<venda_block label=124,mode=value,<venda_setting type=ebiz,name=showcompany>=1><div><label for="company"><venda_text id=site.contact_address.label.company></label> <venda_company field=text,size=25,maxlength=100></div></venda_block label=124>
+		<venda_block label=88,mode=value,<venda_setting type=ebiz,name=nohousenum>!=1><div class="hide"><label for="num"><venda_text id=site.contact_address.label.house_name_flat_number> <span class="required">*</span></label> <venda_num field=text,size=25,maxlength=20></div></venda_block label=88>
+		<div><label for="addr1"><venda_text id=site.contact_address.label.address1> <span class="required">*</span></label> <venda_addr1 field=text,size=25,maxlength=50,required=yes></div>
+		<div><label for="addr2"><venda_text id=site.contact_address.label.address2></label> <venda_addr2 field=text,size=25,maxlength=50></div>
+		<div><label for="city"><venda_text id=site.contact_address.label.city> <span class="required">*</span></label> <venda_city field=text,size=25,maxlength=30></div>
+		<div id="stateDiv"><label for="state" id="stateLabel"><venda_text id=site.contact_address.label.county></label> <venda_state field=text,size=25,maxlength=20></div>
+		<div id="zipcDiv"><label for="zipc" id="zipcLabel"><venda_text id=site.delivery_address.label.postcode> <span class="required">*</span></label><venda_zipc field=text,size=25,maxlength=20><venda_block label=2526,workflow!=shopcart><span class="pclookup"><a href="#" onclick='lookUp("delivery"); return false;'><span></span><venda_text id=site.singlesteppc_lookup.contact_address.address_details.lookuppostcode></a><venda_text id=site.singlesteppc_lookup.contact_address.address_details.lookuppostcode2></span></venda_block label=2526></div>
+		<div id="countryDiv"><label for="cntry" id="countryLabel"><venda_text id=site.contact_address.label.country> <span class="required">*</span></label> <venda_cntry field=combo,required=yes,ship=1></div>
+	</venda_block label=11>
+
+	
+</fieldset>

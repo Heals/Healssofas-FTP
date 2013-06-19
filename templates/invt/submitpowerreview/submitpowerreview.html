@@ -1,0 +1,19 @@
+<div id="powerreview_cover">
+<script type="text/javascript">
+<venda_inctemplate type=includes,name=powerreviewscripts>
+var pr_page_id = '<venda_invtref>';
+</script>
+<script type="text/javascript" src="<venda_serveradd>/partners/pwr/engine/js/appLaunch.js"></script>
+</div>
+<style type="text/css">
+	#submitReviewIframe body{margin: 0 auto;}
+	#col-one {display: none;}
+	#col-two-no-three {width: 940px;}
+	#powerreview_cover {width:606px; margin: 0 auto;}
+</style>
+
+<venda_tpxt mode=set,name=track,value=submitpowerreview>
+<venda_tpxt mode=set,name=invtref,value=<venda_invtref>>
+<venda_tpxt mode=set,name=invtname,value=<venda_invtname>>
+<venda_tpxt mode=set,name=pdxtbrowseby,value=<venda_pdxtbrowse>>
+<div class="hide"><venda_category rec=icat,ref=<venda_invtcatref0>,temp=categoryname></div>

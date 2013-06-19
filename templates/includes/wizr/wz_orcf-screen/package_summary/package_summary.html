@@ -1,0 +1,190 @@
+<script type="text/javascript" id="postcodelist"></script>
+<venda_inctemplate name=orderDetblocks,type=includes>
+<script>
+var s = "<venda_order shopcart=1,template=productType>";
+if (s.indexOf("Fragile") != -1){
+var invtwunits = "Fragile"}
+else {var invtwunits = "NotFragile"}
+</script>
+
+<venda_detblock3>
+	<script type="text/javascript">
+		allShipMethod++;
+		oShipArray[nAddr][allShipMethod] = new ShipMethodRec('<venda_pkrfnbr>', '<venda_shipmethod>', '<venda_shipcheck>', '<venda_shipname>');
+	</script>
+</venda_detblock3>
+
+<!-- start package summary -->
+<venda_detail1>
+<!-- end package summary -->
+
+<!-- orxfields grp3&4 -->
+<venda_extflds exfldtype=order,ref=<venda_ohrfnbr>,group=3,template=orxfields_set,type=includes>
+<venda_extflds exfldtype=order,ref=<venda_ohrfnbr>,group=4,template=orxfields_set,type=includes>
+
+<!--Delivery comment textarea-->
+<venda_block label=555,mode=value,<venda_setting type=ebiz,name=showdeliverycomment>=1>
+<div id="orcfcomment"><label for="comment"><venda_text id=site.order_confirmation.label.delivery_comment></label>
+<textarea name="comment" id="comment" rows="5" cols="30"></textarea></div>
+</venda_block label=555>
+<script type="text/javascript">
+var sMet = new Array();
+var sId = new Array();
+var showPostCode = function() {
+	<venda_tpcomment>//		Checking to show the delivery options </venda_tpcomment>
+	for (m = 0; m <= nAddr; m++) {
+		isFirstItem = true;
+		nShippingRate = '0';
+		sFurnitureDelivery = '';
+		detblock3_HTML = '';
+		thisShippingName[m] = '';
+		
+		<venda_tpcomment>//   Mapping user's postcode stem with the postcode list	</venda_tpcomment>
+		if (hasFuritem[m] == 'yes') {
+			if (userPostCodeStem[m].isPostValid) {
+				validIndex[m] = searchLinear(userPostCodeStem[m].postCode, oPostArray);
+				if (validIndex[m] != -1) {
+					validGTrate[m] = oPostArray[validIndex[m]].GTrate;
+					validLTrate[m] = oPostArray[validIndex[m]].LTrate;
+				}
+			}
+		}
+		
+		<venda_tpcomment>//   getElementByName in case of there are 2 elements use the same id	</venda_tpcomment>
+		objHTML = document.getElementsByName('ordersum_table2');
+	
+		<venda_tpcomment>
+		//		canOrderBoth - keep 2 returned value.
+		//		canOrderGTDeliverFurItem - true means order >= 1000  can be delivered, false means order >= 100 CANNOT be delivered
+		//		canOrderLTDeliverFurItem - true means order < 1000  can be delivered, false means order < 100 CANNOT be delivered	
+		</venda_tpcomment>
+		
+		showDeliveryType[m] = checkItemInCart(hasFuritem[m], hasNormitem[m]);
+		sOrderType[m] = checkFurOrder(hasFuritem[m], hasNormitem[m]);
+	
+		if ( (sOrderType[m] == 'furonly') || (sOrderType[m] == 'mixorder') ) {
+			isFurnitureOrder = true;
+		}
+		if (showDeliveryType[m] == 'furniture') {
+	
+			canOrderBoth = checkCanOrder(validIndex[m], validGTrate[m], validLTrate[m]);		
+			canOrderGTDeliverFurItem = canOrderBoth.canGT;
+			canOrderLTDeliverFurItem = canOrderBoth.canLT;
+	
+			if ( (ohPackageSub[m] >= 1000) && (canOrderGTDeliverFurItem) ) {
+				nShippingRate = validGTrate[m];
+			}
+			else if ( (ohPackageSub[m] >= 1000) && !(canOrderGTDeliverFurItem) ) {
+				showDeliveryType[m] = 'normal';
+			}
+			else if ( (ohPackageSub[m] < 1000) && (canOrderLTDeliverFurItem) ) {
+				nShippingRate = validLTrate[m];
+			}
+			else if ( (ohPackageSub[m] < 1000) && !(canOrderLTDeliverFurItem) ) {
+				showDeliveryType[m] = 'normal';
+			}
+		}
+		
+		if (showDeliveryType[m] == 'furniture') {
+			sFurnitureDelivery = getFurnitureDeliveryRate(nShippingRate);
+		}
+	
+		<venda_tpcomment>
+		//		if allShipMethod = -1 means -  the product is a gift certificate. It's no need to ship anything.
+		</venda_tpcomment>
+		if (allShipMethod != -1) {
+			for (n = 0; n <= allShipMethod; n++) {
+				sShipID = oShipArray[m][n].shipid;
+				sShipMethod = oShipArray[m][n].shipmethod;
+				sShipName = oShipArray[m][n].shipname;
+		
+				if (oShipArray[m][n].shipcheck == 1) { sShipCheck = 'checked'; }
+				else { sShipCheck = ''; }
+				
+				thisShippingName[m] = 'shipmethod_' + sShipID;
+				
+				if (showDeliveryType[m] == 'furniture') {
+					if (sShipMethod == sFurnitureDelivery) {
+						sTDClass = getTDClass(isFirstItem);
+						isFirstItem = false;
+		
+						showShippingMethod(objHTML[m], sShipID, sShipMethod, sShipName, sShipCheck, sTDClass, '<venda_codehttp>');
+                        sMet[m]=sShipMethod;
+                        sId[m]=sShipID;
+
+					}
+				}
+				else {
+					if ( (sShipMethod != 'freedelivery') && +
+						(sShipMethod != 'healsdeliveryservicegbp50')) {
+						
+						sTDClass = getTDClass(isFirstItem);
+						isFirstItem = false;
+						showShippingMethod(objHTML[m], sShipID, sShipMethod, sShipName, sShipCheck, sTDClass, '<venda_codehttp>');
+					}
+				}
+			}
+		
+			<venda_tpcomment>//   getElementByName in case of there are 2 elements use the same id 	</venda_tpcomment>
+			objShipping = document.getElementsByName(thisShippingName[m]);
+			
+			if (objShipping) {
+				hasDefaultShipping[m] = false;
+				resubmitShipID = '';
+				for (x = 0; x < objShipping.length; x++) {
+					if (objShipping[x].checked) {
+						hasDefaultShipping[m] = true;
+					}
+				}
+			}
+			
+			<venda_tpcomment>//   hide delivery option box if the order can't be delivered.</venda_tpcomment>
+			if (isFurnitureOrder == true){
+				if ( (showDeliveryType[m] == 'normal') && ( (sOrderType[m] == 'furonly') || (sOrderType[m] == 'mixorder') ) ) {
+					<venda_tpcomment>//   getElementByName in case of there are 2 elements use the same id	</venda_tpcomment>
+					objStep2 = document.getElementsByName('step2box');
+					objStep2[m].style.display = 'none';
+				}
+			}
+			
+			if (hasDefaultShipping[m] == false) {
+				<venda_tpcomment>
+				// remark this section to stop auto redirecting until we have a better solution to cope the Multiple Hits checking from the application .
+				// once we have got a solution, just remove out the remark.
+				
+				// 	resubmitShipID = thisShippingName[m].substring(thisShippingName[m].length-1,thisShippingName[m].length);
+				//	objShipping[0].checked = true;
+				
+				//	hasOnloadEvent = true;
+				//	addEvent(window, 'load', function() { Step2(document.wizform,"confirm","", resubmitShipID,"changerate","","","_self","") }, false);
+				//	break;
+				</venda_tpcomment>
+			}
+		}
+	}
+};
+
+var showWarning = function() {
+	//		Alert warning message on page load.
+	if (hasOnloadEvent == false) {
+		if (isFurnitureOrder == true){
+			for (a = 0; a <= nAddr; a++) {
+				if ( (showDeliveryType[a] == 'normal') && (sOrderType[a] == 'furonly') ) {
+					alert('Unfortunately our delivery team are not currently able to deliver items of furniture to this postcode area. \nPlease contact us on 08700 240 780 option 2 to discuss alternative delivery options.');
+				}
+				else if ( (showDeliveryType[a] == 'normal') && (sOrderType[a] == 'mixorder') ) {
+					alert('Unfortunately our delivery team are not currently able to deliver items of furniture to this postcode area. \nPlease contact us on 08700 240 780 option 2 to discuss alternative delivery options. \n\nTo continue with your order of non furniture items only, please remove any furniture items and update.');
+				}
+			}
+		}
+	}
+};
+
+var callAllOnload = function() {
+	showPostCode();
+	showWarning();
+
+};
+
+addEvent(window, 'load', function() { callAllOnload() }, false);
+</script>

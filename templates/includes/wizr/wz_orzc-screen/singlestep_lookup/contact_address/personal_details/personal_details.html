@@ -1,0 +1,16 @@
+<fieldset>
+<legend class="orzccaddr-personal"><venda_text id=site.contact_address.personal_details></legend>
+<div><label for="title"><venda_text id=site.contact_address.label.title><span class="re-waiHide"> (required)</span> <span class="required">*</span></label>
+<select name="title" id="title">
+	<option value="Mr" <venda_block label=121,title=Mr>selected</venda_block label=121>>Mr</option>
+	<option value="Mrs" <venda_block label=111,title=Mrs>selected</venda_block label=111>>Mrs</option>
+	<option value="Miss" <venda_block label=101,title=Miss>selected</venda_block label=101>>Miss</option>
+	<option value="Ms" <venda_block label=121,title=Ms>selected</venda_block label=121>>Ms</option>
+	<option value="" <venda_block label=131,title=Other>selected</venda_block label=131>>Other</option>
+</select>
+</div>
+<div><label for="fname"><venda_text id=site.contact_address.label.first_name><span class="re-waiHide"> (required)</span> <span class="required">*</span></label> <venda_fname field=text,size=25,maxlength=30></div>
+<venda_block label=123,mode=value,<venda_setting type=ebiz,name=showmname>=1>
+<div><label for="mname"><venda_text id=site.contact_address.label.middle_name></label> <venda_mname field=text,size=25,maxlength=30></div>
+</venda_block label=123>
+<div><label for="lname"><venda_text id=site.contact_address.label.last_name><span class="re-waiHide"> (required)</span> <span class="required">*</span></label> <venda_lname field=text,size=25,maxlength=30></div>

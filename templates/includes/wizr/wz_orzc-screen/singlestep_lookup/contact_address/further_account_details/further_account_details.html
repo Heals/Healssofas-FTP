@@ -1,0 +1,25 @@
+
+	<legend class="orzccaddr-faccdetail"><venda_text id=site.contact_address.legend.further_account_details></legend>
+	<venda_block label=50,instore!=1>
+	<div><label for="usemail"><venda_text id=site.contact_address.label.email_address><span class="re-waiHide"> (required)</span> <span class="required">*</span></label> <venda_usemail field=text,size=25,required=yes></div>
+	<venda_block label=32,curstep=zipcode>
+	<script type="text/javascript">
+	<!-- 
+	urlArray = location.href.split('&');
+	for (loop=0; loop<urlArray.length; loop++) {
+		test=urlArray[loop];
+		testArray=test.split('=');
+		test=testArray[1];
+		if (checkemail(test)) {
+			document.wizform.usemail.value=test;
+		}
+	}
+	// -->
+	</script>
+	</venda_block label=32>	
+		<div><div><label for="phone" class="dontFloat"><venda_text id=site.contact_address.label.phone_number><span class="re-waiHide"> (required)</span> <span class="required">*</span></label> <venda_block label=101,mode=value,<venda_setting type=ebiz,name=hidearea>!=1><label for="area" class="dontFloat hide"><venda_text id=site.contact_address.label.phone_area_code></label></venda_block label=101></div> <venda_block label=100,mode=value,<venda_setting type=ebiz,name=hidearea>!=1><venda_area field=text,size=4,maxlength=6,required=yes> </venda_block label=100><venda_phone field=text,size=14,maxlength=20,required=yes></div>
+	<venda_block label=123,mode=value,<venda_setting type=ebiz,name=showfax>=1>
+	<div><div><label for="fax" class="dontFloat"><venda_text id=site.contact_address.label.fax_number></label> <venda_block label=101,mode=value,<venda_setting type=ebiz,name=hidearea>!=1><label for="farea" class="dontFloat hide"><venda_text id=site.contact_address.label.fax_area_code></label></venda_block label=101></div> <venda_block label=100,mode=value,<venda_setting type=ebiz,name=hidearea>!=1><venda_farea field=text,size=4,maxlength=6></venda_block label=100><venda_fax field=text,size=18,maxlength=20></div>
+	</venda_block label=123>
+	
+</fieldset>

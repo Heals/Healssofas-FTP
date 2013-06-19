@@ -1,0 +1,95 @@
+<script type="text/javascript">
+function showAvailH2(ref){
+	var h2="h2"+ref;
+	if (document.getElementById(h2)) {
+		aHeader=document.getElementById(h2);
+		aHeader.style.display='block';
+	} 
+}
+function vendaRecsDisplay(elementref){
+var recallCookie = function () {
+	var cj = new CookieJar({expires:'',path: '/'});
+	//alert('rvi cookie contents:'+(cj.get("RVI")));
+	cj.remove("RVI");
+	var listOfRVIs=cj.get("customRVI");
+	cj.put("RVI",listOfRVIs);
+	cj.remove("customRVI");
+	//equalHeight(jQuery('div.relatesection ul li p.sliderinvtname'));
+};
+
+var panelref= ("avail-panel-"+elementref);
+	ajaxFunction('/page/irecsdisplay',panelref,null,recallCookie);//display recs
+	//return the borrowed recently viewed items cookie
+}
+
+function populateProductRecs(elref) {
+	if (document.getElementById('tag-invtref')) {
+	var emarkid = document.getElementById('avail-emarkid').innerHTML;
+	var emark = new Emark(emarkid);
+	var prodid = document.getElementById('tag-invtref').innerHTML;
+	var cj = new CookieJar({expires:'',path: '/'});
+	var elementref = elref;
+	var trackingcodeHTXT = '<venda_htxt mode=get,name=avail>';
+	if(cj.get("AvailTracker")){
+	var trackCode = cj.get("AvailTracker").split(',');//COUcd LD GET THIS VALUE VIA URL PARAM
+	}
+	var addToBasket ="<venda_block label=3212,mode=value,<venda_addedmsg msg=<venda_text id=site.addedmsg>>!=>1</venda_block label=3212>";
+	
+	if (addToBasket!= "1") {
+	//For Tracking 'logClickedOn' fuction, check if a tracking-code has been passed to this page from the previous page (e.g. in a htxt), if it has, then we need to track logClickedOn.
+		if (trackingcodeHTXT == 'true'){
+			emark.logClickedOn(prodid, trackCode[0]);
+			//alert('now calling logClickedOn for a recommended product where the tracking code is: '+trackCode[0]+' and the product id is: '+prodid);
+		}
+	//For Tracking 'logAddedToCart function
+	}
+	if (addToBasket== "1") {
+		if (trackingcodeHTXT == 'true'){
+			emark.logAddedToCart(prodid, trackCode[1]);
+			//alert('now calling logAddedToCart for a recommended product where the tracking code is: '+trackCode[1]+' and the product id is: '+prodid);
+		}
+		if (trackingcodeHTXT == ''){
+			emark.logAddedToCart(prodid);
+			//alert('now calling logAddedToCart for a Non-recommended product where the product id is: '+prodid+' Note we do not pass a trackingcode in this case');
+		}	
+	}
+
+        var dynamicParameters = "append rule in subtemplate 1 with and";
+        if (avaccessories.length == 0) { dynamicParameters = dynamicParameters + " ActionId='no_manual_recommendations'"; }
+        else {
+        for (var i = 0; i<avaccessories.length; i++) {
+                dynamicParameters = (i == 0) ? dynamicParameters + " ActionId='"+avaccessories[i]+"'" : dynamicParameters + " or ActionId='"+avaccessories[i]+"'";
+        }}
+        var prodRecs = emark.getProductsPredictionsFromClicks(prodid, 'ProductDetailRecs');
+        var manualRecs = emark.getRecommendations('ProductDetailManual', ['ProductId:'+prodid], dynamicParameters);
+        emark.commit(function() {
+                var manualRecsP = manualRecs.values;
+                var prodRecsP = prodRecs.values;
+                var prodsSelected = [];
+                var foundSKU = "false";
+                for (var i=0; i<prodRecsP.length; i++) {
+                        for (var j=0; j<manualRecsP.length; j++) {
+                             if (manualRecsP[j][0]==prodRecsP[i][0]){ foundSKU = "true"; break; }
+                        }
+                        if(foundSKU == "false") { prodsSelected.push(prodRecsP[i]); }
+                        foundSKU = "false";
+                }
+                cj.put("RVI",manualRecsP.concat(prodsSelected));
+                cj.put("AvailTracker",prodRecs.trackingcode+','+trackCode);
+                vendaRecsDisplay(elref);
+                if (prodRecs!="") {
+                        showAvailH2(elref);
+                }
+        });
+        }
+
+}
+</script>
+<script type="text/javascript">         
+        addEvent(window, 'load', function() { populateProductRecs("availpd");}, false);
+</script>
+<style type="text/css">#avail-panel-availpd form li { margin: 0 14px 10px 0 !important; }</style>
+<div id="avail-panel-availpd" class="prods" style="width:955px;overflow:hidden;float: left;">
+<!-- ajax content will go here -->
+</div>
+<!-- Avail function calls -->

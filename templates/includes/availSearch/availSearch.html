@@ -1,0 +1,96 @@
+<venda_block label=4211,mode=value,<venda_tpxt mode=get,name=avnkeyword>!=1>
+<script type="text/javascript">
+function showAvailH2(ref){
+	var h2="h2"+ref;
+	if (document.getElementById(h2)) {
+		aHeader=document.getElementById(h2);
+		aHeader.style.display='block';
+	} 
+}
+function vendaRecsDisplay(elementref){
+var recallCookie = function () {
+	var cj = new CookieJar({expires:'',path: '/'});
+	//alert('rvi cookie contents:'+(cj.get("RVI")));
+	cj.remove("RVI");
+	var listOfRVIs=cj.get("customRVI");
+	cj.put("RVI",listOfRVIs);
+	cj.remove("customRVI");
+	//equalHeight(jQuery('div#availsearchrecs ul li p.sliderinvtname'));
+};
+
+var panelref= ("avail-panel-"+elementref);
+	ajaxFunction('/page/irecsdisplaySearch',panelref,null,recallCookie);//display recs
+	//return the borrowed recently viewed items cookie
+}
+function populateSearchRecs(elref)
+{
+aTotalResults="<venda_totalresults>"
+	if ((document.getElementById('tag-searchkeyword'))&& (aTotalResults >= 27))//only do anything if the product data is available on the page
+	{
+		
+		var cj = new CookieJar({expires:'',path: '/'});
+		var searchTerm = document.getElementById('tag-searchkeyword').innerHTML;
+		var emarkid = document.getElementById('avail-emarkid').innerHTML;
+		var addToBasket ="<venda_block label=3212,mode=value,<venda_addedmsg msg=<venda_text id=site.addedmsg>>!=>1</venda_block label=3212>";
+		var searchaddHTXT = '<venda_htxt mode=get,name=searchadd>';
+		var emark = new Emark(emarkid);
+		//alert(elref);
+		var prodRecs = emark.getSearchPredictions(searchTerm, 'SearchResultRecs');
+				
+		
+		if(searchaddHTXT != ""){
+			if (addToBasket== "1") {
+					var saveSearch = emark.saveSearch(searchTerm,searchaddHTXT);
+					emark.logAddedToCart(searchaddHTXT);
+				//alert('now calling logAddedToCart for a Non-recommended product where the product id is: '+searchaddHTXT+' Note we do not pass a trackingcode in this case');
+
+			}
+		}
+		
+		emark.commit(function() {
+
+                availDoubleCheck = availDoubleCheck.substring(0, availDoubleCheck.length-1);//Get from accesory template
+                var accessorySKUArray = availDoubleCheck.split(",");
+                var prodRecsList=prodRecs.values;
+                var prodsSelected = "";
+                for (var i=0; i<prodRecsList.length; i++) {
+                        DuplicatedSKU = "";
+                        for (var j=0; j<accessorySKUArray.length; j++){
+                             if (accessorySKUArray[j]==prodRecsList[i]){
+                                      DuplicatedSKU =accessorySKUArray[j];
+                                 break;
+                                }}
+                       if (DuplicatedSKU==""){
+                         prodsSelected = prodsSelected == "" ? prodRecsList[i] : prodsSelected + "," + prodRecsList[i];
+                }}  
+                
+                p=(prodsSelected.toString());
+                plenght=(p.split(','));
+                //alert('product recomendations:'+prodRecs+"lenght="+plenght.length);
+                 if(aTotalResults>18) {
+                  if((plenght.length)>2){
+                   cj.put("AvailTracker",prodRecs.trackingcode);
+                   cj.put("RVI",prodsSelected);
+                   vendaRecsDisplay(elref);
+                   if (prodRecs!="") {showAvailH2(elref);}
+                  }
+                 }
+                });	
+	}
+}
+</script>
+<div id="availsearchrecs" style="width:770px;height:100%;overflow:hidden;">
+<div id="avail-emarkid" style="display:none;">8f6b6820-5425-11de-92c7-12313b0039c1</div>
+<div class="exh2 searchpsel" style="display:none" id="h2availsrch">
+<span>&nbsp;We Recommend</span>
+</div>
+<style type="text/css">#avail-panel-availsrch form li { margin: 0 30px 10px 0; }</style>
+<div id="avail-panel-availsrch" style="width:770px;height:100%;" class="prods">
+<!-- ajax content will go here -->
+</div>
+</div>
+<!-- Avail function calls -->
+<script type="text/javascript">		
+	addEvent(window, 'load', function() { populateSearchRecs("availsrch"); }, false);
+</script>
+</venda_block label=4211>

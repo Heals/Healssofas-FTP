@@ -1,0 +1,194 @@
+<venda_block label=45,invtpublish=1>
+<venda_block label=119,invtref!=giftcert>
+<!-- product -->
+<li>
+<div class="new">
+	<!-- product image -->
+	<div class="skunu hide"><venda_invtref></div>
+	<div class="pricenu hide">
+	<venda_block label=90010,chkatt=null><venda_currsym><venda_invtsell></venda_block label=90010>
+	<venda_block label=90011,chkatt=notnull><venda_invtsymsell></venda_block label=90011>
+	</div>
+	<div class="image">
+<venda_block label=900102,invtivtype=range,invtivtype=furniturerange,invtivtype=gardenfurniturerange,operator=or>
+	<div class="onlineonly2">
+<a href="<venda_dispview invt=<venda_invtref>>?htxt=<venda_htxt mode=make,avail=true>">
+<img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/product-detail/more-options.gif">
+</a>
+	</div>
+					</venda_block label=900102>
+	<div class="onlineonly">
+		<venda_block label=801,pdxtstoreavail=1>
+<a href="<venda_dispview invt=<venda_invtref>>?htxt=<venda_htxt mode=make,avail=true>">
+<img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/product-detail/online_only_2.gif">
+</a>
+</venda_block label=801>
+	</div>
+<div class="discount50">
+<div class="discountWasPrice" style="display:none;"><venda_invtwas></div>
+<div class="discountSellPrice" style="display:none;"><venda_invtsell></div>
+<div class="discountLive" style="display:none;"><venda_serveradd>/</div>
+<div class="discountSkuInvt" style="display:none;">invt/<venda_invtref></div>
+</div>
+	<venda_block label=4,med-medium=notnull>
+	<a href="<venda_dispview invt=<venda_invtref>>?htxt=<venda_htxt mode=make,avail=true>"><img width="220px" height="220px" border="0" style="padding: 2px 2px;"  alt="<venda_invtname>" name="small" src="<venda_media rec=invt,type=movie-swf-pict,key=medium,jump=no,img=no>"></a>
+	</venda_block label=4>
+	<venda_block label=5,med-medium=null>
+	<a href="<venda_dispview invt=<venda_invtref>>?htxt=<venda_htxt mode=make,avail=true>"><img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/no_image_s.gif" alt="<venda_text id=site.link.alt.no_image.invt>"></a>
+	</venda_block label=5>
+	</div>
+	<!-- product image -->
+
+	<div class="title"><h2><a href="<venda_dispview invt=<venda_invtref>>?htxt=<venda_htxt mode=make,avail=true>"><venda_invtname></a></h2></div>
+
+
+	<div class="details">
+	
+	<!-- venda_block label=50,chkatt=null,invtpreorder=1><p class="release"><venda_text id=site.release_date_invt></p></venda_block label=50 -->
+	<input type="hidden" name="bklist" value="<venda_cattree bklist=mycatref,type=icat>">
+	
+	
+
+	<!-- if in stock and product doesn't have attributes -->
+	<input type="hidden" name="ex" value="co_wizr-shopcart">
+	<input type="hidden" name="bsref" value="<venda_bsref>">
+	<input type="hidden" name="log" value="22">
+	<input type="hidden" name="ivref" value="<venda_invtref>">
+	<input type="hidden" name="buy" value="<venda_invtref>">
+	<input type="hidden" name="mode" value="add">
+	<input type="hidden" name="htxt" value="<venda_htxt mode=make,avail=true,recadded=<venda_invtref>>">
+<!-- For Non Purchasable -->
+<venda_block label=90100,invtivtype!=nonpurchasable,invtivtype!=nonpurchasablerange>
+		<venda_block label=9001,invtavail&gt;0>
+			<!-- Product has not attribute -->
+			<venda_block label=90010,chkatt=null>
+					<div class="pricedetail">
+					<!-- if product doesn't have attributes -->
+							<venda_block label=111,invtsavingonwas=null>
+								<p class="normalprice"><venda_currsym><venda_invtsell></p>
+							</venda_block label=111>
+						
+							<venda_block label=11,invtsavingonwas=notnull,invtwas!=0.00>
+								<p class="was"><venda_text id=site.was> <span><venda_currsym><venda_invtwas></span></p>
+								<p class="nowprice red">NOW <span><venda_currsym><venda_invtsell></span></p>
+							<!-- p class="save"><span><venda_text id=site.save></span><venda_currsym><venda_invtsavingonwas></p -->
+							</venda_block label=11>
+					</div>
+					<venda_block label=900101,invtivtype=normal,invtivtype=furniture,invtivtype=gardenfurniture,invtivtype=package,operator=or>
+						<venda_block label=9001011,etadyleft&gt;0,etadyleft&lt;1,operator=or>
+						</venda_block label=9001011>
+						
+					</venda_block label=900101>
+					<venda_block label=900102,invtivtype=range,invtivtype=furniturerange,invtivtype=gardenfurniturerange,operator=or>
+
+					</venda_block label=900102>
+			</venda_block label=90010>
+			<!-- Product has some attribute -->
+			<venda_block label=90011,chkatt=notnull>
+				<div class="priceattr">
+					<venda_block label=8001,invtatrminsubwas=0.00>
+						<p class="fromprice">
+						    <venda_block label=35,invtatrminsubsell&gt;0.00>
+							FROM <span><venda_currsym><venda_invtatrminsubsell></span>
+							</venda_block label=35>
+						</p>
+						    <venda_block label=36,invtatrminsubsell=0.00><p class="normalprice"><venda_invtsymsell></p></venda_block label=36>
+					</venda_block label=8001>
+					<venda_block label=8002,invtatrminsubwas!=0.00>
+					<p class="fromsaleprice">
+						Sale Prices From <span><venda_currsym><venda_invtatrminsubsell></span>
+					</p>
+					</venda_block label=8002>
+				</div>
+			</venda_block label=90011>
+		</venda_block label=9001>
+		<venda_block label=9002,invtavail&lt;1>
+				<venda_block label=90010,chkatt=null>
+				<div class="pricedetail">
+					<venda_block label=111,invtsavingonwas=null>
+								<p class="normalprice"><venda_currsym><venda_invtsell></p>
+							</venda_block label=111>
+							<venda_block label=11,invtsavingonwas=notnull,invtwas!=0.00>
+								<p class="was"><venda_text id=site.was> <span><venda_currsym><venda_invtwas></span></p>
+								<p class="nowprice red">NOW <span><venda_currsym><venda_invtsell></span></p>
+							<!-- p class="save"><span><venda_text id=site.save></span><venda_currsym><venda_invtsavingonwas></p -->
+							</venda_block label=11>	
+				</div>
+				</venda_block label=90010>
+				
+				<venda_block label=90011,chkatt=notnull>
+				<div class="priceattr">
+					<venda_block label=8001,invtatrminsubwas=0.00>
+						<p class="fromprice">
+						    <venda_block label=35,invtatrminsubsell&gt;0.00>
+							FROM <span><venda_currsym><venda_invtatrminsubsell></span>
+							</venda_block label=35>
+					 	</p>
+						<venda_block label=36,invtatrminsubsell=0.00><p class="normalprice"><venda_invtsymsell></p></venda_block label=36>
+					</venda_block label=8001>
+					<venda_block label=8002,invtatrminsubwas!=0.00>
+					<p class="fromsaleprice">
+						Sale Prices From <span><venda_currsym><venda_invtatrminsubsell></span>
+					</p>
+					</venda_block label=8002>
+				</div>
+				</venda_block label=90011>
+					
+					<venda_block label=900201,invtivtype=normal,invtivtype=furniture,invtivtype=gardenfurniture,invtivtype=package,operator=or>
+						<venda_block label=9002011,etadyleft&gt;0>
+						</venda_block label=9002011>
+						<venda_block label=9002012,etadyleft&lt;1>
+							</venda_block label=9002012>
+					</venda_block label=900201>
+					<venda_block label=900202,invtivtype=range,invtivtype=furniturerange,invtivtype=gardenfurniturerange,operator=or>
+						</venda_block label=900202>
+		</venda_block label=9002>
+</venda_block label=90100>
+<!-- For Purchasable -->
+<venda_block label=90101,invtivtype=nonpurchasable,invtivtype=nonpurchasablerange,operator=or>
+				<div class="pricedetail">
+					<!-- if product doesn't have attributes -->
+							<venda_block label=1110,invtsavingonwas=null>
+								<p class="normalprice"><venda_currsym><venda_invtsell></p>
+							</venda_block label=1110>
+							<venda_block label=110,invtsavingonwas=notnull,invtwas!=0.00>
+								<p class="was"><venda_text id=site.was> <span><venda_currsym><venda_invtwas></span></p>
+								<p class="nowprice red">NOW <span><venda_currsym><venda_invtsell></span></p>
+							<!-- p class="save"><span><venda_text id=site.save></span><venda_currsym><venda_invtsavingonwas></p -->
+							</venda_block label=110>
+					</div>
+	<p class="btnonpurchase"></p>		
+</venda_block label=90101>
+	
+	<venda_block label=104,invtsell2=notnull>
+	<p class="multibuy"><venda_text id=site.multibuy></p>
+	</venda_block label=104>
+	</div>
+	</div>
+</li>		
+</venda_block label=119>
+
+<venda_block label=229,invtref=giftcert>
+	<!-- giftcert -->
+	<li>
+	<div class="details">
+	<h2><a href="<venda_codehttp>?ex=co_wizr-giftcertificates&bsref=<venda_bsref>?htxt=<venda_htxt mode=make,avail=true>"><venda_invtname></a></h2>
+	
+	<p class="price">
+	    <venda_block label=35,invtatrminsubsell&gt;0.00><venda_text id=site.from><venda_currsym><venda_invtatrminsubsell></venda_block label=35>
+	    <venda_block label=36,invtatrminsubsell=0.00><venda_invtsymsell></venda_block label=36>
+	</p>
+	<div class="moreinfo"><a href="<venda_codehttp>?ex=co_wizr-giftcertificates&bsref=<venda_bsref>?htxt=<venda_htxt mode=make,avail=true>" title="<venda_text id=site.link.title.more.invt>"><venda_text id=site.link.more></a></div>
+	</div>
+	
+	<div class="image">
+	<venda_block label=412,med-small=notnull>
+	<a href="<venda_codehttp>?ex=co_wizr-giftcertificates&bsref=<venda_bsref>?htxt=<venda_htxt mode=make,avail=true>"><venda_media rec=invt,type=movie-swf-pict,key=medium,border=0,wisth=120,height=120></a>
+	</venda_block label=412>
+	<venda_block label=422,med-small=null>
+	<a href="<venda_codehttp>?ex=co_wizr-giftcertificates&bsref=<venda_bsref>?htxt=<venda_htxt mode=make,avail=true>"><img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/no_image_s.gif" alt="<venda_text id=site.link.alt.no_image.invt>"></a>
+	</venda_block label=422>	
+	</div>
+	</li>
+</venda_block label=229>
+</venda_block label=45>

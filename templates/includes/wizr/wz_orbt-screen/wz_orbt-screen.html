@@ -1,0 +1,96 @@
+<!-- YOU ARE ONLY PERMITTED TO CHANGE THE ORDER OF THE INCTEMPLATE TAGS WITHIN THIS TEMPLATE. YOU MAY NOT ADD OR CHANGE ANY OTHER CODE. -->
+
+<venda_zones type=countries,template=zoneJs>
+<venda_block label=100,workflow=shopcart,workflow=instore,operator=or>
+
+<venda_block label=152,mode=value,<venda_setting type=ebiz,name=singlesteppclookup>=1>
+<venda_block label=59,param1=login,param2!=singlestep>
+<!-- login and password -->
+<venda_inctemplate type=admn,name=co_comn-login>
+</venda_block label=59>
+<venda_block label=1423,workflow=shopcart,param2=singlestep>
+<!-- remain on wz_orzc-screen when system errors occur -->
+<venda_inctemplate type=includes/wizr,name=wz_orzc-screen>
+</venda_block label=1423>
+</venda_block label=152>
+
+<venda_block label=153,mode=value,<venda_setting type=ebiz,name=singlesteppclookup>!=1>
+<!-- login and password -->
+<venda_block label=51,param1=login>
+<venda_inctemplate type=admn,name=co_comn-login>
+</venda_block label=51>
+</venda_block label=153>
+
+<venda_block label=25,param2=edit>
+<venda_inctemplate type=includes/wizr/wz_orbt-screen,name=edit_billing_details>
+</venda_block label=25>
+
+</venda_block label=100>
+
+
+<venda_block label=200,param1=details>
+<div class="checkoutR">
+<venda_category rec=elementcat,ref=orbtcolumn>
+</div>
+<div class="checkoutL">
+
+<venda_block label=26,workflow=instore>
+<venda_inctemplate type=includes/wizr/wz_orbt-screen/search_user,name=search_form>
+</venda_block label=26>
+
+<venda_block label=300,operator=or,workflow!=instore,param2=search_results>
+<venda_block label=301,param2=search_results>
+<venda_inctemplate type=includes/wizr/wz_orbt-screen/search_user,name=search_results>
+</venda_block label=301>
+<div class="container addcontactaddress">
+<!-- register -->
+<venda_form>
+<input type="hidden" name="layout" value="">
+<input type="hidden" name="uslgemail" value="">
+<venda_block label=17,workflow!=instore>
+<venda_block label=18,mode=value,<venda_glxt mode=get,name=glxtusertype>!=p><input type="hidden" name="ustype" value="R"></venda_block label=18>
+<venda_block label=19,mode=value,<venda_glxt mode=get,name=glxtusertype>=p><input type="hidden" name="ustype" value="P"></venda_block label=19>
+</venda_block label=17>
+<venda_inctemplate type=includes/wizr/wz_orbt-screen/contact_address,name=heading_intro>
+<venda_inctemplate type=includes/wizr/wz_orbt-screen/contact_address,name=personal_details>
+<venda_inctemplate type=includes/wizr/wz_orbt-screen/contact_address,name=address_details>
+<venda_inctemplate type=includes/wizr/wz_orbt-screen/contact_address,name=further_account_details>
+<venda_inctemplate name=usxtfields,type=includes><!-- remains here for backwards compatibility -->
+<venda_inctemplate type=includes/wizr/wz_orbt-screen/contact_address,name=choose_password>
+<venda_block label=54,instore=1><venda_uspswd field=hidden><venda_uspswd2 field=hidden></venda_block label=54>
+<venda_inctemplate type=includes/wizr/wz_orbt-screen/contact_address,name=different_delivery_address>
+<venda_inctemplate type=includes/wizr/wz_orbt-screen/contact_address,name=js_buttons>
+</form>
+</div>
+</venda_block label=300>
+
+</div>
+</venda_block label=200>
+
+<venda_block label=251,workflow!=shopcart,workflow!=instore,curstep=billtologin>
+<venda_inctemplate type=admn,name=co_comn-login>
+</venda_block label=251>
+
+<venda_block label=56,workflow=refer,curstep=referlogin>
+<venda_inctemplate type=admn,name=co_comn-login>
+</venda_block label=56>
+
+<venda_block label=57,workflow=login>
+<venda_inctemplate type=admn,name=co_comn-login>
+</venda_block label=57>
+
+<venda_block label=20,workflow=instore>
+<venda_tpxt mode=set,name=instore,value=1>
+</venda_block label=20>
+
+<!-- 
+workflow: <venda_workflow>
+param1: <venda_param1>
+param2: <venda_param2>
+page: wz_orbt-screen.html
+ -->
+<venda_tpxt mode=set,name=track,value=orbt-screen>
+<venda_inctemplate name=googleTrackingWorkflows,type=includes>
+<venda_inctemplate name=hbxlocalvars1,type=includes/tracking>
+<venda_inctemplate name=hitboxOthers,type=includes/tracking>
+<venda_inctemplate name=cmCreateRegistrationTag,type=includes/tracking/coremetrics>

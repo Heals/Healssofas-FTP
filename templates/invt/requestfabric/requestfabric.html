@@ -1,0 +1,35 @@
+<form name="form" method="post" action="http://www.heals.co.uk/">
+<input type="hidden" name="ex" value="co_disp-eproc">
+<input type="hidden" name="bsref" value="heals">
+<input type="hidden" name="subject" value="Contact Us"> 
+<input type="hidden" name="to" value="dallen@heals.co.uk"> 
+<input type="hidden" name="from" value=""> 
+<input type="hidden" name="label1" value="Name:"> 
+<input type="hidden" name="label2" value="Telephone:"> 
+<input type="hidden" name="label3" value="Email:"> 
+<input type="hidden" name="label4" value="Subject:"> 
+<input type="hidden" name="label5" value="Order Number:"> 
+<input type="hidden" name="label6" value="Your Query:">
+<input type="hidden" name="page" value="swatch_thankyou"> 
+<input type="hidden" name="layout" value="default"> 
+<fieldset class="contact"> 
+<legend>Contact Us</legend> 
+<div class="formRow name"> <label for="txtName">Name: <span class="required">(Required)</span></label> <input type="text" name="field1" class="name_l" id="txtName" maxlength="20"> </div><div class="formRow telephone"> <label for="txtPhone1">Daytime Phone: </label> <input type="text" name="field2" maxlength="15" class="telephone_l" id="txtPhone"> </div> <div class="formRow email"> <label for="txtEmail">Email: <span class="required">(Required)</span></label> <input type="text" name="field3" class="email_l" id="txtEmail" maxlength="66"> </div> <div class="formRow subject"> <label for="ddlSubject">Subject:</label> <select name="field4" class="subject_l" id="ddlSubject"> <option value="">Please Select</option> <option value="enquiries@heals.co.uk">Order Enquiries</option> <option value="delivery@heals.co.uk">Delivery Enquiries</option> <option value="cancellations@heals.co.uk">Cancellation Enquiries</option> <option value="returns@heals.co.uk">Return Enquiries</option> <option value="productadvisor@heals.co.uk">Product Advice</option> <option value="internetsales@heals.co.uk">Sales & Stock Enquiries</option> <option value="enquiries@heals.co.uk">Other Enquiries</option> </select> </div> <div class="formRow ordernumber"> <label for="txtOrder">Order Number, if applicable:</label> <input type="text" name="field5" class="ordernumber_l" id="txtOrder" maxlength="16"> </div> <div class="formRow message"> <label for="txtComments">Your Query: <span class="required">(Required)</span></label> <textarea name="field6" class="message_l" id="txtComments" rows="5" cols="25"></textarea> </div>
+<div> 
+<input type="image" onClick="validateFields(); return false;" 
+src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/my-account/my-account-submit.gif" alt="Continue" class="right"> 
+</div> 
+</fieldset> 
+</form>
+
+<div id="JS-tell-a-friend" style="display: none">
+	<div id="tell-a-friend-validation-fname"><venda_text id=site.tell_friend.js_validation.fname></div>
+	<div id="tell-a-friend-validation-name"><venda_text id=site.tell_friend.js_validation.name></div>
+	<div id="tell-a-friend-validation-email-address"><venda_text id=site.tell_friend.js_validation.email_address></div>
+	<div id="tell-a-friend-validation-valid-email-address"><venda_text id=site.tell_friend.js_validation.valid_email_address></div>
+	<div id="tell-a-friend-validation-message"><venda_text id=site.tell_friend.js_validation.message></div>
+</div>
+
+<!-- tpxt used for crumbtrail -->
+<venda_tpxt mode=set,name=invtname,value=<venda_invtname>>
+<venda_tpxt mode=set,name=track,value=tellafriend>

@@ -1,0 +1,87 @@
+<venda_block label=48,mode=value,<venda_setting type=ebiz,name=powerreviews>=1,<venda_setting type=ebiz,name=powerreviewsprodlist>=1><script type="text/javascript"><venda_inctemplate type=includes,name=powerreviewscripts></script></venda_block label=48>
+<venda_detblock>
+        <venda_tpcomment><!-- "icat" defines next step if "ex" is "co_disp-shopc" (sends to home page without this field) - could be set to send to any invt or page instead --></venda_tpcomment>
+        <form name="form<venda_invtref1>" action="<venda_codehttp>" method="get" id="addproduct<venda_invtref1>form">
+        <input type="hidden" name="icat" value="<venda_icatref>">
+        <venda_inventory ref=<venda_invtref1>,temp=locaytainvt>
+        </form>
+</venda_detblock>
+
+<div id="content-default_nocoltwothree">
+  <div id="searchresults1">
+    <div id="addedmsg"></div>
+<div style="width:300px;height:34px;float:left;background-color:#ffffff;">
+<p style="font-weight:normal;color: black;font-size: 18px;
+padding:7px 0 0 8px;margin:0;"><a href="<venda_dispview icat=gifts>" style="color:#000000;">View All Gifts</a></p>
+</div>
+    <venda_tpcomment><!-- start: sort by options --></venda_tpcomment>
+          <div class="sort">
+          <label for="sortbygift"><venda_text id=site.search_results.label.sort_by></label>
+
+<select name="sortbygift" id="sortbygift" onchange="location = this.options[this.selectedIndex].value;">
+        <option value="<venda_dispview icat=<venda_icatref>>?temp=giftsearch#!&sort="><venda_text id=site.search_results.option.most_relevant></option>
+        <option value="<venda_dispview icat=<venda_icatref>>?temp=giftsearch#!&sort=price&order=desc"><venda_text id=site.search_results.option.price_high_to_low></option>
+        <option value="<venda_dispview icat=<venda_icatref>>?temp=giftsearch#!&sort=price&order=asc"><venda_text id=site.search_results.option.price_low_to_high></option>
+        <option value="<venda_dispview icat=<venda_icatref>>?temp=giftsearch#!&sort=name&order=asc"><venda_text id=site.search_results.option.a_to_z></option>
+        <option value="<venda_dispview icat=<venda_icatref>>?temp=giftsearch#!&sort=name&order=desc"><venda_text id=site.search_results.option.z_to_a></option>
+        <option value="<venda_dispview icat=<venda_icatref>>?temp=giftsearch#!&sort=release&sort=name&order=desc&order=asc"><venda_text id=site.search_results.option.release_date_recent_first></option>
+        <option value="<venda_dispview icat=<venda_icatref>>?temp=giftsearch#!&sort=release&sort=name&order=asc&order=asc"><venda_text id=site.search_results.option.release_date_recent_last></option>
+</select>
+
+          </div>
+          <venda_tpcomment><!-- end: sort by options --></venda_tpcomment>
+  </div>
+</div>
+<div style="clear:both;position:relative;left:0;height:100%;">
+<div id="col-two-three">
+<div id="col-two">
+<div id="searchResults" class="productList">
+<venda_media rec=icat,type=movie-swf-pict,key=catbanner>
+<div class="prodListAlt">
+<div class="<venda_icatref>">
+<h1 class="header"><venda_icatname></h1>
+</div>
+<div>
+        <venda_block label=1,errors=notnull><h2 class="error"><venda_errors></h2></venda_block label=1>
+        <div id="addedmsg" class="addedmessage"><venda_block label=13,mode=value,<venda_addedmsg msg=<venda_text id=site.addedmsg>>=notnull><p><venda_addedmsg msg=<venda_text id=site.addedmsg>></p></venda_block label=13></div>
+        <venda_category rec=icat,ref=<venda_icatref>fp,temp=featprods,cacheall=1>
+
+        <venda_tpcomment><!-- start: product list item - pagination --></venda_tpcomment>
+        <div class="searchpsel searchpseltop">
+                <venda_pagination template=pagn_icat_style1>
+                </div>
+        </div></div>
+        <venda_block label=52,rectot=><p><venda_text id=site.productlist.product_empty></p></venda_block label=52>
+        <venda_block label=53,rectot!=><div class="prods"><ul class="ulProds"><venda_detail></ul></div></venda_block label=53>
+        <div class="searchpsel searchpselbtm">
+                <venda_pagination template=pagn_icat_style1>
+                </div>
+
+        <venda_tpcomment><!-- end: product list item - pagination --></venda_tpcomment>
+</div>
+</div>
+</div>
+
+<div id="col-one" style="background-color:#f1f1f1;">
+<div id="parentCatRef" style="display: none;"><venda_icatref></div>
+<link rel="stylesheet" href="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/css/catgrid-gift.css" type="text/css" media="screen, projector">
+<div id="category-left-nav">
+<h4 style="padding:8px;margin:28px 5px 20px 5px;font-size:18px;color:#ffffff;height:auto;width:174px;background-color:#000000;float:left;font-weight:normal;"><venda_icatname></h4>
+<venda_inctemplate name=giftnav,type=includes>
+</div>
+</div>
+</div>
+
+<br class="clear-all" />
+<venda_tpcomment>
+<!-- TPXTs are defined for other function:
+activepcatid - is used for bestsellers/ compare products based on current category.
+comparecatref - is used for compare products.
+-->
+</venda_tpcomment>
+<venda_tpxt mode=set,name=track,value=productlist>
+<venda_tpxt mode=set,name=activepcatid,value=<venda_icatref>>
+<venda_block label=41,mode=value,<venda_setting type=ebiz,name=showcompareproductlist>=1>
+<venda_block label=501,mode=value,<venda_setting type=ebiz,name=setalwaysshowcompare>!=1><venda_tpxt mode=set,name=comparecatref,value=<venda_icatref>></venda_block label=501>
+<venda_block label=502,mode=value,<venda_setting type=ebiz,name=setalwaysshowcompare>=1><venda_tpxt mode=set,name=comparecatref,value=allcategory></venda_block label=502>
+</venda_block label=41>

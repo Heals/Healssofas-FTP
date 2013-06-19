@@ -1,0 +1,36 @@
+<venda_inctemplate name=htmlEmailDetblocks,type=includes/email>
+
+<html>
+<head>
+	<title><venda_ebizname> Order Status Update - (<venda_ohordnum>)</title>
+</head>
+<body>
+
+<div id="emailBody">
+<venda_inctemplate name=htmlEmailCssEtc,type=includes/email>
+<div id="logo">
+	<venda_inctemplate name=htmlEmailLogo,type=includes/email>
+	<div class="clear">&nbsp;</div>
+</div>
+
+
+<venda_inctemplate name=htmlEmailHeader,type=includes/email>
+
+<p>We would like to inform you that some of the items on your order <venda_ohordnum>, which was placed on <venda_ohdateen> have been backordered. This means that the goods are temporarily out of stock at our warehouse.</p>
+<p>We have either arranged for the stock to be transferred from one of our stores or directly from our suppliers to our warehouse and we anticipate your order will be dispatched within 1 - 2 weeks. If there are any further delays or problems with your order we will contact you directly</p>
+<p>Should you wish to check the current status of your order at any time please log onto your Account and view your 'order history' selecting the order you wish to track. <a href="<venda_codehttps>?ex=co_disp-view&page=myaccount&bsref=<venda_bsref>">Click here to login</a></p>
+
+
+<venda_inctemplate name=htmlEmailBody,type=includes/email>
+<venda_inctemplate name=htmlEmailMessage,type=includes/email>
+
+<p>Regards,</p>
+
+<div><venda_ebizname> Customer Services</div>
+<div><a href="<venda_ebizurl>"><venda_ebizurl></a></div>
+<div>Contact Us - <a href="mailto:delivery@heals.co.uk" style="text-decoration:underline">delivery@heals.co.uk</a>&nbsp;or 08700 240 780</div>
+<div>Registered Office: Heal & Son Limited, 196 Tottenham Court Road, London W1T 7LQ</div>
+<div>VAT NO: GB 524 3006 89</div>
+</div>
+</body>
+</html>

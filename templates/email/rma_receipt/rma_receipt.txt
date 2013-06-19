@@ -1,0 +1,69 @@
+<venda_detblock1>
+Heal's Returns Authorisation Code (RMA): <venda_com>.
+
+
+The order number relating to the products you are returning is <venda_ohordnum>. 
+
+Please write both the RMA number and your order number clearly on the outside of the parcel.
+
+If you are returning goods for a refund please note that all goods returned must be in a perfect and saleable condition with original product packaging and instructions where appropriate or your right to a full refund may be affected. You must also ensure that you return the goods to us within 28 days of receipt of the goods.
+
+If you have requested a replacement item to be sent out to you, then you will receive an email advising you of your replacement order number shortly.
+
+Return Address:
+
+Heal's Distribution Centre
+
+Internet Returns
+
+10 Ardra Road
+
+London
+
+N9 0BD 
+
+To check the status of this order, to change your contact details or to view your order history, go to your 
+<a href="<venda_dispview page=myaccount>">My Account page.
+
+The following product(s) are to be returned:
+
+
+
+<venda_detail2>
+
+
+</venda_detblock1>
+
+
+<venda_detblock2>
+- <venda_oiivname> (<venda_status>)
+
+</venda_detblock2>
+
+
+==============================================================================
+
+Return Authorization Code for Order Number (<venda_ohordnum>)
+==============================================================================
+
+
+
+<venda_inctemplate name=textEmailHeader,type=includes/email>
+
+<venda_detail1>
+
+
+
+Regards,
+
+Heal's Customer Services
+
+<venda_ebizurl>
+
+Contact Us - <a href="mailto:returns@heals.co.uk">returns@heals.co.uk or 08700 240 780
+
+Heal & Son Limited, 196 Tottenham Court Road, London W1T 7LQ
+
+VAT Number: GB 524 3006 89
+
+

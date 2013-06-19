@@ -1,0 +1,120 @@
+<!-- YOU ARE ONLY PERMITTED TO CHANGE THE ORDER OF THE INCTEMPLATE TAGS WITHIN THIS TEMPLATE. YOU MAY NOT ADD OR CHANGE ANY OTHER CODE. -->
+<venda_block label=8800,mode=value,<venda_setting type=ebiz,name=singlesteppclookup>=1>
+	<!-- Start  Validate worklow register or shopcart is true -->
+	<venda_block label=844,workflow=register,workflow=shopcart,workflow=manageaddresses,operator=or>
+		
+<!-- START Singlestep postcode look up -->
+<venda_inctemplate type=includes/wizr/wz_orzc-screen/singlestep_lookup,name=js_inpage>
+<venda_block label=356,workflow!=comingsoon>
+	<venda_block label=70,param2!=delivery,param2!=editadd,param1!=delivery,operator=and>
+	<!-- display contact address details --> 
+	<div class="checkoutR">
+		<venda_category rec=elementcat,ref=orbtcolumn>
+	</div>
+	<div class="checkoutL">
+		<div class="container addcontactaddress">
+			<venda_inctemplate type=includes/wizr/wz_orzc-screen/singlestep_lookup,name=contact_address>
+		</div>
+	</venda_block label=70>
+	
+	<venda_block label=75,workflow=shopcart>
+	<venda_block label=751,curstep=zipcodedelivery,curstep=zipcoderesults,operator=or>
+		<venda_block label=7511,mode=value,<venda_htxt mode=get,name=step>=2,<venda_param1>=delivery,<venda_param2>=delivery,operator=or>
+		<!-- display delivery address form -->
+	<div class="checkoutR">
+		<venda_category rec=elementcat,ref=editaddcolumn>
+	</div>
+	<div class="checkoutL">
+		<div class="container containeroradeditadd">
+			<venda_inctemplate type=includes/wizr/wz_orzc-screen/singlestep_lookup,name=delivery_address>
+		</div>
+			</venda_block label=7511>
+		</venda_block label=751>
+	</venda_block label=75>
+		
+	<venda_block label=71,workflow=manageaddresses>
+	<!-- add delivery address - myaccount -->
+	<div class="checkoutR">
+		<venda_category rec=elementcat,ref=editaddcolumn>
+	</div>
+	<div class="checkoutL">
+		<div class="container containeroradeditadd">
+			<venda_inctemplate type=includes/wizr/wz_orzc-screen/singlestep_lookup,name=delivery_address>
+		</div>
+	</venda_block label=71>
+</venda_block label=356>
+	<venda_category rec=elementcat,ref=orzccontent>
+</div>
+
+<venda_block label=2513,workflow!=shopcart,workflow!=instore,curstep=billtologin>
+<venda_inctemplate type=admn,name=co_comn-login>
+</venda_block label=2513>
+
+<venda_block label=563,workflow=refer,curstep=referlogin>
+<venda_inctemplate type=admn,name=co_comn-login>
+</venda_block label=563>
+
+<venda_block label=573,workflow=login>
+<venda_inctemplate type=admn,name=co_comn-login>
+</venda_block label=573>
+
+<!-- Addtional element cat from ACE -->
+<venda_category rec=elementcat,ref=orzccontent>
+
+
+</venda_block label=844>
+<!-- END Validate worklow register or shopcart is true -->	
+
+
+<!-- Start  Validate worklow comingsoon Catalogue Request -->
+<venda_block label=845,workflow=comingsoon>
+<!-- email-only registration -->
+<div id="comingsoon">
+<venda_block label=58,curstep=details>
+<venda_form>
+<venda_inctemplate type=includes/wizr/wz_orzc-screen/coming_soon,name=heading_intro>
+<input type="hidden" name="uslgemail" value="">
+<input type="hidden" name="ustype" value="P">
+<input type="hidden" name="layout" value="static">
+<input type="hidden" id="blkpost" name="blkpostform" value="1">
+<input type="hidden" id="blksms" name="blksmsform" value="1">
+<br class="clear-all">
+
+<venda_inctemplate type=includes/wizr/wz_orzc-screen/coming_soon,name=your_details>
+<venda_inctemplate type=includes/wizr/wz_orzc-screen/coming_soon,name=js_buttons>
+
+</form>
+</venda_block label=58>
+<venda_block label=59,curstep=confirm>
+<venda_inctemplate type=includes/wizr/wz_orzc-screen/coming_soon,name=confirmation>
+</venda_block label=59>
+<style type="text/css">
+#mainlayout-static #content-default {background:none;}
+#mainlayout-static #col-one {display:none;}
+#mainlayout-static #col-two {width:100%;}
+#content-default_nocoltwothree {background:none;}
+#content-default_nocoltwothree h1 {color:#333333;font-size:1.1em;font-weight:bold;}
+</style>
+</div>
+</venda_block label=845>
+<!-- End  Validate worklow comingsoon Catalogue Request -->
+
+<!-- END Singlestep postcode look up -->	
+</venda_block label=8800>
+
+<venda_block label=620,workflow=instore>
+<venda_tpxt mode=set,name=instore,value=1>
+</venda_block label=620>
+
+<!-- 
+step:<venda_curstep>
+param1: <venda_param1>
+param2: <venda_param2>
+workflow: <venda_workflow>
+page: wz_orzc-screen.html
+ -->
+
+<venda_tpxt mode=set,name=track,value=orzc-screen>  
+<venda_inctemplate name=googleTrackingWorkflows,type=includes>
+<venda_inctemplate name=hbxlocalvars1,type=includes/tracking>
+<venda_inctemplate name=hitboxOthers,type=includes/tracking>

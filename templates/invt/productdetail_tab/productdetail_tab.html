@@ -1,0 +1,83 @@
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+$(".scroll").click(function(event){		
+event.preventDefault();
+$('html,body').animate({scrollTop:$(this.hash).offset().top}, 700);});});
+function showproductdetailtabs(a){$(a).show();}
+function hideproductdetailtabs(a){$(a).hide();}
+</script>
+<style>
+.description-text, .details-text, .reviews-text {background-color:#fff;border:1px solid #b4b4b4;}
+.tabdetail {margin:9px 0 0 0;}
+</style>
+<venda_block mode=value,<venda_invtivtype>=normal,<venda_invtivtype>=furniture,<venda_invtivtype>=gardenfurniture,operator=or>
+<div class="tabdetail" style="margin:20px 0 10px 0;">
+</venda_block>
+<venda_block mode=value,<venda_invtivtype>=furniturerange,<venda_invtivtype>=range,<venda_invtivtype>=gardenfurniturerange,operator=or>
+<div class="tabdetail" style="margin:10px 0;">
+</venda_block>
+<div class="tablink">
+
+<div class="tabheader">
+<div class="tab-clicked-description" style="display:block;">
+<img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/product-detail/tab-clicked-description.gif" alt="Description" border="0">
+</div>
+<div class="tab-description" style="display:none;">
+<a onclick="showproductdetailtabs('.tab-clicked-description,.description-text,.tab-details,.tab-reviews');hideproductdetailtabs('.tab-description,.tab-clicked-details,.tab-clicked-reviews,.details-text,.reviews-text')">
+<img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/product-detail/tab-description.gif" alt="Description" border="0">
+</a>
+</div>
+</div>
+
+<div class="tabheader">
+<div class="tab-clicked-details" style="display:none;">
+<img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/product-detail/tab-clicked-details.gif" alt="Details" border="0">
+</div>
+<div class="tab-details" style="display:block;">
+<a onclick="showproductdetailtabs('.tab-clicked-details,.details-text,.tab-description,.tab-reviews');hideproductdetailtabs('.tab-details,.tab-clicked-description,.tab-clicked-reviews,.description-text,.reviews-text')">
+<img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/product-detail/tab-details.gif" alt="Details" border="0">
+</a>
+</div>
+</div>
+
+</div>
+
+	<div class="description-text" style="display:block;position:relative;"> 
+      <div class="maintab tabcontent"> <venda_block label=12,invtdesc1=notnull> 
+        <p class="invtdesc1"><span itemprop="description"><venda_invtdesc1></span></p>
+        </venda_block label=12> 
+        <div class="dimension left"> <venda_extflds template=pdxtlist,group=4,ref=<venda_invtref>,ivtype=<venda_invtivtype>> 
+        </div>
+        <div class="taboneleft left"> <venda_block label=799,pdxtexclusive=1> 
+          <p class="exclusive bold">Exclusive to Heal's</p>
+          </venda_block label=799> 
+          <p class="sku bold">Product ID : <span itemprop="productID"><venda_invtref></span></p>
+          <venda_block label=pir,mode=value,<venda_invtivtype>=range,<venda_invtivtype>=gardenfurniturerange,operator=or> 
+          <p><a href="#rangeProducts" class="scroll" style="color:#333333;">View 
+            all <strong><venda_invtatrtot></strong> products in <strong><venda_invtname></strong> 
+            range.</a></p>
+          </venda_block label=pir> </div>
+        <div class="anyquestion left"<venda_block label=onlineE,pdxtstoreavail=1> style="margin-bottom:20px;"</venda_block label=onlineE>> 
+        <venda_extflds template=pdxtlist,group=3,ref=<venda_invtref>,ivtype=<venda_invtivtype>></div>
+      <div class="clear-all"></div>
+    </div>
+<venda_block label=800,pdxtstoreavail=1><img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/product-detail/online_only_product.gif" style="position:absolute;bottom:0;"></venda_block label=800>
+</div>
+
+	<div class="details-text" style="display: none;">
+		<div class="tabcontent">					
+			<table width="100%" class="tbl-details">
+			<!-- Set group Pdxts to displayed controlled by client in VCP -->
+			<venda_extflds template=pdxtlist,group=2,ref=<venda_invtref>,ivtype=<venda_invtivtype>>
+			</table>
+		</div>
+	</div>
+</div>
+<venda_tpxt mode=set,name=mailsubject,value=<venda_invtname>>
+<!-- End Tab -->
+	<div class="clear-all"></div>
+		
+<div class="share"><div class="bookmark-link"><script type="text/javascript">addthis_pub = 'Heals';</script>
+					<a href="http://www.addthis.com/bookmark.php" onClick="return addthis_open(this, '', '[URL]', '[TITLE]')" onmouseOut="addthis_close()" onclick="return addthis_sendto();">Share/Bookmark<img class="email-pic" src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/site-wide/img_bookmark.gif" /></a>
+					<script type="text/javascript" src="http://s7.addthis.com/js/152/addthis_widget.js"></script></div><div class="email-link"><a href="<venda_dispview invt=<venda_invtref>>&temp=tellafriend" id="tellafriend_link">Email<img class="email-pic" src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/site-wide/img_email.gif" /></a></div><div class="print-link"><a href="javascript:window.print();" title="Print version">Print<img class="email-pic" src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/site-wide/img_print.gif" /></a></div><div class="twitter-link"><a href="http://twitter.com/share" class="twitter-share-button" data-count="none" data-via="Heals_Furniture">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script></div>
+<div class="facebook-link"><iframe src="//www.facebook.com/plugins/like.php?href=<venda_dispview invt=<venda_invtref>>&amp;send=false&amp;layout=button_count&amp;width=150&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font=arial&amp;height=25" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:150px; height:25px;" allowTransparency="true"></iframe></div><div class="pinterest-link"><a href="http://pinterest.com/pin/create/button/?url=<venda_dispview invt=<venda_invtref>>&media=<venda_media rec=invt,type=movie-swf-pict,key=medium,img=no>&description=<venda_invtname>" class="pin-it-button" count-layout="horizontal"><img border="0" src="//assets.pinterest.com/images/PinExt.png" title="Pin It" /></a></div></div>

@@ -1,0 +1,56 @@
+<!-- standard products detblock include -->
+<venda_inctemplate type=includes/wizr/wz_orsc-screen/items_table,name=standard_items>
+
+<!-- bundle products detblock include -->
+<venda_inctemplate type=includes/wizr/wz_orsc-screen/items_table,name=bundle_items>
+
+<div class="ordertable">
+<table summary="<venda_text id=site.basket.item_information_summary>" title="<venda_text id=site.basket.item_information_title>" class="wizrtable" cellspacing="0" cellpadding="0">
+	<thead>
+	<tr>
+		<th scope="col" class="thumb"><span><venda_text id=site.basket.column_heading.product_image></span></th>
+		<th scope="col" class="name"><span><venda_text id=site.basket.column_heading.product_name></span></th>
+		<th scope="col" class="priceeach"><span><venda_text id=site.basket.column_heading.price_each></span></th>
+		<th scope="col" class="quantity"><span><venda_text id=site.basket.column_heading.quantity></span></th>
+		<th scope="col" class="availability"><span>Availability</span></th>
+		<th scope="col" class="totalprice"><span><venda_text id=site.basket.column_heading.total_price></span></th>
+		<th scope="col" class="remove"><span><venda_text id=site.basket.column_heading.remove></span></th>
+	</tr>
+	</thead>
+	<tbody>
+	<venda_detail5> <!-- normal products -->
+	<venda_detail11> <!-- bundle products -->
+	<tr class="orsctotal">
+		<th scope="row" colspan="3">
+			<venda_text id=site.basket.subtotal><br>
+			
+			<venda_block label=1000,mode=value,<venda_shopcart mode=getqty,ivtype=furniture>&gt;0,<venda_shopcart mode=getqty,ivtype=furniturerange>&gt;0,operator=or>	
+			<!-- Furniture and other types-->
+			<venda_block label=10010,mode=value,<venda_shopcart mode=getqty,ivtype=normal>&gt;0,<venda_shopcart mode=getqty,ivtype=range>&gt;0,<venda_shopcart mode=getqty,ivtype=gardenfurniture>&gt;0,<venda_shopcart mode=getqty,ivtype=gardenfurniturerange>&gt;0,operator=or>
+						<p><a href="<venda_dispview page=furnituredelivery>&layout=popups" target="blank">Standard Delivery <venda_currsym>50</a></p>
+			</venda_block label=10010>
+			<!-- Furniture Only-->
+			<venda_block label=10020,mode=value,<venda_shopcart mode=getqty,ivtype=normal>=0,<venda_shopcart mode=getqty,ivtype=range>=0,<venda_shopcart mode=getqty,ivtype=gardenfurniture>=0,<venda_shopcart mode=getqty,ivtype=gardenfurniturerange>=0>
+						<p><a href="<venda_dispview page=furnituredelivery>&layout=popups" target="blank">Standard Furniture Delivery from <venda_currsym>50</a></p>
+				</venda_block label=10020>
+			</venda_block label=1000>
+			
+			<venda_block label=1001,mode=value,<venda_shopcart mode=getqty,ivtype=furniture>=0,<venda_shopcart mode=getqty,ivtype=furniturerange>=0>
+					<p><a href="<venda_dispview page=deliveryinformation>&layout=popups" rel="popup console 620 560" alt="<venda_text id=site.link.title.delivery_charge_from>">Standard Delivery <venda_currsym>4.95</a></p>
+			</venda_block label=1001>
+		</th>
+		<td class="thumb">&nbsp;</td>
+		<td class="thumb">&nbsp;</td>
+		<td colspan="2" class="basketTot"><venda_currsym><venda_extsub></td>
+	</tr>
+	</tbody>
+</table>
+<!-- 
+			<p>Normal: <venda_shopcart mode=getqty,ivtype=normal></p>
+			<p>Range: <venda_shopcart mode=getqty,ivtype=range></p>
+			<p>Garden Furniture: <venda_shopcart mode=getqty,ivtype=gardenfurniture></p>
+			<p>Garden Furniture Range: <venda_shopcart mode=getqty,ivtype=gardenfurniturerange></p>
+			<p>Furniture: <venda_shopcart mode=getqty,ivtype=furniture></p>
+			<p>Furniture Range: <venda_shopcart mode=getqty,ivtype=furniturerange></p>
+ -->
+</div>

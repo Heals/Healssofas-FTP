@@ -1,0 +1,17 @@
+<venda_detblock1>
+<venda_block label=401,exname=Gift Message>
+
+		<div class="orxfieldsset orxtgiftmessage"><textarea <venda_block label=1000,mode=value,<venda_shopcart mode=getqty,ivtype=furniture>&gt;0,<venda_shopcart mode=getqty,ivtype=furniturerange>&gt;0,operator=or>	
+	<venda_block label=10020,mode=value,<venda_shopcart mode=getqty,ivtype=normal>=0,<venda_shopcart mode=getqty,ivtype=range>=0,<venda_shopcart mode=getqty,ivtype=gardenfurniture>=0,<venda_shopcart mode=getqty,ivtype=gardenfurniturerange>=0>disabled</venda_block label=10020></venda_block label=1000> name="orxgiftmessage" maxlength="125" onkeyup="return ismaxlength(this)" rows="2"/></textarea></div><br><br>
+		<p class="giftmessageinstructions"><venda_text id=site.order_confirmation.gift_instructions></p>
+</venda_block label=401>
+<venda_block label=402,exname!=Gift Message>
+<venda_block label=1000,mode=value,<venda_shopcart mode=getqty,ivtype=furniture>&gt;0,<venda_shopcart mode=getqty,ivtype=furniturerange>&gt;0,operator=or>	
+
+<div class="orxfieldsset"><venda_exfieldvalue><label class="confirmtnc" for="orxorxtacceptdelivery"> I have read the <a href="<venda_ebizurl>/pcat/accessguidelines&layout=popups" rel="popup console 550 450">Access Guidelines</a> and I confirm that I have the appropriate access for delivery</label></div>
+
+</venda_block label=1000>
+</venda_block label=402>
+</venda_detblock1>
+
+<venda_detail1>

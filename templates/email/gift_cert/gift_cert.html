@@ -1,0 +1,98 @@
+<html>
+<head>
+	<title><venda_ebizname> Online Gift Certificate</title>
+</head>
+<body>
+<div id="emailBody">
+<venda_inctemplate name=htmlEmailCssEtc,type=includes/email>
+<div id="logo">
+	<venda_inctemplate name=htmlEmailLogo,type=includes/email>
+	<h1>Heals.co.uk e-voucher</h1>
+	<div class="clear"> </div>
+</div>
+
+<p>Dear <strong><venda_to></strong></p>
+<p><strong><venda_from></strong> has sent you a <strong><venda_amount></strong> 
+Heals.co.uk e-voucher.</p>
+<p>
+	To: <strong><venda_to></strong><br>
+	From: <strong><venda_from></strong><br>
+	Message: <strong><venda_comment></strong><br>
+	Amount: <strong><venda_amount></strong><br>
+	Claim code: <strong><venda_giftcode></strong><br>
+	Expiry date: <strong><venda_block label=611,gcexpirydate!=0><venda_gcexpires>
+</venda_block label=611><venda_block label=612,gcexpirydate=0>no expiration 
+date</venda_block label=612></strong>
+</p>
+
+<table border="0" cellspacing="0" summary="How to redeem your Gift Certificate">
+	<thead><tr><th>How to redeem your Heals.co.uk e-voucher</th></tr></thead>
+	<tbody><tr><td>
+		<ul>
+			<li>Go to <a href="<venda_serveradd>"><venda_ebizurl></a>.</li>
+			<li>Select the items you wish to purchase and add them to your 
+basket.</li>
+			<li>Go through the checkout process until you get to the checkout 
+page.</li>
+			<li>Click on the 'Redeem a Heals.co.uk e-voucher' button and copy 
+the e-voucher claim code exactly as shown above.</li>
+			<li>Click 'continue'. This will apply the e-voucher.</li>
+			<li>If the value of your order is higher than the value of the e-
+voucher, you will need to pay the difference using a credit/debit card or Paypal.</li>
+			<li>If the value of your order is lower than the value of the e-
+voucher, the balance will be added to your account with <venda_ebizname>, and you can use 
+it on future visits.</li>
+		</ul>
+		
+		<p>If you forget to click on the 'Redeem a Gift Certificate' button cancel 
+your order and start again. Once your order has been submitted and paid for by means other 
+than a certificate, you are unable to retrospectively use your Heals.co.uk e-voucher to 
+offset that cost.</p>
+	</td></tr></tbody>
+</table>
+
+<table border="0" cellspacing="0" summary="Your Terms & Conditions to redeem Gift 
+Certificate">
+	<thead><tr><th>Terms & Conditions</th></tr></thead>
+	<tbody><tr><td>
+		<ol>
+			<li>Heals.co.uk e-voucher may only be redeemed at <a href="
+<venda_serveradd>"><venda_ebizurl></a>.</li>
+			<li>You cannot use a Heals.co.uk e-voucher to purchase another 
+Heals.co.uk e-voucher.</li>
+			<li>The Heals.co.uk e-voucher has a cash redemption value of 
+0.001p and is not transferable or assignable.</li>
+			<li>Heals.co.uk e-voucher cannot be cancelled by the purchaser of 
+the e-voucher once they have been redeemed in part or in full.</li>
+			<li>Any unused balance will be placed in the recipient's account 
+with <venda_ebizname> and is not transferable. Your balance can be viewed at any time in 
+the 'My Account' section of the <venda_ebizname> website.</li>
+			<li>If the order exceeds the amount of the gift certificate, the 
+balance must be paid by credit / debit card or Paypal.</li>
+			<li>To avoid disappointment, please make sure you redeem your 
+Heals.co.uk e-voucher before the expiry date that appears on the certificate. Heals.co.uk 
+e-voucher and unused portions of Heals.co.uk e-vouchers expire one year from the date of 
+issue, where permissible under applicable law. Once the certificate has expired we are 
+unable to extend the expiry date under any circumstances.</li>
+            <li>Normal <venda_ebizname> terms and conditions apply to all purchases except 
+where they conflict with these terms and conditions.</li>
+            <li>If you cancel an order for any item you have purchased by redeeming your 
+Heals.co.uk e-voucher, your <venda_ebizname> account will be credited with the amount 
+redeemed. If you redeemed your Heals.co.uk e-voucher in part payment of any item, you have 
+the right to request a cash refund in respect of the amount you paid using your 
+credit/debit card or Paypal. If you do not request a cash refund your <venda_ebizname> 
+account will be credited with the full amount paid.</li>
+            <li><venda_ebizname> will have the right to close customer accounts and 
+request alternative forms of payment if a fraudulently obtained gift certificate is either 
+redeemed through the <venda_ebizname> web site or is redeemed and used to make purchases 
+on the <venda_ebizname> site.</li>
+		</ol>
+	</td></tr></tbody>
+</table>
+<p>Once again thank you for your interest in <venda_ebizname> and we look forward to your 
+visiting our site soon.</p>
+<venda_inctemplate name=htmlEmailFooter,type=includes/email>
+
+</div>
+</body>
+</html>

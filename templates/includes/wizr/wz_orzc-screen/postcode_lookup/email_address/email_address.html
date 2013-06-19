@@ -1,0 +1,31 @@
+<venda_block label=50,instore!=1>
+<venda_block label=40,param1=delivery,ustype=P><venda_usemail field=hidden></venda_block label=40>
+<venda_block label=44,param1!=delivery>
+	<venda_block label=41,workflow=shopcart,workflow=instore,workflow=refer,workflow=register,operator=or>
+	<fieldset class="f-orzcemail">
+	<legend class="orzcemail"><venda_text id=site.postcode_lookup.legend.email_address></legend>
+	<div><label for="usemail"><venda_text id=site.postcode_lookup.label.email_address></label> <venda_usemail field=text,size=25,maxlength=150,required=yes></div>
+	</fieldset>
+	
+	<script type="text/javascript">
+	<!-- 
+	// pass along email address from previous page
+	function checkemail(str) {
+		var filter =/^\w+[\+\.\w-]*@([\w-]+\.)*\w+[\w-]*\.([a-z]{2,7}|\d+)$/i;
+		return (filter.test(str));
+	}
+	
+	urlArray = location.href.split('&');
+	for (i=0; i<urlArray.length; i++) {
+		test=urlArray[i];
+		testArray=test.split('=');
+		test=testArray[1];
+		if (checkemail(test)) {
+			document.wizform.usemail.value=test;
+		}
+	}
+	// -->
+	</script>
+	</venda_block label=41>
+</venda_block label=44>
+</venda_block label=50>

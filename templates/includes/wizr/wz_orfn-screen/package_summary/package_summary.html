@@ -1,0 +1,16 @@
+<script type="text/javascript">
+var vbmParentTrack = "";
+var vbmParentPrices = "";
+var vbmParentQty = "";
+</script>
+<venda_inctemplate name=orderDetblocks,type=includes>
+
+<venda_detblock3>
+<td id="deliverytext"><venda_shipname></td>
+</venda_detblock3>
+
+<!-- start package summary -->
+<venda_detail1>
+<!-- end package summary -->
+<venda_extflds exfldtype=order,ref=<venda_ohrfnbr>,group=3,template=orxfields_display,type=includes,displayonly=1>
+<venda_extflds exfldtype=order,ref=<venda_ohrfnbr>,group=4,template=orxfields_display,type=includes,displayonly=1>

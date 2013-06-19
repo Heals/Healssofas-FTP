@@ -1,0 +1,87 @@
+<venda_detblock1>
+	<tr>
+		<td class="sku"><venda_invtref><venda_block label=71,invtsuplsku=notnull> (<venda_invtsuplsku>)</venda_block label=71></td>
+		<td class="name"><venda_invtname></td>
+		<td class="price"><venda_currsym><venda_invtsell></td>
+		<td class="attr-msg"><venda_text id=site.quickshop.message.notapp></td>
+		<td class="quantity">
+			<venda_block label=66,invtonhand&gt;0,invtivtype!=nonpurchasable>
+			<input type="text" name="qtylist" value="1" size="2">
+			</venda_block label=66>
+			<venda_block label=67,invtonhand&lt;1,invtivtype!=nonpurchasable>
+			<span class="outofstock"><venda_text id=site.quickshop.message.outof></span>
+			</venda_block label=67>
+			<venda_block label=68,invtivtype=nonpurchasable>
+			<span class="txt-nonpurchasable">Only available in store</span>
+			</venda_block label=68>
+
+		</td>
+	</tr>
+	<input type="hidden" name="itemlist" value="<venda_invtref>">
+	<input type="hidden" name="availlist" value="<venda_invtavail>">
+	<input type="hidden" name="attall" value="">
+</venda_detblock1>
+<venda_detblock2>
+	<tr>
+		<!-- status can be unpub nostock mainunpub mainnostock atrunpub atrnostock-->
+		<td class="sku"><venda_invtref><venda_block label=72,invtsuplsku=notnull> (<venda_invtsuplsku>)</venda_block label=72></td>
+		<td class="name"><venda_invtname></td>
+		<td class="price">
+			<venda_currsym><venda_invtsell>	
+		</td>
+		<td class="attr-msg">
+		<venda_block label=68,status=null>
+			<select name="attall"><venda_selectatrdropdown></select>
+		</venda_block label=68>
+		<venda_block label=69,status=notnull>
+			<input type="hidden" name="attall" value="">
+			<venda_text id=site.quickshop.message.nosizecolour>
+		</venda_block label=69>
+		</td>
+		<venda_block label=70,status=null>
+		<td class="quantity">
+		<venda_block label=68,invtivtype=nonpurchasable>
+			<span class="txt-nonpurchasable">Only available in store</span>
+		</venda_block label=68>		
+		<venda_block label=99,invtivtype!=nonpurchasable>
+		<input type="text" name="qtylist" value="1" size="2">		
+		</venda_block label=99>
+		</td>
+		</venda_block label=70>
+	</tr>
+	<input type="hidden" name="itemlist" value="<venda_invtref>">
+	<input type="hidden" name="availlist" value="<venda_invtavail>">
+</venda_detblock2>
+
+<div id="quickshop">
+<h1><venda_text id=site.quickshop.heading></h1>
+<venda_block label=1,errors=notnull><p class="error"><venda_errors></p></venda_block label=1>
+<venda_block label=32,mode=value,<venda_addedmsg msg=<venda_text id=site.quickshop.addedmsg>>=notnull><p><venda_addedmsg msg=<venda_text id=site.quickshop.addedmsg>></p></venda_block label=32>
+<p><venda_text id=site.quickshop.message.screen></p>				
+	<venda_form>
+		<input type="hidden" name="type" value="<venda_type>">
+		<input type="hidden" name="layout" value="default_nocolonetwothree">
+		<input type="hidden" name="log" value="22">
+		<table  class="wizrtable" summary="<venda_text id=site.quickshop.table.title>" cellspacing=0>
+			<tr>
+				<th scope="col" class="sku"><venda_text id=site.quickshop.column.sku></th>
+				<th scope="col" class="name"><venda_text id=site.quickshop.column.name></th>
+				<th scope="col" class="price"><venda_text id=site.quickshop.column.price></th>
+				<th scope="col" class="attr-msg"><venda_text id=site.quickshop.column.attr></th>
+				<th scope="col" class="quantity"><venda_text id=site.quickshop.column.qty></th>
+			</tr>
+			<venda_detail1>
+			<venda_detail2>
+		</table>
+		<div id="buttons">
+		<venda_block label=71,prodavail=1><venda_wizbutton step=shopcartmulti,mode=process,param1=quickshop,param2=quickshop,border=0,src=<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/bt_addtobasket_qshop.gif,alt=<venda_text id=site.quickshop.button.title.add_to_basket>,class=right></venda_block label=71>
+		<a  href="<venda_dispview page=quickshop>"><img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/bt_quickshop_search.gif" alt="<venda_text id=site.quickshop.button.title.search_again>" border="0"></a>
+		</div>
+	</form>
+	
+</div>
+<style type="text/css">
+#mainlayout-static #content-default {background:none;}
+#mainlayout-static #col-one {display:none;}
+#mainlayout-static #col-two {width:100%;}
+</style>

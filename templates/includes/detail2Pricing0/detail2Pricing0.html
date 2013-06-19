@@ -1,0 +1,42 @@
+<!--PRICING BELOW-->
+<venda_block label=100,invtatrmincursubwas&gt;0>
+	<venda_block label=123,invtatrmincursubwas&gt;invtatrminsubsell>
+		<div class="left bold">
+			From: <strike><venda_currsym><venda_invtatrminsubwas></strike>
+		</div>
+		<div <venda_block label=8888,pdxtimpinfo=1> class="red bold left padding_L5"</venda_block label=8888> <venda_block label=9999,pdxtimpinfo!=1>class="bold left padding_L5"</venda_block label=9999>>
+			<venda_currsym><venda_invtatrminsubsell>&nbsp;&nbsp;<span class="black bold padding_L5"><venda_invtdesc4></span>
+		</div>
+		<br class="clear-all">
+	</venda_block label=123>
+		
+	 <venda_block label=123,invtatrminsubwas&lt;invtatrminsubsell>
+		<div <venda_block label=8888,pdxtimpinfo=1> class="red bold left"</venda_block label=8888> <venda_block label=9999,pdxtimpinfo!=1>class="bold left"</venda_block label=9999>>
+			From: <venda_currsym><venda_invtatrminsubwas>&nbsp;&nbsp;<span class="black bold padding_L5"><venda_invtdesc4></span>
+		</div>
+	</venda_block label=123>
+		
+</venda_block label=100>
+
+
+<!-- IF invtatrminsubwas = nll or invtatrminsubwas=0.00 -->
+<venda_block label=107,invtatrminsubwas=null,invtatrminsubwas=0.00,operator=or>
+	<venda_block label=207,invtatrsellprices=null>
+		<div <venda_block label=8888,pdxtimpinfo=1> class="red bold"</venda_block label=8888> <venda_block label=9999,pdxtimpinfo!=1>class="bold"</venda_block label=9999>>
+			From: <venda_currsym><venda_invtatrminsubsell>&nbsp;&nbsp;&nbsp;<span class="black bold padding_L5"><venda_invtdesc4></span>
+		</div>
+	</venda_block label=207>
+	            
+	<venda_block label=208,invtatrsellprices=1,invtatrminsubsell=notnull,invtatrminsubsell&gt;0.00,operator=and>
+		<div <venda_block label=8888,pdxtimpinfo=1> class="red bold"</venda_block label=8888> <venda_block label=9999,pdxtimpinfo!=1>class="bold"</venda_block label=9999>>
+			From: <venda_currsym><venda_invtatrminsubsell>&nbsp;&nbsp;&nbsp;<span class="black bold padding_L5"><venda_invtdesc4></span>
+		</div>
+	</venda_block label=208>
+	            
+	<venda_block label=308,invtatrminsubsell=0.00,invtatrminsubsell=null,operator=or>
+		<div <venda_block label=8888,pdxtimpinfo=1> class="red bold"</venda_block label=8888> <venda_block label=9999,pdxtimpinfo!=1>class="bold"</venda_block label=9999>>
+			From: <venda_invtsymsell><span class="black bold padding_L5">&nbsp;&nbsp;&nbsp;<venda_invtdesc4></span>
+		</div>
+	</venda_block label=308>
+</venda_block label=107>
+<!-- END PRICING -->

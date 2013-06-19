@@ -1,0 +1,18 @@
+==============================================================================
+
+<venda_ebizname> Refund Details
+
+==============================================================================
+
+
+
+<venda_inctemplate name=textEmailHeader,type=includes/email>
+
+We thought you would like to know that a refunded has been processed for £<venda_refamt> for order #<venda_ohordnum>.
+
+
+Please allow 3-5 working days for the refund to appear in your account.
+
+
+
+<venda_inctemplate name=textEmailFooter,type=includes/email>

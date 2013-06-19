@@ -1,0 +1,17 @@
+<venda_inctemplate name=textEmailDetblocks,type=includes/email>
+==============================================================================<cr><venda_ebizname> Back Order Notification - <venda_ohordnum><cr>==============================================================================<cr><cr>
+<venda_inctemplate name=textEmailHeader,type=includes/email><cr><cr>
+
+We would like to inform you that some of the items on your order <venda_ohordnum>, which was placed on <venda_ohdateen> have been backordered. This means that the goods are temporarily out of stock at our warehouse.<cr><cr>
+We have either arranged for the stock to be transferred from one of our stores or directly from our suppliers to our warehouse and we anticipate your order will be dispatched within 1 - 2 weeks. If there are any further delays or problems with your order we will contact you directly<cr><cr>
+Should you wish to check the current status of your order at any time please log onto your Account and view your 'order history' selecting the order you wish to track. Go to <venda_codehttps>?ex=co_disp-view&page=myaccount&bsref=<venda_bsref> to login<cr><cr>
+
+<venda_inctemplate name=textEmailBody,type=includes/email>
+<venda_inctemplate name=htmlEmailMessage,type=includes/email>
+
+Regards,<cr><cr>
+<venda_ebizname> Customer Services<cr>
+<venda_ebizurl><cr>
+Contact Us - delivery@heals.co.uk or <venda_ebizarea> <venda_ebizphone>
+Heal & Son Limited, 196 Tottenham Court Road, London W1T 7LQ<cr>
+VAT NO: GB 524 3006 89<cr><cr>

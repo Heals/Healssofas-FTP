@@ -1,0 +1,91 @@
+<venda_detblock5>
+<venda_block label=41,oiwizcode=null>
+	<input type="hidden" name="oiord" value="<venda_invtref>">
+		
+	<venda_block label=515,mode=value,<venda_setting type=ebiz,name=setdeletecartitems>=button>
+		<input type="hidden" name="<venda_cartfield name=deleteline>" value="">
+	</venda_block label=515>
+		
+	<venda_block label=115,oiitype=3>
+	<!-- if product is gift certificate -->
+	<input type="hidden" name="<venda_cartfield name=setqty>" id="form<venda_cartfield name=setqty>" value="1">	
+	<tr class="standarditem">
+		<td class="thumb gcimage"><a href="<venda_codehttp>?ex=co_wizr-giftcertificates&bsref=<venda_bsref>" title="Buy another <venda_invtname>">
+		<venda_block label=150,med-medium=notnull><venda_media rec=invt,type=movie-swf-pict,key=medium,border=0,width=120,height=120></venda_block label=150>
+		<venda_block label=151,med-medium=null><img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/no_image_<venda_setting type=ebiz,name=setshoppingbasketimagekey>.gif" alt="<venda_text id=site.link.alt.no_image.invt>"></venda_block label=151></a></td>
+		<td class="name"><a href="<venda_codehttp>?ex=co_wizr-giftcertificates&bsref=<venda_bsref>" title="Buy another <venda_invtname>"><venda_invtname></a>
+			<p class="gcdetails">
+				<span class="gcsentto"><venda_text id=site.basket.gift_certificate_sent_to></span><br>
+				<span class="gcmessage"><venda_text id=site.basket.gift_certificate_message> <venda_oicmt></span>
+			</p>
+		</td>
+		<td class="priceeach"><venda_currsym><venda_invtsell></td>
+		<td class="quantity"><venda_oiqty></td>
+		<td class="availability"><venda_block label=50,oiitype=3>In Stock</venda_block label=50>
+		<venda_block label=51,oiitype!=3>	
+		<!-- Include Availability attribute from invt -->
+		<venda_block label=1221,invtparef=notnull><venda_inventory ref=<venda_invtparef>,temp=availability></venda_block label=1221>	
+		<venda_block label=1222,invtparef=null><venda_inventory ref=<venda_invtref>,temp=availability></venda_block label=1222>
+		<!-- Include Availability nonattribute from invt -->
+		</venda_block label=51></td>
+		<td class="totalprice"><venda_currsym><venda_oiextprice></td>
+		<td class="remove">
+			<venda_block label=613,mode=value,<venda_setting type=ebiz,name=setdeletecartitems>=button>
+				<a href="#" title="<venda_text id=site.button.remove> <venda_invtname>" onClick='document.wizform.elements["<venda_cartfield name=deleteline>"].value=1;document.wizform.layout.value="checkout";Step2
+(document.wizform,"shopcart","process","","updated","","_self","","",""); return false;'><img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/bt_remove.gif" alt="<venda_text id=site.button.remove> <venda_invtname>" ></a>
+			</venda_block label=613>
+			<venda_block label=614,mode=value,<venda_setting type=ebiz,name=setdeletecartitems>=checkbox>
+				<input type="checkbox" name="<venda_cartfield name=deleteline>" value="1">
+			</venda_block label=614>
+		</td>
+	</tr>
+	</venda_block label=115>
+	
+	<venda_block label=116,oiitype!=3>
+	<!-- if product is not gift certificate -->
+	<tr class="standarditem">
+		<venda_block label=111,invtatt1=notnull>
+		<!-- if product has attributes -->
+		<venda_block label=4,med-medium=notnull><td class="thumb" style="-width:25%;"><a href="<venda_dispview invt=<venda_invtparef>>"><img src="<venda_entmediaadd>/ebiz/<venda_bsref>/invt/<venda_invtparef>/<venda_oiivref>_s.jpg" border="0" width="120px" height="120px" onError="noImage<venda_oiivref>(this);" /></a>
+<script>function noImage<venda_oiivref>(changeImage){
+changeImage.src = '<venda_entmediaadd>/ebiz/<venda_bsref>/invt/<venda_invtparef>/<venda_invtparef>_m.jpg';}
+</script>
+        </td></venda_block label=4>
+		<venda_block label=5,med-medium=null><td class="thumb noimage"><a href="<venda_dispview invt=<venda_invtparef>>"><img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/no_image_<venda_setting type=ebiz,name=setshoppingbasketimagekey>.gif" alt="<venda_text id=site.link.alt.no_image.invt>"></a></td></venda_block label=5>
+		<td class="name"><a href="<venda_dispview invt=<venda_invtparef>>"><venda_invtname></a> <venda_text id=site.basket.product_name.attribute_start><venda_invtatt1><venda_block label=7,invtatt2=notnull><venda_text id=site.basket.product_name.attribute_separator><venda_invtatt2></venda_block label=7><venda_block label=8,invtatt3=notnull><venda_text id=site.basket.product_name.attribute_separator><venda_invtatt3></venda_block label=8><venda_block label=9,invtatt4=notnull><venda_text id=site.basket.product_name.attribute_separator><venda_invtatt4></venda_block label=9><venda_text id=site.basket.product_name.attribute_end><venda_extflds exfldtype=orderitem,group=1,template=oixfields_display,type=includes,ref=<venda_invtref>,displayonly=1><venda_extflds exfldtype=orderitem,group=2,template=oixfields_display,type=includes,ref=<venda_invtref>,displayonly=1><span class="sku"><venda_text id=site.basket.product_sku><venda_invtref></span></td>
+		</venda_block label=111>
+		
+		<venda_block label=113,invtatt1=null>
+		<!-- if product has no attributes -->
+		<venda_block label=14,med-medium=notnull><td class="thumb" style="-width:25%;"><a href="<venda_dispview invt=<venda_invtref>>"><venda_media rec=invt,type=movie-swf-pict,key=medium,border=0,width=120,height=120></a></td></venda_block label=14>
+		<venda_block label=15,med-medium=null><td class="thumb noimage"><a href="<venda_dispview invt=<venda_invtref>>"><img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/no_image_<venda_setting type=ebiz,name=setshoppingbasketimagekey>.gif" alt="<venda_text id=site.link.alt.no_image.invt>"></a></td></venda_block label=15>
+		<td class="name"><a href="<venda_dispview invt=<venda_invtref>>"><venda_invtname></a><venda_extflds exfldtype=orderitem,group=1,template=oixfields_display,type=includes,ref=<venda_invtref>,displayonly=1><venda_extflds exfldtype=orderitem,group=2,template=oixfields_display,type=includes,ref=<venda_invtref>,displayonly=1><span class="sku"><venda_text id=site.basket.product_sku><venda_invtref></span></td>
+		</venda_block label=113>
+		<td class="priceeach"><venda_currsym><venda_invtsell> <venda_taxesperline template=taxesPerLine,ohrfnbr=<venda_oiohnbr>,linenum=<venda_oiclnbr>></td>
+		<td class="quantity"><label for="form<venda_cartfield name=setqty>" class="re-waiHide"><venda_text id=site.basket.column_heading.quantity></label><input type="text" name="<venda_cartfield name=setqty>" id="form<venda_cartfield name=setqty>" size="2" maxlength="3" value="<venda_oiqty>"></td>
+		<td class="availability"><venda_block label=50,oiitype=3>In Stock</venda_block label=50>
+		<venda_block label=51,oiitype!=3>	
+		<div id="invt<venda_oiivref>"></div>
+		<venda_block label=1222,invtparef=null><venda_inventory ref=<venda_invtref>,temp=availability></venda_block label=1222>
+		<!-- Include Availability nonattribute from invt -->
+		<script type="text/javascript">
+			$("#invt<venda_oiivref>").load("/bin/venda?ex=co_wizr-productgrid&bsref=<venda_bsref>&step=shopcartmulti&invt=<venda_oiivref>&ordercol=alphanu&layout=contentonly p#invt<venda_oiivref>");
+		</script>	
+
+		</venda_block label=51></td>
+		<td class="totalprice"><venda_currsym><venda_oiextprice></td>
+		<td class="remove">
+			<venda_block label=513,mode=value,<venda_setting type=ebiz,name=setdeletecartitems>=button>
+				<a href="#" title="<venda_text id=site.button.remove> <venda_invtname>" onClick='document.wizform.elements["<venda_cartfield name=deleteline>"].value=1;document.wizform.layout.value="checkout";Step2
+	(document.wizform,"shopcart","process","","updated","","_self","","",""); return false;'><img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/bt_remove.gif" alt="<venda_text id=site.button.remove> <venda_invtname>" ></a>
+			</venda_block label=513>
+			<venda_block label=514,mode=value,<venda_setting type=ebiz,name=setdeletecartitems>=checkbox>
+				<input type="checkbox" name="<venda_cartfield name=deleteline>" value="1">
+			</venda_block label=514>
+		</td>
+	</tr>
+	</venda_block label=116>
+</venda_block label=41>
+<venda_inctemplate name=cmCreateShopAction5Tag,type=includes/tracking/coremetrics>
+<venda_inctemplate name=siteCatalystBasket,type=includes/tracking/siteCatalyst>
+</venda_detblock5>

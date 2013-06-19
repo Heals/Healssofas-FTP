@@ -1,0 +1,10 @@
+<venda_tpcomment><!-- Remove the contact details box if the payment type is PayPal (ohpaytype=12) --></venda_tpcomment>
+<venda_block label=255,ohpaytype!=12>
+<!-- start contact details -->
+<div id="contactdetails">
+<h2><span></span><venda_text id=site.contact_address.subheader.billingdetails></h2>
+<venda_inctemplate name=contactDetails,type=includes>
+<a href="#" onClick='<venda_wizbutton step=billto,mode=process,param1=show,param2=edit,callonly=yes> return false;'><img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/bt_edit.gif" alt="<venda_text id=site.button.edit_contact_details>" border="0"></a>
+</div>
+<!-- end contact details -->
+</venda_block label=255>

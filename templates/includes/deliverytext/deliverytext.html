@@ -1,0 +1,6 @@
+<script type="text/javascript">
+var str=document.getElementById("deliverytext").innerHTML;
+var removedash = str.replace(/_/, ".");
+var removegbp = removedash.replace(/GBP/, "&pound;");
+document.getElementById("deliverytext").innerHTML = removegbp;
+</script>

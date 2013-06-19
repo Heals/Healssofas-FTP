@@ -1,0 +1,58 @@
+<!-- YOU ARE ONLY PERMITTED TO CHANGE THE ORDER OF THE INCTEMPLATE TAGS WITHIN THIS TEMPLATE. YOU MAY NOT ADD OR CHANGE ANY OTHER CODE. -->
+<venda_category rec=elementcat,ref=orsctopcontent>
+<div style="display:none" id="tag-basketitems"><venda_tracking type=product,definition=productref></div>
+<div class="checkoutR">
+	<venda_category rec=elementcat,ref=basketcolumn>
+</div>
+
+<div class="checkoutL">
+	<div id="yourbasket">
+	<venda_inctemplate type=includes/wizr/wz_orsc-screen,name=heading_intro>
+	<venda_category rec=elementcat,ref=baskettopcontent>
+	<div class="buttonstopbasket"><venda_inctemplate type=includes/wizr/wz_orsc-screen,name=js_buttons></div>
+	<venda_form>
+	<venda_block label=45,mode=value,<venda_setting type=ebiz,name=expresscheckout>=2><input type="hidden" name="glxt" value="<venda_glxt mode=make,glxtusertype=p>"></venda_block label=45>
+	<input type="hidden" name="log" value="0">
+	<input type="hidden" name="layout" value="0">
+	<venda_inctemplate type=includes/wizr/wz_orsc-screen,name=items_table>
+	<venda_category rec=elementcat,ref=basketmidcontent>
+	<venda_inctemplate type=includes/wizr/wz_orsc-screen,name=js_buttons>
+	</form>
+	
+	</div>
+<venda_category rec=elementcat,ref=basketcontent>
+<!-- venda_inctemplate type=includes/wizr/wz_orsc-screen,name=predictor -->
+<venda_inctemplate type=includes/wizr/wz_orsc-screen,name=promotions>
+</div>
+<venda_category rec=elementcat,ref=orsccolonetwo>
+
+<style>#subcat{background:none;clear:both;}</style>
+<!-- 
+workflow: <venda_workflow>
+param1: <venda_param1>
+param2: <venda_param2>
+page: wz_orsc-screen.html
+ -->
+<venda_inctemplate name=googleTrackingWorkflows,type=includes>
+<venda_block label=815,mode=value,<venda_setting type=ebiz,name=tracktaghitbox>=1><!--HBX tracking if business field checked-->
+<script type="text/javascript">
+<!--
+<venda_inctemplate name=hbxjsvars1,type=includes/tracking>
+
+// set var for hitbox
+c1=hitboxFriendlyChars("<venda_hitbox_ivname>");
+c2=hitboxFriendlyChars("<venda_hitbox_brand>");
+c3=hitboxFriendlyChars("<venda_hitbox_pcat>");
+c4="<venda_hitbox_price>";
+c5="<venda_hitbox_qty>";
+//-->
+
+</script>
+</venda_block label=815>
+
+<venda_inctemplate name=availbasket,type=includes>
+<venda_tpxt mode=set,name=track,value=orsc-screen>
+<venda_inctemplate name=hbxlocalvars1,type=includes/tracking>
+<venda_inctemplate name=hitboxOrsc,type=includes/tracking>
+<venda_inctemplate name=trackingBasket,type=includes>
+<venda_inctemplate name=cmDisplayShop5s,type=includes/tracking/coremetrics>

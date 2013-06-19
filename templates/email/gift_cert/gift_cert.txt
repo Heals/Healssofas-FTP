@@ -1,0 +1,89 @@
+==============================================================================<cr>
+<venda_ebizname> Online Gift Certificate<cr>
+==============================================================================<cr><cr>
+
+Dear <venda_to><cr>
+
+<venda_from> has sent you a <venda_amount> Heals.co.uk e-voucher.<cr>
+
+To: <venda_to><cr>
+From: <venda_from><cr>
+Message: <venda_comment><cr>
+
+Amount: <venda_amount><cr>
+Claim code: <venda_giftcode><cr>
+Expiry date: <venda_block label=611,gcexpirydate!=0><venda_gcexpires></venda_block 
+label=611><venda_block label=612,gcexpirydate=0>no expiration date</venda_block label=612>
+<cr><cr>
+
+==============================================================================<cr>
+How to redeem your Heals.co.uk e-voucher<cr>
+==============================================================================<cr><cr>
+
+- Go to <venda_serveradd>.<cr>
+
+- Select the items you wish to purchase and add them to your basket.<cr>
+
+- Go through the checkout process until you get to the checkout page.<cr>
+
+- Click on the 'Redeem a Heals.co.uk e-voucher' button and copy the e-voucher claim code 
+exactly as shown above.<cr>
+
+- Click 'continue'. This will apply the e-voucher.<cr>
+
+- If the value of your order is higher than the value of the e-voucher, you will need to 
+pay the difference using a credit/debit card or Paypal.<cr>
+
+- If the value of your order is lower than the value of the e-voucher, the balance will be 
+added to your account with <venda_ebizname>, and you can use it on future visits.<cr>
+
+If you forget to click on the 'Redeem a Gift Certificate' button cancel your order and 
+start again. Once your order has been submitted and paid for by means other than a 
+certificate, you are unable to retrospectively use your Heals.co.uk e-voucher to offset 
+that cost.<cr>
+
+==============================================================================<cr>
+Terms & Conditions<cr>
+==============================================================================<cr><cr>
+
+   1.  Heals.co.uk e-voucher may only be redeemed at <venda_serveradd>. <cr>
+
+   2. You cannot use a Heals.co.uk e-voucher to purchase another Heals.co.uk e-voucher.
+<cr>
+
+   3. The Heals.co.uk e-voucher has a cash redemption value of 0.001p and is not 
+transferable or assignable.<cr>
+
+   4. Heals.co.uk e-voucher cannot be cancelled by the purchaser of the e-voucher once 
+they have been redeemed in part or in full.<cr>
+
+   5. Any unused balance will be placed in the recipient's account with <venda_ebizname> 
+and is not transferable. Your balance can be viewed at any time in the 'My Account' 
+section of the <venda_ebizname> website.<cr>
+
+   6. If the order exceeds the amount of the Heals.co.uk e-voucher, the balance must be 
+paid by credit / debit card or Paypal.<cr>
+
+   7. To avoid disappointment, please make sure you redeem your Heals.co.uk e-voucher 
+before the expiry date that appears on the e-voucher. Heals.co.uk e-voucher and unused 
+portions of e-voucher expire one year from the date of issue, where permissible under 
+applicable law. Once the e-voucher has expired we are unable to extend the expiry date 
+under any circumstances.<cr>
+
+	8. Normal <venda_ebizname> terms and conditions apply to all purchases except 
+where they conflict with these terms and conditions.<cr>
+
+	9. If you cancel an order for any item you have purchased by redeeming your 
+Heals.co.uk e-voucher, your <venda_ebizname> account will be credited with the amount 
+redeemed. If you redeemed your Heals.co.uk e-voucher in part payment of any item, you have 
+the right to request a cash refund in respect of the amount you paid using your 
+credit/debit card. If you do not request a cash refund your <venda_ebizname> account will 
+be credited with the full amount paid.<cr>
+
+	10. <venda_ebizname> will have the right to close customer accounts and request 
+alternative forms of payment if a fraudulently obtained Heals.co.uk e-voucher is either 
+redeemed through the <venda_ebizname> web site or is redeemed and used to make purchases 
+on the <venda_ebizname> site.<cr><cr>
+Once again thank you for your interest in <venda_ebizname> and we look forward to your 
+visiting our site soon.
+<venda_inctemplate name=textEmailFooter,type=includes/email>

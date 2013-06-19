@@ -1,0 +1,106 @@
+<venda_block label=219,chkatt=notnull> 
+<script>
+
+Venda.Widget.ProductGrid.setConfig({
+    currsym : '<venda_currsym>',
+    sell : '<venda_block invtatrminsubsell&gt;0.00><venda_text id=site.from><venda_currsym><venda_invtatrminsubsell></venda_block><venda_block invtatrminsubsell=0.00><venda_invtsymsell></venda_block>',
+    was : '<venda_block invtatrminsubwas&gt;0.00><venda_text id=site.from><venda_currsym><venda_invtatrminsubwas></venda_block><venda_block invtatrminsubwas=0.00><venda_invtsymwas></venda_block>',
+    msrp : '',
+    save : '',  
+    priceLabel : 'Price ',
+    wasLabel :'<venda_text id=site.was> ',
+    msrpLabel: '<venda_text id=site.msrp> ',
+    savingLabel: '<venda_text id=site.save> ',
+    priceDiv: 'PriceDiv_<venda_invtuuid>',
+    wasDiv: 'wasDiv_<venda_invtuuid>',
+    msrpDiv: 'msrpDiv_<venda_invtuuid>',
+    savingDiv: 'savingDiv_<venda_invtuuid>',
+    priceDivLabel: 'PriceDiv_<venda_invtuuid>Label',
+    wasDivLabel: 'wasDiv_<venda_invtuuid>Label',
+    msrpDivLabel: 'msrpDiv_<venda_invtuuid>Label',
+    savingDivLabel: 'savingDiv_<venda_invtuuid>Label',
+    atrWas :'atrWas',
+    atrSave:'atrSave',
+    atrMsrp:'atrMsrp'
+
+});
+
+var gridurl =  "/bin/venda?ex=co_wizr-productgrid&bsref=<venda_bsref>&step=shopcartmulti&invt=<venda_invtref>&ordercol=alphanu&layout=contentonly&bklist=<venda_bklist>";
+//addEvent(window, 'load', function() { ajaxFunction(gridurl,'targetgrid',null,Venda.Ebiz.setTrclass) }, false);
+
+defaultImg = new Array();
+	defaultImg[0] = new Image();	//Default medium image
+	defaultImg[1] = new Image();	//No-image image
+	
+	defaultImg[0].src = '<venda_media rec=invt,type=movie-swf-pict,key=medium,img=no>';
+	defaultImg[1].src = '<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/medium_noimage.gif';
+	
+function getClassName(className, tag, elm){
+	var testClass = new RegExp("(^|\\s)" + className + "(\\s|$)");
+	var tag = tag || "*";
+	var elm = elm || document;
+	var elements = (tag == "*" && elm.all)? elm.all : elm.getElementsByTagName(tag);
+	var returnElements = [];
+	var current;
+	var length = elements.length;
+	for(var i=0; i<length; i++){
+		current = elements[i];
+		if(testClass.test(current.className)){
+			returnElements.push(current);
+		}
+	}
+	return returnElements;
+}
+
+var invtatrtot=<venda_invtatrtot>;
+var count_error=0;
+
+
+function fnNoSwatch(oImage) {
+	oImage.src = "<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/no_image_s.gif";
+	oImage.onerror = function () { var xx = "do nothing"; }
+	count_error++;	
+	// Check error equal attribute row and Hide Colum
+	if(count_error==invtatrtot){
+		var oLinks = getClassName("grid-images", "*", document.getElementById("targetgrid"));	
+		for (var i = 0; i < oLinks.length; i++) {
+			oLinks[i].style.display='none';
+		}
+	}
+
+}
+
+function fnDisplaySwatch() {
+	var oLinks = getClassName("attr-two-link", "*", document.getElementById("targetgrid"));	
+	for (var i = 0; i < oLinks.length; i++) {
+		var sParam = oLinks[i].innerHTML.toString();
+		var sImageSource = "<venda_entmediaadd>/ebiz/<venda_bsref>/invt/<venda_invtref>/"  +   sParam.toLowerCase().replace(/\s/g,"") + "_s.jpg";
+		//alert(sImageSource);
+		oLinks[i].innerHTML = "</div><img class=\"swatch-icon\" src=\""+sImageSource+"\" border=\"0\" onError=\"fnNoSwatch(this);\">";
+	}
+	var oAllID = new Array();
+	var j = 0;
+	var oLinks2 = document.getElementById("targetgrid").getElementsByTagName("a");
+	for (var i = 0; i < oLinks2.length; i++) {
+		if (oLinks2[i].id.indexOf("ln") == 0 && oLinks2[i].id.length > 2) {
+			oAllID[j] = oLinks2[i].id;
+			j++;
+			
+		}
+	}
+	YAHOO.util.Event.addListener(oAllID, "click", Venda.Widget.Features.interceptLink);
+}
+addEvent(window, 'load', function() { ajaxFunction(gridurl,'targetgrid',null,fnDisplaySwatch) }, false);
+
+</script>
+
+<span id="test" class="hide"><venda_invtatrminsubsell></span>
+
+<venda_tpcomment><!-- these hidden input (att1,att2, att3 and att4) are used for productgrid--></venda_tpcomment>
+<input type="hidden" name="att1" id="att1" value="">
+<venda_block label=100,selatt2=notnull><input type="hidden" name="att2" id="att2" value=""></venda_block label=100>
+<venda_block label=101,selatt3=notnull><input type="hidden" name="att3" id="att1" value=""></venda_block label=101>
+<venda_block label=102,selatt4=notnull><input type="hidden" name="att4" id="att2" value=""></venda_block label=102>
+<input type="Hidden" name="qty" id="qty" value="1">
+
+</venda_block label=219>

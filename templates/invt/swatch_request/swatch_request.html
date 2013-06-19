@@ -1,0 +1,191 @@
+<!-- ***********************************
+CHANGE THE PRODUCT NAME ON TITLE 
+*********************************** -->
+<div style="font-size:20px; color:#666666; text-align:center; text-transform:uppercase;">REQUEST YOUR <venda_invtname><br/> SOFA SWATCHES HERE</div>
+
+
+<venda_block label=1,errors=notnull><h2 class="error"><venda_errors></h2></venda_block label=1>
+<!-- <p style="text-align:center;">Simply select from the fabrics below.</p> -->
+
+<form name="form" method="post" action="<venda_dispview page=swatch_thankyou>" style="margin:0 4% 0 6%;" onsubmit="return validateForm()">
+<input type="hidden" name="ex" value="co_disp-eproc">
+<input type="hidden" name="bsref" value="heals">
+<!-- *********************************** 
+CHANGE THE PRODUCT NAME ON SUBJECT BELOW 
+*********************************** -->
+<input type="hidden" name="subject" value="<venda_invtname> Swatch Request form"> 
+<input type="hidden" name="to" value="swatches@heals.co.uk"> 
+<input type="hidden" name="from" value="customerservices@heals.co.uk"> 
+<input type="hidden" name="label1" value="Title:"> 
+<input type="hidden" name="label2" value="Name:"> 
+<input type="hidden" name="label3" value="Phone:"> 
+<input type="hidden" name="label4" value="Email:"> 
+<input type="hidden" name="label5" value="Address Line 1:"> 
+<input type="hidden" name="label6" value="Address Line 2:">
+<input type="hidden" name="label7" value="City:">
+<input type="hidden" name="label8" value="Postcode:">
+<input type="hidden" name="page" value="swatch_thankyou"> 
+<input type="hidden" name="layout" value="default"> 
+<fieldset class="contact"> 
+<legend></legend>
+
+<!-- *********************************** 
+SWATCH AREA - LI = INDIVIDUAL SWATCHES 
+*********************************** -->
+
+<!-- <ul class="swatch_list">
+
+<li class="chosen_swatch">
+<venda_block label=21,selatt1=notnull>
+<div style="display:none;">  -->
+
+<!--<input type="hidden" name="att1" value="att1_<venda_invtuuid>" />-->
+
+<!--<label for="att1"><venda_att1>:</label>
+<input type="checkbox" name="att1" id="att1_<venda_invtuuid>"><option value=""><venda_att1></option><venda_selatt1></select>
+</div>
+</venda_block label=21>
+</li>
+
+</ul>  -->
+
+
+<!-- *********************************** 
+REST OF THE FORM 
+*********************************** -->
+
+<p style="margin:10px 0 0 0; text-align:center; margin-bottom:10px;">Just add your details and where you want the swatches delivered to.</p>
+
+<div class="form row" style="width: 45%; margin-bottom: 0; padding-bottom: 0; float: left; clear: none; margin-left: 2%;">
+<div class="formRow ttl">
+<!-- <label for="title" style="clear: both; width: 100%; text-align: left; margin-bottom: 5px;"><venda_text id=desktop.form.title><span class="hideScreenReaderSafe"> <venda_text id=site.accessible.label.required></span></label> -->
+<style>
+#TITLE_FIELD option { color: black; }
+.empty { color: #cccccc; }
+</style>
+<script>
+$("#TITLE_FIELD").change(function () {
+    if($(this).val() == "0") $(this).addClass("empty");
+    else $(this).removeClass("empty")
+});
+
+$("#TITLE_FIELD").change();
+</script>
+<select id="TITLE_FIELD" name="field1" style="height: 33px; width: 100px; font-size: 14px; border: 1px solid #666; padding: 0;" required="required" class="title" >
+<option selected value="" required="required"></option>
+<option value="0" selected disabled>Select Title</option>
+<option value="Mr">Mr</option>
+<option value="Mrs">Mrs</option>
+<option value="Miss">Miss</option>
+<option value="Ms">Ms</option>
+<option value="Dr">Dr</option>
+</select>
+</div>
+ 
+<div class="formRow name">
+<!-- <label for="txtName" style="clear: both; width: 100%; text-align: left;margin-bottom: 5px;">Name: <span class="hideScreenReaderSafe"> <venda_text id=site.accessible.label.required></span></label> -->
+<input type="text" name="field2" class="name_l" id="txtName" style="height: 28px; width:98%;padding-left: 1%; font-size: 14px; border: 1px solid #666;" placeholder="<venda_text id=desktop.form.name> <venda_text id=desktop.form.required>" required="required">
+</div>
+
+<div class="formRow telephone"> 
+<!-- <label for="txtPhone1" style="clear: both; width: 100%; text-align: left; margin-bottom: 5px;">Daytime Phone: </label> -->
+<input type="text" name="field3" class="telephone_l" id="txtPhone" style="height: 28px; width:98%;padding-left: 1%; font-size: 14px; border: 1px solid #666;" placeholder="<venda_text id=desktop.form.phone> (optional)" >
+</div> 
+
+<div class="formRow email">
+<!-- <label for="txtEmail" style="clear: both; width: 100%; text-align: left; margin-bottom: 5px;">Email: <span class="hideScreenReaderSafe"> <venda_text id=site.accessible.label.required></span></label> -->
+<input type="text" name="field4" class="email_l" id="txtEmail" style="height: 28px; width:98%;padding-left: 1%; font-size: 14px; border: 1px solid #666;" placeholder="<venda_text id=desktop.form.email> <venda_text id=desktop.form.required>" required="required" >
+</div>
+</div>
+
+<div class="form row" style="width: 45%; margin-bottom: 0; padding-bottom: 0; float: left; clear: none; margin-left: 2%;">
+
+<div class="formRow address1">
+<!-- <label for="address1" style="clear: both; width: 100%; text-align: left; margin-bottom: 5px;">Address Line 1<span class="hideScreenReaderSafe"> <venda_text id=site.accessible.label.required></span></label> -->
+<input type="text" name="field5" class="address1" id="txtHouseNum" style="height: 28px; width:98%;padding-left: 1%; font-size: 14px; border: 1px solid #666;" placeholder="<venda_text id=desktop.form.addr1> <venda_text id=desktop.form.required>" required="required" >
+</div>
+
+<div class="formRow address2">
+<!-- <label for="address2" style="clear: both; width: 100%; text-align: left; margin-bottom: 5px;">Address Line 2<span class="hideScreenReaderSafe"></span></label> -->
+<input type="text" name="field6" class="address2" id="txtAddress" style="height: 28px; width:98%;padding-left: 1%; font-size: 14px; border: 1px solid #666;" placeholder="<venda_text id=desktop.form.addr2> (optional)" >
+</div>
+
+<div class="formRow city">
+<!-- <label for="city" style="clear: both; width: 100%; text-align: left; margin-bottom: 5px;">City<span class="hideScreenReaderSafe"> <venda_text id=site.accessible.label.required></span></label> -->
+<input type="text" name="field7" class="city" id="txtCity" style="height: 28px; width:98%;padding-left: 1%; font-size: 14px; border: 1px solid #666;" placeholder="<venda_text id=desktop.form.city> <venda_text id=desktop.form.required>" required="required" >
+</div>
+
+<div class="formRow postCode">
+<!-- <label for="postCode" style="clear: both; width: 100%; text-align: left; margin-bottom: 5px;">Postcode<span class="hideScreenReaderSafe"> <venda_text id=site.accessible.label.required></span></label> -->
+<input type="text" name="field8" class="postCode" id="txtPostCode" style="height: 28px; width:98%;padding-left: 1%; font-size: 14px; border: 1px solid #666;" placeholder="<venda_text id=desktop.form.state> <venda_text id=desktop.form.required>" required="required">
+</div>
+
+</div>
+
+
+<div> 
+<input type="submit" value="SEND ME MY <venda_invtname> SWATCHES" class="button  buttonArrow right submit submitSwatchRequest"  onClick="validateFields(); return false;" data-track="submit-swatch_request" style=" font-size: 100%; font-weight: bold; margin: 5% 0 1%; padding: 2% 29%; width: 97%;">
+</div> 
+</fieldset> 
+</form>
+
+<div class="back_to_top">
+<a href="#top" > <p>GO BACK TO TOP</p> </a>
+</div>
+
+<div id="JS-tell-a-friend" style="display: none">
+	<div id="tell-a-friend-validation-fname"><venda_text id=site.tell_friend.js_validation.fname></div>
+	<div id="tell-a-friend-validation-name"><venda_text id=site.tell_friend.js_validation.name></div>
+	<div id="tell-a-friend-validation-email-address"><venda_text id=site.tell_friend.js_validation.email_address></div>
+	<div id="tell-a-friend-validation-valid-email-address"><venda_text id=site.tell_friend.js_validation.valid_email_address></div>
+	<div id="tell-a-friend-validation-message"><venda_text id=site.tell_friend.js_validation.message></div>
+</div>
+
+<!-- tpxt used for crumbtrail -->
+<venda_tpxt mode=set,name=invtname,value=<venda_invtname>>
+<venda_tpxt mode=set,name=track,value=tellafriend>
+<script language="javascript" type="text/javascript">
+<!--
+function validateFields() {
+        // check email
+        var custEmail = document.form.field4.value;
+        if (custEmail == '') {
+                alert('Please type your email.');
+                document.form.field4.focus();
+                return;
+        }
+        if ((custEmail.indexOf('@') < 0) ||
+((custEmail.charAt(custEmail.length-4) != '.') &&
+(custEmail.charAt(custEmail.length-3) != '.'))) {
+                alert('Please type a valid email address.');
+                document.form.field4.focus();
+                return;
+        }
+        // populate "from" field with customer's email
+        document.form.from.value = document.form.field1.value;
+        // check name
+        if (document.form.field2.value == '') {
+                alert('Please type your name.');
+                document.form.field2.focus();
+                return;
+        }
+        // check message
+        if (document.form.field5.value == '') {
+                alert('Please type your address.');
+                document.form.field5.focus();
+                return;
+        }
+		if (document.form.field7.value == '') {
+                alert('Please type your city.');
+                document.form.field7.focus();
+                return;
+        }
+		if (document.form.field8.value == '') {
+                alert('Please type your postcode.');
+                document.form.field8.focus();
+                return;
+        }
+        document.form.submit();
+}
+// -->
+</script>

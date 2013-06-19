@@ -1,0 +1,40 @@
+<venda_block label=57,param1=delivery>
+<venda_block label=58,mode=value,<venda_setting type=ebiz,name=delivertostore>=1>
+<h2><venda_text id=site.store_delivery.heading></h2>
+<script type="text/javascript">
+// for image map if you use one
+function mapsearch(zipcode) {
+	document.storefinderP.zipc.value=zipcode;
+	document.storefinderP.submit();
+}
+</script>
+
+<div id="storelocator">	
+	<form id="storefinderP" name="storefinderP" method="post" onsubmit="return checkPostcode('storefinderP','zipc','<venda_text id=site.store_locator.zipc_value>')" action="<venda_codehttps>">
+	<input type="hidden" name="ex" value="co_wizr-postcodedistance">
+	<input type="hidden" name="threshold" value="1">
+	<input type="hidden" name="layout" value="checkout">
+	<input type="hidden" name="bsref" value="<venda_bsref>">
+	<input type="hidden" name="itemsperpage" value="4">
+	<input type="hidden" name="usemail" value="<venda_usemail>">
+	<input type="hidden" name="param1" value="<venda_workflow>">
+	<input type="hidden" name="param2" value="delivertostore">
+	<input type="hidden" name="zipc2list" value="<venda_category rec=scat,ref=storelocator,temp=storepostcodes,cacheall=1>">
+	<h3><venda_text id=site.store_locator.search_again></h3>
+	<fieldset class="f-storelocator">
+		<label for="zipc"><venda_text id=site.store_locator.label.zipc></label>
+		<input type="text" name="zipc" id="zipc" value="by UK postcode" class="border" onfocus="this.value='';">
+		<p><venda_text id=site.store_locator.enter_full_postcode></p>
+		<label for="bytown"><venda_text id=site.store_locator.label.bytown></label>
+		<select name="bytown" id="bytown" onchange="postcode=this.value;this.form.zipc.value=postcode;this.form.submit();" class="town">
+		<option selected value="postcode"><venda_text id=site.store_locator.find_store_by_town></option>
+		<venda_category rec=scat,ref=storelocator,temp=bytown,cacheall=1>
+		</select>
+	</fieldset>
+	<div id="buttons">
+	<input type="image" name="pcsubmit" id="pcsubmit" src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/bt_continue.gif" alt="<venda_text id=site.button.continue>" class="right">
+	</div>
+	</form>
+</div>
+</venda_block label=58>
+</venda_block label=57>

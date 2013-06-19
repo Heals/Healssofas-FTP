@@ -1,0 +1,133 @@
+<link rel="stylesheet" href="
+<venda_entmediaadd>/ebiz/<venda_bsref>/resources/css/myaccount.css" type="text/css" media="screen, projector">
+<style>#content-checkout {margin-top:0;}fieldset div div {
+width: 660px;}.containeroradeditadd fieldset div {padding-bottom:0;}#checkout .checkoutR {padding:0;}.containeroradeditadd p {padding-left:0;}.error{background:none;color:#C1392D;}#checkout .error {padding:0;}</style>
+<div id="myaccountWrapper">
+<!-- start column 1 -->
+<venda_inctemplate name=myaccount-leftNav,type=includes>
+<!-- end column 1 -->
+
+<!-- start column 2 -->
+<div class="myaccountDetails">
+<p><venda_text id=site.address_book.instructions></p>
+
+<div style="overflow:hidden;">
+<div class="myaccountBillingTabon">
+<img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/my-account/my-account-billing-address-on.gif" border="0">
+</div>
+
+<venda_block label=registereduser,ustype=R>
+<div class="myaccountDeliveryTaboff">
+<a href="#" onClick='<venda_wizbutton step=shipadd,mode=process,param1=show,param2=edit,callonly=yes> return false;'>
+<img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/my-account/my-account-delivery-address-off.gif" border="0">
+</a>
+</div>
+</venda_block label=registereduser>
+</div>
+
+<div class="myaccountDetails-body">
+
+<venda_block label=1,errors=notnull><h2 class="error"><venda_errors></h2></venda_block label=1>
+<p><venda_text id=site.edit_contact_address.required_fields></p>
+<p><venda_text id=site.edit_contact_address.instructions></p>
+<p><venda_text id=site.edit_contact_address.add_alternative></p>
+
+<div class="container editcontactaddress addressform">
+<!-- edit billing address via confirm pg -->
+<venda_form>
+<input type="hidden" name="PrimaryForm">
+<input type="hidden" name="usemail" value="<venda_usemail>">
+<venda_block label=83,mode=value,<venda_glxt mode=get,name=glxtusertype>=p><input type="hidden" name="ustype" value="P"></venda_block label=83>
+<venda_tpcomment><!-- Start: Personal Details --></venda_tpcomment>
+
+<fieldset class="f-orbtpersonal">
+<legend class="orbtname"><venda_text id=site.edit_contact_address.legend.name_at_address></legend>
+
+<div><label for="title"><venda_text id=site.edit_contact_address.label.title> <span class="required">*</span></label>
+		<select name="title" id="title">
+			<option value="Mr" <venda_block label=101,title=Mr>selected</venda_block label=101>>Mr</option>
+			<option value="Mrs" <venda_block label=111,title=Mrs>selected</venda_block label=111>>Mrs</option>
+			<option value="Miss" <venda_block label=121,title=Miss>selected</venda_block label=121>>Miss</option>
+			<option value="Ms" <venda_block label=131,title=Ms>selected</venda_block label=131>>Ms</option>
+			<option value=" "<venda_block label=141,title=,title= ,operator=or> selected</venda_block label=141>>Other</option>
+		</select>
+		</div>
+<div><label for="fname"><venda_text id=site.edit_contact_address.label.first_name> <span class="required">*</span></label> <venda_fname field=text,size=25,maxlength=30,required=yes></div>
+
+<venda_block label=123,mode=value,<venda_setting type=ebiz,name=showmname>=1>
+<div><label for="mname"><venda_text id=site.contact_address.label.middle_name></label> <venda_mname field=text,size=25,maxlength=30></div>
+</venda_block label=123>
+
+<div><label for="lname"><venda_text id=site.edit_contact_address.label.last_name> <span class="required">*</span></label> <venda_lname field=text,size=25,maxlength=30,required=yes></div>
+</fieldset>
+<venda_tpcomment><!-- End: Personal Details --></venda_tpcomment>
+
+<venda_tpcomment><!-- Start: Address Details --></venda_tpcomment>
+<fieldset class="f-orbtdetail">
+<legend class="orbtdetail"><venda_text id=site.edit_contact_address.legend.address_details></legend>
+
+<venda_block label=124,mode=value,<venda_setting type=ebiz,name=showcompany>=1>
+<div><label for="company"><venda_text id=site.contact_address.label.company></label> <venda_company field=text,size=25,maxlength=60></div>
+</venda_block label=124>
+
+<div><label for="addr1"><venda_text id=site.edit_contact_address.label.address> <span class="required">*</span></label> <venda_addr1 field=text,size=25,maxlength=50,required=yes></div>
+
+<div><label for="addr2"><venda_text id=site.edit_contact_address.label.address2></label> <venda_addr2 field=text,size=25,maxlength=50></div>
+
+<div><label for="city"><venda_text id=site.edit_contact_address.label.city> <span class="required">*</span></label> <venda_city field=text,size=25,maxlength=30,required=yes></div>
+		
+<div id="stateDiv">
+<label for="state" id="stateLabel"><venda_text id=site.my_account.edit_user_details.edit_contact_details.label.county></label> <input type="text" id="statetext" name="state" value="<venda_state>" class="admn_fieldsLarge" size="15" maxlength="20" /></div>
+
+<div id="zipcDiv"><label for="zipc" id="zipcLabel"><venda_text id=site.edit_contact_address.label.postcode> <span class="required">*</span></label> <venda_zipc field=text,size=25,maxlength=20></div>
+
+<div id="countryDiv"><label for="cntry" id="countryLabel"><venda_text id=site.edit_contact_address.label.country> <span class="required">*</span></label> <venda_cntry  field=combo,class=admn_fieldsLarge,required=yes></div>
+
+<div><label for="phone">Phone Number <span class="required">*</span></label> <venda_block label=103,mode=value,<venda_setting type=ebiz,name=hidearea>!=1><label for="area" class="dontFloat invisible"></label></venda_block label=103> <venda_block label=104,mode=value,<venda_setting type=ebiz,name=hidearea>!=1><venda_area field=text,size=4,maxlength=6,required=yes> </venda_block label=104><venda_phone field=text,size=18,maxlength=20,required=yes></div>
+
+		</fieldset>
+	<venda_tpcomment><!-- End: Address Details --></venda_tpcomment>
+
+	<venda_inctemplate name=usxtSet,type=exfields/user><!-- remains here for backwards compatibility -->
+
+	<venda_tpcomment><!-- start: JS Buttons --></venda_tpcomment>
+		<script type="text/javascript">
+		<!--
+		// isRequiredField - this param is set to 'true' when country field is 'US', for validating State and Zipcode
+		var isRequiredField = false;
+		function nextPage () {
+			if(isRequiredField){
+				if (document.wizform.statelist.value == "") { 
+					alert('<venda_text id=site.edit_contact_address.js_validation.state>');
+					return ; 
+				}
+				if (document.wizform.zipc.value == "") { 
+					alert('<venda_text id=site.edit_contact_address.js_validation.zipc.us>');
+					return ; 
+				}
+			}else{
+			<venda_block label=188,mode=value,<venda_setting type=ebiz,name=nohousenum>!=1>
+				if ((document.wizform.num.value == "") && (document.getElementById('houseNum').style.display != 'none')) {
+					alert("<venda_text id=site.my_account.edit_user_details.edit_contact_details.js_validation.num>");
+					document.wizform.num.focus();
+					return;
+				}
+				</venda_block label=188>
+			}
+			<venda_wizbutton step=confirm,mode=process,check=yes,callonly=yes>
+		}
+		-->
+		</script>
+		<div id="buttons" class="bottomButtons">
+		<a href="#" class="button buttonAlt2 previous" onclick='<venda_wizbutton step=confirm,mode=display,callonly=yes> return false;'><img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/my-account/my-account-cancel.gif" alt="Cancel" style="margin:0;"></a>
+		<input type="image" onclick='nextPage(); return false;' src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/my-account/my-account-submit.gif" alt="<venda_text id=site.button.submit>" class="button buttonAlt buttonArrow right submit">
+		</div>
+
+	<venda_tpcomment><!-- End: JS Buttons --></venda_tpcomment>
+
+	</form>
+	</div>
+</div>
+</div>
+<div style="margin:-1px 1px 0 1px;background-color:#b4b4b4;height:1px;
+width:197px;clear:both;float:left;"></div>

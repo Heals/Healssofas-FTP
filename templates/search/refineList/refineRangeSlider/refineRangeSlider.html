@@ -1,0 +1,26 @@
+<venda_detblock_hidden>
+	<venda_block sname!=maxprice,sname!=minprice,sname!=price_from,sname!=price_to><input type="hidden" name="<venda_sname>" value="<venda_svalue>" /></venda_block>
+</venda_detblock_hidden>
+
+<div class="collatedresult <venda_field>collateresult">
+<form id="<venda_field>range" name="<venda_field>range" action="/search/?">
+	<fieldset>
+		<venda_detail_hidden>
+		<p><venda_field> Range: <span id="<venda_field>rangevalues"></span></p>
+		<input id="<venda_field>_from" type="hidden" name="<venda_field>_from" />
+		<input id="<venda_field>_to" type="hidden" name="<venda_field>_to" />
+		<venda_block label=1,field=price>
+		<input id="maxprice" name="minprice" type="hidden" value="<venda_block label=2,minprice!=null><venda_minprice></venda_block label=2>" />
+		<input id="maxprice" name="maxprice" type="hidden" value="<venda_block label=3,maxprice!=null><venda_maxprice></venda_block label=3>" />
+		</venda_block label=1>
+	</fieldset>
+</form>
+<div id="<venda_field>slider" class="slider"></div>
+</div>
+<venda_block label=4,field=price>
+<venda_tpcomment><!-- Tags for JS --></venda_tpcomment>
+<div id="tag-pricefrom" style="display:none;"><venda_block pricefrom=null><venda_minprice></venda_block><venda_block pricefrom!=null><venda_pricefrom></venda_block></div>
+<div id="tag-priceto" style="display:none;"><venda_block priceto=null><venda_maxprice></venda_block><venda_block priceto!=null><venda_priceto></venda_block></div>
+<div id="tag-minprice" style="display:none;"><venda_minprice></div>
+<div id="tag-maxprice" style="display:none;"><venda_maxprice></div>
+</venda_block label=4>

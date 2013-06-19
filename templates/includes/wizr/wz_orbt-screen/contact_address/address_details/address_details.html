@@ -1,0 +1,49 @@
+<fieldset class="f-orbtadddetail">
+<legend class="orbtadddetail"><venda_text id=site.contact_address.legend.address_details></legend>
+<venda_block label=124,mode=value,<venda_setting type=ebiz,name=showcompany>=1>
+<div><label for="company"><venda_text id=site.contact_address.label.company></label> <venda_company field=text,size=25,maxlength=60></div>  </venda_block label=124>
+<venda_block label=10,param2=uk,errors=null>
+<div class="orbtaddfound"><label for="zcdropdown"><venda_text id=site.contact_address.label.addresses_found><span class="re-waiHide"> <venda_text id=site.accessible.label.required></span> <span class="required">*</span></label> <venda_zcdropdown></div>
+<a href="#" onClick='<venda_block label=48,instore!=1>document.wizform.ustype.value="P"; </venda_block label=48><venda_wizbutton step=billto,mode=process,param1=details,callonly=yes> return false;'><venda_text id=site.contact_address.enter_address_manually></a>
+<venda_city field=hidden><venda_state field=hidden><venda_zipc field=hidden><venda_cntry field=hidden>
+</venda_block label=10>
+<venda_block label=11,param2!=uk,errors=notnull,operator=or>
+<venda_block label=88,mode=value,<venda_setting type=ebiz,name=nohousenum>!=1><div><label for="num"><venda_text id=site.contact_address.label.house_name_flat_number><span class="re-waiHide"> <venda_text id=site.accessible.label.required></span> <span class="required">*</span></label> <venda_num field=text,size=25,maxlength=20,required=yes></div></venda_block label=88>
+<div><label for="addr1"><venda_text id=site.contact_address.label.address><span class="re-waiHide"> <venda_text id=site.accessible.label.required></span> <span class="required">*</span></label> <venda_addr1 field=text,size=25,maxlength=50,required=yes></div>
+<div><label for="addr2"><venda_text id=site.contact_address.label.address2></label> <venda_addr2 field=text,size=25,maxlength=50></div>
+<div><label for="city"><venda_text id=site.contact_address.label.city><span class="re-waiHide"> <venda_text id=site.accessible.label.required></span> <span class="required">*</span></label> <venda_city field=text,size=25,maxlength=30,required=yes></div>
+
+<div id="stateDiv"><label for="state" id="stateLabel"><venda_text id=site.contact_address.label.county></label> <span id="statelistbox"></span><span id="statetextbox"><input type="text" id="statetext" name="state" value="<venda_state>" class=admn_fieldsLarge size=15 maxlength=20></span></div>
+
+<div id="zipcDiv"><label for="zipc" id="zipcLabel"><venda_text id=site.contact_address.label.postcode></label> <venda_zipc field=text,size=25,maxlength=20>
+<venda_block label=100,instore=1>
+<input type=image src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/bt_lookup.gif" value="<venda_text id=site.contact_address.button.lookup>" onclick="<venda_wizbutton step=searchuser,param1=details,param2=search_results,param3=postcodelookup,mode=display,check=no,callonly=yes> return false;" />
+<venda_tpcomment><!-- bringing search params for 'previous' buttons --></venda_tpcomment>
+<input type="hidden" name="serlname" value="<venda_serlname>" />
+<input type="hidden" name="serusemail" value="<venda_serusemail>" />
+<input type="hidden" name="serzipc" value="<venda_serzipc>" />
+</venda_block label=100>
+</div>
+
+<div id="countryDiv"><label for="cntry" id="countryLabel"><venda_text id=site.contact_address.label.country><span class="re-waiHide"> <venda_text id=site.accessible.label.required></span> <span class="required">*</span></label> <venda_cntry field=combo,class=admn_fieldsLarge,required=yes,onchange=1></div>
+<div id="venda_cntry" style="display: none;"><venda_cntry></div>
+<venda_tpcomment><!-- tags to send to checkout.js for JS detection --></venda_tpcomment>
+<script type="text/javascript">
+<venda_tpcomment>// generate the state dropdown in JS so that JS-free users don't see 2 fields</venda_tpcomment>
+		if (typeof Venda.Platform.Checkout.jsContent != "undefined" || Venda.Platform.Checkout.jsContent)
+		{
+			Venda.Platform.Checkout.jsContent.create('statelistbox');
+		};
+
+		var venda_cntry_val;
+		if(/^[a-zA-Z ]+$/.test(document.getElementById("venda_cntry").innerHTML))
+		{
+			venda_cntry_val = document.getElementById("venda_cntry").innerHTML;
+		}
+
+		setDropDownDefault(document.getElementById("cntrylist"), venda_cntry_val);
+		hasState(document.getElementById('statelistbox'),document.getElementById('statetextbox'),document.getElementById('statelist'), venda_cntry_val);
+		setDropDownDefault(document.getElementById("statelist"), '<venda_state>');
+	</script>
+</venda_block label=11>
+</fieldset>

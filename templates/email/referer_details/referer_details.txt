@@ -1,0 +1,45 @@
+<venda_detblock1>
+<venda_nameref>: <venda_emailref><cr>
+</venda_detblock1>
+
+<cr>
+<venda_ebizname> Refer A Friend<cr>
+------------------------------------------------------------------------------<cr><cr>
+
+Dear <venda_title> <venda_fname> <venda_lname>,<cr><cr>
+
+Thank you for referring your friend(s) to Heals.co.uk. If they are not already registered on Heals.co.uk and purchase something from our site you will be entitled to a £<venda_coamt> voucher!<cr><cr>
+
+Here are the details of the referals you have made:<cr>
+<venda_detail1><cr><cr>
+
+<venda_ebizname> would like to thank you for recommending us.  Don't forget that you can recommend as many friends as you wish, and continue to earn your £<venda_coamt> vouchers.<cr><cr>
+------------------------------------------------------------------------------<cr><cr>
+How to redeem your voucher<cr>
+<cr>
+- Go to <venda_serveradd>.<cr>
+- Select the items you wish to purchase and add them to your basket.<cr>
+- Go through the checkout process until you get to the final order confirmation screen.<cr>
+- Click on the 'Redeem Gift Certificate' button and copy the Gift Certificate code exactly as shown above.<cr>
+- Click 'Continue' to apply the certificate.<cr>
+- If the value of your order is higher than the value of the Gift Certificate, you will need to pay the difference using a credit/debit card.<cr>
+- If the value of your order is lower than the value of the Gift Certificate, the balance will be added to your account with <venda_ebizname>, and you can use it on future visits.<cr>
+<cr>
+<cr>
+If you forget to click on the '<venda_ebizname> voucher' button, cancel your order and start again. Once your order has been submitted and paid for by other means, you are unable to retrospectively use your voucher to offset that cost.<cr><cr>
+------------------------------------------------------------------------------<cr><cr>
+Terms and conditions of use:<cr>
+<cr>
+- Your Refer A Friend voucher can only be redeemed against a purchase with a minimum value of GBP £10.00 excluding postage and packing, delivery and gift wrap charges.<cr>
+- Vouchers can only be redeemed online at <venda_ebizurl> or by telephone, phone <venda_ebizarea> <venda_ebizphone>.<cr>
+- The voucher is valid for three months from the date the voucher is emailed to you.<cr>
+- This voucher has a face value of £<venda_coamt>.<cr>
+- The remaining balance must be paid using a credit or debit card.<cr> 
+- Only one voucher can be redeemed per order.<cr>
+- This voucher is not valid in conjunction with any other promotional offer.<cr>
+- This voucher is not transferable or assignable and has a cash redemption value of GBP £0.001 which can not be exchanged or part exchanged for cash payment.<cr>
+- Normal <venda_ebizname> terms and conditions for using the <venda_ebizname> website apply except when they conflict with these terms and conditions.<cr>
+- The voucher cannot be used to purchase gift certificates, or used against the value of postage and packing, delivery and gift wrap charges.<cr>
+- The voucher cannot be used retrospectively to pay for orders already placed.<cr>
+==============================================================================<cr>
+

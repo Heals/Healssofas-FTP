@@ -1,0 +1,34 @@
+<venda_detblock1>
+    <venda_block label=20,exname!=Status,exname!=Questions>
+            <venda_block label=21,exname=Access Guidelines,exvalue=notnull>
+                    <tr class="pdxtrowodd">
+                            <td colspan="2"><br><a href="<venda_ebizurl>/pcat/accessguidelines&layout=popups" rel="popup console 740 1000"><b>Please check access guidelines</b></a></br></td>
+                    </tr>
+            </venda_block label=21>
+            <venda_block label=22,exname!=Access Guidelines>
+                    <venda_block label=1,exvalue=1,ismultivalue=null>
+                    <tr class="pdxtrowodd">
+                            <td class="leftside"><venda_exname> <!-- : --></td>
+                            <td class="rightside"><venda_text id=site.display.pdxt.yes.invt></td>
+                    </tr>
+                    </venda_block label=1>
+                    <venda_block label=2,ismultivalue=1,exvalue!=1>
+                    <tr class="pdxtrowodd">
+                            <td class="leftside"><venda_exname> :</td>
+                            <td class="rightside"><venda_text id=site.display.pdxt.yes.invt></td>
+                    </tr>
+                    </venda_block label=2>
+                    <venda_block label=3,exvalue!=1,ismultivalue=null,exvalue=notnull>
+                    <tr class="pdxtrowodd">
+                            <td class="leftside"><venda_exname> :</td>
+                            <td class="rightside"><venda_exvalue></td>
+                    </tr>
+                    </venda_block label=3>
+
+            </venda_block label=22>
+    </venda_block label=20>
+    <venda_block label=23,exname=Questions>
+    <venda_block label=12,exvalue=1><venda_text id=site.display.pdxt.text></venda_block label=12>
+    </venda_block label=23>
+</venda_detblock1>
+<venda_detail1>

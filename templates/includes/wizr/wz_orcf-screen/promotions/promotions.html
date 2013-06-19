@@ -1,0 +1,30 @@
+<script type="text/javascript">
+var awinPromoVal = "";
+</script>
+<venda_detblock9>
+<p><venda_codesc> (-<venda_currsym><venda_coamt>)</p>
+<script type="text/javascript">
+if (awinPromoVal == ""){
+	awinPromoVal = "<venda_codesc>";
+}else{
+	awinPromoVal = awinPromoVal + "|<venda_codesc>";
+}
+</script>
+</venda_detblock9>
+
+<venda_block label=3,ohcodisc&gt;0,accdisc&gt;0,operator=or>
+<!-- start promotions -->
+	<div id="promotions">
+	<h2><span></span><venda_text id=site.order_confirmation.promotions_included></h2>
+	<venda_detail9>
+	<script type="text/javascript">
+		clearAffiParam('awinPromoVal');
+		setAffiCookie('awinPromoVal',awinPromoVal);
+	</script>
+	<!-- <p>Your order includes <venda_currsym><venda_ohcodisc> voucher</p> -->
+	<venda_block label=5,accdisc&gt;0>
+	<p><venda_text id=site.order_confirmation.accessory_discount></p>
+	</venda_block label=5>
+	</div>
+<!-- end promotions -->
+</venda_block label=3>

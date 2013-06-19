@@ -1,0 +1,43 @@
+==============================================================================<cr>
+Your <venda_ebizname> Voucher<cr>
+==============================================================================<cr><cr>
+
+Dear <venda_name><cr>
+Great news...<cr>
+As your friend <venda_fromname> thought that you would be interested in seeing what Heals.co.uk has to offer, we're pleased to give you a voucher for a £<venda_coamt> discount off your first order with us.<cr>
+See below for the full details. Don't delete this message as it contains all the information you need to use your voucher.<cr>
+<cr>
+To: <venda_name><cr>
+From: <venda_fromname><cr>
+Amount: £<venda_coamt> off when you spend £30 or more (excluding postage & packing and gift wrap)<cr>
+Claim Code: <venda_copromo><cr>
+Expiry Date: <venda_codurexp><cr>
+<cr>
+------------------------------------------------------------------------------<cr><cr>
+How to redeem your voucher<cr>
+<cr>
+- Go to <venda_serveradd>.<cr>
+- Select the items you wish to purchase and add them to your basket.<cr>
+- Go through the checkout process until you get to the final order summary page.<cr>
+- Click on the 'Redeem A Voucher' button and copy the voucher claim code exactly as shown above.<cr>
+- Click 'Continue'. This will apply the voucher.<cr>
+<cr>
+
+<venda_inctemplate name=textEmailFooter,type=includes/email>
+
+<cr><cr>
+------------------------------------------------------------------------------<cr><cr>
+Terms and conditions of use:<cr>
+<cr>
+- Your Refer A Friend voucher can only be redeemed against a purchase with a minimum value of GBP £10.00 excluding postage and packing, delivery and gift wrap charges.<cr>
+- Vouchers can only be redeemed online at <venda_ebizurl> or by telephone, phone <venda_ebizarea> <venda_ebizphone>.<cr>
+- The voucher is valid for three months from the date the voucher is emailed to you.<cr>
+- This voucher has a face value of £<venda_coamt>.<cr>
+- The remaining balance must be paid using a credit or debit card.<cr> 
+- Only one voucher can be redeemed per order.<cr>
+- This voucher is not valid in conjunction with any other promotional offer.<cr>
+- This voucher is not transferable or assignable and has a cash redemption value of GBP £0.001 which can not be exchanged or part exchanged for cash payment.<cr>
+- Normal <venda_ebizname> terms and conditions for using the <venda_ebizname> website apply except when they conflict with these terms and conditions.<cr>
+- The voucher cannot be used to purchase gift certificates, or used against the value of postage and packing, delivery and gift wrap charges.<cr>
+- The voucher cannot be used retrospectively to pay for orders already placed.<cr>
+==============================================================================<cr>

@@ -1,0 +1,13 @@
+==============================================================================<cr>
+<venda_ebizname> Account Locked<cr>
+==============================================================================<cr><cr>
+        
+<venda_inctemplate name=textEmailHeader2,type=includes/email>
+
+Your account to <venda_ebizname> has been locked due to multiple failed log in attempts.<cr>
+Email Address: <venda_block label=1,usemail=notnull><venda_usemail></venda_block label=1><venda_block label=2,usemail=null,uslogin=notnull><venda_uslogin></venda_block label=2><cr>
+
+If you have forgotten your log in details please go to (<venda_serveradd>/bin/venda?ex=co_wizr-passwordreminder&bsref=<venda_ebizref>). Your details will be sent to you and the account will be unlocked.<cr>
+Alternatively contact customer services on <venda_ebizphone> or by email on <venda_ebizemail>.<cr>
+
+<venda_inctemplate name=textEmailFooter,type=includes/email>

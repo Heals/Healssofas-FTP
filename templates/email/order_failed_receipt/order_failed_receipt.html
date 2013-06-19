@@ -1,0 +1,21 @@
+<venda_inctemplate name=htmlEmailDetblocks,type=includes/email>
+
+<html>
+<head>
+	<title><venda_ebizname> Order <venda_ohordnum>, Card Authorisation Failed</title>
+</head>
+<body>
+
+<venda_inctemplate name=htmlEmailCssEtc,type=includes/email>
+
+<venda_inctemplate name=htmlEmailHeader,type=includes/email>
+
+<venda_block label=20,msg=notnull><p><venda_msg></p></venda_block label=20>
+<p>Your order could not be authorised. No more attempts will be made to authorise your order.</p>
+
+<venda_inctemplate name=htmlEmailBody,type=includes/email>
+
+<venda_inctemplate name=htmlEmailFooter,type=includes/email>
+
+</body>
+</html>

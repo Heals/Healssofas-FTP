@@ -1,0 +1,321 @@
+<venda_detblock1>
+<div class="padding_T5 step1">
+<div class="content_box_catlist"><div class="contentb_box"><div class="contentl_box"><div class="contentr_box"><div class="contentbl_box"><div class="contentbr_box"><div class="contenttl_box"><div class="contenttr_box">
+<!-- Contact Detail -->
+<venda_block label=888,workflow!=ordlookup>
+<div id="stepsummary">
+<div class="ordersum_name">Confirm Details</div>
+<br class="clear-all">
+</div>
+</venda_block label=888>
+<venda_block label=999,workflow=ordlookup>
+<div class="title_block theader"><venda_text id=site.order_details.delivery_details></div>
+</venda_block label=999>
+<venda_block label=601,workflow=shopcart,curstep=confirm>
+<script type="text/javascript">
+numberAddresses = numberAddresses+1;
+                nAddr = numberAddresses - 1;
+allShipMethod = -1;
+oShipArray[nAddr] = new Array();
+</script>
+</venda_block label=601>
+
+<div id="billingandcontactdetails">
+<venda_block label=7631202,workflow=shopcart,curstep=confirm>
+<div id="billing_details">
+<h2><span></span><venda_text id=site.contact_address.subheader.billingdetails></h2>
+<venda_inctemplate name=contactDetails,type=includes>
+<div id="billing_details2">
+<a href="#" onClick='<venda_wizbutton step=billto,mode=process,param1=show,param2=edit,callonly=yes> return false;'><img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/bt_edit.gif" alt="<venda_text id=site.button.edit_contact_details>" border="0"></a>
+</div>
+</div>
+</venda_block label=7631202>
+<div id="contact_detail">
+<h2><venda_block label=21000,pkshipreq=1><venda_text id=site.order_details.delivery_details></venda_block label=21000>&nbsp;</h2><venda_block label=22000,pkshipreq=1>
+<div class="addrName"><venda_pktitle> <venda_pkfname> <venda_pklname></div>
+<div class="address">
+<venda_block label=71,pkcompany=notnull><venda_pkcompany><br></venda_block label=71>
+<venda_pknum> <venda_pkaddr1>, <venda_block label=72,pkaddr2=notnull><br><venda_pkaddr2>,</venda_block label=72><br>
+<venda_pkcity>,<venda_block label=73,pkstate=notnull> <venda_pkstate>,</venda_block label=73><br>
+<venda_pkzipc><br>
+<venda_pkcntry>
+</div>
+<venda_block label=502,workflow!=ordlookup,curstep=confirm>
+<div id="contact_detail2">
+<a href="#" onClick='<venda_wizbutton step=shipadd,param2=adbook,mode=process,callonly=yes> return false;' class="black"><img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/bt_edit_delivery.gif" alt="<venda_text id=site.button.edit_delivery_address>" border="0"></a></div>
+</venda_block label=502>
+</venda_block label=22000>
+
+</div>
+</div>
+<script type="text/javascript">
+<venda_tpcomment>
+// Get User's Postcode Stem here.
+// Postcode stem = All characters before the last 3 characters
+// Ex. Postcode = CR8 2EL then Postcode Stem = CR8
+// There are 6 different formats for Valid Postcode Stem that allow furniture items to be delivered
+// XXXX , XXX0, XX00 , XX0 , X00 , X0
+// where X = Alphabetic , 0 = digit
+</venda_tpcomment>
+var allUserInfo = getFinalUserPostStem('<venda_pkzipc>');
+userPostCodeStem[nAddr] = new UserPostRec(allUserInfo.userpostcode, allUserInfo.uservalidtype, allUserInfo.userispostvalid);
+</script>
+<br class="clear-all">
+
+
+<h2 class="orderlist"><span></span><venda_text id=site.order_details.items_to_this_address></h2>
+
+<div class="bottomdashcover">
+<table summary="Information about each item in your order" width="97%" border="0" cellpadding="0" cellspacing="0" id="bottomdash">
+<thead>
+<tr bgcolor="#E1E1D7" class="bold">
+<th scope="col" colspan="2" class="thumb"><span><venda_text id=site.order_details.column_heading.product_image></span></th>
+<th scope="col" class="price"><div class="hdr-price"><venda_text id=site.order_details.column_heading.price_each></div></th>
+<th scope="col" class="qty"><div class="hdr-qty"><venda_text id=site.order_details.column_heading.quantity></div></th>
+<th scope="col" class="avali"><div class="hdr-avali">Availability</div></th>
+<th scope="col" class="total"><div class="hdr-total"><venda_text id=site.order_details.column_heading.total_price></div></th>
+<venda_block label=500,workflow=ordlookup>
+<th scope="col"><div class="hdr-avali">Status</div></th>
+</venda_block label=500>
+</tr>
+</thead>
+<tbody>
+<venda_block label=7631201,workflow=shopcart,curstep=confirm>
+<script type="text/javascript">
+// hasFuritem - Yes = there is any furniture items, No = there is NO furniture items
+// hasNormitem - Yes = there is any normal items, No = there is NO normal items
+// validIndex - Keep the index of postcode list array. -1 = Not found means user's postcode stem is invalid.
+// validGTrate - Keep the delivery rate for order >= 1000
+// validLTrate - Keep the delivery rate for order < 1000
+hasFuritem[nAddr] = 'no';
+hasNormitem[nAddr] = 'no';
+validIndex[nAddr] = -1;
+validGTrate[nAddr] = '';
+validLTrate[nAddr] = '';
+ohPackageSub[nAddr] = 0.00;
+</script>
+</venda_block label=7631201>
+<venda_detail2>
+
+<venda_block label=7631202,workflow=shopcart,curstep=confirm>
+<script type="text/javascript">
+if (hasFuritem[nAddr] == 'yes') {
+if (userPostCodeStem[nAddr].isPostValid) {
+<venda_tpcomment>
+// The postcode list is splited out into several pages to reduct its size.
+// Using the first user's postcode stem character and the length to check what page of postcode list should be pulled out.
+// Ex. Postcode = CR8 , First character = C then pull out the page "post3chars_1".
+// See getPrefPostList function in general.js for how to map the first character with the page ref.
+</venda_tpcomment>
+
+prefPostList[nAddr] = getPrefPostList(userPostCodeStem[nAddr].postCode);
+
+if (document.getElementById('postcodelist').src == '') {
+document.getElementById('postcodelist').src = '<venda_entmediaadd>/ebiz/<venda_bsref>/resources/js/postcodelist/' + prefPostList[nAddr] + '.js';
+}
+}
+}
+</script>
+</venda_block label=7631202>
+
+</tbody>
+</table>
+</div>
+
+
+<br class="clear-all">
+</div></div></div></div></div></div></div></div><br class="clear-all">
+</div>
+
+
+
+<!-- Step 2 start -->
+
+<venda_block label=90,shipmethod!=free>
+<venda_block label=501,workflow!=ordlookup>
+<venda_block label=901171,pkshipreq!=1>
+<div class="hide">
+</venda_block label=901171>
+<div class="padding_T5 step2" id="step2box" name="step2box">
+<div class="content_box_catlist"><div class="contentb_box"><div class="contentl_box"><div class="contentr_box"><div class="contentbl_box"><div class="contentbr_box"><div class="contenttl_box"><div class="contenttr_box">
+<div class="deliveryopt">
+<div id="stepsummary">
+<div class="delioption">Delivery Options</div>
+<br class="clear-all">
+</div>
+<!-- Do not change this table id or name. -->
+<table width="97%" cellpadding="0" cellspacing="0" background="#E9E9E1" id="ordersum_table2" name="ordersum_table2">
+<venda_detail3>
+</table>
+<venda_block label=901172,pkshipreq!=1>
+</div>
+</venda_block label=901172>
+</div>
+<br class="clear-all">
+</div></div></div></div></div></div></div></div><br class="clear-all">
+</div>
+</venda_block label=501>
+</venda_block label=90>
+</venda_detblock1>
+<!-- Avail -->
+<script type="text/javascript">
+var availProdsDet = "";
+</script>
+<!-- Avail -->
+
+<!-- Affiliate Window tracking -->
+<venda_page page=affiliatewindowtrackingjs>
+<script type="text/javascript">
+var awinProdVal = "";
+</script>
+<!-- Affiliate Window tracking -->
+
+<venda_detblock2>
+<!-- Avail -->
+<script type="text/javascript">
+for(var i=0;i<<venda_oiqty>;i++) {
+vbmParentTrack += "<venda_block label=606,invtparef!=null><venda_invtparef></venda_block label=606><venda_block label=607,invtparef=null><venda_invtref></venda_block label=607>,";
+}
+
+for(var i=0;i<<venda_oiqty>;i++) {
+vbmParentPrices += "<venda_oisub>,";
+vbmParentQty += "<venda_oiqty>,";
+}
+</script>
+<!-- Avail -->
+<script type="text/javascript">
+<venda_tpcomment>
+// hard code checking the product type of each item in the basket
+// If an item is one of these product types then this order is a furniture order.
+</venda_tpcomment>
+
+<venda_block label=5556,invtivtype!=giftcertificate>
+var invttype = "<venda_invtivtype>";
+// alert("<venda_invtivtype>");
+if ( (invttype =="furniture") || (invttype =="furniturerange") ){
+hasFuritem[nAddr] = 'yes';
+}
+if ( (invttype !="furniture") && (invttype !="furniturerange") ){
+hasNormitem[nAddr] = 'yes';
+}
+ohPackageSub[nAddr] += <venda_oiextsub>;
+</venda_block label=5556>
+
+</script>
+
+<venda_block label=700,invtivtype=furniture,invtivtype=furniturerange,operator=or>
+<venda_tpxt mode=set,name=furniture,value=yes>
+<div class="hide"><venda_tpxt mode=set,name=furniture,value=yes></div>
+</venda_block label=700>
+
+<tr class="grey666">
+
+<venda_block label=50,oiitype=3>
+<td class="thumb gcimage"><venda_block label=150,med-medium=notnull><venda_media rec=invt,type=movie-swf-pict,key=medium,border=0,width=120,height=120></venda_block label=150>
+<venda_block label=151,med-medium=null><img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/no_image_<venda_setting type=ebiz,name=setordersummaryimagekey>.gif" alt="<venda_text id=site.link.alt.no_image.invt>"></venda_block label=151></td>
+</venda_block label=50>
+
+<venda_block label=51,oiitype!=3>
+<venda_block label=111,invtatt1=notnull>
+<venda_block label=4,med-medium=notnull><td class="thumb"><img src="<venda_entmediaadd>/ebiz/<venda_bsref>/invt/<venda_invtparef>/<venda_oiivref>_s.jpg" border="0" width="120px" height="120px" onError="noImage<venda_oiivref>(this);" />
+<script type="text/javascript">function noImage<venda_oiivref>(changeImage){
+changeImage.src = '<venda_entmediaadd>/ebiz/<venda_bsref>/invt/<venda_invtparef>/<venda_invtparef>_m.jpg';}
+</script></td></venda_block label=4>
+</venda_block label=111>
+<venda_block label=113,invtatt1=null>
+<venda_block label=4,med-medium=notnull><td class="thumb"><venda_media rec=invt,type=movie-swf-pict,key=medium,border=0,width=120,height=120></td></venda_block label=4>
+</venda_block label=113>
+<venda_block label=5,med-medium=null><td class="thumb noimage"><img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/no_image_<venda_setting type=ebiz,name=setordersummaryimagekey>.gif" alt="<venda_text id=site.link.alt.no_image.invt>"></td></venda_block label=5>
+</venda_block label=51>
+
+
+
+
+<td class="invtname"><div class="margin_L5 margin_R5"><venda_block label=9999,invtatt1=null,invtatt2=null><div class="oiivname"><venda_oiivname></venda_block label=9999><venda_block label=111,invtatt1=notnull><venda_invtatt1><venda_block label=112,invtatt2=notnull>, <venda_invtatt2></div></venda_block label=112></venda_block label=111></div><venda_block label=24000,oiitype=3><br><venda_text id=site.order_details.gift_certificate_sent_to></venda_block label=24000></div></td></td>
+
+
+
+<td class="price"><venda_symoisub></td>
+<td class="qty"><venda_oiqty></td>
+<td class="availability">
+<div>
+<venda_block label=50,oiitype=3>In Stock</venda_block label=50>
+<venda_block label=51,oiitype!=3>
+<div id="invt<venda_oiivref>"></div>
+<venda_block label=1222,invtparef=null><venda_inventory ref=<venda_invtref>,temp=availability></venda_block label=1222>
+<!-- Include Availability nonattribute from invt -->
+<script type="text/javascript">
+$("#invt<venda_oiivref>").load("/bin/venda?ex=co_wizr-productgrid&bsref=<venda_bsref>&step=shopcartmulti&invt=<venda_oiivref>&ordercol=alphanu&layout=contentonly p#invt<venda_oiivref>");
+</script>
+</venda_block label=51>
+
+</div>
+</td>
+<td class="totalprice"><venda_currsym><venda_oiextsub></td>
+
+
+<venda_block label=311,status=notnull>
+<td class="status">
+<venda_block label=22,oistatus!=2,oistatus!=3,oistatus!=5><venda_status></venda_block label=22>
+<venda_block label=23,oistatus=2,oistatus=3,operator=or><venda_text id=site.order_status.in_progress></venda_block label=23>
+<venda_block label=24,oistatus=5>
+<venda_block label=850,invtivtype=furniture,invtivtype=furniturerange,operator=or>
+<venda_text id=site.order_status.processed><!-- Processed -->
+</venda_block label=850>
+<venda_block label=851,invtivtype!=furniture,invtivtype!=furniturerange>
+<venda_text id=site.order_status.delivered> <!-- Dispatched -->
+<div class="trackno"><venda_block label=114,num=notnull><venda_num></venda_block label=114></div>
+</venda_block label=851>
+</venda_block label=24>
+</td>
+</venda_block label=311>
+<venda_block label=312,status=null>
+<venda_block label=500,workflow=ordlookup>
+<td class="status">&nbsp;</td>
+</venda_block label=500>
+</venda_block label=312>
+</tr>
+
+<venda_block label=122,oigwrefqty=notnull,oicmtmsgqty=notnull,operator=or>
+<venda_block label=229,oiitype!=3>
+<tr>
+<td colspan="7" class="giftmessage">
+<venda_block label=221,oigwrefqty=notnull>
+<venda_block label=42,oiqty!=1><span class="wrappedmsgtitle"><venda_text id=site.order_details.items_gift_wrapped></span><br></venda_block label=42>
+<venda_block label=43,oiqty=1><span class="wrappedmsgtitle"><venda_text id=site.order_details.item_gift_wrapped></span><br></venda_block label=43>
+<venda_block label=456,oicmtmsgqty=notnull>
+<span class="wrappedmsgheader"><venda_text id=site.order_details.gift_message></span><span class="wrappedmsgcontent"><venda_oicmt></span></venda_block label=456>
+</venda_block label=221>
+<venda_block label=223,oigwrefqty=null,oicmtmsgqty=notnull>
+<span class="wrappedmsgheader"><venda_text id=site.order_details.gift_message></span><span class="wrappedmsgcontent"><venda_oicmt></span>
+</venda_block label=223>
+</td>
+</tr>
+</venda_block label=229>
+</venda_block label=122>
+
+<venda_block label=222,invtpreorder=notnull>
+<tr>
+<td colspan="6" class="thumb preorder"><span id="preorder_text">Preorder: This item is not released until <venda_invtreleasedy>/<venda_invtreleasemn>/<venda_invtreleaseyr></span></td>
+
+<td>&nbsp;</td>
+
+</tr>
+</venda_block label=222>
+
+<venda_block label=223,mode=value,<venda_tpxt mode=get,name=track>=orderreceipt>
+
+</venda_block label=223>
+
+<!-- Affiliate Window tracking -->
+<script type="text/javascript">
+var prodName = "<venda_invtname>";
+var prodSku = "<venda_invtref>";
+var prodPrice = "<venda_invtsell>";
+var prodQty = "<venda_oiqty>";
+var category = "<venda_invtcatref0>";
+awinProdVal = awinProdVal + 'AW:P|1549|<venda_ohordnum>|'+prodSku+'|'+prodName+'|'+prodPrice+'|'+prodQty+'|SKU:'+prodSku+'|DEFAULT|'+category+'\n';
+</script>
+<!-- Affiliate Window tracking -->
+
+</venda_detblock2>

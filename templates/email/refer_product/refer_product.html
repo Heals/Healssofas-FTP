@@ -1,0 +1,34 @@
+<html>
+<head>
+<title><venda_ebizname> This is fabulous, take a look…</title>
+</head>
+<body>
+<div id="emailBody">
+<venda_inctemplate name=htmlEmailCssEtc,type=includes/email>
+<div id="logo">
+	<venda_inctemplate name=htmlEmailLogo,type=includes/email>
+	<h1>This is fabulous, take a look…</h1>
+	<div class="clear">&nbsp;</div>
+</div>
+
+<p>Dear <strong><venda_name></strong></p>
+
+<venda_block label=1,message=notnull><p><venda_message></p></venda_block label=1>
+<venda_block label=2,message=null><p>I've found an excellent product on <a href="<venda_serveradd>"><venda_ebizname></a>.</p></venda_block label=2>
+
+<p><a href="<venda_dispview invt=<venda_invtref>>">
+	<strong><venda_invtname></strong></a><br>
+	<venda_block label=20,invtsell&gt;0>Costing <venda_currsym><venda_invtsell> Each<br></venda_block label=20>
+	<venda_block label=21,invtsell=0.00,invtatrminsubsell&gt;0,operator=or>From <venda_currsym><venda_invtatrminsubsell><br></venda_block label=21>
+	Item code: <venda_invtref><br>
+	<venda_block label=1,invtdesc1=notnull><venda_invtdesc1></venda_block label=1>
+</p>
+
+<p>Hope you love it as much as I do</p>
+<venda_block label=44,fname=null>A friend</venda_block label=44>
+<venda_block label=45,fname=notnull><venda_fname> <venda_lname></venda_block label=45>
+
+</div>
+</body>
+</html>
+

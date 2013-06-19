@@ -1,0 +1,96 @@
+<venda_detblock1>
+	<venda_block label=501,workflow!=ordlookup,curstep!=finish>
+				<div id="stepsummary">
+						<div class="ordersum_addition bold">Delivery Option</div>
+				</div>
+				<br class="clear-all">
+				<div class="padding_T5"><venda_detail3></div>
+	</venda_block label=501>
+	
+	
+	
+	<venda_block label=47,pkshipreq=1>
+			<div id="stepsummary">
+				<div class="ordersum_addition bold">Delivery Details</div>
+			</div>
+			<!-- start delivery address -->
+			<div id="contact_detail">
+				<div id="contact_detailtitle" class="bold left">Name:</div>
+				<div class="grey666 left"><venda_block label=181,pktitle=notnull><strong><venda_pktitle> </strong></venda_block label=181><strong><venda_pkfname> <venda_pklname></strong></div>
+				<br class="clear-all">
+				
+				<div id="contact_detailtitle" class="bold left">Address:</div>
+				<div class="grey666 left">
+					<venda_block label=182,pknum=notnull><venda_pknum> </venda_block label=182><venda_block label=183,pkaddr1=notnull><venda_pkaddr1></venda_block label=183><venda_block label=72,pkaddr2=notnull>, <venda_pkaddr2></venda_block label=72><venda_block label=184,pkcity=notnull>, <venda_pkcity></venda_block label=184><venda_block label=185,pkstate=notnull>, <venda_pkstate></venda_block label=185>, <venda_pkzipc>, <venda_pkcntry>
+				</div>
+				<br class="clear-all">
+			</div>
+			<!-- end delivery address -->
+
+		<venda_block label=502,workflow!=ordlookup,curstep=confirm>
+			<!-- ns6 hack -->
+			<div id="buttons">
+		    	<a href="#" onClick='<venda_wizbutton step=shipadd,param2=adbook,mode=process,callonly=yes> return false;'><img class="edit-address" src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/buttons/bt_edit.gif" alt="Edit delivery address" title="Edit delivery address" border="0"></a>
+			</div>	
+		</venda_block label=502>
+	</venda_block label=47>
+	
+	<venda_block label=471,pkshipreq!=1>
+		<div class="padding_T5 paddign_B5"><strong>Note: </strong>Services and Gift Certificates do not require delivery and have no delivery costs.</div>
+	</venda_block label=471>
+	
+	<br class="clear-all">
+	
+	<table class="orderdetblocks" width="97%" border="0" cellpadding="0" cellspacing="0" summary="Information about each item in your order" id="bottomdash">
+		<venda_block label=481,pkshipreq=1>
+			<thead>
+				<tr>
+					<th class="col-head" colspan="5"><strong>Items in your order:</strong></th>
+				</tr>
+			</thead>
+		</venda_block label=481>
+		<tbody>
+			<venda_detail2>
+		</tbody>
+	</table>
+	
+	<venda_block label=36,allgiftcert!=1></venda_block label=36>
+</venda_detblock1>
+
+<venda_detblock2>
+	<tr>
+		<td class="col" colspan="2"><strong><venda_oiqty> x <venda_block label=9999,invtatt1=null,invtatt2=null><venda_oiivname></venda_block label=9999><venda_block label=111,invtatt1=notnull><venda_invtatt1><venda_block label=112,invtatt2=notnull>, <venda_invtatt2></venda_block label=112></venda_block label=111></strong></td>
+		<td class="col">at <venda_symoisub> each</td>
+	
+	<venda_block label=311,status=notnull> 
+	    <td class="col">
+		<venda_block label=22,status!=On Hold,status!=Ready to deliver,status!=Delivered><venda_status></venda_block label=22>
+		<venda_block label=23,status=On Hold,status=Ready to deliver,operator=or>In Progress</venda_block label=23>
+		<venda_block label=24,status=Delivered>Despatched</venda_block label=24>
+		</td>
+	</venda_block label=311>
+	</tr>
+	
+	<venda_block label=45,oiitype=3>
+	<tr>
+		<td class="col" colspan="4">
+		<strong>Sent To: </strong><venda_gcto> at <venda_gcemail><br>
+		<strong>Message: </strong><venda_oicmt>
+		<!-- <br>From: <strong><venda_gcfrom></strong> -->
+		</td>
+	</tr>
+	</venda_block label=45>
+	
+	<venda_block label=221,oigwrefqty=notnull>
+	<tr>
+		<td class="col" colspan="4"><venda_oigwrefqty> of <venda_oiqty> items gift wrapped</td>
+	</tr>
+	</venda_block label=221>
+	
+	<venda_block label=222,invtpreorder=notnull>
+	<tr>
+		<td class="col" colspan="4"><strong>Preorder: </strong>This item is not released until <venda_invtreleasedy>/<venda_invtreleasemn>/<venda_invtreleaseyr></td>
+	</tr>
+	</venda_block label=222>
+
+</venda_detblock2>

@@ -1,0 +1,162 @@
+<script type="text/javascript">
+<!--
+function nextPage () {
+	<venda_block label=34,param2=uk,errors=null>
+	if (document.wizform.zcdropdown.selectedIndex==0) {
+		alert("<venda_text id=site.contact_address.js_validation.select_address>");
+		document.wizform.zcdropdown.focus();
+	}
+	else {
+	</venda_block label=34>
+		<venda_block label=341,workflow!=instore>
+		//validate email address
+		if (checkemail(document.wizform.usemail.value)){
+			// express checkout
+			<venda_block label=21,mode=value,<venda_glxt mode=get,name=glxtusertype>!=p>
+			//if full reg then carryout following validation, could not use 'required=yes' as the uspswd/uspswd2 do not exist on partial reg
+			if (document.wizform.uspswd.value == "") {
+				alert("<venda_text id=site.contact_address.js_validation.enter_password>");
+				document.wizform.uspswd.focus();
+				return;
+			}
+			if (document.wizform.uspswd2.value == "") {
+				alert("<venda_text id=site.contact_address.js_validation.verify_password>");
+				document.wizform.uspswd2.focus();
+				return;
+			}
+			</venda_block label=21>
+		</venda_block label=341>
+			<venda_block label=35,workflow=shopcart>
+			if (document.wizform.differentaddress.checked) {
+				// different delivery address
+				if(window.validateUserExtendedFields) {
+					if(validateUserExtendedFields(document.wizform)) {
+						<venda_block label=29,mode=value,<venda_setting type=ebiz,name=bypasspclookup>!=1><venda_wizbutton step=zipcodedelivery,mode=process,param1=delivery,callonly=yes,check=yes></venda_block label=29>
+						<venda_block label=30,mode=value,<venda_setting type=ebiz,name=bypasspclookup>=1><venda_wizbutton step=newadd,mode=process,param1=delivery,param2=add,callonly=yes,check=yes></venda_block label=30>
+					} 
+				} else{
+					<venda_block label=29,mode=value,<venda_setting type=ebiz,name=bypasspclookup>!=1><venda_wizbutton step=zipcodedelivery,mode=process,param1=delivery,callonly=yes,check=yes></venda_block label=29>
+					<venda_block label=30,mode=value,<venda_setting type=ebiz,name=bypasspclookup>=1><venda_wizbutton step=newadd,mode=process,param1=delivery,param2=add,callonly=yes,check=yes></venda_block label=30>
+				}
+			}
+			else {
+				// same delivery address
+				if(window.validateUserExtendedFields) {
+					if(validateUserExtendedFields(document.wizform)) {
+						 <venda_wizbutton step=confirm,mode=process,callonly=yes,check=yes>
+					} 
+				} else{
+ 					<venda_wizbutton step=confirm,mode=process,callonly=yes,check=yes>
+				}
+			}
+			</venda_block label=35>
+			<venda_block label=36,workflow=instore>
+			if (document.wizform.registercustomer.checked && document.wizform.usemail.value=="") {
+				alert("<venda_text id=site.contact_address.js_validation.email_address>");
+				document.wizform.usemail.focus();
+				return;
+			}
+			if (document.wizform.differentaddress.checked) {
+				// different delivery address (instore workflow)
+				input_box=confirm("<venda_text id=site.instore.search_user.warn_submit>");
+				if (input_box==true) { 
+					<venda_wizbutton step=zipcodedelivery,mode=process,param1=delivery,callonly=yes,check=yes>
+				}
+			}
+			else if(document.wizform.delivertostore.checked) {
+				// deliver to store (instore workflow)
+				input_box=confirm("<venda_text id=site.instore.search_user.warn_submit>");
+				if (input_box==true) { 
+					<venda_wizbutton step=pdist,mode=process,param1=instore,param2=delivertostore,callonly=yes,check=yes>
+				}
+			}
+			else {
+				// same delivery address (instore workflow)
+				input_box=confirm("<venda_text id=site.instore.search_user.warn_submit>");
+				if (input_box==true) { 
+					<venda_wizbutton step=confirm,mode=process,callonly=yes,check=yes>
+				}
+			}
+			</venda_block label=36>
+			<venda_block label=39,workflow=register>
+			// if in register workflow
+				if(window.validateUserExtendedFields) {
+					if(validateUserExtendedFields(document.wizform)) {
+						 <venda_wizbutton step=--page-checkgroup,mode=process,param1=details,param2=uk,check=yes,callonly=yes,secure=yes>
+					} 
+				} else{
+ 					<venda_wizbutton step=--page-checkgroup,mode=process,param1=details,param2=uk,check=yes,callonly=yes,secure=yes>
+				}
+
+			</venda_block label=39>
+            <venda_block label=38,workflow=refer>
+                // in refer a friend workflow
+                document.wizform.layout.value="myaccount";
+                <venda_wizbutton step=refer,mode=process,check=yes,callonly=yes>
+            </venda_block label=38>
+		<venda_block label=342,workflow!=instore>
+		} else {
+			alert('<venda_text id=site.contact_address.js_validation.valid_email_address>');
+			document.wizform.usemail.focus();
+		}
+		</venda_block label=342>
+	}
+<venda_block label=37,param2=uk,errors=null>}</venda_block label=37>
+// -->
+</script>
+
+<venda_block label=78,workflow=register>
+	<div id="buttons">
+	<venda_block label=40,mode=value,<venda_setting type=ebiz,name=bypasspclookup>!=1><a href="#" onclick='<venda_wizbutton step=zipcode,mode=display,callonly=yes> return false;' alt="<venda_text id=site.button.previous>"><img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/bt_previous.gif" alt="<venda_text id=site.button.previous>" border="0" class="left"></a></venda_block label=40>
+	<venda_block label=41,mode=value,<venda_setting type=ebiz,name=bypasspclookup>=1><a href="#" onclick='<venda_wizbutton step=billtologin,mode=display,callonly=yes> return false;' alt="<venda_text id=site.button.previous>"><img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/bt_previous.gif" alt="<venda_text id=site.button.previous>" border="0" class="left"></a></venda_block label=41>
+	<input type="image" onclick="nextPage(); return false;" src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/bt_register.gif" alt="<venda_text id=site.button.register>" class="right">
+	</div>
+</venda_block label=78>
+<venda_block label=79,workflow=shopcart>
+	<div id="buttons">
+	<venda_block label=42,mode=value,<venda_setting type=ebiz,name=bypasspclookup>!=1><a href="#" onclick='<venda_wizbutton step=zipcode,mode=display,callonly=yes> return false;' alt="<venda_text id=site.button.previous>"><img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/bt_previous.gif" alt="<venda_text id=site.button.previous>" border="0" class="left"></a></venda_block label=42>
+	<venda_block label=43,mode=value,<venda_setting type=ebiz,name=bypasspclookup>=1><a href="#" onclick='<venda_wizbutton step=billtologin,param1=login,mode=display,callonly=yes> return false;'><img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/bt_previous.gif" alt="<venda_text id=site.button.previous>" border="0" class="left"></a></venda_block label=43>
+	<input type="image" onclick="nextPage(); return false;" src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/bt_continue.gif" alt="<venda_text id=site.button.continue>" class="right">
+	</div>
+</venda_block label=79>
+<venda_block label=80,workflow=instore>
+	<div id="buttons">
+	<a href="#" onclick='<venda_wizbutton step=searchuser,param1=details,mode=display,callonly=yes> return false;' alt="<venda_text id=site.button.previous>"><img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/bt_previous.gif" alt="<venda_text id=site.button.previous>" border="0" class="left"></a>
+	<input type="image" onclick="nextPage(); return false;" src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/bt_continue.gif" alt="<venda_text id=site.button.continue>" class="right">
+	</div>
+</venda_block label=80>
+<venda_block label=76,workflow=refer>
+	<div id="buttons">
+	<input type="image" onclick="nextPage(); return false;" src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/bt_register.gif" alt="<venda_text id=site.button.register>" class="right">
+	</div>
+</venda_block label=76>
+<venda_block label=77,workflow=reminder>
+	<div id="buttons">
+	<input type="image" onclick='<venda_wizbutton step=usext,mode=process,check=yes,callonly=yes> return false;' src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/bt_register.gif" alt="<venda_text id=site.button.register>" class="right">
+	</div>
+</venda_block label=77>
+
+<script type="text/javascript">
+function swapLabel(){
+        var stateLabel = document.getElementById("stateLabel");
+        var zipcLabel = document.getElementById("zipcLabel");
+        var cntryLabel = document.getElementById("countryLabel");
+        var country = document.getElementById("cntrylist");
+		if(country.value == "United States"){
+                        stateLabel.innerHTML = '<venda_text id=site.contact_address.label.us_state>: <span class="required">*</span>';
+                        zipcLabel.innerHTML = '<venda_text id=site.contact_address.zipc.us_zipcode>: <span class="required">*</span>';
+                }
+                else if(country.value == "United Kingdom"){
+                        stateLabel.innerHTML = '<venda_text id=site.contact_address.label.uk_county>:';
+                        zipcLabel.innerHTML = '<venda_text id=site.contact_address.zipc.non_us_postcode>:';
+                }
+                else {
+                        stateLabel.innerHTML = '<venda_text id=site.contact_address.label.non_us_uk_region>:';
+                        zipcLabel.innerHTML = '<venda_text id=site.contact_address.zipc.non_us_postcode>:';
+                }
+}
+                window.onload = swapLabel;
+                addEvent(document.wizform.cntry, 'change', swapLabel, true);
+</script>
+
+

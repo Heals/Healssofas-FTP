@@ -1,0 +1,120 @@
+<!-- start delivery/items loop -->
+<venda_detail1>
+<!-- end delivery/items loop -->
+
+<!-- start totals -->
+<thead style="background-color:#cccccc">
+<tr>
+	<th style="border-top:10px solid #fff;" scope="col" colspan="6">SUMMARY:</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<th scope="row" colspan="3">Sub Total:</th>
+	<td colspan="2"><venda_currsym><venda_ohsub></td>
+</tr>
+<venda_block label=670,ohgwtot&gt;0>
+<tr>
+	<th scope="row" colspan="3">Gift Wrapping:</th>
+	<td colspan="2"><venda_currsym><venda_ohgwtot></td>
+</tr>
+</venda_block label=670>
+
+<venda_block label=64,ohdisc!=0.00,ohdisc=notnull>
+<tr>
+	<th scope="row" colspan="3">Discount:</th>
+	<td colspan="2">-<venda_currsym><venda_ohdisc></td>
+</tr>
+</venda_block label=64>
+<tr>
+	<th scope="row" colspan="3">Delivery:</th>
+	<td colspan="2"><venda_currsym><venda_ohship></td>
+</tr>
+<venda_block label=91,ohtax!=0.00,ohtax=notnull>
+<tr>
+	<th scope="row" colspan="3">ESTIMATED TAX:</th>
+	<td colspan="2"><venda_currsym><venda_ohtax></td>
+</tr>
+</venda_block label=91>
+<tr>
+	<th scope="row" colspan="3">ORDER TOTAL:</th>
+	<td colspan="2"><venda_currsym><venda_ohtot></td>
+</tr>
+<tr>
+	<td colspan="6">(This order includes <venda_currsym><venda_ohtaxinc> VAT)</td>
+</tr>
+<venda_block label=70,storecreditused&gt;0.00,storecreditused=notnull>
+<venda_block label=79,creditaccount&gt;0.00>
+<tr>
+	<th scope="row" colspan="3">Account Credit Used:</th>
+	<td colspan="2"><venda_currsym><venda_creditaccount></td>
+</tr>
+</venda_block label=79>
+<venda_block label=65,storecredit&gt;0.00,storecredit=notnull>
+<tr>
+	<th scope="row" colspan="3">Credit Remaining:</th>
+	<td colspan="2"><venda_currsym><venda_storecredit></td>
+</tr>
+</venda_block label=65>
+<tr>
+	<th scope="row" colspan="3">Balance Paid:</th>
+	<td colspan="2"><venda_currsym><venda_balance></td>
+</tr>
+</venda_block label=70>
+</tbody>
+<!-- end totals -->
+<venda_block label=62,coupons=notnull>
+<thead style="background-color:#cccccc">
+<tr>
+	<th style="border-top:10px solid #fff;" scope="col" colspan="6">Coupons Used</th>
+</tr>
+</thead>
+<tbody>
+<venda_detail3>
+</tbody>
+</venda_block label=62>
+
+<!-- start contact/billing details -->
+<thead style="background-color:#cccccc">
+<tr>
+	<th style="border-top:10px solid #fff;" scope="col" colspan="6">CONTACT/BILLING DETAILS:</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<th scope="row">Cardholder:</td>
+	<td colspan="4"><venda_ohtitle> <venda_ohfname> <venda_ohlname></td>
+</tr>
+<tr>
+	<th scope="row">Address:</td>
+	<td colspan="4">
+	<venda_block label=73,ohcompany=notnull><venda_ohcompany><br></venda_block label=73>
+	<venda_ohnum> <venda_ohaddr1><br>
+	<venda_block label=74,ohaddr2=notnull><venda_ohaddr2><br></venda_block label=74>
+	<venda_ohcity><br>
+	<venda_block label=75,ohstate=notnull><venda_ohstate><br></venda_block label=75>
+	<venda_ohcntry><br>
+	<venda_ohzipc>
+	</td>
+</tr>
+<tr>
+	<th scope="row">Delivery Method:</td>
+	<td colspan="4"><venda_pksmref0></td>
+</tr>
+</tbody>
+<thead style="background-color:#cccccc">
+<tr>
+	<th style="border-top:10px solid #fff;" scope="col" colspan="6">SHIPMENT DETAILS:</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<th scope="row">Carrier:</td>
+	<td colspan="4"><venda_oicarrier0></td>
+</tr>
+<tr>
+	<th scope="row">Service:</td>
+	<td colspan="4">Carrier Service</td>
+</tr>
+</tbody>
+<!-- end contact/billing details -->

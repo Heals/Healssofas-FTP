@@ -1,0 +1,58 @@
+<venda_tpcomment><!-- This bundle block MUST be left in place or the whole template will not translate --></venda_tpcomment>
+<!-- bundle block
+<venda_detblock_bundle>
+	<venda_detblock_bundleditem>
+		<!-- n/a -->
+	</venda_detblock_bundleditem>
+	<venda_detail_bundleditem>
+</venda_detblock_bundle>
+-->
+<!-- <venda_detail_bundle> -->
+<venda_detblock_item>
+	<venda_block label=1,invtref=notnull,ivtype!=3,operator=and>
+	<venda_block label=111,invtatt1=notnull>
+	<venda_tpcomment><!--If this IS an attribute product--></venda_tpcomment>
+	<tr>
+        <td>	
+				<a href="<venda_dispview invt=<venda_invtparef>>&temp=submitpowerreview&pageid=<venda_invtparef>&layout=defaultnocolthree&pr_source=email">
+				<venda_block label=2,med-medium=notnull>
+                        <img src="<venda_media rec=invt,type=movie-swf-pict,key=medium,img=no>" style="border:0px;width:120px;height:120px;"></a>
+                </venda_block label=2>
+                <venda_block label=3,med-medium=null>
+                <img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/no_image_s.gif" alt="<venda_text id=site.alt.no_image>"></a>
+                </venda_block label=3>
+        </td>
+        <td>
+                <a href="<venda_dispview invt=<venda_invtparef>>&temp=submitpowerreview&pageid=<venda_invtparef>&layout=defaultnocolthree&pr_source=email"><venda_invtname></a> - 
+                <a href="<venda_dispview invt=<venda_invtparef>>&temp=submitpowerreview&pageid=<venda_invtparef>&layout=defaultnocolthree&pr_source=email"><venda_invtparef></a>
+        </td>
+        <td>
+                <a href="<venda_dispview invt=<venda_invtparef>>&temp=submitpowerreview&pageid=<venda_invtparef>&layout=defaultnocolthree&pr_source=email"><img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/bt_writereview.gif" border="0" alt="<venda_text id=site.postpurchase_detail.write_review>"></a>
+        </td>
+	</tr>
+	</venda_block label=111>
+	<venda_block label=113,invtatt1=null>
+	<venda_tpcomment><!--If this IS NOT an attribute product--></venda_tpcomment>
+	<tr>
+        <td>
+				<a href="<venda_dispview invt=<venda_invtref>>&temp=submitpowerreview&pageid=<venda_invtref>&layout=defaultnocolthree&pr_source=email">
+				<venda_block label=2,med-medium=notnull>
+                        <img src="<venda_media rec=invt,type=movie-swf-pict,key=medium,img=no>" style="border:0px;width:120px;height:120px;"></a>
+                </venda_block label=2>
+                <venda_block label=3,med-medium=null>
+                <img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/no_image_s.gif" alt="<venda_text id=site.alt.no_image>"></a>
+                </venda_block label=3>
+        </td>
+        <td>
+                <a href="<venda_dispview invt=<venda_invtref>>&temp=submitpowerreview&pageid=<venda_invtref>&layout=defaultnocolthree&pr_source=email"><venda_invtname></a> - 
+                <a href="<venda_dispview invt=<venda_invtref>>&temp=submitpowerreview&pageid=<venda_invtref>&layout=defaultnocolthree&pr_source=email"><venda_invtref></a>
+        </td>
+        <td>
+                <a href="<venda_dispview invt=<venda_invtref>>&temp=submitpowerreview&pageid=<venda_invtref>&layout=defaultnocolthree&pr_source=email"><img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/bt_writereview.gif" border="0" alt="<venda_text id=site.postpurchase_detail.write_review>"></a>
+		</td>
+	</tr>
+	</venda_block label=113>
+	</venda_block label=1>
+</venda_detblock_item>
+
+<venda_detail_item>

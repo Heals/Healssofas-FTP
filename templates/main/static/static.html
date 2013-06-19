@@ -1,0 +1,143 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="<venda_block mode=value,<venda_sessionlanguage>=ae>en-US</venda_block><venda_block mode=value,<venda_sessionlanguage>!=ae><venda_sessionlanguage></venda_block>">
+<head>
+<venda_menu template=title>
+<venda_menu template=metatags>
+<venda_menu template=css>
+<venda_menu template=js>
+</head>
+<body id="mainlayout-static">
+<venda_menu template=admin>
+<venda_menu template=demo>
+<venda_menu template=nojavascript>
+<venda_menu template=multiSite>
+<venda_inctemplate name=header,type=menu>
+<p class="re-waiHide"><a href="#content"><venda_text id=site.skip_to_content></a></p>
+<style type="text/css">
+.Lcattree {padding:20px 0 0 8px; text-transform: lowercase; line-height:1.9em;font-size:0.9em;}
+*:first-child + html .Lcattree {padding:0 0 0 8px; text-transform: lowercase; line-height:1.9em;font-size:0.9em;}
+*html .Lcattree {padding:0 0 0 8px; text-transform: lowercase; line-height:1.9em;font-size:0.9em;}
+/*FOR CHECK VENDA_CATTREE TO DISPLAY STYLE*/
+#pcat_leftnav ul ul#ul<venda_cattree index=1,value=catref> {display:block !important;font-weight:normal;}
+<venda_block label=1,mode=value,<venda_cattree index=1,value=catref>=our_stores>
+	#mainlayout-static #col-one ul#catlist li {display:none;}
+	#mainlayout-static #col-one ul#catlist div {display:none;}
+	#mainlayout-static #col-one ul#catlist li.navour_stores {display:block;}
+	#mainlayout-static #col-one ul#catlist #ulour_stores {display:block !important;}
+	#mainlayout-static #col-one ul#catlist #ulour_stores li {display:block !important;}
+</venda_block label=1>
+<venda_block label=2,mode=value,<venda_cattree index=1,value=catref>=instoreservices>
+	#mainlayout-static #col-one ul#catlist li {display:none;}
+	#mainlayout-static #col-one ul#catlist div {display:none;}
+	#mainlayout-static #col-one ul#catlist li.navinstoreservices {display:block;}
+	#mainlayout-static #col-one ul#catlist #ulinstoreservices {display:block !important;}
+	#mainlayout-static #col-one ul#catlist #ulinstoreservices li {display:block !important;}
+</venda_block label=2>
+
+<venda_block label=3,mode=value,<venda_cattree index=1,value=catref>=designers>
+	#pcat_leftnav ul#catlist {margin-left:0 !important;}
+	#mainlayout-static #col-one ul#catlist li {display:none;}
+	#mainlayout-static #col-one ul#catlist li.navdesigners {display:block;}
+	#mainlayout-static #col-one ul#catlist #uldesigners {display:block !important;}
+	#mainlayout-static #col-one ul#catlist #uldesigners li {display:block !important;}
+	.adesigners{font-size:1.2em}
+</venda_block label=3>
+
+<venda_block label=4,mode=value,<venda_cattree index=1,value=catref>=heals_brands>
+	#mainlayout-static #col-one ul#catlist li {display:none;}
+	#mainlayout-static #col-one ul#catlist div {display:none;}
+	#mainlayout-static #col-one ul#catlist li.navheals_brands {display:block;}
+	#mainlayout-static #col-one ul#catlist #ulheals_brands {display:block !important;}
+	#mainlayout-static #col-one ul#catlist #ulheals_brands li {display:block !important;}
+</venda_block label=4>
+
+<venda_block label=5,mode=value,<venda_cattree index=1,value=catref>=heals_buying_guides>
+	#mainlayout-static #col-one ul#catlist li {display:none;}
+	#mainlayout-static #col-one ul#catlist div {display:none;}
+	#mainlayout-static #col-one ul#catlist li.navheals_buying_guides {display:block;}
+	#mainlayout-static #col-one ul#catlist #ulheals_buying_guides {display:block !important;}
+	#mainlayout-static #col-one ul#catlist #ulheals_buying_guides li {display:block !important;}
+</venda_block label=5>
+
+<venda_block label=6,mode=value,<venda_cattree index=1,value=catref>=glossary>
+	#mainlayout-static #col-one ul#catlist li {display:none;}
+	#mainlayout-static #col-one ul#catlist div {display:none;}
+	#mainlayout-static #col-one ul#catlist li.navglossary {display:block;}
+	#mainlayout-static #col-one ul#catlist #ulglossary {display:block !important;}
+	#mainlayout-static #col-one ul#catlist #ulglossary li {display:block !important;}
+</venda_block label=6>
+
+<venda_block label=7,mode=value,<venda_cattree index=1,value=catref>=heals_trends>
+	#mainlayout-static #col-one ul#catlist li {display:none;}
+	#mainlayout-static #col-one ul#catlist div {display:none;}
+	#mainlayout-static #col-one ul#catlist li.navheals_trends {display:block;}
+	#mainlayout-static #col-one ul#catlist #ulheals_trends {display:block !important;}
+	#mainlayout-static #col-one ul#catlist #ulheals_trends li {display:block !important;}
+</venda_block label=7>
+
+<venda_block label=8,mode=value,<venda_cattree index=1,value=catref>=heals_brochures>
+	#mainlayout-static #col-one ul#catlist div {display:none !important;}
+</venda_block label=8>
+
+<venda_block label=9,pcatref=shopping_at_heals>
+	#mainlayout-static #col-one ul#catlist li {display:block;}
+	#mainlayout-static #col-one ul#catlist div {display:none !important;}
+	#mainlayout-static #col-one ul#catlist li.navshopping_at_heals {display:block;}
+	#mainlayout-static #col-one ul#catlist #ulshopping_at_heals {display:block !important;}
+	#mainlayout-static #col-one ul#catlist #ulshopping_at_heals li {display:block !important;}
+</venda_block label=9>
+
+.nav<venda_cattree index=1,value=catref> {font-weight:bold;}
+.nav<venda_pcatref> {font-weight:bold;}
+.nav<venda_pageref> {font-weight:bold;}
+
+.a<venda_pcatref> {text-decoration:underline;}
+.a<venda_pageref> {text-decoration:underline;}
+/*NEW STYLE , PLEASE REMOVE TO STYLES.CSS*/
+#pcat_leftnav ul#catlist {padding-bottom:15px; margin-left: 13px;}
+
+</style>
+
+<!-- start wrapper -->
+<div id="wrapper">
+<!-- start content-default -->
+<div id="content-default">
+
+<!-- start column 2 -->
+<div id="col-two">
+
+<!-- start content -->
+<a name="content" id="content"></a>
+<venda_block label=91,pcatname!=><h1 class="pcatname"><venda_pcatname></h1></venda_block label=91>
+<venda_block label=92,pagename!=><h1 class="pagename"><venda_pagename></h1></venda_block label=92>
+<venda_content>
+<!-- end content -->
+
+</div>
+<!-- end column 2 -->
+
+<!-- start column 1 -->
+<div id="col-one">
+	<!-- FOR PCAT category -->
+		<venda_category rec=pcat,ref=<venda_cattree index=0,value=catref>,temp=pcat_leftnav>
+</div>
+<div class="clear-all"><!-- ns6 hack --></div>
+
+</div>
+<!-- end column 1 -->
+<br class="clear-all">
+</div>
+<venda_inctemplate name=footerLinks,type=menu/footer>
+
+<!-- end content-default -->
+</div>
+<!-- end wrapper -->
+<script type="text/javascript">
+document.write('<scr' + 'ipt src="' + document.location.protocol + '//fby.s3.amazonaws.com/fby.js"></scr' + 'ipt>');
+</script>
+<script type="text/javascript">
+FBY.showTab({id: '1166', position: 'right', color: '#000000'});
+</script>
+<venda_inctemplate name=bodyBottom,type=tracking/shared>
+</body>
+</html>

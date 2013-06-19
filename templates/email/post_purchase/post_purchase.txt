@@ -1,0 +1,33 @@
+==============================================================================<cr>
+You are invited to write a review<cr>
+==============================================================================<cr><cr>
+
+Dear <venda_userinfo><venda_sestitle> <venda_sesfname> <venda_block label=115,sesmname=notnull><venda_sesmname> </venda_block label=115><venda_seslname></venda_userinfo><cr><cr>
+
+<cr><cr>
+Thanks for shopping at Heals.co.uk recently, we hope that you are pleased with your purchase.
+<cr>
+<cr>
+As it has been a couple of weeks since your order was processed, we would like to get your feedback on the products you purchased and give you a chance to post a review on the Heals.co.uk website.
+<cr>
+<cr>
+Writing a review is a great way to share your knowledge and opinions on a product and furthermore it can really help other customers in their decision making. We all love to hear real life experiences and get a rounded, unbiased opinion before ordering so having recently bought and used our products in the past you really are the experts.
+<cr>
+<cr>
+Your opinions are not only very useful to other customer but they are extremely important to us, so we would be grateful if you would share your thoughts with us - the review form will only take a few moments to complete.
+<cr>
+<cr>
+To review each item you purchased,  Simply click on a link below to begin posting:
+<cr>
+<cr>
+Product(s) Purchased.
+<cr>
+<cr>
+<venda_order ref=<venda_ohrfnbr>,template=txtpost_purchase-detail,templategrp=email,shopcart=1,formfields=false>
+<cr>
+Don’t know where to start or need some help? Please click here <venda_dispview pcat=product_reviews> to go to our Customer Reviews page where you’ll find some hints and tips to help write a good review
+<cr>
+<cr>
+Once again, thank you for choosing to shop with Heals.co.uk
+<cr><cr>
+<venda_inctemplate name=textEmailFooter,type=includes/email>

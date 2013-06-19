@@ -1,0 +1,70 @@
+<venda_inctemplate name=textEmailDetblocks3,type=includes/email>
+
+==============================================================================<cr>
+Order Processed Confirmation - <venda_ohordnum>						<cr>
+==============================================================================<cr><cr>
+
+<venda_inctemplate name=textEmailHeader,type=includes/email>
+
+Thank you for ordering from Heals.co.uk. Please find below details of the items from your order #<venda_ohordnum> that have been recently processed.<cr><cr>
+
+Processed date <venda_nowmonname> <venda_nowdaymon>, <venda_ohdelyear><cr>
+
+<venda_inctemplate name=textEmailBody,type=includes/email>
+
+
+<cr><cr>To check the current status of your order, to change your contact details or to view your order history, go to My Account page: <venda_codehttps>?ex=co_disp-view&page=myaccount&bsref=<venda_bsref>.<cr><cr>
+
+WHAT HAPPENS NEXT?<cr><cr>
+Delivery:<cr><cr>
+If you have any queries regarding the delivery of your order, please check our Delivery FAQs http://www.heals.co.uk/page/faqs. Alternatively you can contact our customer service team by email delivery delivery@heals.co.uk or call 08700 240780<cr>
+
+<venda_block label=111,mode=value,<venda_tpxt mode=get,name=notfurniture>=yes,<venda_tpxt mode=get,name=furniture>=,operator=and>
+<venda_page page=conditionnonfurniture_tex>
+</venda_block label=111>
+<venda_block label=111,mode=value,<venda_tpxt mode=get,name=furniture>=yes,<venda_tpxt mode=get,name=notfurniture>=,operator=and>
+<venda_page page=conditionfurniture_text>
+</venda_block label=111>
+<venda_block label=111,mode=value,<venda_tpxt mode=get,name=notfurniture>=yes,<venda_tpxt mode=get,name=furniture>=yes,operator=and>
+<venda_page page=conditionmixed_emailtext>
+</venda_block label=111>
+<cr><cr>
+Order Tracking:<cr>
+
+To track the real time status of your order, please click here http://dm.metapack.com/metatrack/track?retailerId=433&orderRef=<venda_ohordnum>.<cr>
+In addition, you will receive an email direct from the carrier company with a parcel tracking number as well as specific delivery times.<cr><cr>
+
+
+Payment:<cr> 
+
+All payments are pre-authorised with your bank to ensure that sufficient funds are available to place the order.<cr>  
+Payment of non furniture items takes place when the items are processed.<cr>  
+Payment of all furniture items takes place when the items are processed, generally this will be within 72 hours of placing your order.<cr>  
+If we have any queries or require clarification about access details for large pieces of furniture, we will contact you directly. <cr>
+
+
+Changed your mind?<cr><cr>
+
+Returns and Refunds - returns and refunds are offered on any unsuitable items purchased unseen from our website and returned to us in the original packaging and in perfect condition.<cr><cr>
+
+In order to arrange a refund, return or exchange, you will require a returns authorisation code. You can obtain this by simply emailing: returns@heals.co.uk <cr> or call 08700 240780. You will receive a reply with a returns authorisation code (RMA) that you will need to quote on all subsequent correspondence and instructions on how to proceed with the product return. We recommend using a registered service when returning items to us.<cr>
+
+For non furniture items, the goods need to be returned to us within 28 days of receipt of the order. 
+For items of furniture, the goods need to be returned to us within 7 days of receipt of the order. 
+Refunds on unsuitable goods will exclude all delivery costs. 
+<cr>
+
+Please note that we are unable to accept returns and issue refunds on any 'Special Order' items unless they are proved to be faulty.<cr>
+
+Cancellations - to cancel an order prior to process, please contact our customer service team by email cancellations@heals.co.uk  or call 08700 240780<cr><cr>
+
+Product Faults and Damage:<cr><cr>
+
+After you have received your order, please carefully inspect the goods. If you have problems or queries relating to your order please contact our customer service team by email enquiries@heals.co.uk<cr> or call 08700 240780<cr>
+
+To view our Terms and Condition of business, please visit  
+<venda_dispview page=terms><cr><cr>
+
+Once again thank you for choosing to shop with Heals.co.uk<cr>
+
+<venda_inctemplate name=textEmailFooter,type=includes/email>

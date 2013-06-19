@@ -1,0 +1,11 @@
+==============================================================================<cr>
+<venda_ebizname> Reminder<cr>
+==============================================================================<cr><cr>
+
+Dear <venda_title> <venda_fname> <venda_lname>,<cr><cr>
+
+It's <venda_recfname>'s <venda_remtype> on <venda_remday> <venda_remmonth>. You asked us to remind you so here it is.<cr><cr>
+			
+Visit the Heals.co.uk site now for some great gift ideas!<cr><cr>
+
+<venda_inctemplate name=textEmailFooter,type=includes/email>

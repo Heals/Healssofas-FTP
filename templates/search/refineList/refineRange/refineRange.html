@@ -1,0 +1,16 @@
+<venda_detblock_hidden>
+	<venda_block sname!=price_from,sname!=price_to><input type="hidden" name="<venda_sname>" value="<venda_svalue>" /></venda_block>
+</venda_detblock_hidden>
+
+<div class="collatedresult <venda_field>collateresult">
+<form id="<venda_field>range" name="<venda_field>range" action="/search/?">
+	<fieldset>
+		<venda_detail_hidden>
+		<span><venda_currsym></span>
+		<input id="<venda_field>_from" type="text" maxlength="6" size="3" name="<venda_field>_from" value=""/>
+		<span class="divider"> - <venda_currsym></span>
+		<input id="<venda_field>_to" type="text" maxlength="6" size="3" name="<venda_field>_to" value=""/>
+		<input type="submit" id="submit" value="Go"/>
+	</fieldset>
+</form>
+</div>

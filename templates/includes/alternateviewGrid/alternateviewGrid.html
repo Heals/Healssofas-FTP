@@ -1,0 +1,22 @@
+<venda_tpcomment><!-- This template is used by product detail when the product has attributes, it cycles through and stores the image paths to the various attribute 1 association values (e.g. xsmall,medium,large image path for Red Shirt) --></venda_tpcomment>
+
+<venda_detblock_mediagridrow>
+	<venda_detail_mediagridcell>
+</venda_detblock_mediagridrow>
+
+
+<venda_detblock_mediagridcell>
+        <venda_block label=1,emptycell!=1,medatrvalue!=>
+		Venda.Attributes.StoreImageSwaps({
+			"param": "<venda_medatrvalue>",
+			"images": {
+				imgS: ["<venda_media rec=invt,type=pict,key=setxsmall,medatr=yes,img=no>","<venda_media rec=invt,type=pict,key=setxsalt1,medatr=yes,img=no>","<venda_media rec=invt,type=pict,key=setxsalt2,medatr=yes,img=no>","<venda_media rec=invt,type=pict,key=setxsalt3,medatr=yes,img=no>","<venda_media rec=invt,type=pict,key=setxsalt4,medatr=yes,img=no>","<venda_media rec=invt,type=pict,key=setxsalt5,medatr=yes,img=no>"],imgM: ["<venda_media rec=invt,type=pict,key=setmedium,medatr=yes,img=no>","<venda_media rec=invt,type=pict,key=setmalt1,medatr=yes,img=no>","<venda_media rec=invt,type=pict,key=setmalt2,medatr=yes,img=no>","<venda_media rec=invt,type=pict,key=setmalt3,medatr=yes,img=no>","<venda_media rec=invt,type=pict,key=setmalt4,medatr=yes,img=no>","<venda_media rec=invt,type=pict,key=setmalt5,medatr=yes,img=no>"],imgL: ["<venda_media rec=invt,type=pict,key=setlarge,medatr=yes,img=no>","<venda_media rec=invt,type=pict,key=setlalt1,medatr=yes,img=no>","<venda_media rec=invt,type=pict,key=setlalt2,medatr=yes,img=no>","<venda_media rec=invt,type=pict,key=setlalt3,medatr=yes,img=no>","<venda_media rec=invt,type=pict,key=setlalt4,medatr=yes,img=no>","<venda_media rec=invt,type=pict,key=setlalt5,medatr=yes,img=no>"]
+				}
+			});
+		Venda.Attributes.SwatchURL["<venda_medatrvalue>"] = "<venda_media rec=invt,type=pict,key=setswatch,medatr=yes,img=no>";
+        </venda_block label=1>
+</venda_detblock_mediagridcell>
+
+<script type="text/javascript">
+<venda_detail_mediagridrow>
+</script>

@@ -1,0 +1,100 @@
+<script type="text/javascript">
+var imgTimeout = 0;
+function swapImage(obj,target,event) {
+var e = window.event || event;
+function execute() { obj.src = target; };
+if(obj) {if (e.type == "mouseover") {
+imgTimeout = setTimeout(execute, 250);} else if (e.type == "mouseout") {clearTimeout(imgTimeout);execute()}}}
+</script>
+
+<venda_block label=48,mode=value,<venda_setting type=ebiz,name=powerreviews>=1,<venda_setting type=ebiz,name=powerreviewsprodlist>=1>
+<script type="text/javascript">
+<venda_inctemplate type=includes,name=powerreviewscripts>
+</script>
+</venda_block label=48>
+<venda_detblock>
+<venda_block label=78,invtref1!=giftcert>
+<!-- <script type="text/javascript" src="/resources/reviews/pwr/engine/js/full.js"></script> -->
+<form name="form<venda_invtref1>" action="<venda_codehttp>" method="get" id="addproduct<venda_invtref1>form">
+<venda_inventory ref=<venda_ref1>,temp=locaytainvta_z>
+</form>
+</venda_block label=78>
+
+</venda_detblock>
+
+
+<div id="shopbybrand">
+<div style="background-color:#ededed;width:940px;">
+				<venda_media rec=icat,type=movie-swf-pict,key=banner></div>
+	<div id="col-one">
+<div style="height:5px;width:200px;background-color:#ffffff;"></div>
+		<venda_category rec=icat,ref=<venda_cattree value=catref,index=2>,temp=subcat_shopbybrand,cacheall=1>
+
+<div style="background-color:#000000;width:182px;margin-top:0;margin-left:9px;">
+<p style="color:#ffffff;font-size:18px;padding:8px;margin:.5em 0 0 0;"><venda_icatname></p>
+</div>
+
+<div class="brand_description">
+				<venda_block label=116532,icatldesc=notnull>
+				<div class="a_zldesc">
+				<venda_icatldesc>
+				</div>
+				</venda_block label=116532>
+</div>
+	</div>
+	<div id="col-two-three">	
+	
+	<!-- start column 2 -->
+		<div id="col-two">
+			<div id="productlist">
+			
+			
+			<h1 class="h1seo"><venda_icatname></h1> 
+				<venda_block label=55,mode=value,<venda_setting type=ebiz,name=showprodgridlistview>=1>
+					<!-- Grid/List View Switcher -->
+					<script language="JavaScript" type="text/javascript">
+					<venda_tpcomment>/* now listview will be the default if the ebiz switch is enable replace "listview" with this <venda_setting type=ebiz,name=setdefaultprodgridlistview> tag */</venda_tpcomment>
+						var cookieName= "productlistview";
+						var cookie = Venda.Widget.gridlistSwitcher.readCookie(cookieName);
+						var title = cookie ? cookie : "<venda_setting type=ebiz,name=setdefaultprodgridlistview>";
+						Venda.Widget.gridlistSwitcher.setTitleLink('<venda_setting type=ebiz,name=setdefaultprodgridlistview>');
+						Venda.Widget.gridlistSwitcher.setActiveStyleSheet(title);
+					</script> 
+				</venda_block label=55>
+
+		<!-- pagination -->
+				<div class="searchpsel searchpseltop" style="margin-top:5px;"><venda_pagesel template=pageselect></div>
+		
+				<venda_block label=52,rectot=><p><venda_text id=site.productlist.product_empty></p></venda_block label=52>
+				<venda_block label=53,rectot!=>
+					<ul class="products">
+					<venda_detail>
+					</ul>
+				<script type="text/javascript">
+				$(document).ready(function() {
+					$(".products li").each(function (index) {
+						if (index % 3 == 2) {
+							$(this).addClass("nomarginright");
+						}
+						if (index % 3 == 0) {
+							$(this).css({'clear':'both'});
+						}
+					});
+				});
+				</script>
+				</venda_block label=53>
+		<!-- pagination -->
+				<div class="searchpsel searchpselbtm"><venda_pagesel template=pageselect></div>
+				<venda_block label=41,mode=value,<venda_setting type=ebiz,name=showcompareproductlist>=1>
+				     <!-- tpxt used for compare product -->
+				    <venda_block label=501,mode=value,<venda_setting type=ebiz,name=setalwaysshowcompare>!=1><venda_tpxt mode=set,name=comparecatref,value=<venda_icatref>></venda_block label=501>
+				    <venda_block label=502,mode=value,<venda_setting type=ebiz,name=setalwaysshowcompare>=1><venda_tpxt mode=set,name=comparecatref,value=allcategory></venda_block label=502>
+				</venda_block label=41>
+			</div>
+		</div><!-- End of col-two -->
+	
+		<venda_tpxt mode=set,name=track,value=productlist>
+		<br class="clear-all">
+	</div><!-- End of col-two-three -->
+	<div class="clear-all">&nbsp;</div>
+</div>

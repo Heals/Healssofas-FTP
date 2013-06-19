@@ -1,0 +1,101 @@
+	<div id="buttons">
+	<input type="image" onClick="doContinue(); return false;" src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/bt_continue.gif" alt="<venda_text id=site.button.continue>" class="right">
+	</div>
+    
+	<script type="text/javascript">
+    <!--
+	function doContinue() {
+	<venda_block label=1,workflow=shopcart,workflow=instore,operator=or>
+	<venda_block label=25,param1=delivery,param3!=addgiftwrap>
+	<venda_wizbutton step=editadd,mode=process,param1=delivery,param2=uk,callonly=yes>
+	</venda_block label=25>
+	<venda_block label=250,param1=delivery,param3=addgiftwrap>
+	<venda_wizbutton step=editadd,mode=process,param1=delivery,param2=uk,callonly=yes,param3=addgiftwrap>
+	</venda_block label=250>
+        
+        <venda_block label=26,workflow=shopcart,param1!=delivery>
+        if (checkemail(document.wizform.usemail.value)){
+        <venda_wizbutton step=billto,mode=process,param1=details,param2=uk,callonly=yes>
+		} else {
+			alert('<venda_text id=site.sign_in.js_validation.valid_email_address>');
+			document.wizform.usemail.focus();
+			return false;
+		}
+        </venda_block label=26>
+		
+		<venda_block label=27,workflow=instore,param1!=delivery>
+        <venda_wizbutton step=billto,mode=process,param1=details,param2=uk,callonly=yes>
+        </venda_block label=27>
+        </venda_block label=1>
+        			
+        <venda_block label=2,workflow=manageaddresses>
+        <venda_wizbutton step=editadd,mode=process,param1=delivery,param2=uk,callonly=yes>
+        </venda_block label=2>
+        			
+        <venda_block label=3,workflow=register,workflow=refer,operator=or>
+        if (checkemail(document.wizform.usemail.value)){
+			<venda_wizbutton step=billto,mode=process,param1=details,param2=uk,callonly=yes>
+        } else {
+			alert('<venda_text id=site.sign_in.js_validation.valid_email_address>');
+			document.wizform.usemail.focus();
+			return false;
+		}
+        </venda_block label=3>
+        			
+        <venda_block label=4,workflow=giftlist>
+        <venda_wizbutton step=editadd,mode=process,param1=delivery,param2=uk,callonly=yes>
+        </venda_block label=4>
+
+	}
+    // -->
+    </script>
+    
+    
+			
+<venda_block label=7,workflow=shopcart,workflow=instore,operator=or>
+	<venda_block label=251,param1=delivery,param3!=addgiftwrap>
+	<div><a href="#" onClick='document.wizform.zipcodelookup.value=""; <venda_wizbutton step=newadd,mode=process,param1=delivery,param2=add,callonly=yes> return false;'><venda_text id=site.postcode_lookup.dont_know_postcode></a></div>
+	</venda_block label=251>
+	<venda_block label=252,param1=delivery,param3=addgiftwrap>
+        <div><a href="#" onClick='document.wizform.zipcodelookup.value=""; <venda_wizbutton step=newadd,mode=process,param1=delivery,param2=add,callonly=yes,param3=addgiftwrap> return false;'><venda_text id=site.postcode_lookup.dont_know_postcode></a></div>
+	</venda_block label=252>
+	<venda_block label=261,param1!=delivery>
+	<div><a href="#" onClick='<venda_wizbutton step=billto,mode=process,param1=details,callonly=yes> return false;'><venda_text id=site.postcode_lookup.dont_know_postcode></a></div>
+	</venda_block label=261>
+</venda_block label=7>
+
+<venda_block label=21,workflow=manageaddresses>
+<div><a href="#" onClick='document.wizform.zipcodelookup.value=""; <venda_wizbutton step=newadd,mode=process,param1=delivery,param2=add,callonly=yes> return false;'><venda_text id=site.postcode_lookup.dont_know_postcode></a></div>
+</venda_block label=21>
+
+<venda_block label=31,workflow=register,workflow=refer,operator=or>
+<div><a href="#" onClick='<venda_wizbutton step=billto,mode=process,param1=details,callonly=yes> return false;'><venda_text id=site.postcode_lookup.dont_know_postcode></a></div>
+</venda_block label=31>
+
+<venda_block label=41,workflow=giftlist>
+<div><a href='#' onClick='<venda_wizbutton step=editadd,mode=process,param1=delivery,param2=add,callonly=yes> return false;'><venda_text id=site.postcode_lookup.dont_know_postcode></a></div>
+</venda_block label=41>
+
+
+<script type="text/javascript">
+<!--
+// disable enter
+var handleKeyPress = function(e) {
+	var keyPressed = e.charCode || e.keyCode;
+	if (keyPressed == 13) { 
+		doContinue();
+		return false;
+	}
+};
+// -->
+</script>
+<venda_block label=2610,param1!=delivery>
+<!--[if IE]>
+<script type="text/javascript">if (document.getElementById("usemail")) {addEvent(document.getElementById("usemail"), 'keydown', handleKeyPress, false);}</script>
+<![endif]-->
+</venda_block label=2610>
+<venda_block label=2611,param1=delivery>
+<!--[if IE]>
+<script type="text/javascript">if (document.getElementById("zipc")) {addEvent(document.getElementById("zipc"), 'keydown', handleKeyPress, false);}</script>
+<![endif]-->
+</venda_block label=2611>

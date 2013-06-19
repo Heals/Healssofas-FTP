@@ -1,0 +1,82 @@
+<venda_tpcomment><!-- YOU ARE ONLY PERMITTED TO CHANGE THE ORDER OF THE INCTEMPLATE TAGS WITHIN THIS TEMPLATE. YOU MAY NOT ADD OR CHANGE ANY OTHER CODE. --></venda_tpcomment>
+<venda_form>
+<input type="hidden" name="rfrfnbr" value="<venda_defaultrefer>">
+<input type="hidden" name="exgroup" value="all">
+
+<script type="text/javascript">
+<!-- 
+<venda_block label=71,usgrref=instore><venda_block label=72,mode=value,<venda_glxt mode=get,name=addsnotdone>=1>
+<venda_tpcomment>// this was an instore user who was not logged in before checking out: send back to fill in addresses</venda_tpcomment>
+location.href='<venda_codehttps>?ex=co_wizr-instore&bsref=<venda_bsref>&step=searchuser&param1=details';
+</venda_block label=72></venda_block label=71>
+
+numberAddresses=0;
+// -->
+</script>
+
+<div id="orderconfirmation">
+	<script type="text/javascript">
+	var vbmParentTrack = "";
+	var vbmParentPrices = "";
+	var vbmParentQty = "";
+	</script>
+<venda_category rec=elementcat,ref=orcftopcontent>
+<div class="checkoutorcfL">
+<venda_inctemplate type=includes/wizr/wz_orcf-screen,name=heading_intro>
+<venda_inctemplate type=includes/wizr/wz_orcf-screen,name=package_summary>
+<venda_inctemplate type=includes/wizr/wz_orcf-screen,name=order_summary>
+<venda_inctemplate type=includes/wizr/wz_orcf-screen,name=promotions>
+<venda_category rec=elementcat,ref=orcfcolone>
+<div id="deliveryrateMessage" class="re-waiHide"><venda_block label=14,realpktot&gt;1><venda_block label=15,ohship&gt;0.00><venda_text id=site.order_confirmation.js_validation.delivery_charge></venda_block label=15></venda_block label=14></div>
+<script type="text/javascript">
+var deliveryrateMessage = document.getElementById('deliveryrateMessage');
+if (deliveryrateMessage.innerHTML!=" " && deliveryrateMessage.innerHTML!="") {
+	alert(deliveryrateMessage.innerHTML);
+}
+</script>
+</div>
+<div class="checkoutorcfR">
+<venda_inctemplate type=includes/wizr/wz_orcf-screen,name=additional_services>
+	<div class="paymentinfo">
+		<div class="payinfoelements">
+		<venda_category rec=elementcat,ref=orcfcoltwo>
+		<venda_inctemplate type=includes/wizr/wz_orcf-screen,name=payment_details>
+		<venda_inctemplate type=includes/wizr/wz_orcf-screen,name=contact_details>
+		<venda_inctemplate type=includes/wizr/wz_orcf-screen,name=js_buttons>
+		<venda_category rec=elementcat,ref=orcfcolonetwo>
+		</div>
+	</div>
+</div>
+</div>
+</form>
+
+<venda_block label=20,workflow=instore>
+<venda_tpxt mode=set,name=instore,value=1>
+</venda_block label=20>
+
+<!-- 
+workflow: <venda_workflow>
+step: <venda_curstep>
+param1: <venda_param1>
+param2: <venda_param2>
+page: wz_orcf-screen.html
+ -->
+<venda_tpxt mode=set,name=track,value=orcf-screen> 
+<venda_inctemplate name=googleTrackingWorkflows,type=includes>
+<venda_inctemplate name=hbxlocalvars1,type=includes/tracking>
+<venda_inctemplate name=hitboxOrcf,type=includes/tracking>
+<venda_inctemplate name=cmCreateRegistrationTag,type=includes/tracking/coremetrics>
+<venda_inctemplate name=cmDisplayShop5s,type=includes/tracking/coremetrics>
+<venda_inctemplate name=mycouponsSetCookie,type=includes/tracking/mycoupons>
+<!--RT122255-->
+<script>
+if(document.getElementById("contactdetails")){
+	if(document.getElementById("billing_details")){
+		$("#billing_details .companyName").html($("#contactdetails .companyName").html());
+		$("#billing_details .ohnum").html($("#contactdetails .ohnum").html());
+		$("#billing_details .ohaddr").html($("#contactdetails .ohaddr").html());
+		$("#billing_details .ohstate").html($("#contactdetails .ohstate").html());
+			}
+}
+</script>
+<!--RT122255-->

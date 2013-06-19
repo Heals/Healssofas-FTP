@@ -1,0 +1,110 @@
+<venda_tpcomment><div id="parentCatRef"><venda_dontsearch parentCategoryRef=<venda_invtref>></div></venda_tpcomment>
+<venda_tpcomment><!-- add refinement --></venda_tpcomment>
+<venda_detblock_facet_result>
+	<venda_block label=results,count!=0>
+          <div class="termtext<venda_block label=558,chosen!=0> chosen</venda_block label=558><venda_block label=559,count=0> zerocount</venda_block label=559>"
+               data-field="<venda_field>"
+               data-facet="<venda_facet>"
+               data-url="<venda_faceturl>"
+            >
+            <venda_block label=556,chosen=0,count!=0>
+              <a href="<venda_faceturl>" class="updatesearch">
+            </venda_block label=556>
+            <span class="facet">
+              <venda_block label=333,field=price><venda_currsym></venda_block label=333>
+
+              <venda_block label=365,facetname=null><venda_facet></venda_block label=365>
+              <venda_block label=366,facetname=notnull><venda_facetname></venda_block label=366>
+              <span class="count">(<venda_count>)</span>
+            </span>
+            <venda_block label=557,chosen=0,count!=0></a></venda_block label=557></div>
+        </venda_block label=results>
+</venda_detblock_facet_result>
+
+<venda_detblock_facets>
+
+	<venda_block label=55,totalcount!=0,field!=parentCategoryRef>
+	
+	<h3 id="<venda_field>" class="collateheading">
+<venda_block label=162221,field!=pdxtbrowse,field!=pdxtsize,field!=pdxtmaterial,field!=pdxtbrand,field!=type,field!=pdxtcolour><venda_dispfield></venda_block label=162221>
+
+<venda_block label=issofa,mode=value,<venda_primarysearchtext>!=sofa,<venda_primarysearchtext>!=sofas><venda_block label=162222,field=pdxtcolour>Colour</venda_block label=162222></venda_block label=issofa>
+<venda_block label=162223,field=pdxtbrowse>Product Type</venda_block label=162223>
+<venda_block label=162224,field=pdxtsize>Size</venda_block label=162224>
+<venda_block label=162225,field=pdxtmaterial>Material / Finish</venda_block label=162225>
+<venda_block label=162226,field=pdxtbrand>Brand Name</venda_block label=162226>
+
+</h3>
+
+<venda_block label=pdxtcolour,field=pdxtcolour>
+<venda_block label=issofa1,mode=value,<venda_primarysearchtext>!=sofa,<venda_primarysearchtext>!=sofas>
+<venda_tpcomment><!-- hide pdxtcolour if q=sofa or q=sofas --></venda_tpcomment>
+	<div id="<venda_field>results" class="collateresults <venda_field>Box showviewall">
+                <div class="collatedresult <venda_field>collateresult multirefine">
+                        <venda_detail_facet_result>
+			<p class="toggleviewall" style="display: none;">
+                          <a href="#">
+                            <span class="viewmorerefinements"><venda_text id=site.search_results.refine.viewall></span>
+
+                            <span class="viewlessrefinements" style="display: none;"><venda_text id=site.search_results.refine.viewless></span>
+                          </a>
+                        </p>
+                </div>
+        </div>
+        <div class="refinementdivider"></div>
+</venda_block label=issofa1>
+</venda_block label=pdxtcolour>
+
+<venda_block label=else,field!=pdxtcolour>
+	<div id="<venda_field>results" class="collateresults <venda_field>Box showviewall">
+
+                <venda_block label=default,field!=price>
+                <div class="collatedresult <venda_field>collateresult multirefine">
+                        <venda_detail_facet_result>
+			<p class="toggleviewall" style="display: none;">
+			  <a href="#">
+			    <span class="viewmorerefinements"><venda_text id=site.search_results.refine.viewall></span>
+			    <span class="viewlessrefinements" style="display: none;"><venda_text id=site.search_results.refine.viewless></span>
+			  </a>
+			</p>
+
+                </div>
+                </venda_block label=default>
+                
+                <venda_block label=rangeslider,field=price>
+                <venda_inctemplate type=search/refineList,name=refineRangeSlider>
+                </venda_block label=rangeslider>
+        </div>
+        <div class="refinementdivider"></div>
+</venda_block label=else>	
+	</venda_block label=55>
+</venda_detblock_facets>
+
+<venda_tpcomment><!-- remove refinement --></venda_tpcomment>
+<venda_detblock_searched_fields>
+	<venda_block label=331,facetref!=*><div id="<venda_field><venda_facetref>" class="refine-list boxContent">
+		<div class="refine-left"><a href="<venda_searchurlremove>" class="removesearch" rel="<venda_field>=<venda_facetref>"><img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/bt_removecollation.gif" alt="<venda_text id=site.button.remove_collation>" title="<venda_text id=site.button.remove_collation>"></a> <span class="refine-text"><venda_dispfield>: </span><a href="<venda_searchurlremove>" rel="<venda_field>=<venda_facetref>" id="remove<venda_field><venda_facetref>" class="refine-link removesearch"><venda_block label=332,field=price><venda_currsym></venda_block label=332><venda_block label=265,facetname=null><venda_facetref></venda_block label=265><venda_block label=266,facetname=notnull><venda_facetname></venda_block label=266></a> <a href="<venda_searchurlremove>" rel="<venda_field>=<venda_facetref>" class="refine-remove removesearch"><venda_text id=site.search_results.refine.remove></a></div>
+	</div></venda_block label=331>
+	<venda_block label=1671,field=q><venda_tpcomment><!-- stores current keyword value in tpxt:activekeyword --></venda_tpcomment><venda_tpxt mode=set,name=activekeyword,value=<venda_facetref>></venda_block label=1671>
+	<venda_block label=1672,field!=><venda_tpxt mode=set,name=active<venda_field>,value=<venda_facetref>></venda_block label=1672>
+
+	<venda_block label=1670,field=parentCategoryRef><venda_tpcomment><!-- stores pcatid or cat value in tpxt:activecategory --></venda_tpcomment><venda_tpxt mode=set,name=activecategory,value=<venda_facetref>></venda_block label=1670>
+	<venda_block label=1500,mode=value,<venda_setting type=ebiz,name=setalwaysshowcompare>=1><venda_tpxt mode=set,name=comparecatref,value=allcategory></venda_block label=1500>
+</venda_detblock_searched_fields>
+
+<div id="term"><div class="exh2"><span></span><venda_text id=site.search_results.refine.you_searched_by></div>
+	<venda_detail_searched_fields>
+</div>
+
+<venda_block label=345,totalresults!=0>
+<div id="collate"><div class="exh2"><span></span><venda_text id=site.search_results.refine.further_refine_by></div><venda_detail_facets></div>
+</venda_block label=345>
+	
+
+<venda_tpcomment><!-- Tags for JS: text id values used by viewall toggle --></venda_tpcomment>
+<div id="tag-showviewall" style="display:none;"><venda_setting type=ebiz,name=showrefineviewall></div>
+<div id="tag-viewallcount" style="display:none;"><venda_block label=15,mode=value,<venda_setting type=ebiz,name=viewallcount>=null>4</venda_block label=15><venda_block label=16,mode=value,<venda_setting type=ebiz,name=viewallcount>!=null><venda_setting type=ebiz,name=viewallcount></venda_block label=16></div>
+<div id="tag-viewalllink" style="display:none;"><p><a class="toggleviewall" href="#"><venda_text id=site.search_results.refine.viewall></a></p></div>
+<div id="tag-viewlesstext" style="display:none;"><venda_text id=site.search_results.refine.viewless></div>
+<div id="tag-currsym" style="display:none;"><venda_currsym></div>
+<div id="tag-rangevalidate" style="display:none;"><venda_text id=site.search_results.refine.validaterange></div>

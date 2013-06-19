@@ -1,0 +1,75 @@
+<fieldset class="f-orbtpersonal">
+<h3 class="bluebold">Personal Details</h3>
+<legend class="orbtname"><venda_text id=site.edit_contact_address.legend.name_at_address></legend>
+<div><label for="title"><venda_text id=site.edit_contact_address.label.title> <span class="required">*</span></label>
+<select name="title" id="title">
+	<option value="Mr" <venda_block label=101,title=Mr>selected</venda_block label=101>>Mr</option>
+	<option value="Mrs" <venda_block label=111,title=Mrs>selected</venda_block label=111>>Mrs</option>
+	<option value="Miss" <venda_block label=121,title=Miss>selected</venda_block label=121>>Miss</option>
+	<option value="Ms" <venda_block label=131,title=Ms>selected</venda_block label=131>>Ms</option>
+	<option value=" "<venda_block label=141,title=,title= ,operator=or> selected</venda_block label=141>>Other</option>
+</select>
+</div>
+<div><label for="fname"><venda_text id=site.edit_contact_address.label.first_name> <span class="required">*</span></label> <venda_fname field=text,size=25,maxlength=30,required=yes></div>
+<div><label for="lname"><venda_text id=site.edit_contact_address.label.last_name> <span class="required">*</span></label> <venda_lname field=text,size=25,maxlength=30,required=yes></div>
+</fieldset>
+
+
+<fieldset class="f-orbtdetail">
+<h3 class="bluebold">Address Details</h3>
+<legend class="orbtdetail"><venda_text id=site.edit_contact_address.legend.address_details></legend>
+<div><label for="company"><venda_text id=site.contact_address.label.company></label> <venda_company field=text,size=25,maxlength=100></div>
+<venda_block label=88,mode=value,<venda_setting type=ebiz,name=nohousenum>!=1><div><label for="num"><venda_text id=site.edit_contact_address.label.house_name_flat_number> <span class="required">*</span></label> <venda_num field=text,size=25,maxlength=20,required=yes></div></venda_block label=88>
+<div><label for="addr1"><venda_text id=site.edit_contact_address.label.address> <span class="required">*</span></label> <venda_addr1 field=text,size=25,maxlength=50,required=yes></div>
+<div><label for="addr2" class="invisible"><venda_text id=site.edit_contact_address.label.address2></label> <venda_addr2 field=text,size=25,maxlength=50></div>
+<div><label for="city"><venda_text id=site.edit_contact_address.label.city> <span class="required">*</span></label> <venda_city field=text,size=25,maxlength=30,required=yes></div>
+<div><label for="state"><venda_text id=site.edit_contact_address.label.county></label> <venda_state field=text,size=25,maxlength=20></div>
+<div><label for="zipc"><venda_text id=site.edit_contact_address.label.postcode> <span class="required">*</span></label> <venda_zipc field=text,size=25,maxlength=20></div>
+<div><label for="cntry"><venda_text id=site.edit_contact_address.label.country> <span class="required">*</span></label> <venda_cntry field=combo,required=yes,ship=1></div>
+</fieldset>
+
+
+<fieldset class="f-orbtfdetail">
+<h3 class="bluebold">Further Account Details</h3>
+<legend class="orbtfdetail"><venda_text id=site.edit_contact_address.legend.further_account_details></legend>
+<div><div><label for="phone" class="dontFloat"><venda_text id=site.edit_contact_address.label.phone_number></label> <label for="area" class="dontFloat invisible"><venda_text id=site.edit_contact_address.label.phone_area_code></label></div> <venda_area field=text,size=4,maxlength=6><venda_phone field=text,size=18,maxlength=20></div>
+
+
+<div id='usemail'><label for="usemail"><venda_text id=site.contact_address.label.email_address> <span class="required">*</span></label> <venda_usemail field=text,size=25,maxlength=150></div>
+
+<input type="hidden" name="usmailform" value="3">
+<div><input type="checkbox" name="blkemail" id="blkemail" value="1" class="dontFloat" <venda_block label=124,blkemail=1> checked</venda_block label=124>> <label for="blkemail" class="dontFloat"><venda_text id=site.contact_address.label.email_updates></label></div>
+<!-- <venda_ustandc required=yes> -->
+<div><input type="checkbox" name="ustandc" id="ustandc" value="1"<venda_block label=125,ustandc=1> checked</venda_block label=125>> <label for="ustandc" class="dontFloat"><venda_text id=site.contact_address.label.read_and_agreed> <a href="<venda_dispview page=terms>&layout=empty" rel="popup console 550 450" target="_blank" title="<venda_text id=site.contact_address.label.terms_and_conditions.title>"><venda_text id=site.contact_address.label.terms_and_conditions></a></label></div>
+
+
+<!-- can't call usxtfields templates must customise in this page -->
+<div><label for="how here us">Where you here us <span class="required">*</span></label>
+<select name="usxthowhearus"><option selected="" value="">Please Select...</option><option value="Web Search">Web Search</option>
+<option value="Email">Email</option>
+<option value="Existing Customer">Existing Customer</option>
+<option value="Recommendation">Recommendation</option>
+<option value="Brochure">Brochure</option>
+<option value="Magazine">Magazine</option>
+<option value="Newspaper">Newspaper</option>
+<option value="Store - Tottenham Court Road">Store - Tottenham Court Road</option>
+<option value="Store - Kings Road">Store - Kings Road</option>
+<option value="Store - Guildford">Store - Guildford</option>
+<option value="Store - Kingston">Store - Kingston</option>
+<option value="Store - Manchester">Store - Manchester</option>
+<option value="Store - Redbrick Mill">Store - Redbrick Mill</option>
+<option value="Store - Brighton">Store - Brighton</option>
+<option value="Other">Other</option>
+</select><venda_defaul _moz-userdefined="" select...="" name="Please" usxselectusxthowhearus="">
+</venda_defaul></div>
+
+<input type="hidden" name="formusxtcataloguerequest" value="1">
+<input type="checkbox" name="usxtcataloguerequest" id="usxtcataloguerequest" value="1" checked="checked" class="hide">
+
+
+
+
+</fieldset>
+
+
+

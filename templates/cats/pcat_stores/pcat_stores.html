@@ -1,0 +1,29 @@
+<venda_block label=101,pcatref=our_stores>
+<venda_page page=our_stores_locator>
+</venda_block label=101>
+
+<venda_block label=102,pcatref=instoreservices>
+<venda_page page=our_stores_service>
+</venda_block label=102>
+
+<venda_block label=103,pcatref!=our_stores,pcatref!=instoreservices>
+<venda_detblock>
+	<li class="store_<venda_pcatref1>">
+		<div class="image">
+			<venda_block label=1,med-thumb1=notnull>
+				<a href="<venda_dispview pcat=<venda_pcatref1>>"><venda_media rec=pcat1,type=movie-swf-pict,key=thumb,border=0></a>
+			</venda_block label=1>
+			<venda_block label=5,med-thumb1=null>
+				<a href="<venda_dispview pcat=<venda_pcatref1>>"><img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/no_image_att.gif" alt="Sorry, No Image Available"></a>
+			</venda_block label=5>
+		</div>
+		<div class="bold">
+			<a href="<venda_dispview pcat=<venda_pcatref1>>"><venda_pcatname1></a>
+		</div>
+	</li>
+</venda_detblock>
+
+<div id="pcat_stores">
+	<ul id="pcatlist_stores"><venda_detail></ul>
+</div>
+</venda_block label=103>

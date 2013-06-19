@@ -1,0 +1,22 @@
+<venda_detblock1>
+		<p>We are pleased to inform you that <a href="<venda_dispview invt=<venda_invtref>>"><venda_invtname></a> is now back in stock.<br>
+		Please click here to <a href="<venda_dispview invt=<venda_invtref>>">order this item</a></p>
+</venda_detblock1>
+
+<html>
+<head>
+	<title><venda_ebizname> Stock Information</title>
+</head>
+<body>
+
+<venda_inctemplate name=htmlEmailCssEtc,type=includes/email>
+<!-- Do not display prices because this email cannot incorporate Price Banding -->
+<p>Dear Customer,</p>
+<p>You have requested to be notified when the following items are back in stock:</p>
+<venda_detail1>
+<p>Please note that the products are in stock at the time of sending this e-mail and we cannot guarantee that stock will still be available when you visit Heals.co.uk, as some products are in very high demand.</p>
+
+<venda_inctemplate name=htmlEmailFooter,type=includes/email>
+
+</body>
+</html>

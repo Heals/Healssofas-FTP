@@ -1,0 +1,49 @@
+<venda_detblock>
+<span>
+<venda_block label=1,pageurl1=notnull><a href="<venda_pageurl1><venda_block label=335,mode=value,<venda_setting type=ebiz,name=setproductlistviewallvalue>=<venda_itemsperpage>>&itemsperpage=<venda_setting type=ebiz,name=setproductlistviewallvalue></venda_block label=335>"><venda_pagenum1></a></venda_block label=1>
+<venda_block label=2,pageurl1=null><venda_pagenum1>
+<venda_block label=815,mode=value,<venda_setting type=ebiz,name=tracktaghitbox>=1><!--HBX tracking if business field checked-->
+<venda_inctemplate name=hbxlocalvars7,type=includes/tracking>
+</venda_block label=815>
+</venda_block label=2>
+</span>
+</venda_detblock>
+
+<venda_block label=4,totalpages&gt;1>
+<div class="psel">
+	
+	
+	<span class="pnumber">&nbsp;<venda_text id=site.page_numbers.page.text><venda_detail>&nbsp;</span>
+	
+	<venda_block label=3,prevurl=notnull><span class="previouspage"><a href="<venda_prevurl><venda_block label=334,mode=value,<venda_setting type=ebiz,name=setproductlistviewallvalue>=<venda_itemsperpage>>&itemsperpage=<venda_setting type=ebiz,name=setproductlistviewallvalue></venda_block label=334>" class="previous"><venda_text id=site.page_numbers.link.previous></a></span></venda_block label=3>
+
+	<venda_block label=5,nexturl=notnull><span class="nextpage"><a href="<venda_nexturl><venda_block label=336,mode=value,<venda_setting type=ebiz,name=setproductlistviewallvalue>=<venda_itemsperpage>>&itemsperpage=<venda_setting type=ebiz,name=setproductlistviewallvalue></venda_block label=336>" class="next"><venda_text id=site.page_numbers.link.next></a></span></venda_block label=5>
+	
+	<venda_block label=55,mode=value,<venda_setting type=ebiz,name=showproductlistviewall>=1>
+		<venda_block label=888,mode=value,<venda_totalqty>&lt;<venda_setting type=ebiz,name=setproductlistviewallvalue>,<venda_totalqty>=<venda_setting type=ebiz,name=setproductlistviewallvalue>,operator=or>
+			<venda_block label=111,mode=value,<venda_setting type=ebiz,name=setproductlistviewallvalue>!=<venda_itemsperpage>>	
+<!-- View All--><a href="<venda_dispview icat=<venda_catsref>>&itemsperpage=<venda_setting type=ebiz,name=setproductlistviewallvalue>" title="<venda_text id=site.page_numbers.viewall>" class="pselall"><venda_text id=site.page_numbers.viewall></a>
+			</venda_block label=111>
+		</venda_block label=888>
+			
+		<venda_block label=999,mode=value,<venda_totalqty>&gt;<venda_setting type=ebiz,name=setproductlistviewallvalue>>
+			<venda_block label=666,mode=value,<venda_setting type=ebiz,name=setproductlistviewallvalue>!=<venda_itemsperpage>>
+<!-- View Number --><a href="<venda_dispview icat=<venda_catsref>>&itemsperpage=<venda_setting type=ebiz,name=setproductlistviewallvalue>" title="<venda_text id=site.page_numbers.viewall.perpagemax>" class="pselall"><venda_text id=site.page_numbers.viewall.perpagemax></a>
+			</venda_block label=666>
+			<venda_block label=777,mode=value,<venda_setting type=ebiz,name=setproductlistviewallvalue>=<venda_itemsperpage>>
+<!-- View Number reset --><a href="<venda_dispview icat=<venda_catsref>>" title="<venda_text id=site.page_numbers.viewpage.perpagemax>" class="pselperpage"><venda_text id=site.page_numbers.viewpage.perpagemax></a>
+			</venda_block label=777>
+		</venda_block label=999>
+	</venda_block label=55>	
+		
+</div>
+<venda_tpxt mode=set,name=curpage,value=<venda_currentpage>> <venda_tpcomment> <!-- used to pass current page value to icat/productlist and invt/attributes for add to basket form --> </venda_tpcomment>
+</venda_block label=4>
+
+<venda_block label=712,mode=value,<venda_setting type=ebiz,name=setproductlistviewallvalue>=<venda_itemsperpage>,<venda_setting type=ebiz,name=showproductlistviewall>=1,totalpages&lt;1>
+	<venda_block label=711,mode=value,<venda_totalqty>&lt;<venda_setting type=ebiz,name=setproductlistviewallvalue>,<venda_totalqty>=<venda_setting type=ebiz,name=setproductlistviewallvalue>,operator=or>			
+			<div class="psel">
+<!-- View All reset --><a href="<venda_dispview icat=<venda_catsref>>" title="<venda_text id=site.page_numbers.viewpage>" class="pselperpage"><venda_text id=site.page_numbers.viewpage></a>
+			</div>			
+	</venda_block label=711>
+</venda_block label=712>

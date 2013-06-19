@@ -1,0 +1,3729 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="urn:VendaProducts" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="VendaProducts" targetNamespace="urn:VendaProducts">
+  <wsdl:types>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:VendaProducts">
+      <import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <complexType name="ArrayOfstring">
+        <complexContent>
+          <restriction base="SOAP-ENC:Array">
+            <attribute ref="SOAP-ENC:arrayType" wsdl:arrayType="xsd:string[]" />
+          </restriction>
+        </complexContent>
+      </complexType>
+      <complexType name="ArrayOfpriceElement">
+        <complexContent>
+          <restriction base="SOAP-ENC:Array">
+            <attribute ref="SOAP-ENC:arrayType" wsdl:arrayType="tns:priceElement[]" />
+          </restriction>
+        </complexContent>
+      </complexType>
+      <complexType name="ArrayOfattributeElement">
+        <complexContent>
+          <restriction base="SOAP-ENC:Array">
+            <attribute ref="SOAP-ENC:arrayType" wsdl:arrayType="tns:attributeElement[]" />
+          </restriction>
+        </complexContent>
+      </complexType>
+      <complexType name="ArrayOfaccessoryElement">
+        <complexContent>
+          <restriction base="SOAP-ENC:Array">
+            <attribute ref="SOAP-ENC:arrayType" wsdl:arrayType="tns:accessoryElement[]" />
+          </restriction>
+        </complexContent>
+      </complexType>
+      <complexType name="ArrayOfskuElement">
+        <complexContent>
+          <restriction base="SOAP-ENC:Array">
+            <attribute ref="SOAP-ENC:arrayType" wsdl:arrayType="tns:skuElement[]" />
+          </restriction>
+        </complexContent>
+      </complexType>
+      <complexType name="ArrayOfcategoryTreeElement">
+        <complexContent>
+          <restriction base="SOAP-ENC:Array">
+            <attribute ref="SOAP-ENC:arrayType" wsdl:arrayType="tns:categoryTreeElement[]" />
+          </restriction>
+        </complexContent>
+      </complexType>
+      <complexType name="ArrayOfextendedFieldElement">
+        <complexContent>
+          <restriction base="SOAP-ENC:Array">
+            <attribute ref="SOAP-ENC:arrayType" wsdl:arrayType="tns:extendedFieldElement[]" />
+          </restriction>
+        </complexContent>
+      </complexType>
+      <complexType name="ArrayOfextendedMultivalues">
+        <complexContent>
+          <restriction base="SOAP-ENC:Array">
+            <attribute ref="SOAP-ENC:arrayType" wsdl:arrayType="tns:extendedMultiValue[]" />
+          </restriction>
+        </complexContent>
+      </complexType>
+      <complexType name="ArrayOfproducttypeAttributeElement">
+        <complexContent>
+          <restriction base="SOAP-ENC:Array">
+            <attribute ref="SOAP-ENC:arrayType" wsdl:arrayType="tns:producttypeAttributeElement[]" />
+          </restriction>
+        </complexContent>
+      </complexType>
+      <complexType name="ArrayOfcategoryElement">
+        <complexContent>
+          <restriction base="SOAP-ENC:Array">
+            <attribute ref="SOAP-ENC:arrayType" wsdl:arrayType="tns:categoryElement[]" />
+          </restriction>
+        </complexContent>
+      </complexType>
+      <complexType name="ArrayOfnonDeliverableCountryElement">
+        <complexContent>
+          <restriction base="SOAP-ENC:Array">
+            <attribute ref="SOAP-ENC:arrayType" wsdl:arrayType="tns:nonDeliverableCountryElement[]" />
+          </restriction>
+        </complexContent>
+      </complexType>
+      <complexType name="ArrayOfnonDeliverableCountryGroupElement">
+        <complexContent>
+          <restriction base="SOAP-ENC:Array">
+            <attribute ref="SOAP-ENC:arrayType" wsdl:arrayType="tns:nonDeliverableCountryGroupElement[]" />
+          </restriction>
+        </complexContent>
+      </complexType>
+      <complexType name="ArrayOfsubstitutionElement">
+        <complexContent>
+          <restriction base="SOAP-ENC:Array">
+            <attribute ref="SOAP-ENC:arrayType" wsdl:arrayType="tns:substitutionElement[]" />
+          </restriction>
+        </complexContent>
+      </complexType>
+      <complexType name="ArrayOfmediaElement">
+        <complexContent>
+          <restriction base="SOAP-ENC:Array">
+            <attribute ref="SOAP-ENC:arrayType" wsdl:arrayType="tns:mediaElement[]" />
+          </restriction>
+        </complexContent>
+      </complexType>
+      <complexType name="ArrayOfpublishElement">
+        <complexContent>
+          <restriction base="SOAP-ENC:Array">
+            <attribute ref="SOAP-ENC:arrayType" wsdl:arrayType="tns:publishElement[]" />
+          </restriction>
+        </complexContent>
+      </complexType>
+      <complexType name="ArrayOfstockElement">
+        <complexContent>
+          <restriction base="SOAP-ENC:Array">
+            <attribute ref="SOAP-ENC:arrayType" wsdl:arrayType="tns:stockElement[]" />
+          </restriction>
+        </complexContent>
+      </complexType>
+      <complexType name="ArrayOfpreReleaseElement">
+        <complexContent>
+          <restriction base="SOAP-ENC:Array">
+            <attribute ref="SOAP-ENC:arrayType" wsdl:arrayType="tns:preReleaseElement[]" />
+          </restriction>
+        </complexContent>
+      </complexType>
+      <complexType name="ArrayOfqueryElement">
+        <complexContent>
+          <restriction base="SOAP-ENC:Array">
+            <attribute ref="SOAP-ENC:arrayType" wsdl:arrayType="tns:queryElement[]" />
+          </restriction>
+        </complexContent>
+      </complexType>
+      <complexType name="ArrayOfqueryCategoryElement">
+        <complexContent>
+          <restriction base="SOAP-ENC:Array">
+            <attribute ref="SOAP-ENC:arrayType" wsdl:arrayType="tns:queryCategoryElement[]" />
+          </restriction>
+        </complexContent>
+      </complexType>
+      <complexType name="ArrayOfqueryProductTypeElement">
+        <complexContent>
+          <restriction base="SOAP-ENC:Array">
+            <attribute ref="SOAP-ENC:arrayType" wsdl:arrayType="tns:queryProductTypeElement[]" />
+          </restriction>
+        </complexContent>
+      </complexType>
+      <complexType name="ArrayOfsearchElement">
+        <complexContent>
+          <restriction base="SOAP-ENC:Array">
+            <attribute ref="SOAP-ENC:arrayType" wsdl:arrayType="tns:searchElement[]" />
+          </restriction>
+        </complexContent>
+      </complexType>
+      <complexType name="ArrayOfresponseElement">
+        <complexContent>
+          <restriction base="SOAP-ENC:Array">
+            <attribute ref="SOAP-ENC:arrayType" wsdl:arrayType="tns:responseElement[]" />
+          </restriction>
+        </complexContent>
+      </complexType>
+      <complexType name="ArrayOfsequenceCategoryElement">
+        <complexContent>
+          <restriction base="SOAP-ENC:Array">
+            <attribute ref="SOAP-ENC:arrayType" wsdl:arrayType="tns:sequenceCategoryElement[]" />
+          </restriction>
+        </complexContent>
+      </complexType>
+      <complexType name="ArrayOfsequenceElement">
+        <complexContent>
+          <restriction base="SOAP-ENC:Array">
+            <attribute ref="SOAP-ENC:arrayType" wsdl:arrayType="tns:sequenceElement[]" />
+          </restriction>
+        </complexContent>
+      </complexType>
+      <complexType name="ArrayOfsequenceCategoryTreeElement">
+        <complexContent>
+          <restriction base="SOAP-ENC:Array">
+            <attribute ref="SOAP-ENC:arrayType" wsdl:arrayType="tns:sequenceCategoryTreeElement[]" />
+          </restriction>
+        </complexContent>
+      </complexType>
+      <complexType name="ArrayOfdeleteProductElement">
+        <complexContent>
+          <restriction base="SOAP-ENC:Array">
+            <attribute ref="SOAP-ENC:arrayType" wsdl:arrayType="tns:deleteProductElement[]" />
+          </restriction>
+        </complexContent>
+      </complexType>
+      <complexType name="ArrayOfdeleteCategoryElement">
+        <complexContent>
+          <restriction base="SOAP-ENC:Array">
+            <attribute ref="SOAP-ENC:arrayType" wsdl:arrayType="tns:deleteCategoryElement[]" />
+          </restriction>
+        </complexContent>
+      </complexType>
+      <complexType name="ArrayOfdeleteProductTypeElement">
+        <complexContent>
+          <restriction base="SOAP-ENC:Array">
+            <attribute ref="SOAP-ENC:arrayType" wsdl:arrayType="tns:deleteProductTypeElement[]" />
+          </restriction>
+        </complexContent>
+      </complexType>
+      <complexType name="ArrayOfrecordElement">
+        <complexContent>
+          <restriction base="SOAP-ENC:Array">
+            <attribute ref="SOAP-ENC:arrayType" wsdl:arrayType="tns:recordElement[]" />
+          </restriction>
+        </complexContent>
+      </complexType>
+      <complexType name="ArrayOfoverviewElement">
+        <complexContent>
+          <restriction base="SOAP-ENC:Array">
+            <attribute ref="SOAP-ENC:arrayType" wsdl:arrayType="tns:overviewElement[]" />
+          </restriction>
+        </complexContent>
+      </complexType>
+      <complexType name="ArrayOfproductTypeElement">
+        <complexContent>
+          <restriction base="SOAP-ENC:Array">
+            <attribute ref="SOAP-ENC:arrayType" wsdl:arrayType="tns:productTypeElement[]" />
+          </restriction>
+        </complexContent>
+      </complexType>
+      <complexType name="ArrayOfwarehouseElement">
+        <complexContent>
+          <restriction base="SOAP-ENC:Array">
+            <attribute ref="SOAP-ENC:arrayType" wsdl:arrayType="tns:warehouseElement[]" />
+          </restriction>
+        </complexContent>
+      </complexType>
+      <complexType name="ArrayOfextendedFieldDefinitionElement">
+        <complexContent>
+          <restriction base="SOAP-ENC:Array">
+            <attribute ref="SOAP-ENC:arrayType" wsdl:arrayType="tns:extendedFieldDefinitionElement[]" />
+          </restriction>
+        </complexContent>
+      </complexType>
+      <xsd:complexType name="messageHeaderElement">
+        <xsd:annotation>
+          <xsd:documentation>
+          Every SOAP Request message can also optionally take a Message Header block containing
+          transactional metadata about the message. This data is logged by the Venda application,
+          however the prescence of any of these fields do not alter the function of the associated
+          methods in any way; they are provided purely for informational and manual verification
+          purposes, and can also be helpful during end-to-end testing.
+        </xsd:documentation>
+        </xsd:annotation>
+        <xsd:all>
+          <xsd:element name="senderId" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Alphanumeric string identifying the sender of the message</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="receiverId" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Alphanumeric string identifying the receiver of the message</xsd:documentation>
+            </xsd:annotation>
+		  </xsd:element>
+          <xsd:element name="messageId" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Alphanumeric string identifying the individual 'message' within the data</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="transactionId" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Alphanumeric string identifying the actual data transaction</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="transactionTimeStamp" type="xsd:dateTime">
+            <xsd:annotation>
+              <xsd:documentation>Timestamp of when the data transaction was initiated</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="skuElement">
+        <xsd:all>
+          <xsd:element name="sku" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>This is the SKU reference of the product</xsd:documentation>
+              <xsd:documentation>Required for all except VendaSearchProduct</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="name" type="xsd:string" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>This is the title of the product</xsd:documentation>
+              <xsd:documentation>Required for VendaCreateProduct</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="createIfNotExist" type="xsd:boolean" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>If this Boolean value is set, then the product will be created if it
+                        didn't exist before.
+                      </xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="ivtype" type="xsd:string" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>This is the type of the product.
+                        If specified, this value must be a valid ivtype reference from the “Product/Compare Types” section
+                        in the Venda Control Panel
+                      </xsd:documentation>
+              <xsd:documentation>Required for VendaCreateProduct</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="publish" type="xsd:boolean" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>This is a Boolean value. "true" means the product will appear on the web.
+                        This must be specified as true or false.
+                      </xsd:documentation>
+              <xsd:documentation>Required for VendaCreateProduct and VendaPublishProduct</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="featured" type="xsd:boolean" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>
+                        This is a Boolean value. "true" means the product is featured as a spotlight.
+                        This must be specified as true or false.
+                      </xsd:documentation>
+              <xsd:documentation>Required for VendaCreateProduct</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="skuEtaDate" type="xsd:dateTime" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>This is a Date value. This is the date that stock is expected in for this product.</xsd:documentation>
+              <xsd:documentation>Required for VendaUpdateStock</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="discountExempt" type="xsd:boolean" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>This is a Boolean value. "true" means that no discounts can be applied to this product.
+                        This must be specified as true or False</xsd:documentation>
+              <xsd:documentation>Required for VendaCreateProduct</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="taxExempt" type="xsd:boolean" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>This is a Boolean value. "true" means that no tax will be calculated on this product. This must be specified as true or false</xsd:documentation>
+              <xsd:documentation>Required for VendaCreateProduct</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="noAffiliate" type="xsd:boolean" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>This is a Boolean value.  "true" means this item is not available for affiliation.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="giftwrapExempt" type="xsd:boolean" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>This is a Boolean value. "true" means that the
+                        item is not available to be giftwrapped. This must be specified as true or false</xsd:documentation>
+              <xsd:documentation>Required for VendaCreateProduct</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="giftmessageExempt" type="xsd:boolean" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>This is a Boolean value. "true" means that the
+                        item is not able to have a gift message added.
+                        This must be specified as true or false</xsd:documentation>
+              <xsd:documentation>Required for VendaCreateProduct</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="warehouse" type="xsd:string" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>This is the warehouse from which the product will be delivered.
+                        If specified, this value must be a valid warehouse reference from the "Warehouse"
+                        section of the Venda Control Panel</xsd:documentation>
+              <xsd:documentation>Required for VendaCreateProduct</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="warehouseSKU" type="xsd:string" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>This is an optional extra SKU. If the warehouse has a different reference
+                        to the Website, that value can be stored here</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="supplier" type="xsd:string" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>This is the supplier for the product. This value must be a valid supplier
+                        reference from the "Suppliers" section of the Venda Control Panel</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="supplierSKU" type="xsd:string" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>This is an optional extra SKU. If the supplier has a different reference to the
+                        Website, that value can be stored here.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="productTaxGroup" type="xsd:string" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>This is the group used for calculating tax on a product. This must be a valid
+                        reference from the "Product Tax Groups" section of the Venda Control Panel</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="barcode" type="xsd:string" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>This is an optional barcode reference for the product</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="brand" type="xsd:string" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>This is an optional description of the brand of the product</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="pickLocation" type="xsd:string" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>This is an optional warehouse location for the
+                        item (e.g. "Bin 23", etc)</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="forceQty" type="xsd:int" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>This number of the item will be forced into a
+                        user’s basket when they add their first item.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="onHand" type="xsd:int" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>The number of this product which are available in stock.</xsd:documentation>
+              <xsd:documentation>Required for VendaUpdateStock</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="maxPerOrder" type="xsd:int" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>The maximum number of this item which can
+                        be bought in any one order</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="maxPerUser" type="xsd:int" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>The maximum number of this item which can
+                        be bought by any one user</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="ddpStore" type="xsd:double" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>This is the value of Delivery Duty Paid assigned to the Store.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="ddpCust" type="xsd:double" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>This is the value of Delivery Duty Paid assigned to the Customer.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="deliveryMultiple" type="xsd:int" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>A multiple in which this item must be bought
+                        (if a blank value or 0 is specified, it defaults to 1)</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="minimumOrderQuantity" type="xsd:int" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>The minimum number of this item that
+                        someone has to buy (if a blank value or 0 is specified, it defaults to 1)</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="releaseDate" type="xsd:dateTime" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>This is an optional date (specified in ISO 8601 format)
+                        that the product is released on. Any orders taken for this product before that date will be
+                        classed as pre-orders</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="fraudScore" type="xsd:int" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>If a site uses the Venda fraud checking, then
+                        anyone buying this product will have this score added to their risk value</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="priceElements" type="tns:ArrayOfpriceElement" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>This is an array of prices for the product. If a product is being updated and
+                        this is not included, the prices will not be changed. If it is included, then all current prices will be
+                        replaced with the elements specified.</xsd:documentation>
+              <xsd:documentation>Required for VendaCreateProduct</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="weight" type="xsd:double" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>This is a double value representing the weight of the product.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="weightUnits" type="xsd:string" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>This is a string representation of the weight units (e.g. "kg", "lbs", etc)</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="additionalDeliveryCost" type="xsd:double" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>This is a double value representing an additional delivery cost.
+                        This will be added on top of the rule-calculated delivery charge</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="volume" type="xsd:double" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>This is a double value representing the volume of the product</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="description1" type="xsd:string" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>This is a free-text field which contains a description of the product to be
+                        displayed on the Website</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="description2" type="xsd:string" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>As description1</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="description3" type="xsd:string" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>As description1</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="description4" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>As description1</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="mediaElements" type="tns:ArrayOfmediaElement">
+            <xsd:annotation>
+              <xsd:documentation>This is an array of values which represent the pictures associated to the
+                        current product. </xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="categoryElements" type="tns:ArrayOfcategoryElement">
+            <xsd:annotation>
+              <xsd:documentation>This is an array of string values containing the references to the parent categories for this product.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="forceCategoryRef" type="xsd:string">
+			<xsd:annotation>
+			  <xsd:documentation>
+				 This assignes this SKU to a particular bundle reference.
+				 This SKU is therefore linked to the SKUs contained within the Bundle Category.
+			  </xsd:documentation>
+			</xsd:annotation>
+		  </xsd:element>
+          <xsd:element name="extendedFields" type="tns:ArrayOfextendedFieldElement">
+            <xsd:annotation>
+              <xsd:documentation>This is an array of values for the extended fields.
+                        Which extended fields are available to the products is based on the product type. </xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="substitutionElements" type="tns:ArrayOfsubstitutionElement">
+            <xsd:annotation>
+              <xsd:documentation>This is an array of SKUs which can be used as substitutes for the current product.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="accessoryElements" type="tns:ArrayOfaccessoryElement">
+            <xsd:annotation>
+              <xsd:documentation>This is an array of SKUs which can be used as accessories for the current product.
+                        This also defines the discounts available for buying the two products together. </xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="attribute1" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>This is the label for the first attribute of the product (e.g. Colour)</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="attribute2" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>This is the label for the second attribute of the product (e.g. Size)</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="attribute3" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>This is the label for the third attribute of the product</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="attribute4" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>This is the label for the fourth attribute of the product</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="attributeElements" type="tns:ArrayOfattributeElement">
+            <xsd:annotation>
+              <xsd:documentation>This is an array of child products which vary based on the attributes defined above.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="nonDeliverableCountryElements" type="tns:ArrayOfnonDeliverableCountryElement">
+            <xsd:annotation>
+              <xsd:documentation>This is an array of countries to which the product cannot be delivered.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="nonDeliverableCountryGroupElements" type="tns:ArrayOfnonDeliverableCountryGroupElement">
+            <xsd:annotation>
+              <xsd:documentation>This is an array of country groups to which the product cannot be delivered.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="overviewElement">
+        <xsd:all>
+          <xsd:element name="sku" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>This is the SKU of this product</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="name" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>This is the title of the product</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="publish" type="xsd:boolean">
+            <xsd:annotation>
+              <xsd:documentation>This is a Boolean value. "true" means the product will appear on the web</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="onHand" type="xsd:int">
+            <xsd:annotation>
+              <xsd:documentation>The number of this product which are available in stock.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="categoryTreeElement">
+        <xsd:all>
+          <xsd:element name="ref" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>This is the reference of the category to be created</xsd:documentation>
+              <xsd:documentation>Required</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="name" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>This is the full name of the category</xsd:documentation>
+              <xsd:documentation>Required</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="layout" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>This is the layout name for the category</xsd:documentation>
+              <xsd:documentation>Required</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="categoryTemplate" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>This is the reference of the template name for the category</xsd:documentation>
+              <xsd:documentation>Required</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="publish" type="xsd:boolean">
+            <xsd:annotation>
+              <xsd:documentation>Boolean value – 'true' means the category is visible on the site.
+                        'false' means the category is invisible.</xsd:documentation>
+              <xsd:documentation>Required</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="featured" type="xsd:boolean">
+            <xsd:annotation>
+              <xsd:documentation>Boolean value  - 'true' means the category is marked as Featured.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="displayInControlPanel" type="xsd:boolean">
+			<xsd:annotation>
+			  <xsd:documentation>Boolean value - 'false' stops the contents of a category being displayed in the VCP.</xsd:documentation>
+			</xsd:annotation>
+		  </xsd:element>
+          <xsd:element name="sequenceMethod" type="tns:sequenceType">
+            <xsd:annotation>
+              <xsd:documentation>The type of sequencing applied to the sub-categories or products within this
+                        category. 
+                      </xsd:documentation>
+              <xsd:documentation>Required</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="itemsPerPage" type="xsd:int">
+            <xsd:annotation>
+              <xsd:documentation>This is the number of product items that should be displayed on each category list page.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="shortDescription" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>This is a textual short description of the category.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="longDescription" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>This is a textual long description of the category</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="mediaElements" type="tns:ArrayOfmediaElement">
+            <xsd:annotation>
+              <xsd:documentation>This is an array of mediaElement elements</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="categoryElements" type="tns:ArrayOfcategoryElement">
+            <xsd:annotation>
+              <xsd:documentation>This is an array of categoryElement elements that denote the parent categories to which this category is to belong</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="extendedFields" type="tns:ArrayOfextendedFieldElement">
+            <xsd:annotation>
+              <xsd:documentation>This is an array of extendedField elements</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="navType" type="tns:navType" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>This is a string value of the Navigation Type that the category is to be associated with.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:all>
+      </xsd:complexType>
+      <simpleType name="navType">
+        <restriction base="xsd:string">
+          <enumeration value="CategoryBrowsing">
+            <xsd:annotation>
+              <xsd:documentation>The search will display all products in the category</xsd:documentation>
+            </xsd:annotation>
+          </enumeration>
+          <enumeration value="GuidedNavigation">
+            <xsd:annotation>
+              <xsd:documentation>The category will use the guided nav search template to display the products in the category</xsd:documentation>
+            </xsd:annotation>
+          </enumeration>
+          <enumeration value="Dynamic">
+            <xsd:annotation>
+              <xsd:documentation>Category will be expandable</xsd:documentation>
+            </xsd:annotation>
+          </enumeration>
+          <enumeration value="NoLink">
+            <xsd:annotation>
+              <xsd:documentation>Category displayed but not clickable</xsd:documentation>
+            </xsd:annotation>
+          </enumeration>
+        </restriction>
+      </simpleType>
+      <xsd:complexType name="productTypeElement">
+        <xsd:all>
+          <xsd:element name="ref" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>This is the Product Type reference</xsd:documentation>
+              <xsd:documentation>Required</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="name" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>This is the full Name for the Product Type</xsd:documentation>
+              <xsd:documentation>Required</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="layout" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>This is the Layout to be assigned to the product type</xsd:documentation>
+              <xsd:documentation>Required</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="productTemplate" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>This is the Template name for the product type</xsd:documentation>
+              <xsd:documentation>Required</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="publish" type="xsd:boolean">
+            <xsd:annotation>
+              <xsd:documentation>Boolean Flag. If 'true', the product type is Published and is visible on the site.
+                        If 'false', the product type is invisible</xsd:documentation>
+              <xsd:documentation>Required</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="recordType" type="tns:intyRecordType">
+            <xsd:annotation>
+              <xsd:documentation>This is the type of product record which this productType will describe.</xsd:documentation>
+              <xsd:documentation>Required</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="fileType" type="tns:intyFileType">
+            <xsd:annotation>
+              <xsd:documentation>There is a single possible value for this field: "in_invt-form"</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="pricePoints" type="tns:pricepointsType">
+            <xsd:annotation>
+              <xsd:documentation>If using a markup in a custom price integration (see below) then this dictates
+                        if the finished price is rounded up or down to the nearest whole number.
+                        By default, this field is not used.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="markup" type="xsd:int">
+            <xsd:annotation>
+              <xsd:documentation>This is a markup field which could be used by a custom price integration.
+                        By default, this field is not used.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="extendedFields" type="tns:ArrayOfextendedFieldDefinitionElement">
+            <xsd:annotation>
+              <xsd:documentation>This is an array of Extended Field definitions for this Product Type.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="producttypeAttributes" type="tns:ArrayOfproducttypeAttributeElement">
+            <xsd:annotation>
+              <xsd:documentation>
+				Product Type Attributes define what  quality or characteristic (e.g colour, style, dimension) can be stored
+				for each Product that is assigned a particular Product Type.
+			  </xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="extendedFieldDefinitionElement">
+        <xsd:annotation>
+          <xsd:documentation>Product Type Extended Fields define what additional product data can be stored for each
+                Product that is assigned a particular Product Type. In other words, the extended fields that you can
+                set for an individual Product are defined by what Product Type it has been assigned.
+              </xsd:documentation>
+        </xsd:annotation>
+        <xsd:all>
+          <xsd:element name="name" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>This is the name of the Extended Field</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="booleanFieldName" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>This is the value to put in that field.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="fieldTag" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>This is the tag of the extended field that will be used to retrieve this data
+                        on the front end. Please discuss the naming of these fields with your Venda Project Manager.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="type" type="tns:extendedFieldType">
+            <xsd:annotation>
+              <xsd:documentation>This is the type of an extended field.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="group" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>This is an optional group for the extended field which may be used to retrieve
+                        grouped extended fields on the front end. Please discuss whether this field is required with your
+                        Venda Project Manager.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="sequence" type="xsd:int">
+            <xsd:annotation>
+              <xsd:documentation>This is an optional sequence for the extended field within the group.
+                        Please discuss whether this field is required with your Venda Project Manager.
+                      </xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="publishElement">
+        <xsd:annotation>
+          <xsd:documentation>The data used in VendaPublishProduct is a subset of the data used in VendaModifyProduct.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:all>
+          <xsd:element name="sku" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>This is the SKU which refers to the existing product to be published/unpublished</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="publish" type="xsd:boolean">
+            <xsd:annotation>
+              <xsd:documentation>This is a Boolean value indicating the status of the product. True means the product will be displayed on the website.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="sequenceElement">
+        <xsd:all>
+          <xsd:element name="sku" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>This is the sku of the product you wish to change.</xsd:documentation>
+              <xsd:documentation>Required</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="sequenceCategories" type="tns:ArrayOfsequenceCategoryElement">
+            <xsd:annotation>
+              <xsd:documentation>Contains each category which is sorted manually which you wish
+                        to set the sequence for.
+                      </xsd:documentation>
+              <xsd:documentation>Required</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="sequenceCategoryElement">
+        <xsd:all>
+          <xsd:element name="ref" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>A reference to a parent category for which this sequence will effect.</xsd:documentation>
+              <xsd:documentation>Required</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="sequence" type="xsd:float">
+            <xsd:annotation>
+              <xsd:documentation>The sequence this relationship should be given</xsd:documentation>
+              <xsd:documentation>Required</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="sequenceCategoryTreeElement">
+        <xsd:all>
+          <xsd:element name="ref" type="xsd:string">
+			<xsd:annotation>
+			  <xsd:documentation>The category reference that will be sequenced</xsd:documentation>
+			</xsd:annotation>
+		  </xsd:element>
+          <xsd:element name="sequenceCategories" type="tns:ArrayOfsequenceCategoryElement">
+			<xsd:annotation>
+			  <xsd:documentation>Contains each category which is sorted manually which you wish
+                        to set the sequence for.</xsd:documentation>
+			</xsd:annotation>
+		  </xsd:element>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="deleteProductElement">
+        <xsd:all>
+          <xsd:element name="sku" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>This is the SKU of the product which will be deleted</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="delete" type="xsd:boolean">
+            <xsd:annotation>
+              <xsd:documentation>This is a Boolean flag. The product will only be deleted if it is set to
+                        True. This is used as a safety mechanism.
+                      </xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="deleteCategoryElement">
+        <xsd:all>
+          <xsd:element name="ref" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>This is the reference of the category to be deleted</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="delete" type="xsd:boolean">
+            <xsd:annotation>
+              <xsd:documentation>Boolean value – The category will only be deleted if it is set to True.
+                        This is used as a safety mechanism.</xsd:documentation>
+              <xsd:documentation>Required</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="deleteProductTypeElement">
+        <xsd:all>
+          <xsd:element name="ref" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>This is the reference of the Product Type to be deleted</xsd:documentation>
+              <xsd:documentation>Required</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="delete" type="xsd:boolean">
+            <xsd:annotation>
+              <xsd:documentation>Boolean value – The Product Type will only be deleted if it is set to True. This is used as a safety mechanism.</xsd:documentation>
+              <xsd:documentation>Required</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="queryElement">
+        <xsd:all>
+          <xsd:element name="sku" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>This is the SKU which you want to check the existence of</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="queryCategoryElement">
+        <xsd:all>
+          <xsd:element name="ref" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>This is the reference of the category to be queried</xsd:documentation>
+              <xsd:documentation>Required</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="queryProductTypeElement">
+        <xsd:all>
+          <xsd:element name="ref" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>This is the reference of the Product Type  to be queried</xsd:documentation>
+              <xsd:documentation>Required</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="searchElement">
+        <xsd:annotation>
+          <xsd:documentation>To search for a product, you can specify a SKU or a name.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:all>
+          <xsd:element name="sku" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>This is a partial SKU to search for. If this is a non-NULL value,
+                        this will always be used as the search term</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="name" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>This is a partial name to search for. This will be used as a
+                        search term if no value is specified for "sku"</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="stockElement">
+        <xsd:all>
+          <xsd:element name="sku" type="xsd:string">
+			<xsd:annotation>
+			  <xsd:documentation>This is the SKU reference to update the stock level to.</xsd:documentation>
+			</xsd:annotation>
+		  </xsd:element>
+          <xsd:element name="onHand" type="xsd:int">
+			<xsd:annotation>
+			  <xsd:documentation>This is the new stock quantity for the sku.</xsd:documentation>
+			</xsd:annotation>
+		  </xsd:element>
+          <xsd:element name="skuEtaDate" type="xsd:dateTime">
+			<xsd:annotation>
+			  <xsd:documentation>This is the Stock Estimate Time of Arrival for the sku to update.</xsd:documentation>
+			</xsd:annotation>
+		  </xsd:element>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="preReleaseElement">
+        <xsd:all>
+          <xsd:element name="sku" type="xsd:string">
+			<xsd:annotation>
+			  <xsd:documentation>This is the SKU reference to add the preRelease details to.</xsd:documentation>
+			</xsd:annotation>
+		  </xsd:element>
+          <xsd:element name="onHand" type="xsd:int">
+			<xsd:annotation>
+			  <xsd:documentation>This is the new stock quantity for the sku.</xsd:documentation>
+			</xsd:annotation>
+		  </xsd:element>
+          <xsd:element name="skuEtaDate" type="xsd:dateTime">
+			<xsd:annotation>
+			  <xsd:documentation>This is the Stock Estimate Time of Arrival for the sku to update.</xsd:documentation>
+			</xsd:annotation>
+		  </xsd:element>
+          <xsd:element name="releaseDate" type="xsd:dateTime">
+			<xsd:annotation>
+			  <xsd:documentation>This is when the sku will be released.</xsd:documentation>
+			</xsd:annotation></xsd:element>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="responseElement">
+        <xsd:all>
+          <xsd:element name="sku" type="xsd:string" minOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>This is the SKU of the product which was requested. Note: Venda has
+                        restrictions on the content of SKUs; the SKU returned might have been transformed to
+                        meet those restrictions.</xsd:documentation>
+              <xsd:documentation>Required</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="responseCode" type="xsd:int" minOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>This is a response code indicating the success or failure of the request.
+                        0 is success, anything else is failure. </xsd:documentation>
+              <xsd:documentation>Required</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="errorDescription" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>If the response code is not 0, a textual description of the error will
+                        appear in this element</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="priceElement">
+        <xsd:annotation>
+          <xsd:documentation>
+                If a product is being updated, then all priceElement elements included in this array will
+                replace the current prices. If there are 2 prices before the VendaModifyProduct request and only
+                1 in the request, then there will be 1 price after the request.
+                </xsd:documentation>
+        </xsd:annotation>
+        <xsd:all>
+          <xsd:element name="sell" type="xsd:double">
+            <xsd:annotation>
+              <xsd:documentation>Selling price. This is the price which will be charged for this item.</xsd:documentation>
+              <xsd:documentation>Required</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="cost" type="xsd:double">
+            <xsd:annotation>
+              <xsd:documentation>Cost price. This is the cost to you, the seller, of this item.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="msrp" type="xsd:double">
+            <xsd:annotation>
+              <xsd:documentation>MSRP price. This is the Recommended Retail Price of the item.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="was" type="xsd:double">
+            <xsd:annotation>
+              <xsd:documentation>Was price. This is used if an item is on sale, you can specify the previous price.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="stopAutoUpdate" type="xsd:boolean">
+            <xsd:annotation>
+              <xsd:documentation>If you have a price feed being automatically imported, then setting this to "true"
+                        will stop the price you enter in the Control Panel being overwritten.
+                        This is a Boolean value and must be entered as true or false
+                      </xsd:documentation>
+              <xsd:documentation>Required</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="startQty" type="xsd:int">
+            <xsd:annotation>
+              <xsd:documentation>This is the starting quantity for this price range. If not specified, defaults to 1.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="endQty" type="xsd:int">
+            <xsd:annotation>
+              <xsd:documentation>This is the ending quantity for this price range. If not specified, defaults to 100000.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="priceBand" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>This is the price band with which this price is associated. Should not be sent (null)
+                        if the site is not making use of different bands. The priceband element is only required in the VendaCreateProduct
+                        and VendaModifyProduct messages if more than one priceband is defined on the site. If it is not specified,
+                        all products will be created within the default priceband.
+                        </xsd:documentation>
+              <xsd:documentation>
+                        For more information about pricebands and how they work, see the main Venda Control Panel documentation, or enquire with your Venda Account Manager.
+                      </xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="categoryElement">
+        <xsd:annotation>
+          <xsd:documentation>
+                If a product is being updated, then the elements in this array are only for the new categories to be
+                added or the old categories to be deleted. Any which are to remain should not be included in this list.
+              </xsd:documentation>
+          <xsd:documentation>NEEDS WORK: THIS ELEMENT IS USED DIFFERENTLY ACROSS MESSAGES</xsd:documentation>
+        </xsd:annotation>
+        <xsd:all>
+          <xsd:element name="ref" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>This is the reference of the category to assign the product to. Must be a
+                        valid category reference.
+                      </xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="action" type="xsd:string" minOccurs="0">
+			<xsd:annotation>
+			  <xsd:documentation>
+				This determines what happens. 
+				If add, then the category reference will be added to the product. 
+				If delete, the category reference will be deleted from the product. 
+				If a category to be deleted was not assigned, nothing will be done; no error will be raised.
+			  </xsd:documentation>
+			</xsd:annotation>
+		  </xsd:element>
+          <xsd:element name="sequence" type="xsd:float" minOccurs="0">
+			<xsd:annotation>
+			  <xsd:documentation>This is an optional sequence for the category</xsd:documentation>
+			</xsd:annotation>
+		  </xsd:element>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="extendedFieldElement">
+        <xsd:annotation>
+          <xsd:documentation>If a product is being updated, then any extended fields referenced in this array will be updated with their values.
+                Any not referenced will be left with their current values.
+              </xsd:documentation>
+          <xsd:documentation>
+				Category Extended Fields are used to store additional data for each particular category.
+				The definitions for Category Extended Fields are global for each site instance,
+				so every category has the same set of fields that can be set.
+		  </xsd:documentation>
+        </xsd:annotation>
+        <xsd:all>
+          <xsd:element name="name" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>This is the name of the field</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="value" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>This is the value to put in the field.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+	  <xsd:element name="multiValues" type="tns:ArrayOfextendedMultivalues">
+	    <xsd:annotation>
+	      <xsd:documentation>This is an array of multivalue extended fields values.
+			Which extended fields are available to the products is based on the product type. 
+	      </xsd:documentation>
+	    </xsd:annotation>
+	  </xsd:element>	    
+        </xsd:all>
+      </xsd:complexType>
+       <xsd:complexType name="extendedMultiValue">
+        <xsd:annotation>
+          <xsd:documentation>Multi_value extended fileds array
+              </xsd:documentation>
+        </xsd:annotation>
+        <xsd:all>
+          <xsd:element name="value" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>This is the value to put in the field.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:all>
+      </xsd:complexType>     
+      <xsd:complexType name="producttypeAttributeElement">
+        <xsd:annotation>
+          <xsd:documentation>Product Type Attributes define what  quality or characteristic (e.g colour, style, dimension)
+                can be stored for each Product that is assigned a particular Product Type. In other words, the attributes
+                that you can set for an individual Product are defined by what Product Type it has been assigned.
+              </xsd:documentation>
+        </xsd:annotation>
+        <xsd:all>
+          <xsd:element name="name" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>This is the name of the attribute. E.g: Colour, Size, Dimension etc.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="publish" type="xsd:boolean">
+            <xsd:annotation>
+              <xsd:documentation>This is the field to turn on this functionality.
+                        It takes values 1 (on) or 0 (off).  If it is turned off the application falls back to the old
+                        convention whereby you can assign any names and values for a product and there is no check is applied
+                        against the attributes of it's product type.
+                      </xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="sortOrder" type="tns:sortOrderType">
+            <xsd:annotation>
+              <xsd:documentation>This determines how you want the attribute values sorted.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="values" type="tns:ArrayOfstring">
+            <xsd:annotation>
+              <xsd:documentation>These are the values that belong to the attribute names you've specified 
+                        above.  E.g values 'Red', 'Blue' and 'Green' for attribute name 'Colour'
+                      </xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="substitutionElement">
+        <xsd:annotation>
+          <xsd:documentation>The elements in this array are only for the new substitutes to be added or
+                the old substitutes to be unsassigned. Any which are to remain should not be included in this list.
+              </xsd:documentation>
+        </xsd:annotation>
+        <xsd:all>
+          <xsd:element name="sku" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>This is the SKU of the product to assign as a substitute</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="action" type="xsd:string" minOccurs="0">
+			<xsd:annotation>
+			  <xsd:documentation>
+				This determines what happens. 
+				If add, then the substitution SKU will be added to the product. 
+				If delete, the substitution SKU will be unassigned from the product. 
+				If a SKU to be deleted was not assigned, nothing will be done; no error will be raised.
+			  </xsd:documentation>
+			</xsd:annotation>
+		  </xsd:element>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="accessoryElement">
+        <xsd:all>
+          <xsd:element name="action" type="xsd:string" minOccurs="0">
+			<xsd:annotation>
+			  <xsd:documentation>
+				This determines what happens. 
+				If add, then the accessory SKU will be added to the product. 
+				If delete, the accessory SKU will be unassigned from the product. 
+				If modify then the accessory will remain assigned to the product but allow changes to any of the values below.
+			  </xsd:documentation>
+			</xsd:annotation>
+		  </xsd:element>
+          <xsd:element name="sku" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>This is the SKU of the product to assign as an accessory</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="percentDiscount" type="xsd:double" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Percentage to remove from accessory product cost.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="moneyDiscount" type="xsd:double" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Static amount to remove from the accessory product cost</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="mediaElement">
+        <xsd:annotation>
+          <xsd:documentation>
+                The VendaProducts SOAP interface for your site can optionally include the ability to automatically retrieve
+                product media elements (for example, product images) from an FTP directory. This allows you to upload
+                product images via FTP and then assign the product images to particular products, utilising the mediaElements
+                array within VendaCreateProduct and VendaModifyProduct.
+              </xsd:documentation>
+          <xsd:documentation>
+              As this feature requires the setup of custom FTP accounts and the exchange of sensitive password information,
+              please contact your Venda Account Manager to request it.
+              </xsd:documentation>
+        </xsd:annotation>
+        <xsd:all>
+          <xsd:element name="name" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>This is the name of the media file. It is local to the product directory</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="xSize" type="xsd:int">
+            <xsd:annotation>
+              <xsd:documentation>This is the horizontal size of the image (if you specify 0, it will be  interpreted as a
+                        blank value and the browser will use the default size )</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="ySize" type="xsd:int">
+            <xsd:annotation>
+              <xsd:documentation>This is the vertical size of the image (if you specify 0, it will be interpreted as a
+                        blank value and the browser will use the default size)</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="key" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>This is the key for the image – used in the templates to retrieve a particular image
+                        (e.g. thumb, full, specialoffer). What key is used will depend on how the images are used on the site – 
+                        discuss the use of image keys with your Venda Project Manager.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="attribute1Association" type="xsd:string" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>This key is used to link the media element to the attribute1 values of the product type
+                        which the product is assigned to. This is used in the "Media Grid" functionality.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="attributeElement">
+        <xsd:all>
+          <xsd:element name="sku" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>This is the SKU of the sub-product</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="action" type="xsd:string" minOccurs="0">
+			<xsd:annotation>
+			  <xsd:documentation>
+				This determines what happens. 
+				If add, then the attribute SKU will be added to the product. 
+				If delete, the attribute SKU will be removed from the product. 
+				If modify then the attribute will remain assigned to the product but allow changes to any of the values below.
+			  </xsd:documentation>
+			</xsd:annotation>
+		  </xsd:element>
+          <xsd:element name="attributePublish" type="xsd:boolean" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>This is a Boolean value. "true" means that this attributed product is published.
+                        Required to be "true" or "false"</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="attributeWarehouseSKU" type="xsd:string" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>This is the optional warehouse SKU for the attributed product</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="attributeSupplierSKU" type="xsd:string" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>This is an optional supplier SKU for the attributed product</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="attributeValue1" type="xsd:string" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>This is the value which distinguishes this sub-product based on the first attribute label
+                        specified in the main product (e.g. "Blue" or "Green")</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="attributeValue2" type="xsd:string" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>This is the value which distinguishes this sub-product based on the second attribute label
+                        specified in the main product (e.g. "2" or "4")</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="attributeValue3" type="xsd:string" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>This is the value which distinguishes this sub-product based on the third attribute label specified
+                        in the main product</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="attributeValue4" type="xsd:string" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>This is the value which distinguishes this sub-product based on the fourth attribute label
+                        specified in the main product</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="attributeSell" type="xsd:double" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>This is the selling price for this variation of the product. If no price is supplied, the
+                        main product's price will be charged.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="attributeCost" type="xsd:double" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>This is the cost price for this variation of the product</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="attributeMSRP" type="xsd:double" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>This is the suggested retail price for this variation of the product</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="attributeWas" type="xsd:double" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>This is the "was" price for this variation of the product</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="attributeOnHand" type="xsd:int" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>This is the quantity of this variation of the product which are available in stock</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="attributeReleaseYear" type="xsd:int" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>This is the year that this variation of the product is released</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="attributeReleaseMonth" type="xsd:int" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>This is the month that this variation of the product is released</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="attributeReleaseDay" type="xsd:int" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>This is the day that this variation of the product is released</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="attributeETAYear" type="xsd:int" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>This is the year that this variation of the product has stock expected back in</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="attributeETAMonth" type="xsd:int" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>This is the month that this variation of the product has stock expected back in</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="attributeETADay" type="xsd:int" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>This is the day that this variation of the product has stock expected back in</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="deleteDuplicates" type="xsd:boolean" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>If the attribute SKU already exists, an error will be returned telling you so.
+                        If this flag is set, it will delete the existing version of that attribute SKU and create it here
+                        (useful for moving attributes from one product to another)</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="ignorePricing" type="xsd:boolean" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Boolean value - If set, then any prices sent for this attribute will be ignored.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="priceElements" type="tns:ArrayOfpriceElement" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>This is an array of prices for the product.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="nonDeliverableCountryElement">
+        <xsd:all>
+          <xsd:element name="ref" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>This is the reference of the country to which the product should not be delivered. </xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="name" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>This is the name of the country to which the product should not be delivered.
+                        Either this or the ref should be specified.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="action" type="xsd:string" minOccurs="0">
+			<xsd:annotation>
+			  <xsd:documentation>
+				This determines what happens. 
+				If add, then the country will be added to the product. 
+				If delete, the country will be unassigned from the product. 
+				If a country to be deleted was not assigned, nothing will be done; no error will be raised.
+			  </xsd:documentation>
+			</xsd:annotation>
+		  </xsd:element>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="nonDeliverableCountryGroupElement">
+        <xsd:all>
+          <xsd:element name="ref" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>This is the reference of the country group to which the product should not be delivered.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="name" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>This is the name of the country group to which the product should not be delivered.
+                        Either this or the ref should be specified.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="action" type="xsd:string" minOccurs="0">
+			<xsd:annotation>
+			  <xsd:documentation>
+				This determines what happens. 
+				If add, then the country group will be added to the product. 
+				If delete, the country group will be unassigned from the product. 
+				If a country group to be deleted was not assigned, nothing will be done; no error will be raised.
+			  </xsd:documentation>
+			</xsd:annotation>
+		  </xsd:element>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="recordElement">
+        <xsd:all>
+          <xsd:element name="ref" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>The reference of a child category has the given category as its parent</xsd:documentation>
+              <xsd:documentation>Required</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="type" type="tns:recordType">
+            <xsd:annotation>
+              <xsd:documentation>The given type of the category</xsd:documentation>
+              <xsd:documentation>Required</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="name" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>The full Name of the category</xsd:documentation>
+              <xsd:documentation>Required</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="warehouseElement">
+        <xsd:all>
+          <xsd:element name="ref" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>This is the reference of the Warehouse to be created</xsd:documentation>
+              <xsd:documentation>Required</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="name" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Name of the Warehouse</xsd:documentation>
+              <xsd:documentation>Required for VendaCreateWarehouse</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="firstName" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>First Name for the Warehouse contact</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="middleName" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Middle Name for the Warehouse contact</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="lastName" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Last Name for the Warehouse contact</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="address1" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Address line 1</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="address2" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Address line 2</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="city" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>City for Warehouse</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="state" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>State/County of the Warehouse</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="postcode" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Post/Zip Code of the Warehouse</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="country" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Country of the Warehouse</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="phoneArea" type="xsd:int">
+            <xsd:annotation>
+              <xsd:documentation>Area Code for the Warehouse phone number</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="phoneNumber" type="xsd:int">
+            <xsd:annotation>
+              <xsd:documentation>Warehouse phone number</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="faxArea" type="xsd:int">
+            <xsd:annotation>
+              <xsd:documentation>Area Code for the Warehouse Fax Number</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="faxNumber" type="xsd:int">
+            <xsd:annotation>
+              <xsd:documentation>Warehouse Fax number</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="email" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Email address of the Warehouse</xsd:documentation>
+              <xsd:documentation>Required for VendaCreateWarehouse</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="transactionPercentage" type="xsd:int">
+            <xsd:annotation>
+              <xsd:documentation>This is a reference field intended to store the percentage taken by a warehouse/drop shipper of each transaction.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="fixedTransactionCharge" type="xsd:int">
+            <xsd:annotation>
+              <xsd:documentation>This is a reference field intended to store the fixed charge made to you by the warehouse.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="emailTemplate" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Email template name for Despatch notification</xsd:documentation>
+              <xsd:documentation>Required for VendaCreateWarehouse</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="sendPoWhenOrderOnHold" type="xsd:boolean">
+            <xsd:annotation>
+              <xsd:documentation>This boolean field controls whether a PO email is sent when the order is still on hold. (default is false)</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="emailRmaRequest" type="xsd:boolean">
+            <xsd:annotation>
+              <xsd:documentation>This boolean field controls whether the warehouse is sent an Email when an RMA is raised for one of their items.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="delete" type="xsd:boolean">
+            <xsd:annotation>
+              <xsd:documentation>If deleting a Warehouse, the Warehouse will be deleted if this is set to 'True'. This is used as a safety mechanism.</xsd:documentation>
+              <xsd:documentation>Required for VendaDeleteWarehouse</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="warehouseOrSupplier" type="tns:warehouseOrSupplier">
+            <xsd:annotation>
+              <xsd:documentation>Should be ‘drsh’ to create a Warehouse, or ‘supl’ to create a Supplier</xsd:documentation>
+              <xsd:documentation>Required</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:all>
+      </xsd:complexType>
+      <simpleType name="warehouseOrSupplier">
+        <restriction base="xsd:string">
+          <enumeration value="drsh">
+			<xsd:annotation>
+			  <xsd:documentation>This creates a Warehouse</xsd:documentation>
+			</xsd:annotation>
+		  </enumeration>
+          <enumeration value="supl">
+			<xsd:annotation>
+			  <xsd:documentation>This creates a Supplier</xsd:documentation>
+			</xsd:annotation>
+		  </enumeration>
+        </restriction>
+      </simpleType>
+      <simpleType name="sequenceType">
+        <restriction base="xsd:string">
+          <enumeration value="Manual">
+            <xsd:annotation>
+              <xsd:documentation>Each item is given its own sequence</xsd:documentation>
+            </xsd:annotation>
+          </enumeration>
+          <enumeration value="SKU">
+            <xsd:annotation>
+              <xsd:documentation>Products in the category are sorted by their SKU</xsd:documentation>
+            </xsd:annotation>
+          </enumeration>
+          <enumeration value="Name">
+            <xsd:annotation>
+              <xsd:documentation>Products in the category are sorted by their Name</xsd:documentation>
+            </xsd:annotation>
+          </enumeration>
+        </restriction>
+      </simpleType>
+      <simpleType name="recordType">
+        <restriction base="xsd:string">
+          <enumeration value="category">
+			<xsd:annotation>
+			  <xsd:documentation>The record type is a category.</xsd:documentation>
+			</xsd:annotation>
+		  </enumeration>
+          <enumeration value="product">
+			<xsd:annotation>
+			  <xsd:documentation>The record type is a product.</xsd:documentation>
+			</xsd:annotation>
+		  </enumeration>
+        </restriction>
+      </simpleType>
+      <simpleType name="intyRecordType">
+        <restriction base="xsd:string">
+          <enumeration value="Inventory">
+			<xsd:annotation>
+			  <xsd:documentation>The product type is an inventory</xsd:documentation>
+			</xsd:annotation>
+		  </enumeration>
+          <enumeration value="Package">
+			<xsd:annotation>
+			  <xsd:documentation>The product type is a package</xsd:documentation>
+			</xsd:annotation>
+		  </enumeration>
+          <enumeration value="Service">
+			<xsd:annotation>
+			  <xsd:documentation>The product type is a service</xsd:documentation>
+			</xsd:annotation>
+		  </enumeration>
+          <enumeration value="Gift">
+			<xsd:annotation>
+			  <xsd:documentation>The product type is a gift</xsd:documentation>
+			</xsd:annotation>
+		  </enumeration>
+        </restriction>
+      </simpleType>
+      <simpleType name="intyFileType">
+        <restriction base="xsd:string">
+          <enumeration value="in_invt-form">
+			<xsd:annotation>
+			  <xsd:documentation>The only possible value for 'fileType' field is "in_invt-form"</xsd:documentation>
+			</xsd:annotation>
+		  </enumeration>
+        </restriction>
+      </simpleType>
+      <simpleType name="pricepointsType">
+        <restriction base="xsd:string">
+          <enumeration value="None">
+			<xsd:annotation>
+				<xsd:documentation>Price not rounded</xsd:documentation>
+			</xsd:annotation>
+		  </enumeration>
+          <enumeration value="Up">
+			<xsd:annotation>
+			  <xsd:documentation>Price rounded up</xsd:documentation>
+			</xsd:annotation>
+		  </enumeration>
+          <enumeration value="Down">
+			<xsd:annotation>
+			  <xsd:documentation>Price rounded down</xsd:documentation>
+			</xsd:annotation>
+		  </enumeration>
+        </restriction>
+      </simpleType>
+      <simpleType name="extendedFieldType">
+        <restriction base="xsd:string">
+          <enumeration value="Text">
+			<xsd:annotation>
+			  <xsd:documentation>The extended field is a text</xsd:documentation>
+			</xsd:annotation>
+		  </enumeration>
+          <enumeration value="Checkbox">
+			<xsd:annotation>
+			  <xsd:documentation>The extended field is a checkbox</xsd:documentation>
+			</xsd:annotation>
+		  </enumeration>
+        </restriction>
+      </simpleType>
+      <simpleType name="sortOrderType">
+        <restriction base="xsd:string">
+          <enumeration value="None">
+			<xsd:annotation>
+			  <xsd:documentation>Attribute values will not sorted.</xsd:documentation>
+			</xsd:annotation>
+		  </enumeration>
+          <enumeration value="Ascending">
+			<xsd:annotation>
+			  <xsd:documentation>Attribute values will sorted ascending.</xsd:documentation>
+			</xsd:annotation>
+		  </enumeration>
+          <enumeration value="Descending">
+			<xsd:annotation>
+			  <xsd:documentation>Attribute values sorted descending.</xsd:documentation>
+			</xsd:annotation>
+		  </enumeration>
+        </restriction>
+      </simpleType>
+    </xsd:schema>
+  </wsdl:types>
+  <!-- messages -->
+  <message name="VendaCreateWarehouse">
+    <part name="email" type="xsd:string">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Login email address – must have authority to access the "Warehouses"
+            section of the Venda Control Panel</docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="password" type="xsd:string">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Login password</docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="bsref" type="xsd:string">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Business Reference – you must define which business the Warehouses to be
+            created are located in</docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="messageHeader" type="tns:messageHeaderElement">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Optional block containing transactional metadata</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="warehouseElements" type="tns:ArrayOfwarehouseElement">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Details of the Warehouses – This is an array of Warehouses that you wish to create.</docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+  </message>
+  <message name="VendaCreateWarehouseResponse">
+    <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+      <docbook:para>The return you get from VendaCreateWarehouse will vary based on how far the process got. If no skuElements array is found, then an error will be raised using the SOAP faultcode elements.</docbook:para>
+    </wsdl:documentation>
+    <part name="responseElements" type="tns:ArrayOfresponseElement">
+		<wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+      		<docbook:para>This is an array of responseElement that contain the result of your request.</docbook:para>
+		</wsdl:documentation>
+	</part>
+  </message>
+  <message name="VendaModifyWarehouse">
+    <part name="email" type="xsd:string">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Login email address – must have authority to access the "Warehouses"
+            section of the Venda Control Panel</docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="password" type="xsd:string">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Login password</docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="bsref" type="xsd:string">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Business Reference – you must define which business the Warehouses to be
+            modified are located in</docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="messageHeader" type="tns:messageHeaderElement">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Optional block containing transactional metadata</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="warehouseElements" type="tns:ArrayOfwarehouseElement">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Details of the Warehouses – This is an array of Warehouses that you wish to modify.</docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+  </message>
+  <message name="VendaModifyWarehouseResponse">
+    <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+      <docbook:para>The Response data for VendaModifyWarehouse is exactly the same as for the VendaCreateWarehouse method.</docbook:para>
+    </wsdl:documentation>
+    <part name="responseElements" type="tns:ArrayOfresponseElement">
+		<wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+			<docbook:para>This is an array of responseElement that contain the result of your request.</docbook:para>
+		</wsdl:documentation>
+	</part>
+  </message>
+  <message name="VendaCreateProduct">
+    <part name="email" type="xsd:string">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Login email address – must have
+            authority to access the "Products" section of the Venda Control Panel
+          </docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="password" type="xsd:string">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Login password</docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="bsref" type="xsd:string">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Business Reference – you must define which business the products will be created for are located in</docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="messageHeader" type="tns:messageHeaderElement">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Optional block containing transactional metadata</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="noResequence" type="xsd:boolean">
+    <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+      <docbook:para>This is a deprecated flag and will be ignored.</docbook:para>
+    </wsdl:documentation>
+	</part>
+    <part name="skuElements" type="tns:ArrayOfskuElement">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Details of the Products – This is an array of products to be created</docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+  </message>
+  <message name="VendaCreateProductResponse">
+    <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+      <docbook:para>The return you get from VendaCreateProduct will vary based on how far the process got.
+        If no skuElements array is found, then an error will be raised using the SOAP faultcode elements.
+      </docbook:para>
+    </wsdl:documentation>
+    <part name="responseElements" type="tns:ArrayOfresponseElement">
+		<wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+			<docbook:para>This is an array of responseElement that contain the result of your request.</docbook:para>
+		</wsdl:documentation>
+	</part>
+  </message>
+  <message name="VendaModifyProduct">
+    <part name="email" type="xsd:string">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Login email address – must have
+            authority to access the "Products" section of the Venda Control Panel
+          </docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="password" type="xsd:string">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Login password</docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="bsref" type="xsd:string">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Business Reference – you must define which business the products will be modified for a located in</docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="messageHeader" type="tns:messageHeaderElement">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Optional block containing transactional metadata</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="noResequence" type="xsd:boolean">
+		<wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+			<docbook:para>This is a deprecated flag and will be ignored.</docbook:para>
+		</wsdl:documentation>
+	</part>
+    <part name="skuElements" type="tns:ArrayOfskuElement">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Details of the Products – This is an array of products to be modified</docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+  </message>
+  <message name="VendaModifyProductResponse">
+    <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+      <docbook:para>
+        The return you get from VendaModifyProduct will vary based on how far the process got.
+        If no skuElements array is found, then an error will be raised using the SOAP faultcode elements.
+      </docbook:para>
+    </wsdl:documentation>
+    <part name="responseElements" type="tns:ArrayOfresponseElement">
+		<wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+			<docbook:para>This is an array of responseElement that contain the result of your request.</docbook:para>
+		</wsdl:documentation>
+	</part>
+  </message>
+  <message name="VendaQueryProduct">
+    <part name="email" type="xsd:string">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Login email address – must have authority to access the "Products" section of the
+            Venda Control Panel</docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="password" type="xsd:string">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Login password</docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="bsref" type="xsd:string">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Business Reference – you must define which business the products
+            to be queried are located in</docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="messageHeader" type="tns:messageHeaderElement">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Optional block containing transactional metadata</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="skuElements" type="tns:ArrayOfqueryElement">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Details of the Products – This is an array of products to look for.</docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+  </message>
+  <message name="VendaQueryProductResponse">
+    <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+      <docbook:para>The return you get from VendaQueryProduct will vary based on how far the process got. If no skuElements array is found, then an error will be raised using the SOAP faultcode elements.</docbook:para>
+      <docbook:para>Otherwise, there will be a response in this format:</docbook:para>
+    </wsdl:documentation>
+    <part name="responseElements" type="tns:ArrayOfresponseElement">
+		<wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+			<docbook:para>This is an array of responseElement that contain the result of your request.</docbook:para>
+		</wsdl:documentation>
+	</part>
+  </message>
+  <message name="VendaSearchProduct">
+    <part name="email" type="xsd:string">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Login email address – must have authority to access the "Products" section of the
+            Venda Control Panel</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="password" type="xsd:string">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Login password</docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="bsref" type="xsd:string">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Business Reference – you must define which business the products to be modified are
+            located in</docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="messageHeader" type="tns:messageHeaderElement">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Optional block containing transactional metadata</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="skuElements" type="tns:ArrayOfsearchElement">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Details of the Products – This is an array of strings to search for.</docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+  </message>
+  <message name="VendaSearchProductResponse">
+    <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+      <docbook:para>
+        The return you get from VendaSearchProduct will vary based on how far the process got.
+        If no skuElements array is found, then an error will be raised using the SOAP faultcode elements.
+      </docbook:para>
+      <docbook:para>Otherwise, there will be a response in this format:</docbook:para>
+    </wsdl:documentation>
+    <part name="responseElements" type="tns:ArrayOfresponseElement">
+		<wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+			<docbook:para>This is an array of responseElement that contain the result of your request.</docbook:para>
+		</wsdl:documentation>
+	</part>
+  </message>
+  <message name="VendaRetrieveProduct">
+    <part name="email" type="xsd:string">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Login email address – must have authority to access the "Products"
+            section of the Venda Control Panel</docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="password" type="xsd:string">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Login password</docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="bsref" type="xsd:string">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Business Reference – you must define which business the products to be
+            modified are located in</docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="messageHeader" type="tns:messageHeaderElement">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Optional block containing transactional metadata</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="skuElements" type="tns:ArrayOfqueryElement">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Details of the Products – This is an array of products to retrieve.</docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+  </message>
+  <message name="VendaRetrieveProductResponse">
+    <part name="skuElements" type="tns:ArrayOfskuElement">
+		<wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+			<docbook:para>If a product retrieval is successful, you will be returned an array of products for the SKUs you requested.</docbook:para>
+		</wsdl:documentation>
+	</part>
+  </message>
+  <message name="VendaDeleteProduct">
+    <part name="email" type="xsd:string">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Login email address – must have authority to access the "Products"
+            section of the Venda Control Panel</docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="password" type="xsd:string">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Login password</docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="bsref" type="xsd:string">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Business Reference – you must define which business the products to be
+            deleted are located in</docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="messageHeader" type="tns:messageHeaderElement">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Optional block containing transactional metadata</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="skuElements" type="tns:ArrayOfdeleteProductElement">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Details of the Products – This is an array of SKUs to delete.</docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+  </message>
+  <message name="VendaDeleteProductResponse">
+    <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+      <docbook:para>The return you get from VendaDeleteProduct will vary based on how far the process got.
+        If no skuElements array is found, then an error will be raised using the SOAP faultcode elements.
+      </docbook:para>
+    </wsdl:documentation>
+    <part name="responseElements" type="tns:ArrayOfresponseElement">
+		<wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+			<docbook:para>This is an array of responseElement that contain the result of your request.</docbook:para>
+		</wsdl:documentation>
+	</part>
+  </message>
+  <message name="VendaUpdateStock">
+    <part name="email" type="xsd:string">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Login email address – must have authority to access the "Products"
+            section of the Venda Control Panel</docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="password" type="xsd:string">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Login password</docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="bsref" type="xsd:string">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Business Reference – you must define which business the products to be
+            modified are located in</docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="messageHeader" type="tns:messageHeaderElement">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Optional block containing transactional metadata</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="skuElements" type="tns:ArrayOfstockElement">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Details of the Products – This is an array of products to have the stock updated.</docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+  </message>
+  <message name="VendaUpdateStockResponse">
+    <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+      <docbook:para>The return you get from VendaUpdateStock will vary based on how far the process got. If no skuElements array is found, then an error will be raised using the SOAP faultcode elements.</docbook:para>
+      <docbook:para>Otherwise, there will be a response in this format:</docbook:para>
+    </wsdl:documentation>
+    <part name="responseElements" type="tns:ArrayOfresponseElement">
+		<wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+			<docbook:para>This is an array of responseElement that contain the result of your request.</docbook:para>
+		</wsdl:documentation>
+	</part>
+  </message>
+  <message name="VendaUpdatePreRelease">
+	<wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+		<docbook:para>Updates stock level and release date for all the skuElements.</docbook:para>
+	</wsdl:documentation>
+    <part name="email" type="xsd:string">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Login email address – must have authority to access the "Products"
+            section of the Venda Control Panel</docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="password" type="xsd:string">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Login password</docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="bsref" type="xsd:string">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Business Reference – you must define which business the products to be
+            modified are located in</docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="messageHeader" type="tns:messageHeaderElement">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Optional block containing transactional metadata</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="skuElements" type="tns:ArrayOfpreReleaseElement">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Details of the Products - This is an array of products to have the preRelease date updated.</docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+  </message>
+  <message name="VendaUpdatePreReleaseResponse">
+    <part name="responseElements" type="tns:ArrayOfresponseElement">
+		<wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+			<docbook:para>This is an array of responseElement that contain the result of your request.</docbook:para>
+		</wsdl:documentation>
+	</part>
+  </message>
+  <message name="VendaSequenceProduct">
+    <part name="email" type="xsd:string">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Login email address – must have authority to access the "Products"
+            section of the Venda Control Panel</docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="password" type="xsd:string">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Login password</docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="bsref" type="xsd:string">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Business Reference – you must define which business the products to be
+            modified are located in</docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="messageHeader" type="tns:messageHeaderElement">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Optional block containing transactional metadata</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="sequenceElements" type="tns:ArrayOfsequenceElement">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Details of the Product to be sequenced; See section for details of
+            sequenceElements.</docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+  </message>
+  <message name="VendaSequenceProductResponse">
+    <part name="responseElements" type="tns:ArrayOfresponseElement">
+		<wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+			<docbook:para>This is an array of responseElement that contain the result of your request.</docbook:para>
+		</wsdl:documentation>
+	</part>
+  </message>
+  <message name="VendaPublishProduct">
+    <part name="email" type="xsd:string">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Login email address – must have authority to access the "Products"
+            section of the Venda Control Panel</docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="password" type="xsd:string">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Login password</docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="bsref" type="xsd:string">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Business Reference – you must define which business the products to be
+            modified are located in</docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="messageHeader" type="tns:messageHeaderElement">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Optional block containing transactional metadata</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="skuElements" type="tns:ArrayOfpublishElement">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Details of the Products – This is an array of products to be
+            published/unpublished. </docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+  </message>
+  <message name="VendaPublishProductResponse">
+    <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+      <docbook:para>The return you get from VendaPublishProduct will vary based on how far the process got.
+        If no skuElements array is found, then an error will be raised using the SOAP faultcode elements.
+      </docbook:para>
+    </wsdl:documentation>
+    <part name="responseElements" type="tns:ArrayOfresponseElement">
+		<wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+			<docbook:para>This is an array of responseElement that contain the result of your request.</docbook:para>
+		</wsdl:documentation>
+	</part>
+  </message>
+  <message name="VendaProductList">
+    <part name="email" type="xsd:string">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Login email address – must have authority to access the "Products"
+            section of the Venda Control Panel</docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="password" type="xsd:string">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Login password</docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="bsref" type="xsd:string">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Business Reference – you must define which business the products to be
+            fetched are located in</docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="messageHeader" type="tns:messageHeaderElement">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Optional block containing transactional metadata</docbook:para>
+      </wsdl:documentation>
+    </part>
+  </message>
+  <message name="VendaProductListResponse">
+    <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+      <docbook:para>The return you get from VendaProductList will be an array of all the product SKUs which exist on the site.</docbook:para>
+      <docbook:para>Required</docbook:para>
+    </wsdl:documentation>
+    <part name="productList" type="tns:ArrayOfstring">
+		<wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+			<docbook:para>The existing SKUs</docbook:para>
+		</wsdl:documentation>
+	</part>
+  </message>
+  <message name="VendaProductOverviewList">
+    <part name="email" type="xsd:string">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Login email address – must have authority to access the "Products"
+            section of the Venda Control Panel</docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="password" type="xsd:string">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Login password</docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="bsref" type="xsd:string">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Business Reference – you must define which business the products to be
+            fetched are located in</docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="messageHeader" type="tns:messageHeaderElement">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Optional block containing transactional metadata</docbook:para>
+      </wsdl:documentation>
+    </part>
+  </message>
+  <message name="VendaProductOverviewListResponse">
+    <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+      <docbook:para>
+        The return you get from VendaProductOverviewList will be an array of all the products which exist on the site.
+      </docbook:para>
+    </wsdl:documentation>
+    <part name="overviewList" type="tns:ArrayOfoverviewElement">
+		<wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+			<docbook:para>OverviewList element, which contains SKU, name, stock level and publish status.</docbook:para>
+		</wsdl:documentation>
+	</part>
+  </message>
+  <message name="VendaCreateCategory">
+    <part name="email" type="xsd:string">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Login email address – must have authority to access the "Categories"
+          section of the Venda Control Panel</docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="password" type="xsd:string">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Login password</docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="bsref" type="xsd:string">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Business Reference – you must define which business the categories to be
+            created are located in</docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="messageHeader" type="tns:messageHeaderElement">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Optional block containing transactional metadata</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="categoryTreeElements" type="tns:ArrayOfcategoryTreeElement">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Details of the Categories – This is an array of categories that you wish to create</docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+  </message>
+  <message name="VendaCreateCategoryResponse">
+    <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+      <docbook:para>The return you get from VendaCreateCategory will vary based on how far the process got.
+        If no skuElements array is found, then an error will be raised using the SOAP faultcode elements.
+      </docbook:para>
+    </wsdl:documentation>
+    <part name="responseElements" type="tns:ArrayOfresponseElement">
+		<wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+			<docbook:para>This is an array of responseElement that contain the result of your request.</docbook:para>
+		</wsdl:documentation>
+	</part>
+  </message>
+  <message name="VendaModifyCategory">
+    <part name="email" type="xsd:string">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Login email address – must have authority to access the "Categories"
+          section of the Venda Control Panel</docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="password" type="xsd:string">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Login password</docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="bsref" type="xsd:string">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Business Reference – you must define which business the categories to be
+            modified are located in</docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="messageHeader" type="tns:messageHeaderElement">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Optional block containing transactional metadata</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="categoryTreeElements" type="tns:ArrayOfcategoryTreeElement">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Details of the Categories – This is an array of categories that you wish to modify</docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+  </message>
+  <message name="VendaModifyCategoryResponse">
+    <part name="responseElements" type="tns:ArrayOfresponseElement">
+		<wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+			<docbook:para>This is an array of responseElement that contain the result of your request.</docbook:para>
+		</wsdl:documentation>
+	</part>
+  </message>
+  <message name="VendaDeleteCategory">
+    <part name="email" type="xsd:string">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Login email address – must have authority to access the "Categories"
+          section of the Venda Control Panel</docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="password" type="xsd:string">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Login password</docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="bsref" type="xsd:string">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Business Reference – you must define which business the categories to be
+          deleted are located in</docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="messageHeader" type="tns:messageHeaderElement">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Optional block containing transactional metadata</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="categoryElements" type="tns:ArrayOfdeleteCategoryElement">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Details of the Categories – This is an array of categories that you wish to delete</docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+  </message>
+  <message name="VendaDeleteCategoryResponse">
+    <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+      <docbook:para>The response to a VendaDeleteCategory request is the same as for a VendaCreateCategory request.</docbook:para>
+    </wsdl:documentation>
+    <part name="responseElements" type="tns:ArrayOfresponseElement">
+		<wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+			<docbook:para>This is an array of responseElement that contain the result of your request.</docbook:para>
+		</wsdl:documentation>
+	</part>
+  </message>
+  <message name="VendaSequenceCategory">
+  	<wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+		<docbook:para>This function is now deprecated. Category sequencing is meaningless (since V5).</docbook:para>
+	</wsdl:documentation>
+ 	<part name="email" type="xsd:string">
+		<wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+			<docbook:para>Login email address - must have authority to access the "Categories" section of the Venda Control Panel</docbook:para>
+        	<docbook:para>Required</docbook:para>
+		</wsdl:documentation>
+	</part>
+    <part name="password" type="xsd:string">
+		<wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+			<docbook:para>Login password</docbook:para>
+        	<docbook:para>Required</docbook:para>
+		</wsdl:documentation>
+	</part>
+    <part name="bsref" type="xsd:string">
+		<wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+			<docbook:para>Business Reference - you must define which business the categories are located in</docbook:para>
+        	<docbook:para>Required</docbook:para>
+		</wsdl:documentation>
+	</part>
+    <part name="messageHeader" type="tns:messageHeaderElement">
+		<wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+			<docbook:para>Optional block containing transactional metadata</docbook:para>
+		</wsdl:documentation>
+	</part>
+    <part name="sequenceCategoryTreeElements" type="tns:ArrayOfsequenceCategoryTreeElement">
+		<wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+			<docbook:para>This is an array of subcategories that you want resequence within a category</docbook:para>
+		</wsdl:documentation>
+	</part>
+  </message>
+  <message name="VendaSequenceCategoryResponse">
+    <part name="responseElements" type="tns:ArrayOfresponseElement">
+		<wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+			<docbook:para>This is an array of responseElement that contain the result of your request.</docbook:para>
+		</wsdl:documentation>
+	</part>
+  </message>
+  <message name="VendaQueryCategory">
+    <part name="email" type="xsd:string">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Login email address – must have authority to access the "Categories"
+          section of the Venda Control Panel</docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="password" type="xsd:string">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Login password</docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="bsref" type="xsd:string">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Business Reference – you must define which business the categories to be
+          queried are located in</docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="messageHeader" type="tns:messageHeaderElement">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Optional block containing transactional metadata</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="categoryTreeElements" type="tns:ArrayOfqueryCategoryElement">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Details of the Categories – This is an array of categories that you wish to query</docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+  </message>
+  <message name="VendaQueryCategoryResponse">
+    <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+      <docbook:para>The response to a VendaQueryCategory request is the same as for a VendaCreateCategory request.</docbook:para>
+    </wsdl:documentation>
+    <part name="responseElements" type="tns:ArrayOfresponseElement">
+		<wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+			<docbook:para>This is an array of responseElement that contain the result of your request.</docbook:para>
+		</wsdl:documentation>
+	</part>
+  </message>
+  <message name="VendaRetrieveCategory">
+    <part name="email" type="xsd:string">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Login email address – must have authority to access the "Categories"
+          section of the Venda Control Panel</docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="password" type="xsd:string">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Login password</docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="bsref" type="xsd:string">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Business Reference – you must define which business the categories to be
+          queried are located in</docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="messageHeader" type="tns:messageHeaderElement">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Optional block containing transactional metadata</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="categoryTreeElements" type="tns:ArrayOfqueryCategoryElement">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Details of the Categories – This is an array of categories that you wish to query</docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+  </message>
+  <message name="VendaRetrieveCategoryResponse">
+    <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+      <docbook:para>As you might expect, the data returned in the Response by VendaRetrieveCategory is identical
+        to the data used by the VendaCreateCategory request.
+        </docbook:para>
+    </wsdl:documentation>
+    <part name="categoryTreeElements" type="tns:ArrayOfcategoryTreeElement">
+		<wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+			<docbook:para>Details of the Categories - This is an array of categories that you queried</docbook:para>
+		</wsdl:documentation>
+	</part>
+  </message>
+  <message name="VendaCategoryList">
+    <part name="email" type="xsd:string">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Login email address – must have authority to access the "Categories"
+            section of the Venda Control Panel</docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="password" type="xsd:string">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Login password</docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="bsref" type="xsd:string">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Business Reference – you must define which business the categories are located in</docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="messageHeader" type="tns:messageHeaderElement">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Optional block containing transactional metadata</docbook:para>
+      </wsdl:documentation>
+    </part>
+  </message>
+  <message name="VendaCategoryListResponse">
+    <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+      <docbook:para>The Response for VendaCategoryList will be a simple array of references to every category that exists.</docbook:para>
+    </wsdl:documentation>
+    <part name="categoryList" type="tns:ArrayOfstring">
+		<wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+			<docbook:para>Array of existing categories</docbook:para>
+		</wsdl:documentation>
+	</part>
+  </message>
+  <message name="VendaChildCategoryList">
+    <part name="email" type="xsd:string">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Login email address – must have authority to access the "Categories"
+          section of the Venda Control Panel</docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="password" type="xsd:string">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Login password</docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="bsref" type="xsd:string">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Business Reference – you must define which business the categories to be
+          queried are located in</docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="messageHeader" type="tns:messageHeaderElement">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Optional block containing transactional metadata</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="categoryTreeElements" type="tns:ArrayOfqueryCategoryElement">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Details of the Categories – This is an array of categories that you wish to query</docbook:para>
+      </wsdl:documentation>
+    </part>
+  </message>
+  <message name="VendaChildCategoryListResponse">
+    <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+      <docbook:para>The Response for VendaChildCategoryList will contain an array of record elements,
+        one for each child category that has the queried category assigned as its parent.
+        </docbook:para>
+    </wsdl:documentation>
+    <part name="recordList" type="tns:ArrayOfrecordElement">
+		<wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+			<docbook:para>Array of record elements that represent children categories</docbook:para>
+		</wsdl:documentation>
+	</part>
+  </message>
+  <message name="VendaCreateProductType">
+    <part name="email" type="xsd:string">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Login email address – must have authority to access the "Product/Compare Types"
+          section of the Venda Control Panel</docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="password" type="xsd:string">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Login password</docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="bsref" type="xsd:string">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Business Reference – you must define which business the Product Types to be
+          created are located in</docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="messageHeader" type="tns:messageHeaderElement">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Optional block containing transactional metadata</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="productTypeElements" type="tns:ArrayOfproductTypeElement">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Details of the Product Types – This is an array of the Product Types that you wish to query</docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+  </message>
+  <message name="VendaCreateProductTypeResponse">
+    <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+      <docbook:para>The return you get from VendaCreateProductType will vary based on how far the process got.
+        If no skuElements array is found, then an error will be raised using the SOAP faultcode elements.
+      </docbook:para>
+    </wsdl:documentation>
+    <part name="responseElements" type="tns:ArrayOfresponseElement">
+		<wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+			<docbook:para>This is an array of responseElement that contain the result of your request.</docbook:para>
+		</wsdl:documentation>
+	</part>
+  </message>
+  <message name="VendaDeleteProductType">
+    <part name="email" type="xsd:string">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Login email address – must have authority to access the "Product/Compare Types"
+          section of the Venda Control Panel</docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="password" type="xsd:string">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Login password</docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="bsref" type="xsd:string">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Business Reference – you must define which business the Product Types to be
+          deleted are located in</docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="messageHeader" type="tns:messageHeaderElement">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Optional block containing transactional metadata</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="productTypeElements" type="tns:ArrayOfdeleteProductTypeElement">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Details of the Product Types – This is an array of the Product Types that you wish to delete</docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+  </message>
+  <message name="VendaDeleteProductTypeResponse">
+    <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+      <docbook:para>The Response data for VendaDeleteProductType is exactly the same as for the VendaCreateProductType method.</docbook:para>
+    </wsdl:documentation>
+    <part name="responseElements" type="tns:ArrayOfresponseElement">
+		<wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+			<docbook:para>This is an array of responseElement that contain the result of your request.</docbook:para>
+		</wsdl:documentation>
+	</part>
+  </message>
+  <message name="VendaModifyProductType">
+    <part name="email" type="xsd:string">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Login email address – must have authority to access the "Product/Compare Types"
+          section of the Venda Control Panel</docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="password" type="xsd:string">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Login password</docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="bsref" type="xsd:string">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Business Reference – you must define which business the Product Types to be
+          modified are located in</docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="messageHeader" type="tns:messageHeaderElement">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Optional block containing transactional metadata</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="productTypeElements" type="tns:ArrayOfproductTypeElement">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Details of the Product Types – This is an array of the Product Types that you wish to modify</docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+  </message>
+  <message name="VendaModifyProductTypeResponse">
+    <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+      <docbook:para>The Response data for VendaModifyProductType is exactly the same as for the
+        VendaCreateProductType method.</docbook:para>
+    </wsdl:documentation>
+    <part name="responseElements" type="tns:ArrayOfresponseElement">
+		<wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+			<docbook:para>This is an array of responseElement that contain the result of your request.</docbook:para>
+		</wsdl:documentation>
+	</part>
+  </message>
+  <message name="VendaRetrieveProductType">
+    <part name="email" type="xsd:string">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Login email address – must have authority to access the "Product/Compare Types"
+          section of the Venda Control Panel</docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="password" type="xsd:string">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Login password</docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="bsref" type="xsd:string">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Business Reference – you must define which business the Product Types to be
+          retrieved are located in</docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="messageHeader" type="tns:messageHeaderElement">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Optional block containing transactional metadata</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="productTypeElements" type="tns:ArrayOfqueryProductTypeElement">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Details of the Product Types – This is an array of the Product Types that you wish to retrieve</docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+  </message>
+  <message name="VendaRetrieveProductTypeResponse">
+    <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+      <docbook:para>The Response data for VendaRetrieveProductType is exactly the same as for the VendaQueryProductType method.</docbook:para>
+    </wsdl:documentation>
+    <part name="productTypeElements" type="tns:ArrayOfproductTypeElement">
+		<wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+			<docbook:para>Details of the Product Types - This is an array of the Product Types that you queried for.</docbook:para>
+		</wsdl:documentation>
+	</part>
+  </message>
+  <message name="VendaRetrieveWarehouse">
+    <part name="email" type="xsd:string">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Login email address – must have authority to access the "Warehouses"
+            section of the Venda Control Panel</docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="password" type="xsd:string">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Login password</docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="bsref" type="xsd:string">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Business Reference – you must define which business the Warehouses to be
+            retrieved are located in</docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="messageHeader" type="tns:messageHeaderElement">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Optional block containing transactional metadata</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="warehouseElements" type="tns:ArrayOfwarehouseElement">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Details of the Warehouses – This is an array of Warehouses that you wish to retrieve.</docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+  </message>
+  <message name="VendaRetrieveWarehouseResponse">
+    <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+      <docbook:para>As you might expect, the data returned in the Response by VendaRetrieveWarehouse is identical to the data used by the VendaCreateWarehouse request.</docbook:para>
+    </wsdl:documentation>
+    <part name="warehouseElements" type="tns:ArrayOfwarehouseElement">
+		<wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+			<docbook:para>Details of the Warehouses ~@~S This is an array of Warehouses that you queried for.</docbook:para>
+		</wsdl:documentation>
+	</part>
+  </message>
+  <message name="VendaDeleteWarehouse">
+    <part name="email" type="xsd:string">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Login email address – must have authority to access the "Warehouses"
+            section of the Venda Control Panel</docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="password" type="xsd:string">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Login password</docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="bsref" type="xsd:string">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Business Reference – you must define which business the Warehouses to be
+            deleted are located in</docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="messageHeader" type="tns:messageHeaderElement">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Optional block containing transactional metadata</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="warehouseElements" type="tns:ArrayOfwarehouseElement">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Details of the Warehouses – This is an array of Warehouses that you wish to delete.</docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+  </message>
+  <message name="VendaDeleteWarehouseResponse">
+    <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+      <docbook:para>The Response data for VendaDeleteWarehouse is exactly the same as for the VendaCreateWarehouse method.</docbook:para>
+    </wsdl:documentation>
+    <part name="responseElements" type="tns:ArrayOfresponseElement">
+		<wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+			<docbook:para>This is an array of responseElement that contain the result of your request.</docbook:para>
+		</wsdl:documentation>
+	</part>
+  </message>
+  <message name="VendaQueryWarehouse">
+    <part name="email" type="xsd:string">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Login email address – must have authority to access the "Warehouses"
+            section of the Venda Control Panel</docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="password" type="xsd:string">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Login password</docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="bsref" type="xsd:string">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Business Reference – you must define which business the Warehouses to be
+            queried are located in</docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="messageHeader" type="tns:messageHeaderElement">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Optional block containing transactional metadata</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="warehouseElements" type="tns:ArrayOfwarehouseElement">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Details of the Warehouses – This is an array of Warehouses that you wish to query.</docbook:para>
+        <docbook:para>Required</docbook:para>
+      </wsdl:documentation>
+    </part>
+  </message>
+  <message name="VendaQueryWarehouseResponse">
+    <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+      <docbook:para>The Response data for VendaQueryWarehouse is exactly the same as for the VendaCreateWarehouse method.</docbook:para>
+    </wsdl:documentation>
+    <part name="responseElements" type="tns:ArrayOfresponseElement">
+		<wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+			<docbook:para>This is an array of responseElement that contain the result of your request.</docbook:para>
+		</wsdl:documentation>
+	</part>
+  </message>
+  <message name="VendaQueryProductType">
+    <part name="email" type="xsd:string">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Login email address – must have authority to access the "Product/Compare Types"
+          section of the Venda Control Panel</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="password" type="xsd:string">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Login password</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="bsref" type="xsd:string">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Business Reference – you must define which business the Product Types to be
+          queried are located in</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="messageHeader" type="tns:messageHeaderElement">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Optional block containing transactional metadata</docbook:para>
+      </wsdl:documentation>
+    </part>
+    <part name="productTypeElements" type="tns:ArrayOfqueryProductTypeElement">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>Details of the Product Types – This is an array of the Product Types that you wish to query</docbook:para>
+      </wsdl:documentation>
+    </part>
+  </message>
+  <message name="VendaQueryProductTypeResponse">
+    <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+      <docbook:para>The Response data for VendaDeleteProductType is exactly the same as for the VendaCreateProductType method.</docbook:para>
+    </wsdl:documentation>
+    <part name="responseElements" type="tns:ArrayOfresponseElement">
+		<wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+			<docbook:para>This is an array of responseElement that contain the result of your request.</docbook:para>
+		</wsdl:documentation>
+	</part>
+  </message>
+  <message name="VendaResequence">
+    <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+      <docbook:para>This function is deprecated (since V5), please use VendaModifyProduct instead.</docbook:para>
+    </wsdl:documentation>
+    <part name="email" type="xsd:string">
+		<wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+			<docbook:para>Login email address</docbook:para>
+		</wsdl:documentation>
+	</part>
+    <part name="password" type="xsd:string">
+		<wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+			<docbook:para>Login password</docbook:para>
+		</wsdl:documentation>
+	</part>
+    <part name="bsref" type="xsd:string">
+		<wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+			<docbook:para>Business reference</docbook:para>
+		</wsdl:documentation>
+	</part>
+    <part name="messageHeader" type="tns:messageHeaderElement">
+		<wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+			<docbook:para>Optional block containing transactional metadata</docbook:para>
+		</wsdl:documentation>
+	</part>
+  </message>
+  <message name="VendaResequenceResponse">
+    <part name="responseElements" type="tns:ArrayOfresponseElement">
+		<wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+			<docbook:para>This is an array of responseElement that contain the result of your request.</docbook:para>
+		</wsdl:documentation>
+	</part>
+  </message>
+  <portType name="VendaProductsPort">
+    <operation name="VendaCreateWarehouse">
+      <input message="tns:VendaCreateWarehouse" />
+      <output message="tns:VendaCreateWarehouseResponse" />
+    </operation>
+    <operation name="VendaModifyWarehouse">
+      <input message="tns:VendaModifyWarehouse" />
+      <output message="tns:VendaModifyWarehouseResponse" />
+    </operation>
+    <operation name="VendaCreateProduct">
+      <input message="tns:VendaCreateProduct" />
+      <output message="tns:VendaCreateProductResponse" />
+    </operation>
+    <operation name="VendaModifyProduct">
+      <input message="tns:VendaModifyProduct" />
+      <output message="tns:VendaModifyProductResponse" />
+    </operation>
+    <operation name="VendaPublishProduct">
+      <input message="tns:VendaPublishProduct" />
+      <output message="tns:VendaPublishProductResponse" />
+    </operation>
+    <operation name="VendaUpdateStock">
+      <input message="tns:VendaUpdateStock" />
+      <output message="tns:VendaUpdateStockResponse" />
+    </operation>
+    <operation name="VendaUpdatePreRelease">
+      <input message="tns:VendaUpdatePreRelease" />
+      <output message="tns:VendaUpdatePreReleaseResponse" />
+    </operation>
+    <operation name="VendaSequenceProduct">
+      <input message="tns:VendaSequenceProduct" />
+      <output message="tns:VendaSequenceProductResponse" />
+    </operation>
+    <operation name="VendaDeleteProduct">
+      <input message="tns:VendaDeleteProduct" />
+      <output message="tns:VendaDeleteProductResponse" />
+    </operation>
+    <operation name="VendaQueryProduct">
+      <input message="tns:VendaQueryProduct" />
+      <output message="tns:VendaQueryProductResponse" />
+    </operation>
+    <operation name="VendaSearchProduct">
+      <input message="tns:VendaSearchProduct" />
+      <output message="tns:VendaSearchProductResponse" />
+    </operation>
+    <operation name="VendaRetrieveProduct">
+      <input message="tns:VendaRetrieveProduct" />
+      <output message="tns:VendaRetrieveProductResponse" />
+    </operation>
+    <operation name="VendaProductList">
+      <input message="tns:VendaProductList" />
+      <output message="tns:VendaProductListResponse" />
+    </operation>
+    <operation name="VendaProductOverviewList">
+      <input message="tns:VendaProductOverviewList" />
+      <output message="tns:VendaProductOverviewListResponse" />
+    </operation>
+    <operation name="VendaCreateCategory">
+      <input message="tns:VendaCreateCategory" />
+      <output message="tns:VendaCreateCategoryResponse" />
+    </operation>
+    <operation name="VendaModifyCategory">
+      <input message="tns:VendaModifyCategory" />
+      <output message="tns:VendaModifyCategoryResponse" />
+    </operation>
+    <operation name="VendaDeleteCategory">
+      <input message="tns:VendaDeleteCategory" />
+      <output message="tns:VendaDeleteCategoryResponse" />
+    </operation>
+    <operation name="VendaQueryCategory">
+      <input message="tns:VendaQueryCategory" />
+      <output message="tns:VendaQueryCategoryResponse" />
+    </operation>
+    <operation name="VendaRetrieveCategory">
+      <input message="tns:VendaRetrieveCategory" />
+      <output message="tns:VendaRetrieveCategoryResponse" />
+    </operation>
+    <operation name="VendaSequenceCategory">
+      <input message="tns:VendaSequenceCategory" />
+      <output message="tns:VendaSequenceCategoryResponse" />
+    </operation>
+    <operation name="VendaCategoryList">
+      <input message="tns:VendaCategoryList" />
+      <output message="tns:VendaCategoryListResponse" />
+    </operation>
+    <operation name="VendaChildCategoryList">
+      <input message="tns:VendaChildCategoryList" />
+      <output message="tns:VendaChildCategoryListResponse" />
+    </operation>
+    <operation name="VendaCreateProductType">
+      <input message="tns:VendaCreateProductType" />
+      <output message="tns:VendaCreateProductTypeResponse" />
+    </operation>
+    <operation name="VendaModifyProductType">
+      <input message="tns:VendaModifyProductType" />
+      <output message="tns:VendaModifyProductTypeResponse" />
+    </operation>
+    <operation name="VendaDeleteProductType">
+      <input message="tns:VendaDeleteProductType" />
+      <output message="tns:VendaDeleteProductTypeResponse" />
+    </operation>
+    <operation name="VendaQueryProductType">
+      <input message="tns:VendaQueryProductType" />
+      <output message="tns:VendaQueryProductTypeResponse" />
+    </operation>
+    <operation name="VendaRetrieveProductType">
+      <input message="tns:VendaRetrieveProductType" />
+      <output message="tns:VendaRetrieveProductTypeResponse" />
+    </operation>
+    <operation name="VendaRetrieveWarehouse">
+      <input message="tns:VendaRetrieveWarehouse" />
+      <output message="tns:VendaRetrieveWarehouseResponse" />
+    </operation>
+    <operation name="VendaDeleteWarehouse">
+      <input message="tns:VendaDeleteWarehouse" />
+      <output message="tns:VendaDeleteWarehouseResponse" />
+    </operation>
+    <operation name="VendaQueryWarehouse">
+      <input message="tns:VendaQueryWarehouse" />
+      <output message="tns:VendaQueryWarehouseResponse" />
+    </operation>
+    <operation name="VendaResequence">
+      <input message="tns:VendaResequence" />
+      <output message="tns:VendaResequenceResponse" />
+    </operation>
+  </portType>
+  <binding name="VendaProductsBinding" type="tns:VendaProductsPort">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="VendaCreateProduct">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>
+              The VendaCreateProduct function takes the details of one or more products for the Website and inserts
+              them into the specified site’s database. Having inserted the products,
+              it will return a list of the new SKUs created as well as a list of any exceptions
+              and errors that occurred within the data.
+            </docbook:para>
+      </wsdl:documentation>
+      <soap:operation soapAction="urn:VendaProducts#VendaCreateProduct" />
+      <input>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:VendaProducts" use="encoded" />
+      </input>
+      <output>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:VendaProducts" use="encoded" />
+      </output>
+    </operation>
+    <operation name="VendaModifyProduct">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>
+              The VendaModifyProduct function takes details of an existing product and performs an
+              incremental update based on the information provided. Having updated the products, it
+              will return a list of the modified SKUs as well as a list of any exceptions and errors
+              that occurred within the data.
+            </docbook:para>
+        <docbook:para>
+            The data used in a VendaModifyProduct request is very similar to the data used in VendaCreateProduct.
+            Not all of the data is required, however, as this is an incremental update. If an element is present,
+            its contents will be used to replace the existing data. If an element is not present, then the data
+            will remain as it was before the update.
+            </docbook:para>
+        <docbook:para>
+              For example, to mark a product as published on the website, the only data required is a skuElement
+              element with a sku sub-element. There must also be a publish element with a value of true. No other 
+              data is required.
+            </docbook:para>
+        <docbook:para>
+              In the case of arrays of elements, if the array is not provided, the data will be left as is currently
+              in the record. For all arrays, apart from the price arrays (see below), new elements can be added or
+              deleted by specifying an "action" element. For example, to add a new category, use an element called
+              categoryElement with a sub-element action set to add and a ref element containing the new category
+              reference. To remove a product from a category, use an element called categoryElement with a sub-element
+              action set to delete and a ref element containing the category to delete the product from.
+            </docbook:para>
+        <docbook:para>
+              For prices, because there is no reference to each individual priceElement, all current prices will be 
+              removed and replaced with the priceElement elements specified. To leave prices as they are, don't
+              include a priceElements array within the SOAP Request.
+            </docbook:para>
+      </wsdl:documentation>
+      <soap:operation soapAction="urn:VendaProducts#VendaModifyProduct" />
+      <input>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:VendaProducts" use="encoded" />
+      </input>
+      <output>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:VendaProducts" use="encoded" />
+      </output>
+    </operation>
+    <operation name="VendaPublishProduct">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>The VendaPublishProduct function takes a SKU reference to a
+              product and updates the publish status of it. This is a simple way to add and remove
+              products from the site without the overhead of doing a complete product modification.
+            </docbook:para>
+      </wsdl:documentation>
+      <soap:operation soapAction="urn:VendaProducts#VendaPublishProduct" />
+      <input>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:VendaProducts" use="encoded" />
+      </input>
+      <output>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:VendaProducts" use="encoded" />
+      </output>
+    </operation>
+    <operation name="VendaUpdateStock">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>The VendaUpdateStock function takes a SKU reference to a product and
+            updates the stock level for it. Each SKU supplied can be a regular product SKU
+            or an attribute SKU.
+          </docbook:para>
+      </wsdl:documentation>
+      <soap:operation soapAction="urn:VendaProducts#VendaUpdateStock" />
+      <input>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:VendaProducts" use="encoded" />
+      </input>
+      <output>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:VendaProducts" use="encoded" />
+      </output>
+    </operation>
+    <operation name="VendaUpdatePreRelease">
+	  <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+		<docbook:para>The VendaUpdatePreRelease function takes a list of skuElements and updates
+			updates stock level and release date for them.
+		</docbook:para>
+	  </wsdl:documentation>
+      <soap:operation soapAction="urn:VendaProducts#VendaUpdatePreRelease" />
+      <input>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:VendaProducts" use="encoded" />
+      </input>
+      <output>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:VendaProducts" use="encoded" />
+      </output>
+    </operation>
+    <operation name="VendaSequenceProduct">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>The VendaSequenceProduct request allows a products sequences with regards to
+            it's parent categories to be changed without calling VendaModifyProduct
+          </docbook:para>
+      </wsdl:documentation>
+      <soap:operation soapAction="urn:VendaProducts#VendaSequenceProduct" />
+      <input>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:VendaProducts" use="encoded" />
+      </input>
+      <output>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:VendaProducts" use="encoded" />
+      </output>
+    </operation>
+    <operation name="VendaQueryProduct">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>
+              The VendaQueryProduct function takes a SKU reference to a product and performs a simple lookup to
+              determine if the product exists on the site or not. It will return a response code or an error code
+              based on whether or not the product exists.
+            </docbook:para>
+      </wsdl:documentation>
+      <soap:operation soapAction="urn:VendaProducts#VendaQueryProduct" />
+      <input>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:VendaProducts" use="encoded" />
+      </input>
+      <output>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:VendaProducts" use="encoded" />
+      </output>
+    </operation>
+    <operation name="VendaSearchProduct">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>The VendaSearchProduct function takes a partial SKU or partial name and
+              returns an array of SKUs that match the criteria.
+            </docbook:para>
+      </wsdl:documentation>
+      <soap:operation soapAction="urn:VendaProducts#VendaSearchProduct" />
+      <input>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:VendaProducts" use="encoded" />
+      </input>
+      <output>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:VendaProducts" use="encoded" />
+      </output>
+    </operation>
+    <operation name="VendaRetrieveProduct">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>The VendaRetrieveProduct function takes a SKU reference to a product and performs a looks it up on the site.
+			It returns the data of the product in a format similar to the input data for VendaCreateProduct.
+		</docbook:para>
+      </wsdl:documentation>
+	  <soap:operation soapAction="urn:VendaProducts#VendaRetrieveProduct" />
+      <input>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:VendaProducts" use="encoded" />
+      </input>
+      <output>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:VendaProducts" use="encoded" />
+      </output>
+    </operation>
+    <operation name="VendaDeleteProduct">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>VendaDeleteProduct takes a SKU reference and deletes that product from the site entirely. No trace of the product will exist in the site’s database after successful completion of this request.</docbook:para>
+        <docbook:para>Note that, in a site using attributes, this only applies to parent products. To delete an attribute product, use the VendaModifyProduct request on the parent product.</docbook:para>
+      </wsdl:documentation>
+      <soap:operation soapAction="urn:VendaProducts#VendaDeleteProduct" />
+      <input>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:VendaProducts" use="encoded" />
+      </input>
+      <output>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:VendaProducts" use="encoded" />
+      </output>
+    </operation>
+    <operation name="VendaProductList">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>VendaProductList returns a list of all the SKUs which are available on the site.</docbook:para>
+      </wsdl:documentation>
+      <soap:operation soapAction="urn:VendaProducts#VendaProductList" />
+      <input>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:VendaProducts" use="encoded" />
+      </input>
+      <output>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:VendaProducts" use="encoded" />
+      </output>
+    </operation>
+    <operation name="VendaProductOverviewList">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>VendaProductOverviewList returns basic details about each SKU available on the site.</docbook:para>
+      </wsdl:documentation>
+      <soap:operation soapAction="urn:VendaProducts#VendaProductOverviewList" />
+      <input>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:VendaProducts" use="encoded" />
+      </input>
+      <output>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:VendaProducts" use="encoded" />
+      </output>
+    </operation>
+    <operation name="VendaCreateCategory">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>VendaCreateCategory takes the details of one of more categories to be inserted into the database.</docbook:para>
+        <docbook:para>The category hierarchy, or category 'tree', is created using a 'top-down' model. To assign a category to a parent category,
+          the parent category must already exist on the system.</docbook:para>
+        <docbook:para>A category can have more than one parent category, but a category that contains other categories beneath it (ie. it has child categories)
+          cannot also have Products assigned to it. Attempting to assign products to a category that already has child categories will cause an error.
+          </docbook:para>
+      </wsdl:documentation>
+      <soap:operation soapAction="urn:VendaProducts#VendaCreateCategory" />
+      <input>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:VendaProducts" use="encoded" />
+      </input>
+      <output>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:VendaProducts" use="encoded" />
+      </output>
+    </operation>
+    <operation name="VendaModifyCategory">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>VendaModifyCategory modifies the details of an existing category.
+            Any elements supplied in the request will be used to update the corresponding fields within the Category.
+          </docbook:para>
+      </wsdl:documentation>
+      <soap:operation soapAction="urn:VendaProducts#VendaModifyCategory" />
+      <input>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:VendaProducts" use="encoded" />
+      </input>
+      <output>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:VendaProducts" use="encoded" />
+      </output>
+    </operation>
+    <operation name="VendaDeleteCategory">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para> VendaDeleteCategory takes a category reference and deletes that category from the site entirely.</docbook:para>
+        <docbook:para>Note that any child categories that are assigned to the category you delete will be
+              'orphaned' – inaccessible by navigating the site's category tree, but still existing in the site database.
+              You should first delete the category's child categories before deleting the category itself (a 'bottom-up' approach).
+            </docbook:para>
+      </wsdl:documentation>
+      <soap:operation soapAction="urn:VendaProducts#VendaDeleteCategory" />
+      <input>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:VendaProducts" use="encoded" />
+      </input>
+      <output>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:VendaProducts" use="encoded" />
+      </output>
+    </operation>
+    <operation name="VendaQueryCategory">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>VendaQueryCategory takes a category reference and returns true or false based on whether
+			the category exists or not.
+        </docbook:para>
+      </wsdl:documentation>
+      <soap:operation soapAction="urn:VendaProducts#VendaQueryCategory" />
+      <input>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:VendaProducts" use="encoded" />
+      </input>
+      <output>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:VendaProducts" use="encoded" />
+      </output>
+    </operation>
+    <operation name="VendaRetrieveCategory">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>VendaRetrieveCategory takes a category reference and returns the details of that category
+            in the same format as it is supplied in VendaCreateCategory.
+          </docbook:para>
+        <docbook:para>The Request data for VendaRetrieveCategory is the same as for VendaQueryCategory,
+            the only difference being that the categories you denote will be the ones used for returning category data within
+            the Response.
+          </docbook:para>
+      </wsdl:documentation>
+      <soap:operation soapAction="urn:VendaProducts#VendaRetrieveCategory" />
+      <input>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:VendaProducts" use="encoded" />
+      </input>
+      <output>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:VendaProducts" use="encoded" />
+      </output>
+    </operation>
+    <operation name="VendaSequenceCategory">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>This function is now deprecated. Category sequencing is meaningless (since V5).
+        </docbook:para>
+      </wsdl:documentation>
+      <soap:operation soapAction="urn:VendaProducts#VendaSequenceCategory" />
+      <input>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:VendaProducts" use="encoded" />
+      </input>
+      <output>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:VendaProducts" use="encoded" />
+      </output>
+    </operation>
+    <operation name="VendaCategoryList">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>VendaCategoryList returns a list of references of ALL categories that exist on the site.</docbook:para>
+      </wsdl:documentation>
+      <soap:operation soapAction="urn:VendaProducts#VendaCategoryList" />
+      <input>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:VendaProducts" use="encoded" />
+      </input>
+      <output>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:VendaProducts" use="encoded" />
+      </output>
+    </operation>
+    <operation name="VendaChildCategoryList">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>VendaChildCategoryList takes a category reference and returns the references of all categories and products which have that category as a parent.</docbook:para>
+      </wsdl:documentation>
+      <soap:operation soapAction="urn:VendaProducts#VendaChildCategoryList" />
+      <input>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:VendaProducts" use="encoded" />
+      </input>
+      <output>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:VendaProducts" use="encoded" />
+      </output>
+    </operation>
+    <operation name="VendaCreateProductType">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>VendaCreateProductType takes details of one or more product types to be created on the site.</docbook:para>
+      </wsdl:documentation>
+      <soap:operation soapAction="urn:VendaProducts#VendaCreateProductType" />
+      <input>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:VendaProducts" use="encoded" />
+      </input>
+      <output>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:VendaProducts" use="encoded" />
+      </output>
+    </operation>
+    <operation name="VendaModifyProductType">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>
+            VendaModifyProductType takes details of one or more product types to be updated on the site.
+            Any field values given are used to update the data for the specified Product Type.
+            If any children of the 'productTypeElement' element are not supplied, the corresponding data is not modified.
+          </docbook:para>
+      </wsdl:documentation>
+      <soap:operation soapAction="urn:VendaProducts#VendaModifyProductType" />
+      <input>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:VendaProducts" use="encoded" />
+      </input>
+      <output>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:VendaProducts" use="encoded" />
+      </output>
+    </operation>
+    <operation name="VendaCreateWarehouse">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>VendaCreateWarehouse takes the details of one of more Warehouses/Suppliers to be inserted into the database.</docbook:para>
+      </wsdl:documentation>
+      <soap:operation soapAction="urn:VendaProducts#VendaCreateWarehouse" />
+      <input>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:VendaProducts" use="encoded" />
+      </input>
+      <output>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:VendaProducts" use="encoded" />
+      </output>
+    </operation>
+    <operation name="VendaModifyWarehouse">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>VendaModifyWarehouse takes details of one or more warehouses/suppliers to be updated on the site. Any field values given are used to update the data for the specified Warehouse. If any children of the ‘warehouseElement’ element are not supplied, the corresponding data is not modified.</docbook:para>
+        <docbook:para />
+      </wsdl:documentation>
+      <soap:operation soapAction="urn:VendaProducts#VendaModifyWarehouse" />
+      <input>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:VendaProducts" use="encoded" />
+      </input>
+      <output>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:VendaProducts" use="encoded" />
+      </output>
+    </operation>
+    <operation name="VendaDeleteProductType">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>
+            VendaDeleteProductType takes a product type reference and deletes that category from the site entirely.            
+          </docbook:para>
+        <docbook:para>
+            It is only possible to delete Product Types that do not have any Products assigned to it.
+            Attempting to delete Product Types that are ‘in use’ by Products will generate an error.
+          </docbook:para>
+      </wsdl:documentation>
+      <soap:operation soapAction="urn:VendaProducts#VendaDeleteProductType" />
+      <input>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:VendaProducts" use="encoded" />
+      </input>
+      <output>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:VendaProducts" use="encoded" />
+      </output>
+    </operation>
+    <operation name="VendaQueryProductType">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>VendaQueryProductType takes a product type reference and returns a true or false value based on whether that product type exists or not.</docbook:para>
+      </wsdl:documentation>
+      <soap:operation soapAction="urn:VendaProducts#VendaQueryProductType" />
+      <input>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:VendaProducts" use="encoded" />
+      </input>
+      <output>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:VendaProducts" use="encoded" />
+      </output>
+    </operation>
+    <operation name="VendaRetrieveProductType">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>VendaRetrieveProductType takes a product type reference and returns the full details of that product type in the same format as it is supplied in VendaCreateProductType.
+		</docbook:para>
+      </wsdl:documentation>
+      <soap:operation soapAction="urn:VendaProducts#VendaRetrieveProductType" />
+      <input>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:VendaProducts" use="encoded" />
+      </input>
+      <output>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:VendaProducts" use="encoded" />
+      </output>
+    </operation>
+    <operation name="VendaRetrieveWarehouse">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>The Response data for VendaQueryWarehouse is exactly the same as for the VendaCreateWarehouse method.</docbook:para>
+      </wsdl:documentation>
+      <soap:operation soapAction="urn:VendaProducts#VendaRetrieveWarehouse" />
+      <input>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:VendaProducts" use="encoded" />
+      </input>
+      <output>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:VendaProducts" use="encoded" />
+      </output>
+    </operation>
+    <operation name="VendaDeleteWarehouse">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>VendaDeleteWarehouse takes a warehouse/supplier reference and deletes that Warehouse or Supplier from the site entirely.</docbook:para>
+        <docbook:para>It is only possible to delete Warehouses/Suppliers that do not have any Products assigned to it. Attempting to delete Warehouses that are 'in use' by Products will generate an error.</docbook:para>
+      </wsdl:documentation>
+      <soap:operation soapAction="urn:VendaProducts#VendaDeleteWarehouse" />
+      <input>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:VendaProducts" use="encoded" />
+      </input>
+      <output>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:VendaProducts" use="encoded" />
+      </output>
+    </operation>
+    <operation name="VendaQueryWarehouse">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>VendaQueryWarehouse takes a product type reference and returns true or false based on whether that Warehouse/Supplier exists or not.</docbook:para>
+      </wsdl:documentation>
+      <soap:operation soapAction="urn:VendaProducts#VendaQueryWarehouse" />
+      <input>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:VendaProducts" use="encoded" />
+      </input>
+      <output>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:VendaProducts" use="encoded" />
+      </output>
+    </operation>
+    <operation name="VendaResequence">
+      <wsdl:documentation xmlns:docbook="http://docbook.org/ns/docbook">
+        <docbook:para>This function is now deprecated, please use VendaModifyProduct instead.
+		</docbook:para>
+      </wsdl:documentation>
+      <soap:operation soapAction="urn:VendaProducts#VendaResequence" />
+      <input>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:VendaProducts" use="encoded" />
+      </input>
+      <output>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:VendaProducts" use="encoded" />
+      </output>
+    </operation>
+  </binding>
+  <service name="VendaProducts">
+    <port binding="tns:VendaProductsBinding" name="VendaProductsPort">
+      <soap:address location="https://www.heals.co.uk/bin/vendaSOAP.plex" />
+    </port>
+  </service>
+</definitions>

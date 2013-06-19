@@ -1,0 +1,69 @@
+<venda_detblock>
+	<venda_block label=1,pcatref1=affiliates>
+		<li class="nav_<venda_pcatref1>"><a href="<venda_dispview pcat=<venda_pcatref1>>" target="_blank"><venda_pcatname1></a></li>
+	</venda_block label=1>
+	
+		
+	<venda_block label=3,pcatref1=giftcertificates>
+		<li class="nav_<venda_pcatref1>"><a href="<venda_codehttp>?ex=co_wizr-giftcertificates&bsref=heals&layout=default_nocolonetwothree"><venda_pcatname1></a></li>
+	</venda_block label=3>
+	
+	<venda_block label=2,pcatref1=press>
+		<li class="nav_<venda_pcatref1>">
+			<venda_block label=20,ustype=R,usgrref=press>
+				<a href="<venda_dispview scat=<venda_pcatref1>>"><venda_pcatname1></a>
+			</venda_block label=20>
+			<venda_block label=21,ustype!=R,usgrref!=press,operator=or>
+				<a href="<venda_codehttps>?ex=co_wizr-register&bsref=<venda_bsref>&htxt=<venda_htxt mode=make,group=press>"><venda_pcatname1></a>
+			</venda_block label=21>
+		</li>
+	</venda_block label=2>
+<venda_block label=635194325,pcatref1!=designers>	
+	<li class="nav<venda_pcatref1>"><a href="<venda_dispview pcat=<venda_pcatref1>>" class="a<venda_pcatref1>"><venda_pcatname1></a></li>
+	<ul id="ul<venda_pcatref1>"><venda_detail2></ul>
+</venda_block label=635194325>
+
+<venda_block label=6351943251,pcatref1!=heals_brochures,pcatref1!=heals_buying_guides,pcatref1=designers>	
+	<div class="nav<venda_pcatref1>">
+<style>
+.leftnav-header p {color: #333;text-decoration: none;display: block;padding: 0 0 0 15px;text-transform: uppercase;font-size: 14px;margin: 8px 0 15px 0;font-weight:normal;}
+.shopbybrand_area {margin: 0;padding: 0;width: 200px;background-color: #F1F1F1;overflow: hidden;float: left;font-weight:normal;}
+.shopbybrand_area .block_sbb {margin: 0 5px 0 5px;padding: 0;}
+.shopbybrand_area .block_sbb p {border-bottom: 1px dotted #CCC;padding-top: 5px;padding-bottom: 5px;margin: 0;font-weight:normal;}
+.shopbybrand_area .block_sbb p a {color: #666;text-decoration: none;margin-left: 15px;display: block;font-weight:normal;}
+.shopbybrand_area .block_sbb p:hover {background-color: #E2E2E2;font-weight:normal;}
+</style>
+<div style="background-color:#363435;width:182px;margin-top:0;margin-left:9px;display:block;">
+<p style="color:#ffffff;font-size:15px;padding:8px;margin:.5em 0 0 0;"><a href="<venda_dispview pcat=designers>" style="color:#f0f0f0;font-weight:normal;">View All Designers</a></p>
+</div>
+<br /><br />
+<div class="leftnav-header">
+<p>Favourite Designers</p>
+</div>
+<div class="shopbybrand_area" style="margin-bottom:20px;">
+<div class="block_sbb">
+<venda_category temp=designer_categories,ref=favourite_designers,rec=pcat></div>
+</div>
+<div class="leftnav-header">
+<p>Heal's Discovers</p>
+</div>
+<div class="shopbybrand_area">
+<div class="block_sbb">
+<venda_category temp=designer_categories,ref=heals_discovers_designers,rec=pcat>
+</div>
+</div>
+</div>
+</venda_block label=6351943251>
+</venda_detblock>
+<venda_detblock2>
+	<li class="nav<venda_pcatref1>"><a href="<venda_dispview pcat=<venda_pcatref1>>" class="a<venda_pcatref1>"><venda_pcatname1></a></li>
+</venda_detblock2>
+<div class="exh2"><venda_pcatname></div>
+<div id="pcat_leftnav">
+	<ul id="catlist"><venda_detail></ul>
+</div>
+<style type="text/css">
+.navaffiliates {display:none;}
+.navpress {display:none;}
+.navgiftcertificates {display:none;}
+</style>

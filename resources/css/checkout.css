@@ -1,0 +1,977 @@
+/********************************************/
+/* form elements (mostly on checkout pages) */
+/* ******************************************/
+/*RT122255*/
+#checkoutwrapper #header .Lcat_ckheader .Lcat_ckheaderbtm #topnavcategory{
+display:none;
+}
+#checkoutwrapper #header .Lcat_ckheader .Lcat_ckheaderbtm #topnav{
+display:none;
+}
+#checkoutwrapper #header .Lcat_ckheader .Lcat_ckheaderbtm #formlocaytasearch{
+display:none;
+}
+/*RT122255*/
+#checkoutwrapper {width: 940px; margin:0 auto; padding-top:0;}
+#content-checkout {margin-top:20px;}
+*html #content-checkout {margin-top:0;}
+*:first-child + html #content-checkout {margin-top:0;}
+#checkout {width: 941px; margin:0;}
+#checkout .checkoutL {width: 938px; margin:0 auto;}
+/*#checkout .checkoutL {float:none !important; width:938px !important;}*/
+#checkout .checkoutR {width: 938px; float: left;}
+
+#checkout .error {font-size:1em; padding:0 0 10px;}
+
+/* HELP & INFO */
+/*RT122255*/
+#checkout .checkoutR {float:left; padding:0 0 10px 1px; margin:0;}
+/*RT122255*/
+#checkout .checkoutR .helpinfo {background:#F1F1F1; width:221px; float:left; min-height:156px; height:156px; padding:19px 0 0 10px; margin:0; border:none;}
+#checkout .checkoutR .helpinfo h2 {font-size:0.9em; color:#333; text-transform:uppercase; padding:0 0 3px 0; margin:0;}
+#checkout .checkoutR .helpinfo ul li {text-transform:uppercase; padding:0; margin:0; color:#333;}
+#checkout .checkoutR .helpinfo ul li a {font-size:0.9em; color:#666666;}
+#checkout .checkoutR img {float:left;}
+
+#contact_detail2{float:right;}
+
+.orderitems td.thumb,.orderitems th.thumb {padding-left:10px;padding-bottom:10px;}
+.orderitems td.name {vertical-align: middle;}
+#myacc-col-two h2 {padding:5px 0pt 0pt 4px;}
+
+.f-myformdetail{padding:0 0 0 25px !important;}
+.f-myformdetail input ,.f-myformdetail select {font-size:1em;font-family:arial;}
+
+/* the following are classes because they appear in detblocks and ids cannot be duplicated */
+table th, table tr td {text-align:left;}
+table.wizrtable {width: 100%; border-width: 0; border-spacing: 0; border-style: none; border-collapse: collapse;}
+table.wizrtable th {border-width: 0; padding: 5px 0 5px 0; border-style: none;}
+/*********************************************/
+/* BASKET, ORDER CONFIRMATION, ORDER RECEIPT BOTH COLUMNS */
+/*********************************************/
+#ordersummary table.wizrtable th,.Linternalimage,.deliveryrate ul {padding:5px 0 0 6px;}
+/*this will overwrite the global.css set in the core code, to hide sku remove the line below  */
+#yourbasket .sku, #orderconfirmation .sku, #orderreceipt .sku, #orderhistory .sku, #orderdetail .sku {display: none !important;}
+/*********************************************/
+/* MY ACCOUNT */
+/*********************************************/
+
+.bt-gobackmyacc {margin-left: 8px;}
+
+#myacc-col-one h2 {padding:10px 0 5px 10px !important;margin:0;font-size: 0.9em;color:#333333;text-transform: uppercase}
+#myacc-col-one ul {padding:0 0 0 6px !important;margin:0 0 0 5px;}
+#myacc-col-one ul li {padding:0;font-size: .9em;color:#666666;text-transform:uppercase;}
+#myacc-col-one a{color:#666666;font-weight:bold;}
+#myacc-col-one a:hover{text-decoration:underline;font-weight:bold;}
+.addressbook h1 {margin:0;padding:0;}
+#content-myaccount{background:url(../images/bg_lefthand.gif) 0 0 repeat-y;float:left;margin-bottom:15px;margin-top:20px;}
+*html #content-myaccount{background:url(../images/bg_lefthand.gif) 0 0 repeat-y;float:left;margin-bottom:15px;margin-top:0;}
+*:first-child + html #content-myaccount{background:url(../images/bg_lefthand.gif) 0 0 repeat-y;float:left;margin-bottom:15px;margin-top:0;}
+#myacc-col-two h1{background:#AFAAA3;color:#fff;font-size:1em;padding:4px 0 5px 12px !important;}
+#myacc-col-two p{padding:10px 0 0 25px;}
+#myaccountwelcome p.myaccountwelcome{padding:15px 0 0 25px;}
+.Lcat_myaccountnav{margin:10px 0 0 0;padding:0;}
+
+
+#address_list {padding:0;margin:0;}
+#address_list li {padding:0 0 20px 0;margin:0;}
+#address_list li .f-oradsaddbook {padding:0;margin:0;}
+#address_list li .f-oradsaddbook .oradsaddbook{padding:0;margin:0;display:block;color:#000000;width:100%;}
+*:first-child + html #address_list li .f-oradsaddbook .oradsaddbook {padding:0;margin:0 0 0 -7px;display:block;color:#000000;width:100%;}
+*html #address_list li .f-oradsaddbook .oradsaddbook {padding:0;margin:0 0 0 -7px;display:block;color:#000000;width:100%;}
+/*********************************************/
+/* MY ACCOUNT ITEMS YOU MAY BE INTERESTED IN */
+/*********************************************/
+.myaccpredictor h2 {background:#AFAAA3;color:#fff;font-size:1em;padding:4px 0 5px 12px !important;width:693px;}
+#myaccfeatprod {float:left;}
+#myaccfeatprod ul li {float:left;margin:0;padding:19px 20px 0;width:195px;font-size:0.9em; text-transform: uppdercase;}
+#myaccfeatprod ul li .sliderinvtname {display:block;float:left;margin:0;padding:0;text-align:right;width:195px;}
+#myaccfeatprod ul li .sliderinvtname a {color:#666666;font-weight:bold;text-transform:uppercase;}
+#myaccfeatprod ul li .details .moreinfo a{color:#AEAEAE; font-weight: bold; float:right;text-transform:lowercase;}
+#myaccfeatprod ul li .image {float:left; width: 120px;}
+#myaccfeatprod ul li .details {float:right;text-align:right;width:75px;}
+
+
+#myaccfeatprod ul li .pricedetail {float: right; text-align: right;}
+#myaccfeatprod ul li .normalprice {margin: 73px 0 0 0; *margin-top: 58px; padding: 0; font-weight: bold; font-size: 1.09em;}
+#myaccfeatprod ul li .was {margin-top: 25px; *margin: 16px 0 0 0; text-decoration: none; padding: 0;}
+#myaccfeatprod ul li .was span {text-decoration: line-through; font: bold 1.09em Arial;}
+#myaccfeatprod ul li .nowprice {padding: 0; margin: 0;}
+#myaccfeatprod ul li .nowprice span {font-weight: bold; font-size: 1.09em;}
+#myaccfeatprod ul li #qty{width: 41px; border: 1px solid #CCCCCC; margin-bottom: 2px;}
+#myaccfeatprod ul li .noqtybutton {margin: 21px 0 0 0; *margin-top: 22px; padding: 0;}
+#myaccfeatprod ul li .nonpurchasbutton {margin: 0;}
+#myaccfeatprod ul li .nostock {margin: 21px 0 0 0; *margin-top: 24px;}
+#myaccfeatprod ul li .priceattr .fromprice {margin: 33px 0 0 0; *margin-top: 24px; text-transform: uppercase;}
+#myaccfeatprod ul li .priceattr .fromprice span {font-weight: bold; font-size: 1.09em;}
+
+#myaccfeatprod ul li .priceattr .fromsaleprice {margin: 10px 0 0 0; *margin-top: 0; color: #CC0000; text-transform: uppercase;}
+#myaccfeatprod ul li .priceattr .fromsaleprice span {font-weight: bold; font-size: 1.09em;}
+#myaccfeatprod ul li .priceattr .attrmoreinfo {margin: 21px 0 0 0;}
+
+
+
+/*********************************************/
+/* MY ACCOUNT : ORDER HISTORY */
+/*********************************************/
+#orderhistory h1{background:#FFFFFF;margin:0pt !important;padding:0pt !important;}
+#orderhistory h2 {font-size:1.1em;padding-left:27px;}
+#orderhistory .ordersListBox {font-size:0.9em;padding-left:27px;}
+#orderhistory .ordersListBox h2 {padding-left:0;}
+#orderhistory .ordersListBox ul#orders_list li {padding-bottom:15px;}
+*html #orderhistory .ordersListBox table {font-size:1.2em;}
+*html #orderhistory .ordersListBox table tr td{font-size:0.9em;}
+#orderhistory .ordersListBox table tr th {width:200px;}
+#orderhistory #buttons {padding:25px 0 25px 27px;width:95%;}
+#orderdetail  h1 {/*background:url(../images/banner_orderhistory_detail.jpg) no-repeat;width:705;height:175px;padding:0;margin:0;text-align:right;*/
+background:#AFAAA3;color:#FFFFFF;font-size:1em;margin:0 0 0 24px;padding:5px 0 5px 8px !important;text-transform:uppercase;}
+#orderdetail .ohSumDetail,#orderdetail #paymentdetails_orlk,#orderdetail #contactdetails_orlk,#orderdetail .padding_T5 {padding:10px 0 0 25px;}
+#orderdetail .ohListVoucher {padding:10px 0 0 35px;}
+#orderdetail .ohListVoucher tr th {width:160px;}
+#orderdetail .ohSumDetail table tbody tr td{padding:5px 0 0 10px;}
+#orderdetail .ohSumDetail table tbody tr td.first {width:150px;}
+#orderdetail #paymentdetails_orlk table tbody tr th {padding:3px 15px 0pt 10px;width:132px;}
+#orderdetail #paymentdetails_orlk table tbody tr td {padding:3px 15px 0pt 10px;}
+#orderdetail #contactdetails_orlk  p {padding:0 0 0 10px;}
+#orderdetail .padding_T5 #contact_detail .title{padding:5px 0 0 0;}
+#orderdetail .padding_T5 #contact_detail .title .name {padding:0 0 0 10px;}
+#orderdetail .padding_T5 #contact_detailtitle {padding:5px 0 0 10px;}
+#orderdetail .padding_T5 #contact_detail .addrName {padding:5px 0 0 10px;}
+#orderdetail .padding_T5 #contact_detail .address {padding:0 0 0 10px;}
+#orderdetail h2 {font-size:1em;padding:5px 0 5px 8px;text-transform:uppercase;background:#AFAAA3;color:#FFF;width:673px;}
+#orderdetail #paymentdetails_orlk h2 {display:none;}
+#orderdetail #paymentdetails_orlk #paymentdetails h2 {display:block;}
+#orderdetail #paymentdetails_orlk #paypallogo {margin:0;padding:0 0 0 12px;}
+#orderdetail #paymentdetails_orlk p {padding:0 0 0 12px;}
+#orderdetail .padding_T5 .title_block {display:none;}
+#orderdetail h2.orderlist {margin-bottom:5px; width:673px;}
+#orderdetail .notegiftcert {margin-bottom:5px;padding-left:8px;}
+#orderdetail #bottomdash {width:681px;border-bottom:12px solid #E5E5E5;}
+#orderdetail #bottomdash tr th {background:url(../images/bg_hdrbaskettable.gif) repeat-x left top;color:#FFFFFF;font-size:1em;padding:5px 15px 15px 10px; text-align:center; width:88px;}
+#orderdetail #bottomdash tr th.thumb{padding:5px 0 15px 24px;text-align:left;width:233px;}
+#orderdetail #bottomdash tr th.price {width:75px;padding:5px 0 15px 0;}
+#orderdetail #bottomdash tr th.qty {width:60px;padding:5px 0 15px 0;}
+#orderdetail #bottomdash tr th.avali {width:95px;padding:5px 0 15px 0;}
+#orderdetail #bottomdash tr th.total {width:89px;padding:5px 0 15px 0;}
+#orderdetail #bottomdash tr td {color:#333333;font-size:1em;padding:12px 0 14px 0;text-align:center;vertical-align:top;border-top:1px solid #E2E2E2;}
+#orderdetail #bottomdash tr td.thumb {background:url(../images/bg_thumbbasket.gif) repeat-y left top;padding:12px 0 14px 0;width:138px;}
+#orderdetail #bottomdash tr td.thumb img {margin-left:18px;}
+#orderdetail #bottomdash tr td.invtname{text-align:left;background:none;padding-left:3px;padding-right:0;width:116px;}
+#orderdetail #bottomdash tr td.availability {text-align:left;}
+#orderdetail #bottomdash tr td.availability p {margin:0; padding:0;}
+#orderdetail #bottomdash tr td.giftcert {background:url(../images/bg_thumbbasket.gif) repeat-y left top;padding:5px 0 5px 25px;text-align:left;}
+#orderdetail #bottomdash tr td.status {background:url(../images/bg_removebasket.gif) repeat-y right top; padding-left:10px; padding-right:15px;}
+#orderdetail #buttons {padding:20px 0 25px 29px;width:95%;}
+
+#orderhistory ul#orders_list th.hdrOrderStatus , 
+#orderhistory ul#orders_list td.orderStatus {display:none;}
+/**********************************/
+/* ORDER RECEIPT DELIVERY OPTIONS */
+/**********************************/
+.deliveryrate {border: 1px solid #666666; margin-top: 15px; padding: 0 0 10px 0;}
+
+/* myaccount - change user details */
+#tlusermyform fieldset div {padding-bottom: 5px;}
+#tlusermyform fieldset div.postbox{display:none;}
+#tlusermyform fieldset div.thirdpartybox{display:none;}
+
+
+#tlusermyform fieldset {margin: 0; padding: 0;}
+#tlusermyform fieldset.usxt {padding-left:24px;}
+#tlusermyform fieldset.usxt input ,#tlusermyform fieldset.usxt select {font-size:1em;font-family:arial;}
+#tlusermyform fieldset.f-myformemail {padding-left:24px;}
+.f-myformemail input ,.f-myformemail select {font-size:1em;font-family:arial;}
+#tlusermyform fieldset#myformcommoption .emailbox {padding-left:24px;}
+#tlusermyform fieldset#myformcommoption .emailformat {padding-left:24px;padding-top:7px;}
+#tlusermyform fieldset#myformcommoption .emailformat input ,#tlusermyform fieldset#myformcommoption .emailformat select {font-size:1em;font-family:arial;}
+#tlusermyform #buttons {padding:25px 0 25px 24px;width:95%;}
+.addrName,legend.oradsaddbook {font-weight:bold;}
+#tlusermyform h1{margin:0 !important;padding:0 !important;background:#fff;}
+
+/***********************************/
+/* CSS for CHECKOUT STEP INDICATOR */
+/***********************************/
+/*RT122255*/
+ul.Lcheckoutstepindicators {background:#fff; padding-top:30px; margin:0; font-weight:bold; float:left; width:940px;height:25px;}
+/*RT122255*/
+ul.Lcheckoutstepindicators li {display: inline; color:#D8D8D8; }
+
+ul.Lcheckoutstepindicators li.checkoutLoginOn {float:left; width:152px; padding:0 26px 0 0; margin:0; background:url(../images/bg_steploginon.gif) no-repeat left top; display:block; text-indent:-5000px;}
+ul.Lcheckoutstepindicators li.checkoutStep1On {float:left; width:205px; padding:0 26px 0 0; margin:0; background:url(../images/bg_stepbox1on.gif) no-repeat left top; display:block; text-indent:-5000px;}
+ul.Lcheckoutstepindicators li.checkoutStep2On {float:left; width:150px; padding:0 26px 0 0; margin:0; background:url(../images/bg_stepbox2on.gif) no-repeat left top; display:block; text-indent:-5000px;}
+ul.Lcheckoutstepindicators li.checkoutLogin {float:left; width:152px; padding:0 26px 0 0; margin:0; background:url(../images/bg_steplogin.gif) no-repeat left top; display:block; text-indent:-5000px;}
+ul.Lcheckoutstepindicators li.checkoutStep1 {float:left; width:205px; padding:0 26px 0 0; margin:0; background:url(../images/bg_stepbox1.gif) no-repeat left top; display:block; text-indent:-5000px;}
+ul.Lcheckoutstepindicators li.checkoutStep2 {float:left; width:150px; padding:0 26px 0 0; margin:0; background:url(../images/bg_stepbox2.gif) no-repeat left top; display:block; text-indent:-5000px;}
+ul.Lcheckoutstepindicators li.checkoutStep4 {float:left; width:130px; background:url(../images/bg_stepbox4.gif) no-repeat left top; display:block; text-indent:-5000px;}
+ul.Lcheckoutstepindicators li.checkoutStep3 {float:left; width:190px; padding:0 26px 0 0; margin:0; background:url(../images/bg_stepbox3off.gif) no-repeat left top; display:block; text-indent:-5000px;}
+ul.Lcheckoutstepindicators li.checkoutStep3On {float:left; width:190px; padding:0 26px 0 0; margin:0; background:url(../images/bg_stepbox3on.gif) no-repeat left top; display:block; text-indent:-5000px;}
+
+ul.Lcheckoutstepindicators li.checkoutStep4On {float:left; width:130px; background:url(../images/bg_stepbox4on.gif) no-repeat left top; display:block; text-indent:-5000px;}
+
+/*******************/
+/* POSTCODE LOOKUP */
+/*******************/
+span.pclookup{padding-left:10px;}
+.pclookup a{text-decoration:underline;}
+.pclookup a span {width:72px; height:16px; cursor:pointer;}
+.pclookup a:hover {text-decoration:none;}
+
+/*******************/
+/* LOGIN */
+/*******************/
+/*RT122255*/
+div.signin h1 {background:#AFAAA3;font-size:1em !important;padding:5px 0 5px 13px !important;margin:0 !important;overflow:hidden;-float:left;}
+/*RT122255*/
+/* .Lcat_signintopcontent .helpinfo {background:url(../images/login_bg.jpg) no-repeat;width:938px;height:202px;color:#EFEEED;text-transform:uppercase;} */
+.Lcat_signintopcontent .helpinfo {background:#F1F1F1; width:222px; float:left; min-height:156px; height:156px; padding:19px 0 0 11px; margin:0;}
+/*.Lcat_signintopcontent {padding:0 0 30px;}*/
+.Lcat_signintopcontent .helpinfo a {color:#666666;}
+.Lcat_signintopcontent .helpinfo h2 {width:220px;font-size:0.9em;padding:10px 0 0 10px;margin:0;color:#333;text-transform:uppercase;}
+.Lcat_signintopcontent .helpinfo ul {width:220px;padding:0 0 0 10px;margin:0}
+
+*html .Lcat_signintopcontent .helpinfo{ 
+width:212px;   /*IE6*/ 
+} 
+*html .Lcat_signintopcontent .helpinfo h2 {
+width:212px; /* IE6 */
+}
+*html .Lcat_signintopcontent .helpinfo ul {
+width:212px; /* IE6 */
+}
+
+.Lcat_signintopcontent .helpinfo ul li {font-size:0.9em;}
+.Lcat_signintopcontent .helpinfo ul li a{text-transform:uppercase;}
+/*RT122255*/
+.signin {margin:auto;width:938px;}
+.signin .contactonsignin{margin-right:10px;}
+#exisitinguser{
+background:#E6E6E6;
+width:381px;
+margin:30px 0;
+float:left;
+}
+#exisitinguser h1{
+-width:100%;
+} 
+.notregister h1{ 
+-width:100%;
+}
+
+.notregister{
+float:right;
+background:#E6E6E6;
+width:425px;
+height:190px;
+margin:30px 0;
+}
+.notregistertxt{
+padding-bottom:10px;
+padding-left:10px;
+padding-right:10px;
+padding-top:20px;
+}
+/*RT122255*/
+#checkout .signin .error {padding:5px 0 10px 13px;}
+*:first-child + html .signin fieldset.f-loginemail {width:381px;margin:0;}
+*html .signin fieldset.f-loginemail {width:381px;margin:0;}
+.signin input {font-family:arial;font-size:1em;}
+/*RT122255*/
+.signin fieldset.f-loginemail {margin:auto;padding:0;width:381px;}
+.signin fieldset.f-loginiam {margin:auto;padding:0;width:381px;border-top:1px solid #E0E0E0;}
+/*RT122255*/
+.signin fieldset.f-loginiam .notregister {padding-top:20px;height:40px;}
+.signin fieldset.f-loginiam .notregisterinput {clear:none;float:left;width:120px;}
+.signin fieldset.f-loginiam .notregisterinput input#notRegistered {padding:0;margin:0;}
+*:first-child + html .signin fieldset.f-loginiam .notregistertxt {clear:none;float:right;width:298px;padding:2px 0 0 0;font-size:0.9em;}
+*html .signin fieldset.f-loginiam .notregistertxt {clear:none;float:right;width:298px;padding:2px 0 0 0;font-size:0.9em;}
+.signin fieldset.f-loginiam .notregistertxt {clear:none;float:right;width:298px;font-size:0.9em;}
+.signin fieldset.f-loginiam .registered .registered1 {float:left;width:140px;}
+.signin fieldset.f-loginiam .registered .registered1 input#alreadyRegistered {padding:0;margin:0;}
+/*RT122255*/
+.signin fieldset.f-loginiam .registered {border-top:1px solid #E0E0E0;padding-top:10px;}
+.signin fieldset.f-loginiam .registered .registered2 {width:380px;}
+/*RT122255*/
+*:first-child + html .signin fieldset.f-loginiam .registered .registered2 {width:381px;padding-top:1px;}
+/*\*/
+html*.signin fieldset.f-loginiam .registered .registered2 {
+width:380px;    /*Safari for Macintosh only (v1-3), IE7,IE6*/
+]width:381px;    /*IE7,IE6*/
+}/**/
+/***** hack opera9.5 ******/
+@media all and (-webkit-min-device-pixel-ratio:10000),
+                             not all and (-webkit-min-device-pixel-ratio:0)
+{:root .signin fieldset.f-loginiam .registered .registered2 {width:380px;}}
+/*RT122255*/
+.signin fieldset.f-loginiam .forgotpassword {text-align:right;padding:8px 38px 0 0;font-size:0.9em;}
+.signin #buttons {margin:auto;padding:20px 0 10px 0;width:350px;}
+.signin #buttons2 {margin:auto;padding:55px 0 0px 0;width:400px;}
+
+.f-loginemail label {margin:0 30px;width:auto;}
+.f-loginemail #email {width:200px;border:1px solid #999;}
+.f-loginiam label {font-weight:bold;color:#333;}
+.f-loginiam label#lLoginPassword {font-weight:normal;color:#666666;margin-left:30px;margin-right:20px;width:auto;-margin-right:22px;}
+.f-loginiam #password {width:200px;border:1px solid #999;}
+/*RT122255*/
+.expresscheckout {margin:auto;padding:0 0 20px 0;width:463px;}
+.expresscheckout h2 {margin:0;padding:0;font-size:1em;}
+fieldset.f-loginemail div {padding:20px 0;}
+legend.loginemail {display: none;}
+.dontFloat {float:none;width:auto;}
+.containerpwrm h1 {/*background:url(../images/forgotten_bg.jpg) no-repeat;*/font-size:0.9em;font-weight:normal;height:175px;width:938px;padding:0;margin:0 0 30px 0;}
+.containerpwrm .helpinfo {color:#EFEEED;padding:16px 0 0 11px;width:215px;}
+/*RT122255*/
+.containerpwrm .helpinfo {background:#AFAAA3 none repeat scroll 0 0;float:left;height:156px;margin:0;min-height:156px;padding:19px 0 0 11px;width:222px;}
+/*RT122255*/
+.containerpwrm .helpinfo h2 {color:#333333;font-size:1em;text-transform:uppercase;padding:0;margin:0;}
+.containerpwrm .helpinfo ul li {padding-bottom:5px;}
+.containerpwrm p {padding-left:10px;}
+.containerpwrm form {padding-left:10px;}
+.f-pwrmemail label {width:11%;}
+.f-pwrmemail input {width:229px;border:1px solid #999;}
+.f-pwrmemail input#usemail {font-size:1em;font-family:arial;}
+.containerpwrmthankyou h1 {font-size:0.9em;font-weight:normal;}
+.containerpwrmthankyou .helpinfo {color:#EFEEED;padding:16px 0 0 11px;width:215px;}
+.containerpwrmthankyou .helpinfo h2 {color:#333333;font-size:1em;text-transform:uppercase;padding:0;margin:0;}
+.containerpwrmthankyou .helpinfo ul li {padding-bottom:5px;}
+.containerpwrmthankyou p {padding-left:10px;}
+.containerpwrmthankyou form {padding-left:10px;}
+/*RT122255*/
+.containeroradeditadd h1 {/*background:url(../images/banner_add_delivery_address1.jpg) no-repeat;*/font-size:0.9em;font-weight:normal;height:175px;width:938px;margin:0 0 30px 0;padding:0;height:202px;*height:auto;}
+/*RT122255*/
+.containeroradeditadd .helpinfo {color:#EFEEED;padding:16px 0 0 11px;width:215px;}
+.containeroradeditadd .helpinfo {background:#AFAAA3 none repeat scroll 0 0;float:left;height:156px;margin:0;min-height:156px;padding:19px 0 0 11px;width:222px;-width:218px;}
+.containeroradeditadd .helpinfo h2 {color:#333333;font-size:1em;text-transform:uppercase;padding:0;margin:0;}
+.containeroradeditadd .helpinfo ul li {padding-bottom:5px;}
+.containeroradeditadd p {padding-left:10px;}
+.containeroradeditadd form {}
+.containeroradeditadd input{font-family:arial;font-size:1em;}
+.containeroradeditadd select{font-family:arial;font-size:1em;}
+.containeroradeditadd fieldset div {padding-bottom:5px;}
+.containeroradeditadd .error {padding:10px 0 0 10px !important;}
+.editcontactaddress h1 {padding:0;margin:0;}
+.editcontactaddress input{font-family:arial;font-size:1em;}
+.editcontactaddress select{font-family:arial;font-size:1em;}
+.editcontactaddress fieldset div {padding-bottom:5px;}
+ul#address_list li .f-oradsaddbook input {padding:0;margin:0;}
+*:first-child + html ul#address_list li .f-oradsaddbook input {padding:0;margin:0 0 0 -5px;}
+*html ul#address_list li .f-oradsaddbook input {padding:0;margin:0 0 0 -5px;}
+ul#address_list li .f-oradsaddbook img {padding:5px 0;margin:0;}
+#addreminder h1 {padding:0 !important;margin:0;background:#FFF;}
+#addreminder .reminderBox {padding-left:25px;}
+#addreminder .reminderBox input ,#addreminder .reminderBox select {font-size:1em;}
+#addreminder .reminderBox table thead tr th {background:#AFAAA3;color:#FFF;}
+#addreminder .reminderBox table thead tr th.hdrFname {padding-left:10px;}
+#addreminder .reminderBox table tbody tr td {padding-top:10px;}
+#addreminder .reminderBox table tbody tr td.fname {padding-left:7px;}
+#reminderslist h1 {padding:0 !important;margin:0;background:#FFF;}
+#reminderslist h3 {padding:10px 0 0 25px;margin:0;font-size:1em;}
+#reminderslist .addreminder {clear:both;}
+#reminderslist .reminderBox {clear:both;padding:20px 0 0 25px;}
+*html #reminderslist .reminderBox {clear:both;padding:10px 0 0 25px;}
+*:first-child + html #reminderslist .reminderBox {clear:both;padding:10px 0 0 25px;}
+#reminderslist .reminderBox table thead tr th {background:#AFAAA3;color:#FFF;}
+#reminderslist .reminderBox table thead tr th.hdrEdit {padding-left:10px;}
+#reminderslist .reminderBox table tbody tr td {padding-top:10px;font-size:1em;}
+#reminderslist .reminderBox table tbody tr td.edit {padding-left:7px;}
+#editreminder h1 {padding:0 !important;margin:0;background:#FFF;}
+#editreminder .reminderBox  {padding:10px 0 0 25px;}
+#editreminder .reminderBox table thead tr th {background:#AFAAA3;color:#FFF;}
+#editreminder .reminderBox table tbody tr td {padding-top:10px;}
+#editreminder .reminderBox input ,#editreminder .reminderBox select {font-size:1em;}
+#editreminder #buttons {padding:25px 0 25px 25px;width:96%;}
+/*******************/
+/* REGISTER */
+/*******************/
+/*RT122255*/
+.addcontactaddress a{
+text-decoration:underline;
+}
+/*RT122255*/
+.addcontactaddress h1 {/*background:url(../images/banner_add_contact.jpg) no-repeat;*/font-size:0.9em;font-weight:normal;height:175px;*height:auto;width:938px;margin:0 0 25px 0;padding:0;}
+.addcontactaddress .helpinfo {color:#EFEEED;padding:16px 0 0 11px;width:215px;}
+.addcontactaddress .helpinfo {background:#F1F1F1 none repeat scroll 0 0;float:left;height:156px;margin:0;min-height:156px;padding:19px 0 0 11px;width:222px;-width:218px;}
+.addcontactaddress .helpinfo h2 {color:#333333;font-size:1em;text-transform:uppercase;padding:0;margin:0;}
+.addcontactaddress .helpinfo ul li {padding-bottom:5px;}
+/*RT122255*/
+.addcontactaddress p {clear:both;padding-left:0px;padding-bottom:7px;}
+/*RT122255*/
+.addcontactaddress form {padding-left:0px;}
+.addcontactaddress fieldset div {padding-bottom:5px;}
+.addcontactaddress select {font-family:arial;font-size:1em;}
+.addcontactaddress input {font-family:arial;font-size:1em;}
+.padding0 {padding: 5px 0 0 0 !important;}
+#zipcDiv span#postcodelookup{margin-left:5px;}
+
+.registercontent fieldset.nopaddingbottom{margin-bottom:0px;}
+
+/**********/
+/* BASKET */
+/**********/
+
+#yourbasket h1 {display:none;}
+/*RT122255*/
+#yourbasket {width:938px; margin:0 auto;}
+#yourbasket div.ordertable {padding:0 0 20px 0; margin:0; float:left;}
+#yourbasket .wizrtable {width:938px;}
+#yourbasket .wizrtable tr.updatebasketbutton td{border-top:0px solid black !important;}
+/*RT122255*/
+#yourbasket .wizrtable tr th {text-align:center; padding:5px 0 14px 0; font-size:1.0em; background:url(../images/bg_hdrbaskettable.gif) repeat-x left top; color:#fff;}
+#yourbasket .wizrtable tr th.thumb {text-align:left; padding:5px 0 14px 24px; width:205px;}
+#yourbasket .wizrtable tr th.name {width:141px;} 
+#yourbasket .wizrtable tr th.priceeach,
+#yourbasket .wizrtable tr th.totalprice {width:145px;}
+#yourbasket .wizrtable tr th.quantity {width:91px;}
+#yourbasket .wizrtable tr th.availability {width:114px;}
+#yourbasket .wizrtable tr th.remove {width:103px;}
+#yourbasket .wizrtable tr td {text-align:center; background:#fff; border-top:1px solid #E5E5E5; vertical-align:top; font-size:1em; padding:12px 0 14px 0; color:#333;}
+#yourbasket .wizrtable tr td.thumb {background:url(../images/bg_thumbbasket.gif) repeat-y left top; padding:12px 0 14px 0; text-align:center;}
+#yourbasket .wizrtable tr td.name {text-align:left; padding-left:12px;}
+#yourbasket .wizrtable tr td.name a {color:#333;}
+#yourbasket .wizrtable tr td.priceeach,
+#yourbasket .wizrtable tr td.totalprice {text-align:right; padding:12px 48px 14px 0;}
+#yourbasket .wizrtable tr td input {text-align:right;}
+#yourbasket .wizrtable tr td.availability {text-align:left; padding-left:15px;}
+#yourbasket .wizrtable tr td.availability p {margin:0; padding:0;}
+#yourbasket .wizrtable tr td.remove {background:#fff url(../images/bg_removebasket.gif) repeat-y right top;}
+/*RT122255*/
+#yourbasket .wizrtable tr.orsctotal th {text-align:left; padding:8px 23px; color:#FFFFFF; background:url(../images/bg_hdrsubtotalbasket1.gif) no-repeat left top; font-size:1.2em; height: 64px;-height:40px;}
+/*RT122255*/
+#yourbasket .wizrtable tr.orsctotal th p a{font: bold 0.8em Arial; color: #FFFFFF;}
+#yourbasket .wizrtable tr.orsctotal td.thumb { background:url(../images/bg_orsctotal.gif) repeat-x left top; padding:14px 0; border:none;} 
+/*RT122255*/
+#yourbasket .wizrtable td.basketTot {text-align:left; background:url(../images/bg_subtotalbasket.gif) no-repeat right top; padding:8px 0 8px 45px; color:#fff; font-weight:bold; font-size:1.2em; border:none;}
+#yourbasket .buttonstopbasket {display:none;}
+/*RT122255*/
+
+/* BASKET EMPTY */
+.containerorscempty p {padding:0 0 0 235px;}
+
+/* BUTTON ON TOP BASKET */
+.buttonstopbasket #buttons {clear:both; float:left; margin:23px 0 0 88px; padding:0; width:763px;}
+.buttonstopbasket #buttons .btUpdateBasket {margin-left:185px;}
+.buttonstopbasket #buttons .btCheckout {float:right;}
+.buttonstopbasket .paymentInstructions,
+.buttonstopbasket .paypalbtn,
+.buttonstopbasket .paypalselecttext {display:none;}
+
+/* BUTTON ON BOTTOM BASKET */
+/*RT122255*/
+#yourbasket #buttons {float:left; width:938px; padding:0; margin:0;}
+/*RT122255*/
+#yourbasket #buttons .btContinueShopping {}
+/*RT122255*/
+#yourbasket #buttons .btUpdateBasket{margin-left:345px;}
+/*RT122255*/
+/* PAYPAL BUTTON */
+.paypalselecttext {} 
+.paypalbtn {float:right; clear:both; display:block; padding:0; margin:30px 0 0 0;}
+
+#yourbasket .paymentInstructions {clear:both;
+position:relative;
+top:-10px;}
+
+/*-- Bundle Items Table --*/
+#yourbasket .wizrtable tbody tr.defaultbundle td {border-bottom: 1px solid #BDBDBD;}
+#yourbasket .wizrtable tbody tr.bundle td {border-bottom: 1px solid #BDBDBD;}
+#yourbasket .wizrtable tbody tr.productbundlestartrow {background: #EEE;}
+#yourbasket .wizrtable tbody tr.productbundlestartrow td.productbundleheading {font-weight: bold;text-align: left;padding-left: 10px;border-left: 2px solid #BDBDBD;border-right: 2px solid #BDBDBD;height: 30px;}
+#yourbasket .wizrtable tbody tr.productbundleendrow {background: #EEE;height: 30px;}
+#yourbasket .wizrtable tbody tr.productbundleendrow td {border-bottom: 1px solid #BDBDBD;}
+#yourbasket .wizrtable tbody tr.productbundleendrow td.priceeach {font-weight: bold;}
+#yourbasket .wizrtable tbody tr.customisationcostendrow td.bottomrow {border-bottom: 1px solid #BDBDBD;}
+
+/**********************/
+/* Order Confirmation */
+/**********************/
+#orderconfirmation {float:left; width:100%; margin:0 0 30px 0;}
+/*RT122255*/
+#orderconfirmation .Lcat_orcftopcontent {float:left; padding:0 0 0px 1px; margin:0;}
+/*RT122255*/
+#orderconfirmation .Lcat_orcftopcontent .helpinfo {background:#F1F1F1; width:222px; float:left; min-height:156px; height:156px; padding:19px 0 0 11px; margin:0;}
+#orderconfirmation .Lcat_orcftopcontent .helpinfo h2 {font-size:0.9em; color:#333; text-transform:uppercase; padding:0 0 3px 0; margin:0;}
+#orderconfirmation .Lcat_orcftopcontent .helpinfo ul li {text-transform:uppercase; padding:0; margin:0;}
+#orderconfirmation .Lcat_orcftopcontent .helpinfo ul li a {font-size:0.9em; color:#666666;}
+#orderconfirmation .Lcat_orcftopcontent img {float:left;}
+/*RT122255*/
+#orderconfirmation .checkoutorcfL {width:100%; margin:0 auto; clear:both;}
+/*RT122255*/
+#orderconfirmation .checkoutorcfL h1 {font-size:1em; margin:0; padding:0 0 15px 0; text-decoration:none; color:#333; text-transform:capitalize; background:none;}
+/*RT122255*/
+#orderconfirmation .checkoutorcfR {width:100%; margin:0 auto;}
+/*RT122255*/
+/* CONTACT DETAIL */
+#orderconfirmation  .ordersum_name {display:none;}
+/*RT122255*/
+#orderconfirmation  .editbuttons{
+float:left;
+width:100%;
+margin-top:-18px;
+}
+#orderconfirmation #billing_details {background:#E5E5E5; width:50%;float:left;}
+#orderconfirmation #billing_details h2 {background-color:#AFAAA3; color:#FFFFFF; font-size:1em; margin:0 0 7px 0; padding:5px 0 5px 9px; text-decoration:none;}
+#orderconfirmation #billing_details .title {padding:0 0 14px 0;}
+#orderconfirmation #billing_details p {width:150px; padding:0 0 0 10px; color:#333;margin-bottom:0;}
+#orderconfirmation #billingandcontactdetails{background:#E5E5E5 none repeat scroll 0 0;margin:0 0 10px;padding:0 0 10px;overflow:hidden;-float:left;}
+#orderconfirmation #contact_detail {background:#E5E5E5;  width:50%;*width: 49.9%;float:left;}
+#orderconfirmation #billing_details2 {float:left; width:100%;text-align:center;*width: 100%;margin-top:-25px;}
+*html #orderconfirmation #billing_details2 {float:left; width: 100%;}
+.orxfieldsset label.confirmtnc{float:left;
+margin-left:5px;
+width:260px;}
+.orxfieldsset input{float:left;width:auto;}
+/*RT122255*/
+#orderconfirmation #contact_detail h2 {background-color:#AFAAA3; color:#FFFFFF; font-size:1em; margin:0 0 7px 0; padding:5px 0 5px 9px; text-decoration:none;}
+#orderconfirmation #contact_detail .title {padding:0 0 14px 0;}
+#orderconfirmation #contact_detail div {width:132px; padding:0 0 0 10px; color:#333;}
+#orderconfirmation #contact_detail2 {float:right; width:100% !important;text-align:center;margin-top:-10px;}
+*html #orderconfirmation #contact_detail2 {float:left; width:90% !important;}
+
+/* ORDER ITEMS */
+#orderconfirmation  h2.orderlist {background:url(../images/hdr_orderlist.gif) no-repeat left top; display:block; text-indent:-5000px; padding:0; width:763px; height:25px; display:none;}
+/*RT122255*/
+#orderconfirmation  .bottomdashcover {background:#E5E5E5 url(../images/bg_bottomdashcover.gif) repeat-x left top; width:925px; float:left; padding:0 8px 7px 8px; margin:0 0 10px 0;}
+/*RT122255*/
+#orderconfirmation  #bottomdash {width:100%;}
+#orderconfirmation  #bottomdash th {color:#fff; font-size:1em; margin:0; padding:6px 0 12px 0; background:url(../images/bg_hdrorderlist.gif) repeat-x left top; text-align:center;width:250px;}
+#orderconfirmation #bottomdash th.thumb {text-align:left; width:370px;}
+#orderconfirmation #bottomdash th.price,
+#orderconfirmation #bottomdash th.total,
+#orderconfirmation #bottomdash th.avali {width:142px;}
+#orderconfirmation #bottomdash th.qty {width:117px;}
+#orderconfirmation #bottomdash td {background:#fff; border-bottom:1px solid #E5E5E5; color:#333;vertical-align:top; text-align:center;}
+#orderconfirmation #bottomdash td.thumb {width:157px; padding:5px 0; text-align:center;}
+#orderconfirmation #bottomdash td.invtname {text-align:left; width:208px; color:#333;}
+#orderconfirmation #bottomdash td.availability {text-align:left; padding-left:20px;}
+#orderconfirmation #bottomdash td.availability p {padding:0; margin:0;}
+#orderconfirmation #bottomdash td.preorder {width:300px;}
+
+#orderconfirmation #additionalservices h2,
+#checkout .checkoutR h2,
+.orderitems h2 {background-color:#F1F1F1; color:#666666; font-size:1em; margin:0; padding:5px 0 5px 9px; text-decoration:none;}
+
+/* DELIVERY OPTION */
+/*RT122255*/
+#orderconfirmation .content_box_catlist .deliveryopt {background:#E5E5E5; margin:0 0 10px 0; width:100%;}
+/*RT122255*/
+#orderconfirmation .content_box_catlist .delioption {background-color:#AFAAA3; color:#FFFFFF; font-size:1em; margin:0 0 3px 0; padding:5px 0 5px 9px; font-weight:bold;}
+/*RT122255*/
+#orderconfirmation .content_box_catlist table#ordersum_table2 {width:910px; margin:0 0 0 12px;}
+/*RT122255*/
+#orderconfirmation .content_box_catlist td {border-bottom:1px solid #CECECE; padding:5px 0;}
+#orderconfirmation .content_box_catlist td label.bold {position:relative; top:2px;}
+#orderconfirmation .content_box_catlist td a.ship-details {background:url(../images/bullet_moreinfo.gif) no-repeat right 60%; padding:0 15px 0 0; text-transform:capitalize; display:block; float:right;}
+
+#orderconfirmation .deliveryaddress {border: 1px solid #666666; margin-top: 10px; padding-bottom: 10px;}
+#orderconfirmation .deliveryaddress p {padding: 0 10px;}
+#orderconfirmation .deliveryaddress img {padding: 0 10px;}
+#orderconfirmation .deliveryaddress h2, 
+#orderconfirmation .deliveryrate h2, 
+#orderconfirmation .orderitems h2 {background-color:#AFAAA3; color:#FFFFFF; font-size:1em; margin:0; padding:5px 0 5px 9px; text-decoration:none;}
+
+#orderconfirmation .deliveryrate div.Lcat_deliveryoptions {padding: 6px 10px 0 10px;}
+#orderconfirmation .deliveryrate ul {padding: 0 10px;}
+#orderconfirmation .wizrtable thead tr th {text-align: center;}
+#orderconfirmation .wizrtable thead tr th.name {text-align: left;} 
+#orderconfirmation .wizrtable tbody tr td.thumb, 
+#orderconfirmation .wizrtable tbody tr td.priceeach, 
+#orderconfirmation .wizrtable tbody tr td.priceeach, 
+#orderconfirmation .wizrtable tbody tr td.quantity, 
+#orderconfirmation .wizrtable tbody tr td.totalprice {text-align: center;}
+#orderconfirmation .wizrtable tbody tr td.name {text-align: left;}
+#orderconfirmation .wizrtable tbody tr.orsctotal th {text-align: right;}
+#orderconfirmation .wizrtable tbody tr.orsctotal td.basketTot {text-align: left;}
+
+#orderdetail .wrappedmsgtitle, 
+#orderdetail .wrappedmsgheader, 
+#orderconfirmation .wrappedmsgtitle, 
+#orderconfirmation .wrappedmsgheader {font-weight:bold; padding:2px 0 2px 7px;}
+#orderdetail .wrappedmsgcontent,
+#orderconfirmation .wrappedmsgcontent {padding:2px 0 2px 8px;}
+
+#orderconfirmation .title_block {background-color:#AFAAA3; color:#FFFFFF; font-weight:bold; font-size:1em; margin:0; padding:5px 0 5px 9px;}
+#orderconfirmation .notegiftcert {background:#E5E5E5; margin:0 0 10px 0; padding:5px 0 5px 9px;}
+#orderconfirmation td.giftcert {padding:2px 0 2px 8px;}
+
+#orderconfirmation .orderdetails th , #orderconfirmation .orderdetails td.includingVat {padding: 0 0 0 10px;}
+#orderconfirmation th.hdrOrderTotal, #orderconfirmation td.ordertotal {background: #cccccc;}
+
+#orderconfirmation #ordersummary {background:#E5E5E5; margin:0 0 10px 0;}
+#orderconfirmation #ordersummary h2 {background-color:#AFAAA3; color:#FFFFFF; font-size:1em; margin:0 0 4px 0; padding:5px 0 5px 9px; text-decoration:none;}
+/*RT122255*/
+#orderconfirmation #ordersummary #ordersum_table {width:920px; margin:0 0 0 12px;}
+/*RT122255*/
+#orderconfirmation #ordersummary #ordersum_table td {padding:2px 0 2px 0; border-bottom:1px solid #CECECE; font-size:1em; font-weight:normal; color:#333;}
+#orderconfirmation #ordersummary #ordersum_table td.first {text-align:left;}
+#orderconfirmation #ordersummary #ordersum_table td.second {text-align:right;}
+#orderconfirmation #ordersummary #ordersum_table td.ordertotal {padding:4px 0 4px 0; text-align:left; color:#fff; text-transform:uppercase; font-weight:bold; background:#B9A1AC;}
+#orderconfirmation #ordersummary #ordersum_table td.totalprice {padding:4px 0 4px 0; text-align:right; color:#fff; text-transform:uppercase; font-weight:bold; background:#B9A1AC;}
+
+#orderconfirmation #promotions {background:#E5E5E5; margin:0 0 10px 0; padding:0 0 5px 0;}
+#orderconfirmation #promotions h2 {background-color:#AFAAA3; color:#FFFFFF; font-size:1em; margin:0 0 4px 0; padding:5px 0 5px 9px; text-decoration:none;}
+#orderconfirmation #promotions p {width:735px; margin:0 0 0 12px; font-size:1em; color:#333;}
+
+/*RT122255*/
+#orderconfirmation #additionalservices {float:left; margin:0 0 10px 0; padding:0 0 4px 0; background:#E5E5E5; width:100%; }
+/*RT122255*/
+#orderconfirmation #additionalservices ul {margin:0 0 0 16px; padding:0 0 0 0;}
+#orderconfirmation #additionalservices li {margin:10px 0; display:inline; text-transform:capitalize;}
+#orderconfirmation #additionalservices li a {color:#333; font-size:1em;}
+/*RT122255*/
+#orderconfirmation #additionalservices li.giftwrap {background:url(../images/bg_giftwrap.gif) no-repeat left top; height:60px; margin:10px 0; float: left;}
+#orderconfirmation #additionalservices li.giftwrap span.giftmessagelabel { padding:0 50px 0 50px;float:left;}
+/*RT122255*/
+/*#orderconfirmation #additionalservices li.itemship {margin:10px 32px 10px 0;}
+#orderconfirmation #additionalservices li.itemship a {background:url(../images/bg_itemship.gif) no-repeat left top; padding:0 0 0 31px;}*/
+#orderconfirmation #additionalservices li.redeemgift {margin:0 0 10px 0;width:100%; float: left;}
+#orderconfirmation #additionalservices li.redeemgift a {background:url(../images/bg_redeemgift.gif) no-repeat left top; padding:0 0 10px 50px;}
+/*RT122255*/
+#orderconfirmation #additionalservices li.coupon {margin:10px 0 10px 0;width:100%; float: left;}
+#orderconfirmation #additionalservices .orxtgiftmessage{
+float:left;
+padding-bottom:5px;
+}
+.orxtgiftmessage textarea{
+font-size:100%;
+width:520px;
+}
+#orderconfirmation #additionalservices .giftmessageinstructions{
+float:left;
+-clear:both;
+margin:0 0 10px 205px;
+-margin-left:105px;
+}
+#orderconfirmation #additionalservices li.coupon a {background:url(../images/bg_coupon.gif) no-repeat left top; padding:0 0 10px 50px;}
+/*RT122255*/
+
+/*RT122255*/
+#orderconfirmation .paymentinfo {background:#E5E5E5 url(../images/bg_paymentinfo.gif) no-repeat left top; float:left; width:100%; overflow:hidden;}
+#orderconfirmation .paymentinfo .payinfoelements {background:#fff url(../images/bg_payinfoelements.gif) repeat-x left bottom; width:925px; margin:0; margin:35px 0 0 8px; float:left;}
+#orderconfirmation .paymentinfo .Lcat_orcfcoltwo {width:100%; background:#fff; padding:0 0 21px 0; margin:0;}
+/*RT122255*/
+#orderconfirmation .paymentinfo .Lcat_orcfcoltwo .cardbanner {padding:10px 0 0 13px;}
+#orderconfirmation .paymentinfo .Lcat_orcfcoltwo .payinstruction {font-size:0.9em; padding:0 0 0 13px; color:#666;}
+#orderconfirmation .paymentinfo .paytypegroup {float:left; width:50%;}
+#orderconfirmation #paymentdetails {margin:0; padding:0; width:374px; float:left; color:#333;}
+#orderconfirmation #paymentdetails h2 {display:none;}
+#orderconfirmation #paymentdetails p {margin-left: 7px;}
+#orderconfirmation #paymentdetails fieldset.f-payment_details img {display:none;}
+#orderconfirmation #paymentdetails fieldset.f-payment_details {background:url(../images/bg_paytypeline.gif) no-repeat left bottom; padding:0 0 15px 0; margin:0 0 0 5px; width:281px;}
+#orderconfirmation #paymentdetails fieldset.f-payment_details .credit {float:left; padding:0 0 12px 0; *padding:0 0 4px 0; margin:0;}
+#orderconfirmation #paymentdetails fieldset.f-payment_details input#creditcard {float:left;}
+#orderconfirmation #paymentdetails fieldset.f-payment_details .credit label {float:left; padding:2px 0 0 4px; width:170px !important; color:#333;}
+#orderconfirmation #paymentdetails fieldset.f-payment_details input#dontsavecc {margin:0 0 0 7px; float:left;}
+#orderconfirmation #paymentdetails fieldset.f-payment_details label {float:left !important; font-size:0.9em; width:245px !important; color:#666; margin:0 0 0 5px; *margin:0 0 0 3px;}
+#orderconfirmation #paymentdetails fieldset.f-payment_details div {padding:0 0 9px 25px; color:#666;}
+#orderconfirmation #paymentdetails fieldset.f-payment_details div label {font-size:1em; width:88px !important; margin:0 !important;}
+#orderconfirmation #paymentdetails fieldset.f-payment_details div select#cardtype {width:103px;}
+#orderconfirmation #paymentdetails fieldset.f-payment_details div input#ohccnum,
+#orderconfirmation #paymentdetails fieldset.f-payment_details div input#ohccname {width:150px;}
+#orderconfirmation #paymentdetails fieldset.f-payment_details div select#startmonth,
+#orderconfirmation #paymentdetails fieldset.f-payment_details div select#month {width:60px; margin:0 14px 0 0;}
+#orderconfirmation #paymentdetails fieldset.f-payment_details div select#startyear,
+#orderconfirmation #paymentdetails fieldset.f-payment_details div select#year {width:80px;}
+#orderconfirmation #paymentdetails fieldset.f-payment_details div input#ohcccsc {margin:0 3px 0 0;}
+#orderconfirmation #paymentdetails fieldset.f-payment_details div.issuenumber {width:150px;}
+#orderconfirmation #paymentdetails fieldset.f-payment_details div.switchsolo {font-size:0.9em; width:180px; margin:0 0 0 90px;}
+#orderconfirmation #paymentdetails fieldset.f-payment_details div.switchsolo a {font-size:1em;}
+#orderconfirmation #paymentdetails fieldset.f-payment_details div a {text-decoration:underline; font-size:0.9em;}
+#orderconfirmation #paymentdetails fieldset.f-payment_details div div {clear: none; float: left; width: 40%;}
+#orderconfirmation #paymentdetails table {margin-left: 7px;}
+/* additional payment methods */
+#orderconfirmation #paymentdetails fieldset .credit label, 
+#paymentdetails fieldset .po label, 
+#paymentdetails fieldset .send label, 
+#paymentdetails fieldset .manual label, 
+#paymentdetails fieldset .fax label {float: none;}
+#orderconfirmation #paymentdetails .ohponum, #paymentdetails .sendpaypaid, #paymentdetails .payall {width: 100%;}
+#orderconfirmation #paymentdetails fieldset .ohponum label, #paymentdetails fieldset .sendpaypaid label {float: left; width: 40%;}
+
+#orderconfirmation #paymentdetails fieldset.f-paypal {float:left; background:url(../images/bg_paytypeline.gif) no-repeat left bottom; padding:6px 0 6px 0; *padding:6px 0 12px 0; margin:0 0 0 5px; width:281px;}
+#orderconfirmation #paymentdetails fieldset.f-paypal .paypal {float:left; padding:0; margin:0;}
+#orderconfirmation #paymentdetails fieldset.f-paypal .paypal input#formpaypal {float:left;}
+#orderconfirmation #paymentdetails fieldset.f-paypal .paypal label {float:left; width:120px; padding:2px 0 0 4px; color:#666;}
+#orderconfirmation #paymentdetails fieldset.f-paypal .paypal #paypallogo {float:left; margin:0;}
+#orderconfirmation #paymentdetails fieldset.f-paypal .paypaltext {font-size:0.9em; float:left; padding:6px 0 0 19px; width:255px; color:#666;}
+
+#orderconfirmation #paymentdetails fieldset.f-purchaseorder {float:left; width:281px; padding:12px 0 0 0; margin:0 0 0 5px;}
+#orderconfirmation #paymentdetails fieldset.f-purchaseorder .po  {float:left; padding:0 0 9px 0; margin:0;}
+#orderconfirmation #paymentdetails fieldset.f-purchaseorder .po input {float:left;}
+#orderconfirmation #paymentdetails fieldset.f-purchaseorder .po label {float:left; width:190px; padding:2px 0 0 4px; color:#666;}
+#orderconfirmation #paymentdetails fieldset.f-purchaseorder .po .ohponum label {font-size:0.9em; width:60px; float:left; padding:10px 0 0 26px; *padding:10px 0 0 5px; color:#666;}
+#orderconfirmation #paymentdetails fieldset.f-purchaseorder .po .ohponum #ohponum {margin:8px 0 0 0;}
+
+/* PO box */
+.ponumbox {margin:0; padding:0; width:150px; clear:both; position:relative; top:-25px; left:110px;}
+
+#orderconfirmation #contactdetails {width:50%;*width:49.9%; float:left; background:#fff url(../images/bg_billdetail.gif) no-repeat left top;}
+#orderconfirmation #contactdetails h2 {font-size:1em; color:#333; padding:0 0 0 17px; margin:0;}
+#orderconfirmation #contactdetails p {width:180px; font-size:1em; color:#333; padding:0 0 0 17px;}
+/*RT122255*/
+#orderconfirmation #contactdetails a {float:left; outline:0; margin:-34px 0 0 200px;}
+/*RT122255*/
+#orderconfirmation #confirmbox a {text-decoration:underline; text-transform: lowercase;}
+/*RT122255*/
+#orderconfirmation #confirmbox {font-size:0.9em; width:295px; padding:0 0 13px 0; margin:135px 24px 20px 0; text-align:left; color:#666;float:right;-margin-right:10px}
+#orderconfirmation #buttons {padding:0; margin:0 20px 10px 0; width:350px;float:right;}
+/*RT122255*/
+#orderconfirmation .final {display:none;}
+#orderconfirmation .finalstep {text-align:right; width:732px; font-size:0.9em; padding:9px 0 22px 0; margin:0;}
+
+/* GIFT WRAP */
+*html #giftwrap .wizrtable{font-size:1.2em;}
+#giftwrap .wizrtable{font-size:0.9em;}
+#giftwrap .wizrtable thead tr th{background:#AFAAA3;color:#FFF;}
+#giftwrap .wizrtable thead tr th.wrapitem {padding:5px 0 5px 5px;width:220px;}
+#giftwrap .wizrtable thead tr th.productname {width:250px;}
+#giftwrap .wizrtable thead tr th.productprice {width:135px;}
+#giftwrap .wizrtable thead tr th.giftmessage {width:335px;}
+#giftwrap .wizrtable tbody tr td {padding-top:5px;}
+#giftwrap .wizrtable tbody tr td.wrapitem select {width:200px;font-family:arial;font-size:1em;}
+#giftwrap .wizrtable tbody tr td.giftmessage textarea {width:300px;font-family:arial;font-size:1em;}
+
+/* MULTIPLE DELIVERY ADDRESSES */
+#multideladdress .wizrtable thead tr th{background:#AFAAA3;color:#FFF;}
+#multideladdress .wizrtable thead tr th.productname {padding:5px 0 5px 5px;}
+#multideladdress .wizrtable tbody tr td {padding-top:5px;}
+#multideladdress .wizrtable tbody tr td.productname {padding:5px 0 0 5px;}
+#multideladdress #buttons .btUpdate{padding-left:20px;}
+#multideladdress input {font-size:1em;font-family:arial;}
+#multideladdress select {font-size:1em;font-family:arial;}
+
+/* REDEEM GIFT CER */
+#redeemgiftcert h1 {margin:0;padding:0 0 10px 0;}
+#redeemgiftcert fieldset label {width:15%;}
+#redeemgiftcert fieldset {padding:0;}
+#redeemgiftcert input {font-size:1em;font-family:arial;}
+#redeemgiftcert #buttons {padding:0;}
+
+/* REDEEM PROMOTION */
+#redeempromocode h1 {margin:0;padding:0 0 10px 0;}
+#redeempromocode .error {padding:10px 0 10px;}
+#redeempromocode div.left div {padding-top:1px;padding-left:2px;}
+*:first-child + html #redeempromocode div.left div {padding-top:3px;padding-left:2px;}
+*html #redeempromocode div.left div {padding-top:3px;padding-left:2px;}
+#redeempromocode .totaldiscount {padding:10px 0 10px 0;}
+#redeempromocode #buttons {padding:0;}
+#redeempromocode input {font-size:1em;font-family:arial;}
+#redeempromocode input#other {}
+
+/*****************/
+/* ORDER RECEIPT */
+/*****************/
+#orderreceipt {width:100%; float:left;}
+#orderreceipt .checkoutorfnL {width:763px; margin:0 auto;}
+#orderreceipt .checkoutorfnR {margin:auto;float:left;}
+#orderreceipt .Lcat_orfntopcontent {float:left;margin:0;padding:0 0 20px 1px;}
+#orderreceipt .Lcat_orfntopcontent .helpinfo {background:#AFAAA3;float:left;height:156px;margin:0;min-height:156px;
+padding:19px 0 0 11px;width:222px;}
+#orderreceipt .Lcat_orfntopcontent .helpinfo h2 {color:#333333;font-size:0.9em;margin:0;padding:0 0 3px;text-transform:uppercase;}
+#orderreceipt .Lcat_orfntopcontent .helpinfo ul li {margin:0;padding:0;text-transform:uppercase;}
+#orderreceipt .Lcat_orfntopcontent .helpinfo ul li a {color:#FFFFFF;font-size:0.9em;}
+#orderreceipt .Lcat_orfntopcontent img {float:left;}
+
+#orderreceipt .checkoutorfnL h1 {/*padding:0 0 15px 0; margin:0; background:none; color:#333; font-size:1em; text-decoration:none;*/display:none;}
+#orderreceipt p.thankyou,
+#orderreceipt p.email,
+#orderreceipt p.ordernumber {font-size:1em; color:#333; padding:2px 0; margin:0;}
+#orderreceipt span.printicon {padding:2px 0 10px 0; float:left;}
+#orderreceipt .printicon a {font-size:0.9em; margin:0 0 0 5px; color:#333;}
+#orderreceipt #preorder_text{width:500px;display:block;}
+
+/* CONTACT DETAIL */
+#orderreceipt .ordersum_name {display:none;}
+#orderreceipt #contact_detail {background:#E5E5E5; padding:0 0 10px 0; margin:0 0 10px 0; width:762px;}
+#orderreceipt #contact_detail h2 {background-color:#AFAAA3; color:#FFFFFF; font-size:1em; margin:0 0 7px 0; padding:5px 0 5px 9px; text-decoration:none;}
+#orderreceipt #contact_detail .title {padding:0 0 14px 0;}
+#orderreceipt #contact_detail div {width:132px; padding:0 0 0 10px; color:#333;}
+#orderreceipt #contact_detail2 {float:left; margin:-32px 0 0 150px;}
+
+/* ORDER ITEMS */
+#orderreceipt h2.orderlist {background:url(../images/hdr_orderlist.gif) no-repeat left top; display:block; text-indent:-5000px; padding:0; width:763px; height:25px; display:none;}
+#orderreceipt .bottomdashcover {background:#E5E5E5 url(../images/bg_bottomdashcover.gif) repeat-x left top; width:747px; float:left; padding:0 8px 7px 8px; margin:0 0 10px 0;}
+#orderreceipt #bottomdash {width:747px;}
+#orderreceipt #bottomdash th {color:#fff; font-size:1em; margin:0; padding:6px 0 12px 0; background:url(../images/bg_hdrorderlist.gif) repeat-x left top; text-align:center;}
+#orderreceipt #bottomdash th.thumb {text-align:left;}
+#orderreceipt #bottomdash th.price,
+#orderreceipt #bottomdash th.total {width:97px}
+#orderreceipt #bottomdash th.qty {width:70px}
+#orderreceipt #bottomdash th.avali {width:100px;}
+#orderreceipt #bottomdash td {background:#fff; border-bottom:1px solid #E5E5E5; color:#333;}
+#orderreceipt #bottomdash td.thumb {width:132px; padding:5px 0; text-align:center;}
+#orderreceipt #bottomdash td.thumb img {margin-left:6px;}
+#orderreceipt #bottomdash td.invtname {width:260px; padding:0; color:#333;}
+#orderreceipt #bottomdash td.price,
+#orderreceipt #bottomdash td.totalprice {text-align:right; padding:0 25px 0 0;}
+#orderreceipt #bottomdash td.qty {text-align:center;}
+
+#orderreceipt .wrappedmsgtitle, 
+#orderreceipt .wrappedmsgheader {font-weight:bold; padding:2px 0 2px 7px;}
+#orderreceipt .wrappedmsgcontent {padding:2px 0 2px 8px;}
+
+#orderreceipt .title_block {background-color:#AFAAA3; color:#FFFFFF; font-weight:bold; font-size:1em; margin:0; padding:5px 0 5px 9px;clear:both;}
+#orderreceipt .notegiftcert {background:#E5E5E5; margin:0 0 10px 0; padding:5px 0 5px 9px;}
+#orderreceipt td.giftcert {padding:2px 0 2px 8px;}
+
+/* DELIVERY OPTION */
+#orderreceipt .content_box_catlist .deliveryopt {background:#E5E5E5; margin:0 0 10px 0; width:762px;}
+#orderreceipt .content_box_catlist .delioption {background-color:#AFAAA3; color:#FFFFFF; font-size:1em; margin:0 0 3px 0; padding:5px 0 5px 9px; font-weight:bold;}
+#orderreceipt .content_box_catlist .deliveryopt table#ordersum_table2 {width:735px; padding:0; margin:0 0 0 9px;}
+#orderreceipt .content_box_catlist .deliveryopt table#ordersum_table2 td {border-bottom:1px solid #CECECE; padding:5px 0; font-size:1em; font-weight:bold; color:#333;}
+
+#orderreceipt .content_box_catlist .deliveryopt h3 {font-size:1em; color:#333; padding:5px 0 10px 9px; *padding:5px 0 18px 9px; margin:0; 
+display:block; overflow:hidden;}
+
+/* ORDER SUMMARY */
+#orderreceipt #ordersummary {background:#E5E5E5; margin:0 0 10px 0;}
+#orderreceipt #ordersummary h2 {background-color:#AFAAA3; color:#fff; font-size:1em; margin:0 0 4px 0; padding:5px 0 5px 9px; text-decoration:none;}
+#orderreceipt #ordersummary #ordersum_table {width:735px; margin:0 0 0 12px;}
+#orderreceipt #ordersummary #ordersum_table td {padding:2px 0 2px 0; border-bottom:1px solid #CECECE; font-size:1em; font-weight:normal; color:#333;}
+#orderreceipt #ordersummary #ordersum_table td.first {text-align:left;}
+#orderreceipt #ordersummary #ordersum_table td.second {text-align:right;}
+#orderreceipt #ordersummary #ordersum_table td.ordertotal {padding:4px 0 4px 0; text-align:left; color:#fff; text-transform:uppercase; font-weight:bold; background:#B9A1AC;}
+#orderreceipt #ordersummary #ordersum_table td.totalprice {padding:4px 0 4px 0; text-align:right; color:#fff; text-transform:uppercase; font-weight:bold; background:#B9A1AC;}
+
+/* PAYMENT DETAIL */
+#orderreceipt #paymentdetails {margin:0 0 0 0; padding:0 0 10px 0; width:374px; float:left; color:#333; background:#E5E5E5;}
+*html #orderreceipt #paymentdetails {margin:0 0 0 45px;}
+#orderreceipt #paymentdetails h2 {background-color:#AFAAA3; color:#fff; font-size:1em; margin:0 0 4px 0; padding:5px 0 5px 9px; text-decoration:none;}
+#orderreceipt #paymentdetails table {width:374px; padding:0; margin:0 0 0 7px;}
+#orderreceipt #paymentdetails table th {width:90px;}
+#orderreceipt #paymentdetails p {padding:5px 0 5px 9px; float:left;}
+#orderreceipt #paymentdetails #paypallogo {float:left; margin:5px 0 0 10px;}
+#orderreceipt #paymentdetails p span {padding:0 0 0 5px;}
+#orderreceipt #paymentdetails p span br {display:none;}
+
+/* CONTACT DETAILS */
+#orderreceipt #contactdetails {width:373px; float:right; background:#E5E5E5; padding:0 0 5px 0;margin:0 0 0 0;}
+*html #orderreceipt #contactdetails {margin:0 44px 0 0;}
+#orderreceipt #contactdetails h2 {background-color:#AFAAA3; color:#fff; font-size:1em; margin:0 0 7px 0; padding:5px 0 5px 9px; text-decoration:none;}
+#orderreceipt #contactdetails p {width:180px; font-size:1em; color:#333; padding:0 0 0 9px;}
+#orderreceipt #contactdetails a {float:left; outline:0; margin:-18px 0 0 200px;}
+
+#orderreceipt #buttons {display:none;}
+
+#orderreceipt .Lcat_orfncoltwo {float:left;margin:auto;width:763px;}
+
+#orderreceipt #orfnbutton {margin:auto;padding:20px 0;width:763px;}
+
+#orderreceipt #orfnfeatured {display:none;}
+#orderreceipt #orfnfeatprod {width:940px;float:left;padding-top:20px;}
+*html #orderreceipt #orfnfeatprod {width:940px;float:left;padding-top:0;}
+*:first-child + html #orderreceipt #orfnfeatprod {width:940px;float:left;padding-top:0;}
+#orderreceipt #orfnfeatprod h2 {background:#E0E0E0; color:#333; font-size:1em; padding:5px 0 4px 9px; text-transform:uppercase;}
+#orderreceipt #orfnfeatprod ul li {float:left;font-size:0.9em;margin:0 5px 0 0;padding:19px 0 0;width:230px;}
+#orderreceipt #orfnfeatprod ul li .sliderinvtname {display:block; float:left; width:230px; text-align:right;text-transform:uppercase;margin:0;padding:0;}
+#orderreceipt #orfnfeatprod ul li .sliderinvtname a {font-weight:bold;color:#666;}
+#orderreceipt #orfnfeatprod ul li .details {float:right; width:115px; text-align:right;width:110px;}
+#orderreceipt #orfnfeatprod ul li .details .moreinfo{text-transform: lowercase; float: right; }
+#orderreceipt #orfnfeatprod ul li .details .moreinfo a {color: #333;}
+#orderreceipt #orfnfeatprod ul li .details .pricedetail {clear: both;}
+#orderreceipt #orfnfeatprod ul li .details .pricedetail .normalprice {margin: 82px 0 0 0; *margin-top: 67px; padding: 0; font-weight: bold; font-size: 1.1em;}
+#orderreceipt #orfnfeatprod ul li .details .pricedetail .was {margin: 36px 0 0 0; *margin-top: 21px; text-decoration: none;}
+#orderreceipt #orfnfeatprod ul li .details .pricedetail .was span {text-decoration: line-through; font-weight: bold; font-size: 1.1em;}
+#orderreceipt #orfnfeatprod ul li .details .pricedetail .nowprice {padding: 0; margin: 0;}
+#orderreceipt #orfnfeatprod ul li .details .pricedetail .nowprice span {font-weight: bold; font-size: 1.1em;}
+#orderreceipt #orfnfeatprod ul li .details form {width:90px; text-align:right; float:right;}
+#orderreceipt #orfnfeatprod ul li .details #qty {text-align:right; width: 41px; border: 1px solid #CCCCCC; margin-bottom: 2px;}
+#orderreceipt #orfnfeatprod ul li .details .noqtybutton {margin:19px 0 0 0; *margin:22px 0 0 0;}
+#orderreceipt #orfnfeatprod ul li .details .nonpurchasbutton {margin: 0;}
+#orderreceipt #orfnfeatprod ul li .details .nostock {margin: 0;}
+#orderreceipt #orfnfeatprod ul li .details .priceattr .fromprice {margin: 64px 0 0 0; text-transform: uppercase;}
+#orderreceipt #orfnfeatprod ul li .details .priceattr .fromprice span {font-weight: bold; font-size: 1.1em;}
+
+#orderreceipt #orfnfeatprod ul li .details .priceattr .fromsaleprice {margin: 65px 0 0 0; color: #CC0000; text-transform: uppercase;}
+#orderreceipt #orfnfeatprod ul li .details .priceattr .fromsaleprice span {font-weight: bold; font-size: 1.1em;}
+
+
+#orderreceipt #orfnfeatprod ul li .details .priceattr .attrmoreinfo {margin: 21px 0 0 0; *margin-top: 22px;}
+#orderreceipt #orfnfeatprod ul li .image {float:left; }
+
+/* instore/wes styles for search form and results */
+#searchUser h2, #searchResults h2 {margin:0;padding:5px 0pt 5px 4px;border-color:#000000;background-color:#666666;color:#FFFFFF;font-size:1.5em;}
+#searchResultsTable {height:150px;overflow:auto;}
+#searchResultsTable th, #searchResultsTable td {padding:2px 8px;}
+#searchResults a {cursor:pointer;}
+
+
+/* Product Related on My Basket */
+.checkoutL #irelslider {float:left; width:939px; margin:55px 0 22px 0;}
+.checkoutL #irelslider h2 {background:#E0E0E0; color:#333333; font-size:1em; padding:5px 0 4px 9px; text-transform:uppercase;}
+.checkoutL #irelslider #irelsliderlist {/*set ul width to high number so we are able to "slide" using overflow:hidden*/ width:2700px;}
+.checkoutL #irelslider .slidewrapper {width:919px; margin:0; position:relative; float:left; overflow:hidden;}
+.checkoutL #irelslider ul#irelsliderlist h2.icatname{display:none;}
+.checkoutL #irelslider ul#irelsliderlist li {float:left; width:220px; padding:19px 0 0 0; margin:0 5px 0 5px;}
+.checkoutL #irelslider ul#irelsliderlist li .sliderinvtname {display:block; float:left; width:220px; text-align:right;}
+.checkoutL #irelslider ul#irelsliderlist li .sliderinvtname a {font-weight:bold; text-transform:lowercase; color:#666;}
+.checkoutL #irelslider ul#irelsliderlist li .details {float:right; width:90px;}
+.checkoutL #irelslider ul#irelsliderlist li .details form {width:90px; text-align:right; float:right;}
+.checkoutL #irelslider ul#irelsliderlist li .details #qty {text-align:right;}
+.checkoutL #irelslider ul#irelsliderlist li .details .noqtybutton {margin:19px 0 0 0; *margin:22px 0 0 0;}
+.checkoutL #irelslider ul#irelsliderlist li .details .fromprice {margin:50px 0 20px;}
+
+.checkoutL #irelslider .slide {float:left; top:70px; position:relative; cursor:pointer;}
+.checkoutL #irelslider .btn {width: 16px; float: left; border: solid 1px white;}
+
+.headbox {margin:0 0 30px 0;}
+
+#orderdetail .bottomdashcover table tbody tr td.giftmessage {border-left:11px solid #E5E5E5;}
+
+td.quantity input {width:30px;} /*All browser*/ 
+/*\*/ 
+html* td.quantity input {width:30px;} { 
+width:30px;    /*Safari for Macintosh only (v1-3), IE7,IE6*/ 
+]width:30px;;    /*IE7,IE6*/ 
+}/**/ 
+*html td.quantity input {width:35px;} { 
+width:30px;   /*IE6*/ 
+} 
+
+/*RT141774*/
+.expresscheckout{
+	float:right;
+	width:425px;
+	background:#E6E6E6;
+	padding:32px 0 0 0;
+}
+
+.expresscheckout h2{
+	padding:0 0 0 10px;
+}
+
+.expresscheckout p{
+	padding:0 0 0 10px;
+}
+.expresscheckout  #buttons{
+	width:400px;
+}
+.signin .expresscheckout  #buttons{
+	padding-top:27px;
+}
+.signin #exisitinguser #buttons{
+	padding:38px 0 10px 0;
+}
+.signin #exisitinguser #buttons,  x:-moz-any-link, x:default  { padding:44px 0 10px 0; }
+
+.signin #buttons2{
+	padding:0;
+}
+.notregistertxt{
+	padding:20px 10px 5px;
+}
+.notregister{
+	margin:30px 0 0 0;
+	height:113px;
+}
+fieldset.f-loginemail div{
+	padding:30px 0;
+}
+.signin fieldset.f-loginiam .registered{
+	border:none;
+}
+.signin fieldset.f-loginiam {
+	border:none;
+}
+.registercontent #buttons fieldset {
+	text-align:right;
+	float:right;
+}

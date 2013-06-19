@@ -1,0 +1,24 @@
+<html>
+<head>
+	<title><venda_ebizname> Refund Details</title>
+</head>
+<body>
+
+<div id="emailBody">
+<venda_inctemplate name=htmlEmailCssEtc,type=includes/email>
+<div id="logo">
+	<venda_inctemplate name=htmlEmailLogo,type=includes/email>
+	<h1>Refund Confirmation - <venda_ohordnum></h1>
+	<div class="clear"> </div>
+</div>
+
+<venda_inctemplate name=htmlEmailHeader,type=includes/email>
+
+<p>We thought you would like to know that a refunded has been processed for <strong><venda_currsym><venda_refamt></strong> for order #<venda_ohordnum>.</p>
+
+<p>Please allow 3-5 working days for the refund to appear in your account.</p>
+
+<venda_inctemplate name=htmlEmailFooter,type=includes/email>
+</div>
+</body>
+</html>

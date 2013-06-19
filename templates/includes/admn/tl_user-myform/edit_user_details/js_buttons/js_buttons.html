@@ -1,0 +1,140 @@
+<SCRIPT type="text/javascript">
+<!-- Hide
+// isRequiredField - this param is set to 'true' when country field is 'US', for validating State and Zipcode
+var isRequiredField = false;
+function CheckFields(form1) {
+
+        if (form1.fname.value == "") {
+                alert("<venda_text id=site.my_account.edit_user_details.edit_contact_details.js_validation.first_name>");
+                return;
+        }
+
+        if (form1.lname.value == "") {
+                alert("<venda_text id=site.my_account.edit_user_details.edit_contact_details.js_validation.last_name>");
+                return;
+        }
+<venda_block label=88,mode=value,<venda_setting type=ebiz,name=nohousenum>!=1>
+        if (form1.num.value == "") {
+                alert("<venda_text id=site.my_account.edit_user_details.edit_contact_details.js_validation.num>");
+                return;
+        }
+</venda_block label=88>
+        if (form1.addr1.value == "") {
+                alert("<venda_text id=site.my_account.edit_user_details.edit_contact_details.js_validation.addr1>");
+                return;
+        }
+
+        if (form1.city.value == "") {
+                alert("<venda_text id=site.my_account.edit_user_details.edit_contact_details.js_validation.city>");
+                return;
+        }
+        if(isRequiredField){
+        	if (form1.statelist.value == "") { 
+                alert('<venda_text id=site.my_account.edit_user_details.edit_contact_details.js_validation.state>');
+                return ; 
+            }
+
+        }
+        	if (form1.zipc.value == "") { 
+                alert('<venda_text id=site.singlesteppc_lookup.contact_address.delivery_address.js_validation.zipc>');
+                return ; 
+            }
+		if (form1.cntry.value == "") {
+                alert("<venda_text id=site.my_account.edit_user_details.edit_contact_details.js_validation.cntry>");
+                return;
+        }
+        <venda_block label=100,mode=value,<venda_setting type=ebiz,name=hidearea>!=1>
+        if (form1.area.value == "") {
+                alert("<venda_text id=site.my_account.edit_user_details.edit_contact_details.js_validation.area>");
+                return;
+        }
+        </venda_block label=100>
+        if (form1.phone.value == "") {
+                alert("<venda_text id=site.my_account.edit_user_details.edit_contact_details.js_validation.phone>");
+                return;
+        }
+		
+		// strip hyphens
+		<venda_block label=101,mode=value,<venda_setting type=ebiz,name=hidearea>!=1>form1.area.value=form1.area.value.replace(/-/g,"");</venda_block label=101>
+		form1.phone.value=form1.phone.value.replace(/-/g,"");
+		// strip whitespace
+		<venda_block label=102,mode=value,<venda_setting type=ebiz,name=hidearea>!=1>form1.area.value=form1.area.value.replace(/ /g,"");</venda_block label=102>
+		form1.phone.value=form1.phone.value.replace(/ /g,"");
+		// phone number validation
+		// not alpha characters
+		var filterNumber = /[^\d]/;
+        <venda_block label=103,mode=value,<venda_setting type=ebiz,name=hidearea>!=1>
+		if (filterNumber.test(form1.area.value)==true) {
+			alert("<venda_text id=site.my_account.edit_user_details.edit_contact_details.js_validation.area_digits>");
+			form1.area.focus();
+			return false;
+		}
+        </venda_block label=103>
+		if (filterNumber.test(form1.phone.value)==true) {
+			alert("<venda_text id=site.my_account.edit_user_details.edit_contact_details.js_validation.phone_digits>");
+			form1.phone.focus();
+			return false;
+		}
+
+		// fax number validation if present
+		<venda_block label=155,mode=value,<venda_setting type=ebiz,name=showfax>=1>
+		// strip hyphens
+		<venda_block label=104,mode=value,<venda_setting type=ebiz,name=hidearea>!=1>form1.farea.value=form1.farea.value.replace(/-/g,""); </venda_block label=104>
+		form1.fax.value=form1.fax.value.replace(/-/g,"");
+		// strip whitespace
+		<venda_block label=105,mode=value,<venda_setting type=ebiz,name=hidearea>!=1>form1.farea.value=form1.farea.value.replace(/ /g,""); </venda_block label=105>
+		form1.fax.value=form1.fax.value.replace(/ /g,"");
+        <venda_block label=205,mode=value,<venda_setting type=ebiz,name=hidearea>!=1>
+		if (form1.farea.value != "") {
+			if (filterNumber.test(form1.farea.value)==true) {
+				alert("<venda_text id=site.my_account.edit_user_details.edit_contact_details.js_validation.farea_digits>");
+				form1.farea.focus();
+				return false;
+			}
+        </venda_block label=205>
+			if (filterNumber.test(form1.fax.value)==true) {
+				alert("<venda_text id=site.my_account.edit_user_details.edit_contact_details.js_validation.fax_digits>");
+				form1.fax.focus();
+				return false;
+			}
+        <venda_block label=206,mode=value,<venda_setting type=ebiz,name=hidearea>!=1>}</venda_block label=206>
+		</venda_block label=155>
+		
+	form1.submit();
+}
+//End Javascript-->
+</SCRIPT>
+
+<div id="buttons">
+<a href="<venda_dispview page=myaccount>"><img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/bt_backtomyaccount.gif" alt="<venda_text id=site.button.back_to_my_account>" border="0" class="left"></a>
+<input type="image" onClick="CheckFields(document.form); return false;" src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/bt_continue.gif" alt="<venda_text id=site.button.continue>" class="right">
+</div>
+
+<script type="text/javascript">
+function swapLabel(){
+        var stateLabel = document.getElementById("stateLabel");
+        var zipcLabel = document.getElementById("zipcLabel");
+        var cntryLabel = document.getElementById("countryLabel");
+        var country = document.getElementById("cntrylist");
+
+	if(country == undefined) { return; } //if country is undefined do nothing
+
+                if(country.value == "United States"){
+                        stateLabel.innerHTML = '<venda_text id=site.contact_address.label.us_state>:<span class="re-waiHide"> (required)</span> <span class="required">*</span>';
+                        zipcLabel.innerHTML = '<venda_text id=site.contact_address.zipc.us_zipcode>:<span class="re-waiHide"> (required)</span> <span class="required">*</span>';
+                        isRequiredField = true;
+                }
+                else if(country.value == "United Kingdom"){
+                        stateLabel.innerHTML = '<venda_text id=site.contact_address.label.uk_county>:';
+                        zipcLabel.innerHTML = '<venda_text id=site.contact_address.zipc.non_us_postcode>:<span class="re-waiHide"> (required)</span> <span class="required">*</span>';
+                        isRequiredField = false;
+                }
+                else {
+                        stateLabel.innerHTML = '<venda_text id=site.contact_address.label.non_us_uk_region>:';
+                        zipcLabel.innerHTML = '<venda_text id=site.contact_address.zipc.non_us_postcode>:';
+                        isRequiredField = false;
+                }
+}
+                window.onload = swapLabel;
+                addEvent(document.form.cntry, 'change', swapLabel, true);
+</script>

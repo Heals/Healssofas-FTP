@@ -1,0 +1,126 @@
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-350601-11']);
+  _gaq.push(['_trackPageview']);    
+    <venda_tpcomment>/*Set custom variable slots 2-5. N.B. Slot 1 is reserved for mobile site detection*/</venda_tpcomment>
+    <venda_block label=loggedin,ustype=R>
+    <venda_tpcomment>/* record logged in users using session customvar */</venda_tpcomment>
+    _gaq.push(['_setCustomVar',2,'Logged In','True',2]);
+    </venda_block label=loggedin>
+    
+    <venda_block label=multi,isinternational=1>
+    <venda_tpcomment>/* record language using session customvar */</venda_tpcomment>
+    _gaq.push(['_setCustomVar',3,'Language','<venda_sessionlanguage>',2]);
+    <venda_tpcomment>/* record region using session customvar */</venda_tpcomment>
+    _gaq.push(['_setCustomVar',4,'Region','<venda_sessionlocation>',2]);
+    </venda_block label=multi>
+    
+    <venda_tpcomment>/*Track Carts*/</venda_tpcomment> 
+    jQuery('body').bind('minicart-items-added', function() {
+        _gaq.push(['_setCustomVar',5,'Cart','Created',1]);
+        _gaq.push(['_trackEvent','Shopping','Add to Cart',jQuery('#tag-invtname').text()]);
+    });
+    
+    if(typeof Venda.Widget.Tracking != 'undefined'){
+    <venda_tpcomment>/*Check resources/js/Venda/Widget/Tracking.js is loaded*/</venda_tpcomment>
+        if(Venda.Widget.Tracking.Step()){
+            
+            <venda_tpcomment>//Delete shopping cart custom var on empty cart</venda_tpcomment>
+            if(Venda.Widget.Tracking.Step()==='shopcart/shopcart/empty'){
+                _gaq.push(['_deleteCustomVar', 5]);
+            }
+        <venda_tpcomment>/*Track workflow steps as Virtual Pageviews*/</venda_tpcomment>
+            _gaq.push(['_trackPageview', Venda.Widget.Tracking.Step()]); 
+        }
+        else{
+        <venda_tpcomment>/*Track standard Pageviews if not on a workflow step*/</venda_tpcomment>
+            _gaq.push(['_trackPageview']);
+        }
+        if(typeof Venda.Widget.Tracking.orderJSON != 'undefined'){
+        <venda_tpcomment>/*Ecommerce tracking on order receipt uses vars set in includes/orderDetails*/</venda_tpcomment>
+        
+        <venda_tpcomment>//Delete shopping cart custom var on order receipt</venda_tpcomment>
+        _gaq.push(['_deleteCustomVar', 5]);  
+        
+        var trk = Venda.Widget.Tracking.orderJSON,
+            items = Venda.Widget.Tracking.orditemsArray,
+            ordID = trk.ref + '-' + trk.currency;<venda_tpcomment>/*Append currency to transaction ID*/</venda_tpcomment>
+        
+        <venda_tpcomment>/*Track order*/</venda_tpcomment>
+        _gaq.push(['_addTrans',ordID,trk.store,trk.total,trk.tax,trk.shipping,trk.city,trk.state,trk.country]);
+
+            for (var i=0; i < items.length; i++){   
+            
+            <venda_tpcomment>/*Append attributes and giftwrap to item name*/</venda_tpcomment>
+            var oiname = items[i].name;
+            if(items[i].attributes.att1!=''){oiname += ' ' + items[i].attributes.att1}
+            if(items[i].attributes.att2!=''){oiname += ' ' + items[i].attributes.att2}
+            if(items[i].attributes.att3!=''){oiname += ' ' + items[i].attributes.att3}
+            if(items[i].attributes.att4!=''){oiname += ' ' + items[i].attributes.att4}
+            if(items[i].giftwrap!=''){oiname += ' Gift Wrapped (' + items[i].giftwrap + ')';}
+            
+            <venda_tpcomment>/*Add product type and brand to category name*/</venda_tpcomment>
+            var cat;
+            cat = items[i].type;
+            if(items[i].brand){cat += ' by ' + items[i].brand;}
+            cat += ' in ' + items[i].category;
+
+            <venda_tpcomment>/*Track order items*/</venda_tpcomment>
+            _gaq.push(['_addItem',ordID,items[i].sku,oiname,cat,items[i].price,items[i].qty]);
+            }
+            _gaq.push(['_trackTrans']);
+            
+        }
+    }
+    else{
+    <venda_tpcomment>/*Track standard Pageviews - fallback in case resources/js/Venda/Widget/Tracking.js is not present*/</venda_tpcomment>
+        _gaq.push(['_trackPageview']);
+    }
+    
+    (function ($) {
+    <venda_tpcomment>/* Log all jQuery AJAX requests to Google Analytics. See www.alfajango.com/blog/track-jquery-ajax-requests-in-google-analytics*/</venda_tpcomment>
+    $(document).ajaxSend(function(event, xhr, settings){
+    if (typeof _gaq !== "undefined" && _gaq !== null) {
+    _gaq.push(['_trackPageview', settings.url]);
+    }
+    });
+    })(jQuery);
+    
+    <venda_tpcomment>/* Track clicks as Events */</venda_tpcomment>
+    jQuery('[data-trackEvent]').click(function(){gaEventTrack(this);});
+    jQuery('.ui-dialog [data-trackEvent]').live('click', function() {gaEventTrack(this);});
+    function gaEventTrack(btn){
+        var $this = jQuery(btn),
+            category = $this.attr('data-trackEvent'),
+	    tag = $this.prop('tagName');
+        switch (tag) {
+        case 'IMG':
+            var label = $this.attr('src');
+            break;
+        case 'A':
+            var label = $this.text();
+            break;
+        case 'INPUT':
+            var label = $this.val();
+            break;
+        default:
+            var label = $this.attr('id');
+        }
+    _gaq.push(['_trackEvent', category, 'Click', label]);
+    }
+    
+    <venda_tpcomment>/* Track all links within a container as Events - e.g. add one data-trackNav parameter to a ul to track links within list */</venda_tpcomment>
+    jQuery('[data-trackNav] a').click(function(){
+    var Nav = jQuery('[data-trackNav]').attr('data-trackNav');
+    gaNavTrack(Nav,this);});
+    function gaNavTrack(category,link){
+        var label = link.pathname;
+        _gaq.push(['_trackEvent', category, 'Click', label]);
+    }
+    
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>

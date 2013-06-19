@@ -1,0 +1,23 @@
+<html>
+<head>
+<title><venda_ebizname> Account Locked</title>
+</head>
+<body>
+<div id="emailBody">
+    <venda_inctemplate name=htmlEmailCssEtc,type=includes/email>
+    <div id="logo">
+        <venda_inctemplate name=htmlEmailLogo,type=includes/email>
+        <h1>Account Locked</h1>
+        <div class="clear">&nbsp;</div>
+    </div>
+
+    <venda_inctemplate name=htmlEmailHeader2,type=includes/email>
+    <p>Your account to <a href="<venda_serveradd>"><venda_ebizname></a> has been locked due to multiple failed log in attempts.</p>
+    <p>Email Address: <strong><venda_block label=1,usemail=notnull><venda_usemail></venda_block label=1><venda_block label=2,usemail=null,uslogin=notnull><venda_uslogin></venda_block label=2></strong></p>
+	<p>If you have forgotten your log in details please go to the <a href="<venda_serveradd>/bin/venda?ex=co_wizr-passwordreminder&bsref=<venda_ebizref>">Password Reminder</a> page. Your details will be sent to you and the account will be unlocked.</p>
+	<p>Alternatively contact customer services on <venda_ebizphone> or by email on <venda_ebizemail>.</p>
+
+    <venda_inctemplate name=htmlEmailFooter,type=includes/email>
+</div>
+</body>
+</html>

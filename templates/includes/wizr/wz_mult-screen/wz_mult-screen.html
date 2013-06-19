@@ -1,0 +1,215 @@
+<venda_tpxt mode=set,name=producttype,value=<venda_invtivtype>>
+<venda_detblock2>
+<!-- Case of DDSD Furniture and Furniture Range SKUs (i.e. furniture) -->
+	<venda_block label=511,mode=value,<venda_invtivtype>=range,<venda_invtivtype>=gardenfurniturerange,<venda_invtivtype>=furniturerange,<venda_invtivtype>=furniture,operator=or>
+			<tr valign='top' id="row-<venda_rows>" class="row_<venda_itemcount>">
+			<td class="grid-images" align="center"><div class="attr-two-link"><venda_rows></div></td>
+			<td class="bold grey666" width="476" height="60">
+				<venda_block label=212,rows=unpub><style>#row-<venda_rows>{display:none;}</style></venda_block label=212>
+				<venda_block label=278,rows!=unpub><venda_invtatr1></venda_block label=278>
+			</td>
+			
+			<venda_block label=405,rows!=notav,rows!=unpub>
+				<venda_block label=1237,mode=value,<venda_tpxt mode=get,name=producttype>=normal,<venda_tpxt mode=get,name=producttype>=range,operator=or>
+
+					<venda_block label=1236,invtavail&gt;0>
+						<venda_block label=123,invtatretadyleft&lt;1>
+							<td width="116" class="grey666 center">
+								<p id="invt<venda_rows>"><venda_page page=11></p><!-- In Stock --><!-- Available in 1-2 weeks -->
+							</td>
+						</venda_block label=123>					
+						<venda_block label=12345,invtatretadyleft&gt;0>
+							<td width="116" class="grey666 center">
+								<p id="invt<venda_rows>"><venda_page page=12></p><!-- Available in 1 - 2 weeks -->
+							</td>
+						</venda_block label=12345>
+					</venda_block label=1236>
+					<venda_block label=1236,invtavail&lt;0,invtavail=0,invtavail=null,operator=or>
+						<venda_block label=1234,invtatretadyleft&gt;0>
+							<td width="93" class="grey666 center">				
+														<p style="margin:0px;" id="invt<venda_rows>"><venda_page page=13> <venda_block label=33213,invtatretawkleft=1>1 - 3 weeks</venda_block label=33213><venda_block label=33214,invtatretawkleft=2>2 - 4 weeks</venda_block label=33214><venda_block label=33215,invtatretawkleft=3>3 - 5 weeks</venda_block label=33215><venda_block label=33216,invtatretawkleft=4>4 - 6 weeks</venda_block label=33216><venda_block label=33217,invtatretawkleft=5>5 - 7 weeks</venda_block label=33217><venda_block label=33218,invtatretawkleft=6>6 - 8 weeks</venda_block label=33218><venda_block label=33219,invtatretawkleft=7>7 - 9 weeks</venda_block label=33219><venda_block label=33220,invtatretawkleft=8>8 - 10 weeks</venda_block label=33220><venda_block label=33221,invtatretawkleft=9>9 - 11 weeks</venda_block label=33221><venda_block label=33222,invtatretawkleft=10>10 - 12 weeks</venda_block label=33222><venda_block label=33223,invtatretawkleft=11>11 - 13 weeks</venda_block label=33223><venda_block label=33224,invtatretawkleft=12>12 - 14 weeks</venda_block label=33224><venda_block label=33225,invtatretawkleft=13>13 - 15 weeks</venda_block label=33225><venda_block label=33226,invtatretawkleft=14>14 - 16 weeks</venda_block label=33226><venda_block label=33227,invtatretawkleft&gt;14>Over 15 weeks</venda_block label=33227></p><!-- Awaiting Stock -->
+							</td>
+						</venda_block label=1234>
+						<venda_block label=000,invtatretadyleft=null,invtatretadyleft&lt;1,operator=or>
+							<td width="90" class="grey666 center">
+							<p id="invt<venda_rows>"><venda_page page=14></p><!-- Out of Stock -->
+							</td>
+						</venda_block label=000>
+					</venda_block label=1236>
+					<input type="hidden" name="itemlist" value="<venda_rows>">
+				</venda_block label=1237>
+				<venda_block label=237,mode=value,<venda_tpxt mode=get,name=producttype>=furniture,<venda_tpxt mode=get,name=producttype>=furniturerange,<venda_tpxt mode=get,name=producttype>=gardenfurniture,<venda_tpxt mode=get,name=producttype>=gardenfurniturerange,operator=or>
+	
+					<venda_block label=111,invtavail&gt;0>
+						<venda_block label=1234,invtatretadyleft=null,invtatretadyleft&lt;1,operator=or>
+							<td width="116" class="grey666 center">
+							<p id="invt<venda_rows>"><venda_page page=21></p>
+							<!-- Available in 2 - 4 weeks -->
+							</td>
+						</venda_block label=1234>
+						<venda_block label=1234,invtatretadyleft&gt;0>
+							<td width="116" class="grey666 center">
+							<p style="margin:0px;" id="invt<venda_rows>"><venda_page page=22> <venda_block label=33213,invtatretawkleft=1>1 - 3 weeks</venda_block label=33213><venda_block label=33214,invtatretawkleft=2>2 - 4 weeks</venda_block label=33214><venda_block label=33215,invtatretawkleft=3>3 - 5 weeks</venda_block label=33215><venda_block label=33216,invtatretawkleft=4>4 - 6 weeks</venda_block label=33216><venda_block label=33217,invtatretawkleft=5>5 - 7 weeks</venda_block label=33217><venda_block label=33218,invtatretawkleft=6>6 - 8 weeks</venda_block label=33218><venda_block label=33219,invtatretawkleft=7>7 - 9 weeks</venda_block label=33219><venda_block label=33220,invtatretawkleft=8>8 - 10 weeks</venda_block label=33220><venda_block label=33221,invtatretawkleft=9>9 - 11 weeks</venda_block label=33221><venda_block label=33222,invtatretawkleft=10>10 - 12 weeks</venda_block label=33222><venda_block label=33223,invtatretawkleft=11>11 - 13 weeks</venda_block label=33223><venda_block label=33224,invtatretawkleft=12>12 - 14 weeks</venda_block label=33224><venda_block label=33225,invtatretawkleft=13>13 - 15 weeks</venda_block label=33225><venda_block label=33226,invtatretawkleft=14>14 - 16 weeks</venda_block label=33226><venda_block label=33227,invtatretawkleft&gt;14>Over 15 weeks</venda_block label=33227></p><!-- Available in 4 - 10 weeks -->
+
+							</td>
+						</venda_block label=1234>
+					</venda_block label=111>
+					<venda_block label=222,invtavail&lt;0,invtavail=0,invtavail=null,operator=or>
+						<venda_block label=1234,invtatretadyleft&gt;0>
+							<td width="116" class="grey666 center">
+							<p style="margin:0px;" id="invt<venda_rows>"><venda_page page=23> <venda_block label=33213,invtatretawkleft=1>1 - 3 weeks</venda_block label=33213><venda_block label=33214,invtatretawkleft=2>2 - 4 weeks</venda_block label=33214><venda_block label=33215,invtatretawkleft=3>3 - 5 weeks</venda_block label=33215><venda_block label=33216,invtatretawkleft=4>4 - 6 weeks</venda_block label=33216><venda_block label=33217,invtatretawkleft=5>5 - 7 weeks</venda_block label=33217><venda_block label=33218,invtatretawkleft=6>6 - 8 weeks</venda_block label=33218><venda_block label=33219,invtatretawkleft=7>7 - 9 weeks</venda_block label=33219><venda_block label=33220,invtatretawkleft=8>8 - 10 weeks</venda_block label=33220><venda_block label=33221,invtatretawkleft=9>9 - 11 weeks</venda_block label=33221><venda_block label=33222,invtatretawkleft=10>10 - 12 weeks</venda_block label=33222><venda_block label=33223,invtatretawkleft=11>11 - 13 weeks</venda_block label=33223><venda_block label=33224,invtatretawkleft=12>12 - 14 weeks</venda_block label=33224><venda_block label=33225,invtatretawkleft=13>13 - 15 weeks</venda_block label=33225><venda_block label=33226,invtatretawkleft=14>14 - 16 weeks</venda_block label=33226><venda_block label=33227,invtatretawkleft&gt;14>Over 15 weeks</venda_block label=33227></p><!-- Special Order -->
+
+							</td>
+						</venda_block label=1234>
+						<venda_block label=1234,invtatretadyleft=null,invtatretadyleft&lt;1,operator=or>
+							<td width="116" class="grey666 center">
+							<p id="invt<venda_rows>"><venda_page page=24></p><!-- Out of Stock  -->
+							</td>
+						</venda_block label=1234>
+					</venda_block label=222>
+					<input type="hidden" name="itemlist" value="<venda_rows>">
+				</venda_block label=237>
+			</venda_block label=405>
+
+			<venda_block label=405,rows=notav,rows=unpub,operator=or>
+				<td width="10%" class="center grey666">Not Available</td>
+				<td width="10%"><venda_currsym><venda_invtatrsell></td>
+				<td colspan="2" class="rightnone grey666 center">&nbsp;</td>
+			</venda_block label=405>
+				
+			<!-- can't preorder -->
+			<!--  venda_invtpreorder=<venda_invtpreorder><BR>  -->
+			<venda_block label=406,invtpreorder=0,invtpreorder=null,operator=or>
+			<!-- have no preorder  -->
+			<!-- invtavail=<venda_invtavail> -->
+				<venda_block label=409,rows!=unpub>
+					<!-- PRICE start--> 
+					<venda_block label=181,invtatrsell&gt;0>					
+						<venda_block label=188,mode=value,<venda_invtatrwas>=null,<venda_invtatrwas>=0.00,<venda_invtatrwas>=0,<venda_invtatrwas>&lt;<venda_invtatrsell>,<venda_invtatrwas>=<venda_invtatrsell>,operator=or>				
+						<td width="90" align="center"><div class="price"><venda_currsym><venda_invtatrsell></div></td>
+						</venda_block label=188>						
+						<venda_block label=182,mode=value,<venda_invtatrwas>&gt;<venda_invtatrsell>,<venda_invtatrwas>=notnull,<venda_invtatrwas>&gt;0.00>		
+						<td width="90" align="center">
+						<div class="wasprice">Was<br class="clear-all"><span class="was"><venda_currsym><venda_invtatrwas></span></div>
+						<div class="nowprice red">Now<br class="clear-all"><span><venda_currsym><venda_invtatrsell></span></div>
+						</td>
+						</venda_block label=182>
+					</venda_block label=181>
+					
+					<venda_block label=83,invtatrsell=null,invtatrsell=0.00,operator=or>
+						<venda_block label=188,mode=value,<venda_invtwas>=null,<venda_invtwas>=0.00,<venda_invtwas>=0,operator=or>
+							<td width="93" align="center"><venda_invtsymsell></td>
+						</venda_block label=188>
+						<venda_block label=182,mode=value,<venda_invtwas>=notnull,<venda_invtwas>!=0.00,<venda_invtwas>!=0>
+							<td width="93 align="center">
+							<div class="wasprice">Was<br class="clear-all"><span class="was"><venda_currsym><venda_invtatrwas></span></div>
+							<div class="nowprice red">Now<br class="clear-all"><span><venda_invtsymsell></span></div>
+							<!-- <div class="price"><p class="red">Now</p><venda_invtsymsell></div> -->
+							</td>
+						</venda_block label=182>
+					</venda_block label=83>
+					<!-- PRICE Finished-->
+					
+					<!-- QTY Start -->
+						<!-- if in stock -->
+						<venda_block label=251,invtavail&gt;0>
+							<td width="90" class="rightnone" align="center"><input  name="qtylist" value="1" id="qty<venda_rows>" type="text" size="3" maxlength="3" class="invt_qtybox"><label for="qty" class="bold"> Qty</label></td>
+							
+							<td width="153" class="lastgridcolumn" align="right">
+							<textarea class="hide" id="thiscurattr<venda_rows>"><venda_invtatr1></textarea>
+								<a href="#" onClick="availsetcookie();addAttrItem('<venda_rows>');return false;" title="Add to basket"><img title="Add to basket" class="padding_T5" border="0"></a>
+															</td>
+					</venda_block label=251>
+					<venda_block label=252,invtavail&lt;1,invtavail=null,operator=or>
+						<venda_block label=1234,invtatretadyleft&gt;0>
+							<td width="90" align="center"><input  name="qtylist" value="1" id="qty<venda_rows>" type="text" size="3" maxlength="3" class="invt_qtybox"><label for="qty" class="bold"> Qty</label></td>
+							
+							<td width="153" class="lastgridcolumn" align="right">
+							<textarea class="hide" id="thiscurattr<venda_rows>"><venda_invtatr1></textarea>
+								<a href="#" onClick="availsetcookie();addAttrItem('<venda_rows>');return false;" title="Add to basket"><img title="Add to basket" class="padding_T5" border="0"></a>
+                            </td>
+						</venda_block label=1234>
+						<venda_block label=1234,invtatretadyleft=null,invtatretadyleft&lt;1,operator=or>
+							<td colspan="2" class="grey666" valign="top" align="right">			
+								<a href="<venda_dispview invt=<venda_invtref>>&temp=emailinstock" title="<venda_text id=site.link.title.email_when_in_stock.invt>" id="ln<venda_rows>"><img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/bt_emailme.gif" border="0" class="mailme" alt="<venda_text id=site.link.title.email_when_in_stock.invt>"></a>
+							</td>
+						</venda_block label=1234>
+					</venda_block label=252>
+				</venda_block label=409>
+			</venda_block label=406>
+			
+			<!-- can preorder -->
+			<venda_block label=401,invtpreorder=1>
+			<!-- have preorder  -->
+			<!-- invtavail=<venda_invtavail> -->
+				<venda_block label=404,invtavail&gt;0,rows!=unpub,rows!=nostock>
+					<venda_block label=181,invtatrsell&gt;0>	
+						<venda_block label=188,mode=value,<venda_invtatrwas>=null,<venda_invtatrwas>=0.00,<venda_invtatrwas>=0,<venda_invtatrwas>&lt;<venda_invtatrsell>,<venda_invtatrwas>=<venda_invtatrsell>,operator=or>				
+						<td width="10%" class="center bold"><venda_currsym><venda_invtatrsell></td>
+						</venda_block label=188>						
+						<venda_block label=182,mode=value,<venda_invtatrwas>&gt;<venda_invtatrsell>,<venda_invtatrwas>=notnull,<venda_invtatrwas>&gt;0.00>		
+						<td width="15%" class="center bold">
+						<div class="bold">Was: <strike><venda_currsym><venda_invtatrwas></strike></div>
+						<div class="bold red">Now: <venda_currsym><venda_invtatrsell></div>
+						</td>
+						</venda_block label=182>
+					</venda_block label=181>
+					
+					<venda_block label=83,invtatrsell=null,invtatrsell=0.00,operator=or>
+						<venda_block label=188,mode=value,<venda_invtwas>=null,<venda_invtwas>=0.00,<venda_invtwas>=0,operator=or>
+						<td width="10%" class="center bold"><venda_invtsymsell></td>
+						</venda_block label=188>
+						<venda_block label=182,mode=value,<venda_invtwas>=notnull,<venda_invtwas>!=0.00,<venda_invtwas>!=0>
+							<td width="15%" class="center bold">
+							<div class="bold">Was: <strike><venda_currsym><venda_invtwas></strike></div>
+							<div class="bold red">Now: <venda_invtsymsell></div>
+							</td>
+						</venda_block label=182>
+					</venda_block label=83>
+					
+					<!-- QTY Start -->
+						<!-- if in stock -->
+						<venda_block label=251,invtavail&gt;0>
+							<td width="90" align="center"><input  name="qtylist" value="1" id="qty<venda_invtatr1>" type="text" value="1" size="3" maxlength="3" class="invt_qtybox"><label for="qty" class="bold"> Qty</label></td>
+							<td width="15%" class="button">
+								<a href="#" onClick="availsetcookie();Venda.Widget.ProductGrid.setProduct('<venda_invtatr1>','','','');Venda.Widget.ProductGrid.addProduct(document.getElementById('qty<venda_invtatr1>').value);" title="ADD TO BASKET"><img title="ADD TO BASKET" class="padding_T5" border="0"></a>
+							</td>
+					</venda_block label=251>
+					<venda_block label=252,invtavail&lt;1,invtavail=null,operator=or>
+						<venda_block label=1234,invtatretadyleft&gt;0>
+							<td width="90" class="rightnone" align="center"><input  name="qtylist" value="1" id="qty<venda_invtatr1>" type="text" value="1" size="3" maxlength="3" class="invt_qtybox"><label for="qty" class="bold"> Qty</label></td>
+							<td width="15%" class="button">
+								<a href="#" onClick="availsetcookie();Venda.Widget.ProductGrid.setProduct('<venda_invtatr1>','','','');Venda.Widget.ProductGrid.addProduct(document.getElementById('qty<venda_invtatr1>').value);" title="ADD TO BASKET"><img title="ADD TO BASKET" class="padding_T5" border="0"></a>
+							</td>
+						</venda_block label=1234>
+						<venda_block label=1234,invtatretadyleft=null,invtatretadyleft&lt;1,operator=or>
+							<td colspan="2">&nbsp;</td>
+						</venda_block label=1234>
+					</venda_block label=252>
+				</venda_block label=404>
+			</venda_block label=401>
+		</tr>
+	</venda_block label=511>
+<!-- End  -->
+	<venda_block label=512,mode=value,<venda_invtivtype>=nonpurchasablerange,<venda_invtivtype>=nonpurchasable>
+			<tr valign='top'>
+			<td class="leftnone bold grey666" width="85"><div class="attr-two-link"><venda_rows></div></td>
+			<td class="leftnone rightnone bold grey666" width="40%"><venda_invtatr1></td>
+			<td><venda_currsym><venda_invtatrsell></td>
+			<td class="leftnone bold grey666" width="25%"><div class="instore"><venda_text id=site.non_purchaseable.stock_availability></div></td>
+		</tr>
+	</venda_block label=512>
+
+</venda_detblock2>
+
+<venda_detblock3>
+</venda_detblock3>
+
+<div id="grid_block">
+	<table summary="Availability and pricing of <venda_invtatrlbl1>s and <venda_invtatrlbl2>s"  cellspacing="0" cellpadding="0" id="invt_table" width="100%">
+		<tbody>
+			<tr><td class="first" height="19" colspan="6"><span id="gridheader">IN THIS RANGE</span></td></tr>
+				<venda_detail3>	
+		</tbody>
+	</table>	
+</div>

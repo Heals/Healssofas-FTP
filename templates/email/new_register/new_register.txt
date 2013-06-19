@@ -1,0 +1,19 @@
+==============================================================================
+
+<venda_ebizname> Registration
+
+==============================================================================
+
+
+Dear <venda_title> <venda_fname> <venda_lname>,
+
+
+Thank you for registering and welcome to Heals.co.uk, the simple, quick and secure way to shop at Heal’s.
+
+
+Using the “My Account” section of Heals.co.uk, you are now able manage your personal information, add or edit your delivery address details, view your order history and check on the current status of an order. You can also use our reminder service to make sure you never forget that special birthday or anniversary again... Furthermore, you can sign up or unsubscribe to the heals.co.uk email newsletters which include seasonal product updates, special offers and promotions.
+
+
+Once again thank you for registering with heals.co.uk and we look forward to your visiting soon.
+
+<venda_inctemplate name=textEmailFooter,type=includes/email>

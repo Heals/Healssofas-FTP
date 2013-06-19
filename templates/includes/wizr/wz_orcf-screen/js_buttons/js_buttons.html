@@ -1,0 +1,57 @@
+<p class="final"><venda_text id=site.order_confirmation.final_step></p>
+<script>
+function checkDelivery(){
+if(sMet.length != 0){
+    for(var i=0;i<sMet.length;i++){
+        if(sMet[i] != undefined){
+        var methodId = sMet[i]+sId[i];
+         if(!document.getElementById(methodId).checked){
+            alert("Please select the delivery option");
+            document.getElementById(methodId).focus();
+            return false;
+        }   
+        }
+    }
+}
+if(document.wizform.terms.checked==false){
+    alert("Please accept the terms and conditions of this purchase");
+    return false;
+} 
+<venda_block label=472,mode=value,<venda_tpxt mode=get,name=furniture>=yes,mode=value>
+for (a = 0; a <= nAddr; a++) {
+	if ( (showDeliveryType[a] == 'normal') && (sOrderType[a] == 'furonly') ) {
+		alert('Unfortunately our delivery team are not currently able to deliver items of furniture to this postcode area. \nPlease contact us on 08700 240 780 option 2 to discuss alternative delivery options.');
+		return false;
+			}
+	else if ( (showDeliveryType[a] == 'normal') && (sOrderType[a] == 'mixorder') ) {
+		alert('Unfortunately our delivery team are not currently able to deliver items of furniture to this postcode area. \nPlease contact us on 08700 240 780 option 2 to discuss alternative delivery options. \n\nTo continue with your order of non furniture items only, please remove any furniture items and update.');
+		return false;
+			}
+}
+
+if(document.wizform.orxorxtacceptdelivery.checked==false){
+    alert("Please confirm that you have checked delivery access");
+    return false;
+}
+</venda_block label=472> 
+
+<venda_wizbutton step=payment,mode=process,param1=process,check=yes,callonly=yes> 
+}
+
+</script>
+
+<div id="confirmbox">
+<div class="term hide">
+<label>I accept the <a href="<venda_ebizurl>/page/terms" rel="popup console 550 450">terms and conditions</a> of this purchase</label>
+<label><input type="checkbox" name="terms" value="on" checked></label>
+</div>
+<venda_block label=472,mode=value,<venda_tpxt mode=get,name=furniture>=yes>
+<venda_extflds exfldtype=order,ref=<venda_ohrfnbr>,group=1,template=orxfields_set,type=includes>
+</venda_block label=472>
+<br class="clear-all">
+</div>
+
+<div id="buttons">
+<a href="<venda_codehttp>?ex=co_wizr-shopcart&bsref=<venda_bsref>&log=22" class="hide"><img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/bt_backtobasket.gif" alt="<venda_text id=site.button.back_to_basket>" border="0" class="left"></a>
+<input type="image" onClick='checkDelivery(); return false;' src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/bt_placeyourorderlarge.gif" alt="<venda_text id=site.button.place_order>" class="right">
+</div>

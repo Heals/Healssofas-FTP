@@ -1,0 +1,219 @@
+<link rel="stylesheet" href="
+<venda_entmediaadd>/ebiz/<venda_bsref>/resources/css/myaccount.css" type="text/css" media="screen, projector">
+<style>#content-checkout {margin-top:0;}fieldset div div {
+width: 660px;}.error{background:none;color:#C1392D;}#checkout .error {padding:0;}</style>
+<div id="myaccountWrapper">
+<!-- start column 1 -->
+<venda_inctemplate name=myaccount-leftNav,type=includes>
+<!-- end column 1 -->
+
+<!-- start column 2 -->
+<div class="myaccountDetails">
+<venda_block label=1,errors=notnull><h2 class="error"><venda_errors></h2></venda_block label=1>
+<p><venda_text id=site.address_book.instructions></p>
+
+<div style="overflow:hidden;">
+<venda_block label=registereduser,ustype=R>
+<div class="myaccountBillingTaboff">
+<venda_block label=manageadressesflow1,workflow=manageaddresses>
+<a href="<venda_codehttps>?ex=tl_user-myform&bsref=<venda_bsref>&layout=myaccount&htxt=<venda_htxt mode=make,addr=change>">
+</venda_block label=manageadressesflow1>
+<venda_block label=checkoutflow1,workflow=shopcart,workflow=instore,operator=or>
+<a href="#" onClick='<venda_wizbutton step=billto,mode=process,param1=show,param2=edit,callonly=yes> return false;'>
+</venda_block label=checkoutflow1>
+<img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/my-account/my-account-billing-address-off.gif" border="0">
+</a>
+</div>
+</venda_block label=registereduser>
+
+<div class="myaccountDeliveryTabon">
+<img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/my-account/my-account-delivery-address-on.gif" border="0">
+</div>
+
+<venda_block label=fullyregistered1,ustype=R,workflow=manageaddresses>
+<div class="myaccountEmailTaboff">
+<a href="<venda_codehttps>?ex=tl_user-myform&bsref=<venda_bsref>&layout=myaccount&htxt=<venda_htxt mode=make,pass=change>">
+<img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/my-account/my-account-email-address-off.gif" border="0">
+</a>
+</div>
+</venda_block label=fullyregistered1>
+</div>
+
+<div class="myaccountDetails-body">
+<venda_form>
+
+<venda_detblock>
+<li style="padding:0;">
+<venda_block label=10,abrfnbr1&gt;0>
+<div>
+
+<fieldset class="f-oradsaddbook">
+<input type="hidden" name="abrfnbr" value="<venda_abrfnbr1>">
+
+<venda_block label=billingDetails1,adtype1=1>
+<img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/my-account/my-account-contact-details.gif" border="0">
+<venda_block label=416,workflow=shopcart,workflow=instore,operator=or>
+<input style="margin:5px 0 0 0;" type="image" onClick='<venda_wizbutton step=confirm,mode=process,check=yes,secure=yes,callonly=yes> return false;' src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/my-account/my-account-submit.gif" alt="<venda_text id=site.button.submit>" class="button buttonAlt buttonArrow right submit">
+</venda_block label=416>
+<venda_block label=417,workflow=manageaddresses><input type="image" style="margin:5px 0 0 0;" onClick='<venda_wizbutton step=--page-myaccount,mode=process,check=yes,secure=yes,callonly=yes> return false;' src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/my-account/my-account-submit.gif" alt="<venda_text id=site.button.submit>" class="button buttonAlt buttonArrow right submit">
+</venda_block label=417>
+<venda_block label=418,workflow=giftlist>
+<a href="<venda_codehttp>?ex=co_wizr-giftlist&bsref=<venda_bsref>&step=glstlist" class="button buttonAlt buttonArrow"><img style="margin:5px 0 0 0;" src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/my-account/my-account-submit.gif" alt="<venda_text id=site.button.submit>"></a>
+</venda_block label=418>
+<br>
+</venda_block label=billingDetails1>
+
+<venda_block label=deliveryDetails1,adtype1!=1>
+<img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/my-account/my-account-delivery-details-1.gif" border="0">
+<br>
+</venda_block label=deliveryDetails1>
+
+<venda_block label=default1,default1=1>
+<div style="padding:0 0 10px 0;border-bottom:1px solid #B4B4B4;overflow:auto;margin:0 0 10px 0;">
+<div style="padding:5px 0 5px 25px;background-color:#ffffff;border:1px solid #b4b4b4;overflow:auto;margin:0;">
+</venda_block label=default1>
+<venda_block label=default0,default1!=1>
+<div style="padding:0 0 10px 25px;overflow:auto;margin:0 0 10px 0;border-bottom:1px solid #b4b4b4;">
+</venda_block label=default0>
+<p>
+<venda_block label=addrname1,adtype1=0,addrname1=notnull><strong>Delivery Details for: <venda_addrname1></strong><br></venda_block label=addrname1>
+<venda_title1> <venda_fname1><venda_block label=77,mname1=notnull> <venda_mname1></venda_block label=77> <venda_lname1><br>
+<venda_block label=31,company1=notnull><venda_company1><br></venda_block label=31>
+<venda_block label=41,num1=notnull><venda_num1> </venda_block label=41><venda_addr11><venda_block label=3,addr21=notnull><br><venda_addr21></venda_block label=3><br>
+
+<!-- if country is US or US Non-48 display this formatting -->
+<venda_block label=999,mode=value,<venda_cntry1>=United States,<venda_cntry1>=United States Non-48,<venda_cntry1>=United States Armed Forces,operator=or>
+<venda_city1>, <venda_block label=42,state1=notnull><venda_state1> </venda_block label=42><venda_zipc1><br>
+</venda_block label=999>
+
+<!-- if country is NOT US or US entities display this formatting -->
+<venda_block label=9991,mode=value,<venda_cntry1>!=United States,<venda_cntry1>!=United States Non-48,<venda_cntry1>!=United States Armed Forces,operator=and>
+<venda_city1><br>
+<venda_block label=42,state1=notnull><venda_state1><br></venda_block label=42>
+<venda_zipc1><venda_block label=1234,state1=notnull,zipc1=notnull,operator=or><br></venda_block label=1234>
+</venda_block label=9991>
+
+<venda_cntry1><br>
+<venda_block label=43,area1=notnull,phone1=notnull,operator=or><br><span class="addrPhone"><venda_block label=100,mode=value,<venda_setting type=ebiz,name=hidearea>!=1><venda_block label=11,area1=notnull><venda_area1>&nbsp;</venda_block label=11></venda_block label=100><venda_block label=12,phone1=notnull><venda_phone1></venda_block label=12></span></venda_block label=43>
+</p>
+		
+<venda_block label=132,adtype1!=1>
+<!-- if it's a delivery address -->
+<venda_block label=330,mode=value,<venda_company1>!=c/o <venda_setting type=ebiz,name=name>>
+<!-- Not Deliver to Store -->
+<venda_block label=220,workflow=giftlist>
+<div><a href='#' onClick='<venda_wizbutton step=editadd,param1=<venda_abrfnbr1>,param2=edit,callonly=yes> return false;'><img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/my-account/my-account-edit-delivery-address.gif" alt="Edit Delivery Address"></a></div><br clear="left">
+</venda_block label=220>
+
+<venda_block label=320,workflow=manageaddresses>
+<div><a href='#' onClick='<venda_wizbutton step=editadd,param1=<venda_abrfnbr1>,callonly=yes> return false;'><img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/my-account/my-account-edit-delivery-address.gif" alt="Edit Delivery Address"></a></div><br clear="left">
+</venda_block label=320>
+			
+<venda_block label=321,workflow=shopcart,workflow=instore,operator=or>
+<venda_block label=325,param2!=multiple>
+<div><a href='#' onClick='<venda_wizbutton step=editadd,param1=<venda_abrfnbr1>,param2=adbook,callonly=yes> return false;'><img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/my-account/my-account-edit-delivery-address.gif" alt="Edit Delivery Address"></a></div><br clear="left">
+</venda_block label=325>
+
+<venda_block label=322,param2=multiple>
+<div><a href='#' onClick='<venda_wizbutton step=editadd,param1=<venda_abrfnbr1>,param2=multiple,callonly=yes> return false;'><img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/my-account/my-account-edit-delivery-address.gif" alt="Edit Delivery Address"></a></div><br clear="left">
+</venda_block label=322>
+</venda_block label=321>
+
+<venda_block label=324,workflow=register>
+<div><a href='#' onClick='<venda_wizbutton step=editadd,param1=<venda_abrfnbr1>,callonly=yes> return false;'><img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/my-account/my-account-edit-delivery-address.gif" alt="Edit Delivery Address"></a></div><br clear="left">
+</venda_block label=324>
+</venda_block label=330>
+
+<venda_block label=331,mode=value,<venda_company1>=c/o <venda_setting type=ebiz,name=name>>
+<!-- Deliver to Store -->
+<div><a href='#' onClick='<venda_wizbutton step=editadd,param1=<venda_abrfnbr1>,param2=storeadd,callonly=yes> return false;'><img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/my-account/my-account-edit-delivery-address.gif" alt="Edit Delivery Address"></a></div><br clear="left">
+</venda_block label=331>
+</venda_block label=132>
+		
+<venda_block label=133,adtype1!=0>
+<!-- if it's a billing address no edit button -->
+</venda_block label=133>
+		
+<venda_block label=63,default1=1>
+<!-- if it's the current default address -->
+<venda_block label=46,workflow!=shopcart,workflow!=instore>This is your default delivery address</venda_block label=46>
+
+<venda_block label=47,workflow=shopcart,workflow=instore,operator=or>Delivery is currently set to this address</venda_block label=47>
+</venda_block label=63>
+		
+<venda_block label=5,default1=0>
+<div style="width:40%">
+<input type="radio" style="margin:2px 0 0 0;" name="update" id="<venda_abrfnbr1>" value="<venda_abrfnbr1>"<venda_block label=4,default1=1> checked="checked"</venda_block label=4>>
+
+<venda_block label=48,workflow!=shopcart,workflow!=instore><label for="<venda_abrfnbr1>" class="dontFloat">Make this your default delivery address</label></venda_block label=48>
+
+<venda_block label=49,workflow=shopcart,workflow=instore,operator=or><label for="<venda_abrfnbr1>" class="dontFloat">Change delivery to this address</label></venda_block label=49>
+</div>
+</venda_block label=5>
+</div>
+<venda_block label=default2,default1=1>
+</div>
+</venda_block label=default2>
+</fieldset>
+</div>
+</venda_block label=10>
+</li>
+</venda_detblock>
+<ul id="address_list">
+<venda_detail>
+</ul>
+<venda_tpcomment><!-- End: Address List --></venda_tpcomment>
+
+<venda_tpcomment><!-- Start: JS Buttons --></venda_tpcomment>
+<div id="buttons" class="bottomButtons">
+<venda_block label=2199,<venda_setting type=ebiz,name=billingdeliveryonly>!=1,mode=value>
+<venda_block label=551,workflow!=shopcart,workflow!=giftlist,workflow!=instore>
+	<venda_block label=29,mode=value,<venda_setting type=ebiz,name=bypasspclookup>!=1><a href='#' class="addnew button buttonAlt"  onClick='<venda_wizbutton step=zipcodedelivery,param1=delivery,callonly=yes> return false;'><img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/my-account/my-account-add-new-delivery-address.gif" alt="Add New Delivery Address"></a></venda_block label=29>
+	<venda_block label=30,mode=value,<venda_setting type=ebiz,name=bypasspclookup>=1><a href='#' class="addnew button buttonAlt"  onClick='<venda_wizbutton step=newadd,mode=process,param1=delivery,param2=add,callonly=yes> return false;'><img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/my-account/my-account-add-new-delivery-address.gif" alt="Add New Delivery Address"></a></venda_block label=30>
+</venda_block label=551>
+<venda_block label=552,workflow=shopcart,workflow=instore,operator=or>
+	<venda_block label=553,param2=multiple>
+		<venda_block label=32,mode=value,<venda_setting type=ebiz,name=bypasspclookup>!=1><a href='#' class="addnew button buttonAlt" onClick='<venda_wizbutton step=zipcodedelivery,param1=delivery,param2=multiple,callonly=yes> return false;'><img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/my-account/my-account-add-new-delivery-address.gif" alt="Add New Delivery Address"></a></venda_block label=32>
+		<venda_block label=33,mode=value,<venda_setting type=ebiz,name=bypasspclookup>=1><a href='#' class="addnew button buttonAlt" onClick='<venda_wizbutton step=newadd,mode=process,param1=delivery,param2=add,callonly=yes> return false;'><img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/my-account/my-account-add-new-delivery-address.gif" alt="Add New Delivery Address"></a></venda_block label=33>
+	</venda_block label=553>
+	<venda_block label=554,param2!=multiple>
+		<venda_block label=34,mode=value,<venda_setting type=ebiz,name=bypasspclookup>!=1>
+		<venda_block label=40,mode=value,<venda_setting type=ebiz,name=singlesteppclookup>!=1><a href='#' class="addnew button buttonAlt" onclick='<venda_wizbutton step=zipcodedelivery,param1=delivery,param2=adbook,callonly=yes>;return false;'><img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/my-account/my-account-add-new-delivery-address.gif" alt="Add New Delivery Address"></a></venda_block label=40>
+		<venda_block label=41,mode=value,<venda_setting type=ebiz,name=singlesteppclookup>=1><input type="hidden" name="htxt" value=""><a href='#' class="addnew button buttonAlt" onclick='document.wizform.htxt.value="<venda_htxt mode=make,prevbtn=adbook>";<venda_wizbutton step=zipcodedelivery,param1=delivery,param2=adbook,callonly=yes>;return false;'><img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/my-account/my-account-add-new-delivery-address.gif" alt="Add New Delivery Address"></a></venda_block label=41>
+		</venda_block label=34>
+		<venda_block label=35,mode=value,<venda_setting type=ebiz,name=bypasspclookup>=1><a href='#' class="addnew button buttonAlt" onClick='<venda_wizbutton step=newadd,mode=process,param1=delivery,param2=add,callonly=yes> return false;'><img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/my-account/my-account-add-new-delivery-address.gif" alt="Add New Delivery Address"></a></venda_block label=35>
+	</venda_block label=554>
+</venda_block label=552>
+<venda_block label=560,workflow=giftlist>
+		<venda_block label=36,mode=value,<venda_setting type=ebiz,name=bypasspclookup>!=1><a href='#' class="addnew button buttonAlt" onClick='<venda_wizbutton step=zipcodedelivery,param1=delivery,callonly=yes> return false;'><img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/my-account/my-account-add-new-delivery-address.gif" alt="Add New Delivery Address"></a></venda_block label=36>
+		<venda_block label=37,mode=value,<venda_setting type=ebiz,name=bypasspclookup>=1><a href='#' class="addnew button buttonAlt" onClick='<venda_wizbutton step=newadd,mode=process,param1=delivery,param2=add,callonly=yes> return false;'><img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/my-account/my-account-add-new-delivery-address.gif" alt="Add New Delivery Address"></a></venda_block label=37>
+</venda_block label=560>
+</venda_block label=2199>
+<venda_block label=416,workflow=shopcart,workflow=instore,operator=or>
+<input style="margin:10px 0 0 0;" type="image" onClick='<venda_wizbutton step=confirm,mode=process,check=yes,secure=yes,callonly=yes> return false;' src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/my-account/my-account-submit.gif" alt="<venda_text id=site.button.submit>" class="button buttonAlt buttonArrow right submit">
+</venda_block label=416>
+<venda_block label=417,workflow=manageaddresses>
+<a href="<venda_dispview page=myaccount>" class="backtomyacc button buttonAlt2"><img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/my-account/my-account-back-to-my-account.gif" alt="Back to My Account"></a>
+<input type="image" style="margin:10px 0 0 0;" onClick='<venda_wizbutton step=--page-myaccount,mode=process,check=yes,secure=yes,callonly=yes> return false;' src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/my-account/my-account-submit.gif" alt="<venda_text id=site.button.submit>" class="button buttonAlt buttonArrow right submit">
+</venda_block label=417>
+<venda_block label=418,workflow=giftlist>
+<a href="<venda_codehttp>?ex=co_wizr-giftlist&bsref=<venda_bsref>&step=glstlist" class="button buttonAlt buttonArrow"><img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/my-account/my-account-submit.gif" alt="<venda_text id=site.button.submit>"></a>
+</venda_block label=418>
+</div>
+<venda_tpcomment><!-- End: JS Buttons --></venda_tpcomment>
+</form>
+
+</div>
+</div>
+<div style="margin:-1px 1px 0 1px;background-color:#b4b4b4;height:1px;
+width:197px;clear:both;float:left;"></div>
+</div>
+<venda_block label=20,workflow=instore><venda_tpxt mode=set,name=instore,value=1></venda_block label=20>
+<!-- 
+step: <venda_curstep>
+param1: <venda_param1>
+param2: <venda_param2>
+page: wz_orad-screen
+workflow: <venda_workflow>
+ -->
+<venda_tpxt mode=set,name=track,value=orad-screen>

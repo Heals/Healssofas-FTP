@@ -1,0 +1,40 @@
+<fieldset class="f-myformdetail">
+<legend class="myformdetail"><venda_text id=site.my_account.edit_user_details.edit_contact_details.legend.your_contact_details></legend>
+<div><label for="title"><venda_text id=site.my_account.edit_user_details.edit_contact_details.label.title><span class="re-waiHide"> (required)</span> <span class="required">*</span></label>
+<select name="title" id="title">
+	<option value="Mr"<venda_block label=101,title=Mr> selected</venda_block label=101>>Mr</option>
+	<option value="Mrs"<venda_block label=111,title=Mrs> selected</venda_block label=111>>Mrs</option>
+	<option value="Miss"<venda_block label=121,title=Miss> selected</venda_block label=121>>Miss</option>
+	<option value="Ms"<venda_block label=131,title=Ms> selected</venda_block label=131>>Ms</option>
+	<option value=" "<venda_block label=141,title=> selected</venda_block label=141>>Other</option>
+</select>
+</div>
+<div><label for="fname"><venda_text id=site.my_account.edit_user_details.edit_contact_details.label.first_name><span class="re-waiHide"> (required)</span> <span class="required">*</span></label> <venda_fname field=text,size=25,maxlength=30,required=yes></div>
+<venda_block label=123,mode=value,<venda_setting type=ebiz,name=showmname>=1>
+<div><label for="mname"><venda_text id=site.contact_address.label.middle_name></label> <venda_mname field=text,size=25,maxlength=30></div>
+</venda_block label=123>
+<div><label for="lname"><venda_text id=site.my_account.edit_user_details.edit_contact_details.label.last_name><span class="re-waiHide"> (required)</span> <span class="required">*</span></label> <venda_lname field=text,size=25,maxlength=30,required=yes></div>
+<venda_block label=124,mode=value,<venda_setting type=ebiz,name=showcompany>=1>
+<div><label for="company"><venda_text id=site.contact_address.label.company></label> <venda_company field=text,size=25,maxlength=60></div>  </venda_block label=124>
+<venda_block label=88,mode=value,<venda_setting type=ebiz,name=nohousenum>!=1><div><label for="num"><venda_text id=site.my_account.edit_user_details.edit_contact_details.label.house_name_flat_number><span class="re-waiHide"> (required)</span> <span class="required">*</span></label> <venda_num field=text,size=25,maxlength=20,required=yes></div></venda_block label=88>
+<div><label for="addr1"><venda_text id=site.my_account.edit_user_details.edit_contact_details.label.address><span class="re-waiHide"> (required)</span> <span class="required">*</span></label> <venda_addr1 field=text,size=25,maxlength=50,required=yes></div>
+<div><label for="addr2"><venda_text id=site.my_account.edit_user_details.edit_contact_details.label.address2></label> <venda_addr2 field=text,size=25,maxlength=50></div>
+<div><label for="city"><venda_text id=site.my_account.edit_user_details.edit_contact_details.label.city><span class="re-waiHide"> (required)</span> <span class="required">*</span></label> <venda_city field=text,size=25,maxlength=30,required=yes></div>
+
+<div id="stateDiv"><label for="state" id="stateLabel"><venda_text id=site.my_account.edit_user_details.edit_contact_details.label.county></label> <span id="statelistbox"><select id="statelist" name="statelist" class=admn_fieldsLarge onchange="setState(document.getElementById('statetext'),this.value);"></select></span><span id="statetextbox"><input type="text" id="statetext" name="state" value="<venda_state>" class=admn_fieldsLarge size=15 maxlength=20></span></div>
+
+<div id="zipcDiv"><label for="zipc" id="zipcLabel"><venda_text id=site.my_account.edit_user_details.edit_contact_details.label.postcode></label> <venda_zipc field=text,size=25,maxlength=20,required=yes></div>
+
+<div id="countryDiv"><label for="cntry" id="countryLabel"><venda_text id=site.my_account.edit_user_details.edit_contact_details.label.country><span class="re-waiHide"> (required)</span> <span class="required">*</span></label> <venda_cntry  field=combo,class=admn_fieldsLarge,required=yes,onchange=1></div>
+
+	<script type="text/javascript">
+		setDropDownDefault(document.getElementById("cntrylist"), '<venda_cntry>');
+		hasState(document.getElementById('statelistbox'),document.getElementById('statetextbox'),document.getElementById('statelist'),'<venda_cntry>');
+		setDropDownDefault(document.getElementById("statelist"), '<venda_state>');
+	</script>
+
+<div><div><label for="phone" class="dontFloat"><venda_text id=site.my_account.edit_user_details.edit_contact_details.label.phone_number><span class="re-waiHide"> (required)</span> <span class="required">*</span></label> <venda_block label=101,mode=value,<venda_setting type=ebiz,name=hidearea>!=1><label for="area" class="dontFloat invisible"><venda_text id=site.my_account.edit_user_details.edit_contact_details.label.phone_area_code></label></venda_block label=101></div> <venda_block label=100,mode=value,<venda_setting type=ebiz,name=hidearea>!=1><venda_area field=text,size=4,maxlength=6,required=yes> </venda_block label=100><venda_phone field=text,size=18,maxlength=20,required=yes></div>
+<venda_block label=123,mode=value,<venda_setting type=ebiz,name=showfax>=1>
+<div><div><label for="fax" class="dontFloat"><venda_text id=site.contact_address.label.fax_number></label> <venda_block label=101,mode=value,<venda_setting type=ebiz,name=hidearea>!=1><label for="farea" class="dontFloat invisible"><venda_text id=site.contact_address.label.fax_area_code></label></venda_block label=101></div> <venda_block label=100,mode=value,<venda_setting type=ebiz,name=hidearea>!=1><venda_farea field=text,size=4,maxlength=6> </venda_block label=100><venda_fax field=text,size=18,maxlength=20></div>
+</venda_block label=123>
+</fieldset>

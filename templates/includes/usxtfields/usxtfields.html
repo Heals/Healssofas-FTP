@@ -1,0 +1,87 @@
+<!-- use this template to display your user extended fields -->
+<venda_block label=1,param1!=survey>
+<!-- register -->
+<p>We would like to capture some information for marketing purposes only.</p>
+<fieldset>
+<legend>I'm interested in:</legend>
+<venda_block label=20,usgrref=press>
+<div>
+<label for="usxtrecjobtitle">Job title</label>
+<select name="usxtrecjobtitle"><venda_usxselectusxtrecjobtitle></select><venda_defaultusxselectusxtrecjobtitle name=Please Select...>
+</div>
+</venda_block label=20>
+<venda_block label=21,usgrref!=press>
+<div>
+<label for="usxthowhearus">Where did you hear about us?</label>
+<select name="usxthowhearus"><venda_usxselectusxthowhearus></select><venda_defaultusxselectusxthowhearus name=Please Select...>
+</div>
+</venda_block label=21>
+
+
+</fieldset>
+
+</venda_block label=1>
+
+<venda_block label=2,param1=survey>
+
+<!-- my account / user profile -->
+<h1><venda_page page=changeprofile_banner></h1>
+<venda_form>
+<venda_zipc field=hidden>
+<input type="hidden" name="uslgemail" value="">
+<input type="hidden" name="page" value="myaccount">
+<input type="hidden" name="formusxtexample1" value="1">
+<input type="hidden" name="formusxtexample2" value="1">
+<input type="hidden" name="formusxtexample3" value="1">
+<input type="hidden" name="formusxtcataloguerequest" value="1">
+<input type="hidden" name="blkpost" value="<venda_blkpost>">
+<input type="hidden" name="blkemail" value="<venda_blkemail>">
+<input type="hidden" name="blksms" value="<venda_blksms>">
+<input type="hidden" name="blktrdcomm" value="<venda_blktrdcomm>">
+<input type="hidden" name="usmailform" value="<venda_usmailform>">
+
+<p>We would like to capture some information for marketing purposes only.</p>
+<fieldset class="usxt">
+<legend>I'm interested in:</legend>
+
+<venda_block label=20,usgrref=press>
+<div>
+<label for="usxtrecjobtitle">Job title</label>
+<select name="usxtrecjobtitle"><venda_usxselectusxtrecjobtitle></select><venda_defaultusxselectusxtrecjobtitle name=Please Select...>
+</div>
+</venda_block label=20>
+<venda_block label=21,usgrref!=press>
+<div>
+<label for="usxthowhearus">Where did you hear about us?</label>
+<select name="usxthowhearus"><venda_usxselectusxthowhearus></select><venda_defaultusxselectusxthowhearus name=Please Select...>
+</div>
+</venda_block label=21>
+
+<div><label for="usxtcataloguerequest">Please send me the Heal's brochure</label>
+<input type="checkbox" name="usxtcataloguerequest" id="usxtcataloguerequest" value="1" <venda_block label=138,usxusxtcataloguerequest=1>checked="checked"</venda_block label=138>>
+</div>
+
+
+
+
+</fieldset>
+
+<fieldset>
+<legend>I am:</legend>
+<div class="hide"><label for="usxtyourgender">Your gender?</label>
+<select name="usxtyourgender"><venda_usxselectusxtyourgender></select><venda_defaultusxselectusxtyourgender name=Please Select...>
+</div>
+
+<div id="buttons">
+<a href="<venda_dispview page=myaccount>"><img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/bt_backtomyaccount.gif" alt="<venda_text id=site.button.back_to_my_account>" border="0" class="left"></a>
+<venda_block label=2100,usgrref!=press>
+<input type="image" onclick="if(window.validateUserExtendedFields) { if(validateUserExtendedFields(this.form)) {return true;}; return false;}" src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/bt_continue.gif" alt="CONTINUE" class="right">
+</venda_block label=2100>
+<venda_block label=2101,usgrref=press>
+<input type="image" onclick="return true;" src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/bt_continue.gif" alt="CONTINUE" class="right">
+</venda_block label=2101>
+
+</div>
+</fieldset>
+</form>
+</venda_block label=2>

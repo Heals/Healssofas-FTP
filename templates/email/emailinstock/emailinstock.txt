@@ -1,0 +1,22 @@
+<venda_detblock1>
+We are pleased to inform you that <venda_invtname> is now back in stock. Please click on the link below to order this item:<cr>
+<venda_dispview invt=<venda_invtref>><cr><cr>
+</venda_detblock1>
+
+==============================================================================<cr>
+<venda_ebizname> Stock Information<cr>
+==============================================================================<cr><cr>
+
+Dear Customer,<cr><cr>
+
+You have requested to be notified when the following items are back in stock:<cr><cr>
+<venda_detail1><cr>
+Please note that the products are in stock at the time of sending this e-mail and we cannot guarantee that stock will still be available when you visit Heals.co.uk, as some products are in very high demand.<cr><cr>
+
+<venda_inctemplate name=textEmailFooter,type=includes/email>
+
+
+
+
+
+

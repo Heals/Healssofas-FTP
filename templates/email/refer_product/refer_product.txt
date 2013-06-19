@@ -1,0 +1,18 @@
+==============================================================================<cr>
+<venda_ebizname> This is fabulous, take a look…<cr>
+==============================================================================<cr><cr>
+
+Dear <venda_name><cr>
+
+<venda_block label=1,message=notnull><venda_message></venda_block label=1>
+<venda_block label=2,message=null>I've found an excellent product on <venda_ebizname> (<venda_ebizurl>).<cr></venda_block label=2>
+
+<venda_invtname><cr>
+<venda_block label=20,invtsell&gt;0>Costing <venda_currsym><venda_invtsell> Each<cr></venda_block label=20>
+<venda_block label=21,invtsell=0.00,invtatrminsubsell&gt;0,operator=or>From <venda_currsym><venda_invtatrminsubsell><cr></venda_block label=21>
+Item code: <venda_invtref><cr>
+<venda_block label=1,invtdesc1=notnull><venda_invtdesc1><cr><cr></venda_block label=1>
+
+Hope you love it as much as I do<cr>
+<venda_block label=44,fname=Empty>A Friend</venda_block label=44>
+<venda_block label=45,fname!=Empty><venda_fname> <venda_lname></venda_block label=45>

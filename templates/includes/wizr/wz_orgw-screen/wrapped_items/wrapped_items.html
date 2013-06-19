@@ -1,0 +1,64 @@
+<venda_detblock2>
+<venda_detail3>
+</venda_detblock2>
+
+<venda_detblock3>
+<venda_block label=20,invtatrtot1&gt;0>if product does have attributes </venda_block label=20>
+
+
+<tr>
+	<venda_block label=81,mode=value,<venda_setting type=ebiz,name=giftmessageonly>!=1>
+	<td class="wrapitem">
+<venda_block label=1510,invtivtype!=furniture,invtivtype!=furniturerange,invtivtype!=gardenfurniture,invtivtype!=gardenfurniturerange,invtivtype!=package>
+	
+	<venda_block label=4,invtnogw!=1>
+	<label for="formgw-<venda_oirfnbr>" class="re-waiHide"><venda_text id=site.gift_wrap.column_heading.wrap_item></label>
+	<select name="gw-<venda_oirfnbr>" id="formgw-<venda_oirfnbr>"><venda_selectgiftwrap></select>
+	</venda_block label=4>
+	<venda_block label=5,invtnogw=1>
+	<venda_text id=site.gift_wrap.not_available>
+	</venda_block label=5>
+</venda_block label=1510>
+
+<venda_block label=1512,invtivtype=furniture,invtivtype=furniturerange,invtivtype=gardenfurniture,invtivtype=gardenfurniturerange,invtivtype=package,operator=or>
+<span>Not Available</span>
+</venda_block label=1512>
+	
+	</td>
+	</venda_block label=81>
+	<td class="productname">
+	<strong><venda_invtname><venda_block label=111,invtatt1=notnull> <venda_text id=site.basket.product_name.attribute_start><venda_invtatt1><venda_block label=112,invtatt2=notnull><venda_text id=site.basket.product_name.attribute_separator><venda_invtatt2></venda_block label=112><venda_block label=113,invtatt3=notnull><venda_text id=site.basket.product_name.attribute_separator><venda_invtatt3></venda_block label=113><venda_block label=114,invtatt4=notnull><venda_text id=site.basket.product_name.attribute_separator><venda_invtatt4></venda_block label=114><venda_text id=site.basket.product_name.attribute_end></venda_block label=111></strong><br>
+	<venda_title> <venda_fname> <venda_lname><br>
+	<venda_block label=71,num=notnull><venda_num> </venda_block label=71><venda_addr1><venda_block label=72,addr2=notnull> <venda_addr2></venda_block label=72><br>
+	<venda_city> <venda_state> <venda_zipc> <venda_cntry>
+	</td>
+	<td class="productprice"><venda_oisub></td>
+	<td class="giftmessage">
+	<venda_block label=100,invtivtype!=furniture,invtivtype!=nonpurchasable,invtivtype!=nonpurchasablerange,invtivtype!=furniturerange,invtivtype!=gardenfurniture,invtivtype!=gardenfurniturerange,invtivtype!=package>
+	<venda_block label=7,invtnogwmsg!=1><label for="formcm-<venda_oirfnbr>" class="re-waiHide"><venda_text id=site.gift_wrap.column_heading.message></label><textarea name="cm-<venda_oirfnbr>" id="formcm-<venda_oirfnbr>" rows="3" cols="20" class="message" onkeyup="TrackCount(this,'textcount',80)" onkeypress="LimitText(this,80)"><venda_oicmt></textarea></venda_block label=7>
+<venda_block label=8,invtnogwmsg=1><venda_text id=site.gift_wrap.not_available></venda_block label=8>
+</venda_block label=100>&nbsp;
+</td>
+</tr>
+
+
+</venda_detblock3>
+
+<input type="hidden" name="textcount">
+<div class="wizrtable_wrap">
+<table summary="<venda_text id=site.gift_wrap.table_summary2>" title="<venda_text id=site.gift_wrap.table_title2>" class="wizrtable">
+<thead>
+<tr>
+	<venda_block label=80,mode=value,<venda_setting type=ebiz,name=giftmessageonly>!=1>
+	<th scope="col" class="wrapitem"><venda_text id=site.gift_wrap.column_heading.wrap_item></th>
+	</venda_block label=80>
+	<th scope="col" class="productname"><venda_text id=site.gift_wrap.column_heading.product></th>
+	<th scope="col" class="productprice"><venda_text id=site.gift_wrap.column_heading.price></th>
+	<th scope="col" class="giftmessage"><venda_text id=site.gift_wrap.column_heading.message></th>
+</tr>
+</thead>
+<tbody>
+<venda_detail2>
+</tbody>
+</table>
+</div>

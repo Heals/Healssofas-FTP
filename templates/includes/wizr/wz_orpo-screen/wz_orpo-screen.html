@@ -1,0 +1,139 @@
+<link rel="stylesheet" href="
+<venda_entmediaadd>/ebiz/<venda_bsref>/resources/css/myaccount.css" type="text/css" media="screen, projector">
+<style>
+ul#orders_list li {background-color:#ffffff;border:1px solid #B4B4B4;padding:10px;margin:10px 0;overflow:auto;}
+ul#orders_list li ul#productlistOrderhistory li {background-color:#F8F4F5;}
+ul#orders_list li ul#productlistOrderhistory li, ul#orders_list li ul#productlistOrderhistory li a, ul#orders_list li ul#productlistOrderhistory li a:active, ul#orders_list li ul#productlistOrderhistory li a:link, ul#orders_list li ul#productlistOrderhistory li a:visited {color:#333;}
+#tableReturn {background-color:#F1F1F1;border:1px solid #B4B4B4;}
+#tableReturnPrice {background-color:#fff;border:1px solid #B4B4B4;}
+#tableHeader {padding:5px;}
+table.wizrtable th {font-weight:normal;}
+.error{background:none;color:#C1392D;}#checkout .error {padding:0;}
+</style>
+<venda_block label=34,ustype=R>
+<div class="myaccountDetails">
+<h1 class="hide">Order History</h1>
+<venda_block label=1,errors=notnull><h2 class="error"><venda_errors></h2></venda_block label=1>
+<p>Below are a list of any previous or existing orders.</p>
+<p><venda_text id=site.my_account.order_history.note> <venda_setting type=ebiz,name=area> <venda_setting type=ebiz,name=phone> <venda_text id=site.my_account.order_history.email> <a href="mailto:customerservices@heals.co.uk">customerservices@heals.co.uk</a> <venda_text id=site.my_account.order_history.afteremail></p>
+<font style="font-size:14px;color:#333;">Account Credit <venda_currsym><venda_storeremain></font>
+<br />
+<venda_block label=registereduser,ustype=R>
+<div class="myaccountBillingTaboff">
+<venda_block label=manageadressesflow1,workflow!=shopcart>
+<a href="<venda_codehttps>?ex=tl_user-myform&bsref=<venda_bsref>&layout=myaccount&htxt=<venda_htxt mode=make,addr=change>">
+</venda_block label=manageadressesflow1>
+<venda_block label=checkoutflow1,workflow=shopcart,workflow=instore,operator=or>
+<a href="#" onClick='<venda_wizbutton step=billto,mode=process,param1=show,param2=edit,callonly=yes> return false;'>
+</venda_block label=checkoutflow1>
+<img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/my-account/my-account-billing-address-off.gif" border="0">
+</a>
+</div>
+<div class="myaccountDeliveryTaboff" style="display:block">
+<a href="<venda_codehttps>?ex=co_wizr-manageaddresses&bsref=<venda_bsref>">
+<img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/my-account/my-account-delivery-address-off.gif" border="0">
+</a>
+</div>
+<venda_block label=fullyregistered1,workflow!=shopcart>
+<div class="myaccountEmailTaboff">
+<a href="<venda_codehttps>?ex=tl_user-myform&bsref=<venda_bsref>&layout=myaccount&htxt=<venda_htxt mode=make,pass=change>">
+<img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/my-account/my-account-email-address-off.gif" border="0">
+</a>
+</div>
+</venda_block label=fullyregistered1>
+</venda_block label=registereduser>
+<div class="myaccountDetails-body">
+<venda_tpcomment><!-- Start: Recent Orders --></venda_tpcomment>
+	<venda_detblock4>
+	<li>
+	<venda_tpcomment><!-- venda_form removed for JS-free compatible checkout --></venda_tpcomment>
+	<form method="post" enctype="multipart/form-data" name="wizform<venda_ohrfnbr>" action="<venda_codehttp>">
+	<input type="hidden" name="ex" value="co_wizr-ordlookup" />
+	<input type="hidden" name="step" value="--shopcart" />
+	<input type="hidden" name="param1" value="reorder" />
+	<input type="hidden" name="param2" value="<venda_ohrfnbr>" />
+	<input type="hidden" name="trrfnbr" value="<venda_userinfo><venda_sesid></venda_userinfo>" />
+	<input type="hidden" name="trrfext" value="<venda_block label=115,mode=value,<venda_protocol>=https>1</venda_block label=115>" />
+	<input type="hidden" name="curstep" value="ordwishlist" />
+	<input type="hidden" name="workflowid" value="<venda_workflow>" />
+	<input type="hidden" name="curlayout" value="checkout" />
+	<input type="hidden" name="bsref" value="<venda_bsref>" />
+	<table summary="<venda_text id=site.my_account.order_history.table_summary>" title="<venda_text id=site.my_account.order_history.table_title>" class="wizrtable">
+	<tr id="tableReturn">
+		<th id="tableHeader" scope="row" class="hdrOrderDate" align="right" valign="top">Order Date:</th>
+		<td class="orderDate"><venda_block label=88,mode=value,<venda_setting type=ebiz,name=mmdddates>!=1><venda_ohodateen></venda_block label=88><venda_block label=89,mode=value,<venda_setting type=ebiz,name=mmdddates>=1><venda_ohodatemonth>-<venda_ohodateday>-<venda_ohodateyear></venda_block label=89></td>
+	</tr>
+	<tr id="tableReturn">
+		<th id="tableHeader" scope="row" class="hdrOrderNum" align="right" valign="top">Order Number:</th>
+		<td class="orderNum"><venda_ohordnum></td>
+	</tr>
+	<tr id="tableReturn">
+		<th id="tableHeader" scope="row" class="hdrOrderStatus" align="right" valign="top">Order Status:</th>
+		<td class="orderStatus">
+		<venda_block label=10,ohstatus=2><venda_text id=site.order_status.in_progress></venda_block label=10>
+		<venda_block label=11,ohstatus=3><venda_text id=site.order_status.released_for_delivery></venda_block label=11>
+		<venda_block label=12,ohstatus=4><venda_text id=site.order_status.backordered></venda_block label=12>
+		<venda_block label=13,ohstatus=5><venda_text id=site.order_status.delivered></venda_block label=13>
+		<venda_block label=14,ohstatus=6><venda_text id=site.order_status.returned></venda_block label=14>
+		<venda_block label=15,ohstatus=7><venda_text id=site.order_status.cancelled></venda_block label=15>
+		</td>
+	</tr>
+	<tr id="tableReturnPrice">
+		<th id="tableHeader" scope="row" class="hdrItems" align="right" valign="top">Items In This Order:</th>
+		<td class="items">
+		<ul id="productlistOrderhistory" style="margin-right:8px;">
+			<venda_order ref=<venda_ohrfnbr>,shopcart=1,template=orderHistoryItemDisplay,formfields=true>
+		</ul>
+		</td>
+	</tr>
+<venda_order ref=<venda_ohrfnbr>,shopcart=0,template=orderHistoryPackageDisplay,formfields=true>
+	</tr>
+	</table>
+	</form>
+	</li>
+	</venda_detblock4>
+
+	<venda_block label=20,ohorders!=0>
+	<div><font style="font-size:14px;">
+	<venda_text id=site.my_account.order_history.recent_orders></font><br />
+	<ul id="orders_list">
+	<venda_detail4>
+	</ul>
+	</div>
+	</venda_block label=20>
+<venda_tpcomment><!-- End: Recent Orders --></venda_tpcomment>
+
+<venda_tpcomment><!-- Start: No Orders --></venda_tpcomment>
+	<venda_block label=21,ohorders=0>
+	<p><venda_text id=site.my_account.order_history.no_orders></p>
+	</venda_block label=21>
+<venda_tpcomment><!-- End: No Orders --></venda_tpcomment>
+
+<venda_tpcomment><!-- Start: JS Buttons --></venda_tpcomment>
+	<div id="buttons" class="bottomButtons">
+	<a href="<venda_dispview page=myaccount>" class="button buttonAlt2"><img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/my-account/my-account-back-to-my-account.gif" alt="Back to My Account"></a>
+	</div>
+<venda_tpcomment><!-- End: JS Buttons --></venda_tpcomment>
+
+</div>
+</div>
+</venda_block label=34>
+
+<venda_block label=33,ustype!=R>    
+<script type="text/javascript">
+// forward to log in page
+location.href="<venda_codehttps>?ex=co_wizr-register&bsref=<venda_bsref>";
+</script>
+<div id="orderhistory" class="basketAlt">
+<h1 class="header"><venda_text id=site.my_account.order_history.heading></h1>
+<p><venda_text id=site.my_account.order_history.login></p>
+</div>
+</venda_block label=33>
+<!-- 
+workflow: <venda_workflow>
+step: <venda_curstep>
+param1: <venda_param1>
+param2: <venda_param2>
+page: wz_orpo-screen.html
+ -->
+<venda_tpxt mode=set,name=track,value=orpo-screen>

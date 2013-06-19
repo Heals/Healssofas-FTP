@@ -1,0 +1,98 @@
+<venda_detblock1>
+<!-- start items loop -->
+<thead>
+<tr>
+	<th scope="col">Product Name</th>
+	<th scope="col">Price Each</th>
+	<th scope="col">Qty</th>
+	<th scope="col">Total Price</th>
+	<th scope="col">Status</th>
+</tr>
+</thead>
+<tbody>
+<venda_detail2>
+</tbody>
+<!-- end items loop -->
+</venda_detblock1>
+
+<venda_detblock2>
+<tr>
+	<td><venda_oiivname><venda_block label=111,invtatt1=notnull> (<venda_invtatt1><venda_block label=112,invtatt2=notnull>, <venda_invtatt2></venda_block label=112>)</venda_block label=111><venda_block label=221,oigwref=notnull> (gift wrapped)</venda_block label=221></td>
+	<td><venda_symoisub></td>
+	<td><venda_oiqty></td>
+	<td><venda_currsym><venda_oiextsub></td>
+	<td>
+	<venda_block label=19,oistatus!=5,oistatus!=6,oistatus!=8>
+		<venda_block label=10,oistatus=2>In Progress</venda_block label=10>
+		<venda_block label=11,oistatus=3,oistatus=4,oistatus=7,operator=or><venda_status></venda_block label=11>
+	</venda_block label=19>
+	<venda_block label=20,oistatus=5,oistatus=6,oistatus=8,operator=or>
+		<venda_block label=113,oistatus=5><venda_block label=114,num=notnull>Tracking #: <venda_num></venda_block label=114>Despatched <venda_stmp></venda_block label=113>
+		<venda_block label=112,oistatus=6><venda_status> <venda_stmp></venda_block label=112>
+		<venda_block label=115,oistatus=8>RMA #: <venda_num> Despatched <venda_stmp></venda_block label=115>
+	</venda_block label=20>
+	</td>
+</tr>
+</venda_detblock2>
+
+<html>
+<head>
+	<title><venda_ebizname> Returns Confirmation - <venda_ohordnum></title>
+</head>
+<body>
+<div id="emailBody">
+
+<venda_inctemplate name=htmlEmailCssEtc,type=includes/email>
+<div id="logo">
+	<venda_inctemplate name=htmlEmailLogo,type=includes/email>
+	<h1>Returns Confirmation - <venda_ohordnum></h1>
+	<div class="clear">&nbsp;</div>
+</div>
+
+<venda_inctemplate name=htmlEmailHeader,type=includes/email>
+
+<p>We have received your returned products, <strong>RMA Number: <venda_com></strong>.</p>
+<p>We will refund your credit/debit card as soon as your return has been checked and at the latest within 30 days from the receipt of your return notification.</p>
+
+<table border="0" cellspacing="0" summary="Details for your <venda_ebizname> order">
+<thead>
+<tr>
+	<th scope="col" colspan="5">Your Contact/Billing Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<th scope="row">Cardholder:</th>
+	<td colspan="4"><venda_ohtitle> <venda_ohfname> <venda_block label=76,ohmname=notnull><venda_ohmname> </venda_block label=76><venda_ohlname></td>
+</tr>
+<tr>
+	<th scope="row">Address:</th>
+	<td colspan="4">
+	<venda_block label=73,ohcompany=notnull><venda_ohcompany><br></venda_block label=73>
+	<venda_ohnum> <venda_ohaddr1><br>
+	<venda_block label=74,ohaddr2=notnull><venda_ohaddr2><br></venda_block label=74>
+	<venda_ohcity><br>
+	<venda_ohstate> <venda_ohzipc><br>
+	<venda_ohcntry>
+	</td>
+</tr>
+<tr>
+	<th scope="row">Phone:</th>
+	<td colspan="4"><venda_block label=100,mode=value,<venda_setting type=ebiz,name=hidearea>!=1><venda_oharea> </venda_block label=100><venda_ohphone></td>
+</tr>
+<venda_block label=156,ohfax=notnull>
+<tr>
+	<th scope="row">Fax:</th>
+	<td colspan="4"><venda_ohfarea> <venda_ohfax></td>
+</tr>
+</venda_block label=156>
+</tbody>
+<venda_detail1>
+</table>
+
+<venda_inctemplate name=htmlEmailMessage,type=includes/email>
+<venda_inctemplate name=htmlEmailFooter,type=includes/email>
+
+</div>
+</body>
+</html>

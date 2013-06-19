@@ -1,0 +1,82 @@
+<script type="text/javascript">
+<!-- 
+function isNum(form, elm, errMsg) {
+	var numOnly =/^\d+$/;
+	var curElm = document.forms[form].elements[elm];
+	var strpdField = curElm.value.replace(/\s+/g,'');
+	if (!numOnly.test(strpdField)) {  
+		if (arguments[2] != undefined) {
+			alert(errMsg);
+			curElm.focus();
+		}
+		return;
+	}
+}
+function validateFields() {
+	var filterNumber = /[0-9]/;
+	if (document.wizform.fname.value == '') {
+		alert('<venda_text id=site.my_account.edit_user_details.edit_contact_details.js_validation.first_name>');
+		document.wizform.fname.focus();
+		return;
+	}
+	if (document.wizform.lname.value == '') {
+		alert('<venda_text id=site.my_account.edit_user_details.edit_contact_details.js_validation.last_name>');
+		document.wizform.lname.focus();
+		return;
+	}
+	if (document.wizform.num.value == '') {
+		alert('<venda_text id=site.my_account.edit_user_details.edit_contact_details.js_validation.num>');
+		document.wizform.num.focus();
+		return;
+	}
+	if (document.wizform.addr1.value == '') {
+		alert('<venda_text id=site.my_account.edit_user_details.edit_contact_details.js_validation.addr1>');
+		document.wizform.addr1.focus();
+		return;
+	}
+	if (document.wizform.city.value == '') {
+		alert('<venda_text id=site.my_account.edit_user_details.edit_contact_details.js_validation.city>');
+		document.wizform.city.focus();
+		return;
+	}
+	if (document.wizform.zipc.value == '') {
+		alert('<venda_text id=site.my_account.edit_user_details.edit_contact_details.js_validation.zipc>');
+		document.wizform.zipc.focus();
+		return;
+	}
+	if (document.wizform.cntry.value == '') {
+		alert('<venda_text id=site.my_account.edit_user_details.edit_contact_details.js_validation.cntry>');
+		document.wizform.cntry.focus();
+		return;
+	}
+	if (document.wizform.usemail.value == '') {
+		alert('<venda_text id=site.coming_soon.js_validation.email>');
+		document.wizform.usemail.focus();
+		return;
+	}
+	var checkUserEmail = document.wizform.usemail.value;
+	if (checkUserEmail != '') {
+		if ((checkUserEmail.indexOf('@') < 0) || ((checkUserEmail.charAt(checkUserEmail.length-4) != '.') && (checkUserEmail.charAt(checkUserEmail.length-3) != '.'))) {
+			alert('<venda_text id=site.coming_soon.js_validation.valid_email>');
+			document.wizform.usemail.focus();
+			return;
+		}
+	}
+	if (document.wizform.ustandc.value == '') {
+		alert('<venda_text id=ustandc_required>');
+		document.wizform.ustandc.focus();
+		return;
+	}
+	if (document.wizform.usxthowhearus.value == '') {
+		alert('<venda_text id=js_validation.usxthowhearus>');
+		document.wizform.usxthowhearus.focus();
+		return;
+	}
+	
+	<venda_wizbutton step=confirm,mode=process,check=yes,callonly=yes>
+}
+// -->
+</script>
+<div id="buttons">
+<input type="image" onclick="validateFields(); return false;" src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/bt_continue.gif" alt="<venda_text id=site.button.continue>" class="right">
+</div>

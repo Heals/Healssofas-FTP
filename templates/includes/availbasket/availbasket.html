@@ -1,0 +1,113 @@
+<br class="clear-all">
+<script type="text/javascript" src="/venda-support/js/Venda/Widget/Slider.js"></script><script type="text/javascript" src="/venda-support/js/external/cookiejar.js"></script>
+<script type="text/javascript" src="http://service.avail.net/2009-02-13/dynamic/8f6b6820-5425-11de-92c7-12313b0039c1/emark.js"></script>
+<script type="text/javascript">
+function showAvailH2(ref){
+	var h2="h2"+ref;
+	if (document.getElementById(h2)) {
+		aHeader=document.getElementById(h2);
+		aHeader.style.display='block';
+	} 
+}
+function vendaRecsDisplay(elementref)
+{
+	
+var panelref= ("avail-panel-"+elementref);
+	ajaxFunction('/page/irecsdisplay',panelref);//display recs
+	//return the borrowed recently viewed items cookie
+	
+	var cj = new CookieJar({expires:'',path: '/'});
+	//alert('rvi cookie contents:'+(cj.get("RVI")));
+	cj.remove("RVI");
+	var listOfRVIs=cj.get("customRVI")
+	cj.put("RVI",listOfRVIs);
+	cj.remove("customRVI")
+	
+}
+function populateProductRecs(elref)
+{
+	if (document.getElementById('tag-basketitems'))//only do anything if the product data is available on the page
+	{
+		
+		var cj = new CookieJar({expires:'',path: '/'});
+		var prodid = document.getElementById('tag-basketitems').innerHTML;
+		var emarkid = document.getElementById('avail-emarkid').innerHTML;
+		var trackingcodeHTXT = '<venda_htxt mode=get,name=avail>';
+	if(cj.get("AvailTracker")){
+	var trackCode = cj.get("AvailTracker").split(',');//COUcd LD GET THIS VALUE VIA URL PARAM
+	}else{
+	var trackCode = "";
+	}
+		var addToBasket ="<venda_block label=3212,mode=value,<venda_addedmsg msg=<venda_text id=site.addedmsg>>!=>1</venda_block label=3212>";
+		var recaddedHTXT = '<venda_htxt mode=get,name=recadded>';		
+		
+		var emark = new Emark;
+		//alert(elref);
+			var prodRecs = emark.getProductsPredictionsFromClicks([prodid], 'ShoppingCartRecs');
+		//borrow recently viewed items cookie (if the cookie exists)
+		if (cj.get("RVI")!=null)
+		
+		{var listOfRVIs = cj.get("RVI");
+		//copy the list of recently viewed items to the "Custom RVI Cookie"
+		//cj.put("customRVI",listOfRVIs);
+			//cj.remove("RVI");
+		}
+		
+		if (trackingcodeHTXT == 'true'){
+			if (recaddedHTXT != ''){
+				emark.logAddedToCart(recaddedHTXT, trackCode[0]);
+//(recaddedHTXT + " " +trackCode[0] + " " + trackCode )
+				//alert('now calling logAddedToCart for a recommended product where the tracking code is: '+trackCode[0]+' and the product id is: '+recaddedHTXT);
+				}else{
+				emark.logAddedToCart(recaddedHTXT);
+				//alert('now calling logAddedToCart for a Non-recommended product where the product id is: '+recaddedHTXT+' Note we do not pass a trackingcode in this case');
+				}
+		}	
+		
+		//copy product recs from Avail to the RVI cookie
+		/*emark.commit(function() { 
+//alert('product recomendations:'+prodRecs);
+	
+		cj.put("RVI",prodRecs);
+//alert('cookie contents:'+prodRecs);	
+		//vendaRecsDisplay(elref);
+		if (prodRecs!="") {showAvailH2(elref);}
+		});*/
+	
+	}
+}
+</script>
+	<style>
+#availprodrecs .exh2{background-color:#BBB7B1;color:#FFFFFF;font-size:1.09em;font-weight:bold;margin:0;padding:2px 10px;text-transform:uppercase;text-align:left}
+.irecslist ul {height:220px;overflow:hidden;margin-bottom:15px;}
+.irecslist ul li{float:left;padding:8px 0 0 0;width:220px;margin:0 0 30px 20px}
+.irecslist ul li h2, .irecslist ul li p.sliderinvtname {display:block;text-align:right;padding:0;font-weight:bold;text-transform:uppercase;font-size:1em;color:#666;height:40px;}
+.irecslist ul li .image {float:left;width:220px;}
+.irecslist ul li .details {float:right;text-align:right;width:75px;}
+#avail-panel-availpd ul li .details, #avail-panel-availpd ul li h2 {margin-right:10px;}
+.irecslist ul li .moreinfo a{color:#AEAEAE;font-weight:bold;font-size:1em;text-transform:lowercase;}
+.irecslist ul li .normalprice, .irecslist ul li .priceattr{font-size:1em;margin:40px 0 0 0;padding:0;display:block; *margin:40px;}
+#availprodrecs #qty {
+border:1px solid #CCCCCC;
+font-size:1em;
+margin-bottom:2px;
+width:41px;
+}
+.irecslist ul li .fromprice span, .irecslist ul li .normalprice{font-weight:bold;}
+.irecslist ul li .pricedetail {clear:both}
+</style>
+	<div id="availprodrecs" style="width:955px;">
+<div id="avail-emarkid" style="display:none;">8f6b6820-5425-11de-92c7-12313b0039c1</div>
+<div class="exh2" style="display:none" id="h2availbasket">
+&nbsp;We Recommend
+</div>
+<div id="avail-panel-availbasket" class="irecslist" style="width:955px;float:left">
+<!-- ajax content will go here -->
+</div>
+</div>
+<br class="clear-all">
+<!-- Avail function calls -->
+<script type="text/javascript"> 
+populateProductRecs("availbasket")
+</script>
+<br class="clear-all">

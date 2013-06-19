@@ -1,0 +1,50 @@
+<html>
+<head>
+<title><venda_ebizname> - Order follow up</title>
+</head>
+<body>
+<div id="emailBody">
+<venda_inctemplate name=htmlEmailCssEtc,type=includes/email>
+<div id="logo">
+	<venda_inctemplate name=htmlEmailLogo,type=includes/email>
+</div>
+
+<div id="emailwhitecontent">
+<div id="emailcontent">
+
+<p>Dear <strong><venda_userinfo><venda_sestitle> <venda_sesfname> <venda_block label=115,sesmname=notnull><venda_sesmname> </venda_block label=115><venda_seslname></venda_userinfo></strong></p>
+
+<p>Thanks for shopping at Heals.co.uk recently, we hope that you are pleased with your purchase.</p>
+
+<p>As it has been a couple of weeks since your order was processed, we would like to get your feedback on the products you purchased and give you a chance to post a review on the Heals.co.uk website.  </p>
+
+<p>Writing a review is a great way to share your knowledge and opinions on a product and furthermore it can really help other customers in their decision making. We all love to hear real life experiences and get a rounded, unbiased opinion before ordering so having recently bought and used our products in the past you really are the experts. </p>
+
+<p>Your opinions are not only very useful to other customer but they are extremely important to us, so we would be grateful if you would share your thoughts with us - the review form will only take a few moments to complete. </p>
+
+<p>To review each item you purchased, simply click on the “write a review” button below:</p>
+
+<!-- for standard orders -->
+
+<table border="0" cellspacing="0" cellpadding="5" summary="products you have purchased" style="text-align:left;">
+		<thead>
+			<tr>
+				<th align="left" valign="top" colspan="3">Product(s) Purchased.</th>
+			</tr>
+		</thead>
+		<tbody>
+			<venda_order ref=<venda_ohrfnbr>,template=htmlpost_purchase-detail,templategrp=email,shopcart=1,formfields=true>
+			
+		</tbody>
+</table>
+
+<p>Don’t know where to start or need some help? Please <a href="<venda_dispview pcat=product_reviews>">click here to go to our Customer Reviews</a> page where you’ll find some hints and tips to help write a good review </p>
+<p>Once again, thank you for choosing to shop with Heals.co.uk </p>
+	
+<venda_inctemplate name=htmlEmailFooter,type=includes/email>
+</div>
+</div>
+</div>
+</body>
+</html>
+

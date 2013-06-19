@@ -1,0 +1,119 @@
+<table border="0" cellspacing="0" cellpadding="5" summary="Details for your <venda_ebizname> order" style="text-align:left;">
+<!-- start contact/billing details -->
+<thead>
+<tr>
+	<th scope="col" colspan="5">Contact Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<th scope="row">Cardholder:</th>
+	<td colspan="4"><span class="addrName"><venda_ohtitle> <venda_ohfname> <venda_block label=76,ohmname=notnull><venda_ohmname> </venda_block label=76><venda_ohlname></span></td>
+</tr>
+<tr>
+	<th scope="row">Address:</th>
+	<td colspan="4">
+	<venda_block label=73,ohcompany=notnull><venda_ohcompany><br></venda_block label=73>
+	<venda_ohnum> <venda_ohaddr1><br>
+	<venda_block label=74,ohaddr2=notnull><venda_ohaddr2><br></venda_block label=74>
+
+	<!-- if country is US or US entities display this formatting -->
+	<venda_block label=999,mode=value,<venda_ohcntry>=United States,<venda_ohcntry>=United States Non-48,<venda_ohcntry>=United States Armed Forces,operator=or>
+	<venda_ohcity>, <venda_block label=75,ohstate=notnull><venda_ohstate></venda_block label=75> <venda_ohzipc><br>
+	</venda_block label=999>
+
+	<!-- if country is NOT US or US entities display this formatting -->
+	<venda_block label=9991,mode=value,<venda_ohcntry>!=United States,<venda_ohcntry>!=United States Non-48,<venda_ohcntry>!=United States Armed Forces,operator=and>
+	<venda_ohcity><br>
+	<venda_block label=751,ohstate=notnull><venda_ohstate></venda_block label=751> <venda_ohzipc><venda_block label=1234,ohstate=notnull,ohzipc=notnull,operator=or><br></venda_block label=1234>
+	</venda_block label=9991>
+
+	<venda_ohcntry>
+	</td>
+</tr>
+<tr>
+	<th scope="row">Phone Number:</th>
+	<td colspan="4"><span class="addrPhone"><venda_oharea> <venda_ohphone></span></td>
+</tr>
+<venda_block label=155,ohfax=notnull>
+<tr>
+	<th scope="row">Fax Number:</th>
+	<td colspan="4"><span class="addrFax"><venda_ohfarea> <venda_ohfax></span></td>
+</tr>
+</venda_block label=155>
+</tbody>
+<!-- end contact/billing details -->
+
+<!-- start delivery/items loop -->
+<venda_detail1>
+<!-- end delivery/items loop -->
+
+<!-- start totals -->
+<thead>
+<tr>
+	<th scope="col" colspan="5">Order Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<th scope="row" colspan="3">Items:</th>
+	<td colspan="2"><venda_ohcursym><venda_ohsub></td>
+</tr>
+<venda_block label=64,ohdisc!=0.00,ohdisc=notnull>
+<tr>
+	<th scope="row" colspan="3">Discount:</th>
+	<td colspan="2">-<venda_ohcursym><venda_ohdisc></td>
+</tr>
+</venda_block label=64>
+<tr>
+	<th scope="row" colspan="3">Postage &amp; Packaging:</th>
+	<td colspan="2"><venda_ohcursym><venda_ohship></td>
+</tr>
+<venda_block label=91,ohtax!=0.00,ohtax=notnull>
+<tr>
+	<th scope="row" colspan="3">Estimated Tax:</th>
+	<td colspan="2"><venda_ohcursym><venda_ohtax></td>
+</tr>
+</venda_block label=91>
+<venda_block label=670,ohgwtot&gt;0>
+<tr>
+	<th scope="row" colspan="3">Gift Wrapping:</th>
+	<td colspan="2"><venda_ohcursym><venda_ohgwtot></td>
+</tr>
+</venda_block label=670>
+<tr class="ordertotal">
+	<th scope="row" colspan="3">ORDER TOTAL: <venda_block label=92,ohtaxinc!=0.00,ohtaxinc=notnull>(including <venda_ohcursym><venda_ohtaxinc> VAT)</venda_block label=92></th>
+	<td colspan="2"><venda_ohcursym><venda_ohtot></td>
+</tr>
+
+<venda_block label=70,storecreditused&gt;0.00,storecreditused=notnull,creditaccount=notnull>
+<tr>
+	<th scope="row" colspan="3">Store Credit Used:</th>
+	<td colspan="2"><venda_ohcursym><venda_creditaccount></td>
+</tr>
+<venda_block label=181,balance=notnull,balance&gt;0.00>
+<tr>
+	<th scope="row" colspan="3">Balance Paid:</th>
+	<td colspan="2"><venda_ohcursym><venda_balance></td>
+</tr>
+</venda_block label=181>
+<venda_block label=65,storecredit&gt;0.00,storecredit=notnull>
+<tr>
+	<th scope="row" colspan="3">Store Credit Remaining:</th>
+	<td colspan="2"><venda_ohcursym><venda_storecredit></td>
+</tr>
+</venda_block label=65>
+</venda_block label=70>
+</tbody>
+<!-- end totals -->
+<venda_block label=62,coupons=notnull>
+<thead>
+<tr>
+	<th scope="col" colspan="5">Promotions Included</th>
+</tr>
+</thead>
+<tbody>
+<venda_detail3>
+</tbody>
+</venda_block label=62>
+</table>

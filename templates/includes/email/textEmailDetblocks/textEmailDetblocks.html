@@ -1,0 +1,58 @@
+<venda_detblock1>
+<cr>
+<venda_block label=40,pkshipreq=1>
+--------------------------------------------------------------------------------------------------------------------------------------------------------<cr><cr>
+DELIVERY DETAILS:<cr>
+<venda_pktitle> <venda_pkfname> <venda_pklname><cr><cr>
+
+<venda_block label=71,pkcompany=notnull><venda_pkcompany><cr></venda_block label=71>
+<venda_pknum> <venda_pkaddr1><cr>
+<venda_block label=72,pkaddr2=notnull><venda_pkaddr2><cr></venda_block label=72>
+<venda_pkcity><cr>
+<venda_block label=73,pkstate=notnull><venda_pkstate><cr></venda_block label=73>
+<venda_pkcntry><cr>
+<venda_pkzipc><cr><cr>
+
+Tel: <venda_pkarea> <venda_pkphone><cr><cr>
+Delivery Method: <venda_pkshipmthd><cr><cr>
+--------------------------------------------------------------------------------------------------------------------------------------------------------<cr><cr>
+</venda_block label=40>
+<venda_detail2>
+</venda_detblock1>
+
+
+<venda_detblock2>
+
+<venda_block label=111,invtivtypename=Test,invtivtypename=Normal,invtivtypename=Range,invtivtypename=Non-Purchasable,invtivtypename=Non-PurchasableRange,invtivtypename=giftcertificate,invtivtypename=Hamper,invtivtypename=GardenFurnitureRange,invtivtypename=GardenFurniture,invtivtypename=package,operator=or>
+<venda_tpxt mode=set,name=notfurniture,value=yes>
+</venda_block label=111>
+
+<venda_block label=112,invtivtypename=FurnitureRange,invtivtypename=Furniture,operator=or>
+<venda_tpxt mode=set,name=furniture,value=yes>
+</venda_block label=112>
+
+<venda_block label=9999,invtatt1=null,invtatt2=null><venda_oiivname></venda_block label=9999> 
+<venda_block label=111,invtatt1=notnull><venda_invtatt1><venda_block label=112,invtatt2=notnull>, <venda_invtatt2></venda_block label=112></venda_block label=111>
+<venda_block label=221,oigwref=notnull>(gift wrapped)</venda_block label=221>
+ (<venda_oisub> <venda_ohcur>) x <venda_oiqty> = <venda_oiextsub> <venda_ohcur>
+ <venda_block label=19,oistatus!=5,oistatus!=6,oistatus!=8>
+	<venda_block label=10,oistatus=2,oistatus=3,operator=or>(In Progress)</venda_block label=10>
+	<venda_block label=11,oistatus=4,oistatus=7,operator=or>(<venda_status>)</venda_block label=11>
+</venda_block label=19>
+<venda_block label=20,oistatus=5,oistatus=6,oistatus=8,operator=or>
+	<venda_block label=113,oistatus=5>(<venda_block label=114,num=notnull>Tracking #: <venda_num> </venda_block label=114>Despatched <venda_stmp>)</venda_block label=113>
+	<venda_block label=112,oistatus=6>(<venda_status> <venda_stmp>)</venda_block label=112>
+	<venda_block label=115,oistatus=8>(RMA #: <venda_num> Despatched <venda_stmp>)</venda_block label=115>
+</venda_block label=20>
+<cr>
+<venda_block label=45,oiitype=3>
+<cr>
+Sent to: <venda_gcto> at <venda_gcemail><cr>
+Message: <venda_oicmt><cr>
+</venda_block label=45>
+</venda_detblock2>
+
+
+<venda_detblock3>
+<venda_ckname> (-<venda_cktotal> <venda_ohcur>)<cr>
+</venda_detblock3>

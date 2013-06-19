@@ -1,0 +1,35 @@
+<venda_inctemplate name=htmlEmailDetblocks2,type=includes/email>
+<html>
+<head>
+	<title><venda_ebizname> Order Cancellation - <venda_ohordnum></title>
+</head>
+<body>
+<div id="emailBody">
+<venda_inctemplate name=htmlEmailCssEtc,type=includes/email>
+<div id="logo">
+	<venda_inctemplate name=htmlEmailLogo,type=includes/email>
+	<h1>Items Cancelled from Order - <venda_ohordnum></h1>
+	<div class="clear">&nbsp;</div>
+</div>
+<venda_inctemplate name=htmlEmailHeader,type=includes/email>
+<p>We are writing to confirm that part or all of your order <strong>#<venda_ohordnum></strong> has been cancelled - full details are shown below.</p>
+<venda_inctemplate name=htmlEmailBody,type=includes/email>
+
+
+<p>To view your order history, go to '<a href="<venda_codehttps>?ex=co_wizr-register&bsref=<venda_bsref>" title="My Account">My Account</a>'.</p>
+<p>If your order was paid for using either an online Gift Certificate or Store Credit please contact Customer Service for your refund to be processed.</p>
+
+
+<!-- Footer cancel receipt -->
+<p>If you have any queries about this do not hesitate to contact us at <a href="mailto:customerservices@heals.co.uk" title="customerservices@heals.co.uk">customerservices@heals.co.uk</a></p>
+<p>Regards,</p>
+<div><venda_ebizname> Customer Services</div>
+<div><a href="<venda_ebizurl>"><venda_ebizurl></a></div>
+<div>Contact Us - <a href="mailto:cancellations@heals.co.uk">cancellations@heals.co.uk</a> or 08700 240 780</div>
+<div>Registered Office: Heal & Son Limited, 196 Tottenham Court Road, London W1T 7LQ</div>
+<div>VAT Number: GB 524 3006 89</div>
+<!-- Footer cancel receipt -->
+
+</div>
+</body>
+</html>

@@ -1,0 +1,360 @@
+<link rel="stylesheet" href="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/css/<venda_cattree index=1,value=catref>print.css" type="text/css" media="print">
+<div class="hide">templates name :normal</div>
+<!-- tag values used for lightbox and product cycling --></venda_tpcomment>
+<div id="tag-redirect" style="display:none;"><venda_dispview page=installflash></div>
+<div id="tag-ebizref" style="display:none;"><venda_setting type=ebiz,name=ref></div>
+<div id="tag-invtref" style="display:none;"><venda_invtref></div>
+<div id="tag-invtname" style="display:none;"><venda_invtname></div>
+<div id="tag-lightboxloadmessage" style="display:none;"><venda_text id=site.lightboxloadmessage></div>
+<div id="tempLightbox" style="display:none;"></div>
+<!-- tag values used for tell a friend, emwbis, write and read a review popups --></venda_tpcomment>
+
+<div id="tag-loadmessage" style="display:none;"><venda_text id=site.loadmessage></div>
+<script language="JavaScript" type="text/javascript">
+	
+	function toggle1(showdiv,img) {		
+		var avail_divID = new Array("reviewDiv1","reviewDiv2","reviewDiv3");
+		//Add all of IDs here		
+		for (i=0;i<avail_divID.length;i++) {
+			if (showdiv == avail_divID[i]) {		
+					document.getElementById(showdiv).style.display = "block";		
+					document.getElementById(showdiv+"img").src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/<venda_cattree index=1,value=catref>/"+img+".gif";		
+				}
+			else {
+				document.getElementById(avail_divID[i]).style.display = "none";	
+					if ((avail_divID[i]!="reviewDiv8")&& (avail_divID[i]!="reviewDiv9")) {
+						document.getElementById(avail_divID[i]+"img").src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/<venda_cattree index=1,value=catref>/"+avail_divID[i]+".gif";	
+					}
+				}
+			}
+		}
+	function largeImagePopup(template) 
+	{
+		if(template=='enlarge'){
+			var url = "<venda_dispview invt=<venda_invtref>&layout=popups&temp="+ template +">";
+			window.open(url, null, "scrollbars=yes,width=340,height=460");
+		}
+		else{
+			var url = "<venda_dispview invt=<venda_invtref>&layout=popups&temp="+ template +">";
+			window.open(url, null, "scrollbars=yes,width=340,height=460");
+		}
+	}
+	
+	function pressImagePopup(template) 
+		{
+			if(template=='enlarge'){
+				var url = "<venda_dispview invt=<venda_invtref>&layout=popups&temp="+ template +">";
+				window.open(url, null, "scrollbars=yes,width=340,height=460");
+			}
+			else{
+				var url = "<venda_dispview invt=<venda_invtref>&layout=popups&temp="+ template +">";
+				window.open(url, null, "scrollbars=yes,width=340,height=460");
+			}
+		}
+
+	
+	function popupNewWindow(url)
+	{
+		if(url!=null){
+			window.open(url, null, "scrollbars=yes,width=620,height=560");
+		}
+	}
+	
+	function PopupPic(sPicURL) { 
+		var url = "<venda_dispview invt=<venda_invtref>&layout=enlarge&temp=enlargepress?>";
+				window.open(url+sPicURL, "", "resizable=1,,");
+	}
+<venda_tpcomment>
+// START - javascript for lightbox. Please remove if not needed 
+</venda_tpcomment>
+<venda_tpcomment>
+// see /venda-support/js/Venda/Widget/LightBox.js for usage details
+</venda_tpcomment>
+//enlarge_link
+if (typeof Venda.Widget.Lightbox != "undefined" || Venda.Widget.Lightbox) {
+	var Lightbox1 = new Venda.Widget.Lightbox();
+	Lightbox1.create(['zoom_link', 'zoom_img'], ['enlarge_link', 'enlarge_img'], 
+		{
+			drag: true, modal: true, fixedCenter: true, fade: 0.24,
+		//flash settings
+flSource:'http://imageware.venda.com/erez4/fsi4/fsi.swf?showcase_server=http://imageware.venda.com/erez4&showcase_dir=<venda_setting type=ebiz,name=ref>/invt/<venda_invtref>/&cfg=showcase_presets/showcase_info&Showcase_LabelTextSize=0&Showcase_ToolTips=0', flId:'lightboxflash', flContainer: 'imageware', flWidth: '480px', flHeight: '500px', flVer: '6.0.0' , flBgColour: '#ffffff',
+		  	invtname: 	document.getElementById('tag-invtname').innerHTML,
+		  	redirect: 	document.getElementById('tag-redirect').innerHTML,
+		  	loadmessage: 	document.getElementById('tag-lightboxloadmessage').innerHTML
+	});
+}
+
+<venda_tpcomment>
+// END - javascript for lightbox
+</venda_tpcomment>
+<venda_tpcomment>
+// START - javascript for tell a friend, emwbis, write and read a review. Please remove if not needed 
+</venda_tpcomment>
+if (typeof Venda.Widget.Features != "undefined" || Venda.Widget.Features) {
+	Venda.Widget.Features.create(['tellafriend_link', 'writereview_link', 'writeownreview_link', 'readreview_link', 'emwbis_link'], 
+		{
+			drag: true, modal: false
+	  	}, 
+	  	{
+		  	loadmessage: document.getElementById('tag-loadmessage').innerHTML
+		});
+}
+</script>
+<script type="text/javascript">
+function checkOS(){
+if (navigator.userAgent.indexOf("Windows NT 6.0") > -1) {
+return true;
+}
+else
+return false;
+}
+function getInternetExplorerVersion() {
+    var rv = -1; // Return value assumes failure.
+    if (navigator.appName == 'Microsoft Internet Explorer') {
+        var ua = navigator.userAgent;
+        var re = new RegExp("MSIE ([0-9]{1,}[\.0-9]{0,})");
+        if (re.exec(ua) != null)
+            rv = parseFloat(RegExp.$1);
+    }
+    return rv;
+}
+function checkVersion() {
+    var msg = "You're not using Windows Internet Explorer.";
+    var ver = getInternetExplorerVersion();
+    if (ver > -1) {
+        if (ver >= 8.0){
+            msg = "You're using a recent copy of Windows Internet Explorer.By V8";
+			return true;
+		}
+        else{
+            msg = "You should upgrade your copy of Windows Internet Explorer.";
+			return false;
+		}
+	}
+}
+if(checkVersion()==true && checkOS()==true){
+
+document.write("<style>#lightbox_holder #lightboxcontent_panel.yui-panel .bd { width:100%; }<\/style>");
+document.write("<style>#lightboxflash {width:100%;}<\/style>");
+
+}
+</script>
+
+<div id="invt_popup"></div>
+<div id="productdetail">
+		<div id="imagezone">
+				<!--  Alternative view Products  -->
+				<venda_inventory ref=<venda_invtref>,temp=alternative_view>
+				<!--  Alternative view Products  -->	
+		</div>
+
+		<div id="detailzone">
+			<venda_block label=32,mode=value,addedmsg=notnull><div><venda_addedmsg msg=You have added addedqty of addedname to your basket></div></venda_block label=32>
+			<div id="pleasenotebox"><venda_page page=nonpurchasableproduct></div>
+			<h1><venda_invtname></h1>
+	<div id="brandlogo">
+				<venda_block label=1011,pdxtbrandlogo=notnull>
+					<img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/brand/<venda_pdxtbrandlogo>"><br></venda_block label=1011>
+<venda_inventory ref=<venda_invtref>,temp=similarsearch></div>
+			<div id="productdetail_price">
+			<venda_block label=16,chkatt=null>
+			<!-- if product doesn't have attributes -->
+				
+					<venda_block label=17,invtwas=null>
+						<div>
+							<div id="price"><venda_currsym><venda_invtsell></div>
+							<br class="clear-all">
+						</div>
+					</venda_block label=17>
+					<venda_block label=171,invtwas=notnull>
+						<div id="price" class="pricenow"><venda_currsym><venda_invtsell></div>
+						<div class="productdetail_was">WAS <span id="was"><venda_currsym><venda_invtwas></span></div>
+					</venda_block label=171>
+				<!-- <*venda_block label=18,invtsavingonwas=notnull><div >Save <venda_currsym><venda_invtsavingonwas></div></venda_block label=18> -->
+			</venda_block label=16>
+				<br class="clear-all">
+				<!-- use following line for stock availability check -->
+				<venda_inventory ref=<venda_invtref>,temp=hardcode>
+			</div>
+			<br class="clear-all">
+			<venda_block label=215,invtsell2=notnull,operator=and>
+						<div class="multibuy_saving">
+									<div>
+										  	  <div>Multibuy Saving:&nbsp;</div>
+												<div>
+											   			Buy <venda_invtstartqty2><venda_block label=52,invtsell3=null></venda_block label=52> of these for <venda_currsym><venda_invtsell2>
+													<venda_block label=341,invtsell3=notnull>
+												   		Buy <venda_invtstartqty3><venda_block label=53,invtsell4=null></venda_block label=53> of these for <venda_currsym><venda_invtsell3>
+												    </venda_block label=341>
+												    <venda_block label=342,invtsell4=notnull>
+												    	Buy <venda_invtstartqty4><venda_block label=54,invtsell5=null></venda_block label=54> of these for <venda_currsym><venda_invtsell4>
+												    </venda_block label=342>
+												    <venda_block label=343,invtsell5=notnull>
+												    	Buy <venda_invtstartqty5><venda_block label=55,invtsell6=null></venda_block label=55> of these for <venda_currsym><venda_invtsell5>
+												    </venda_block label=343>
+												    <venda_block label=344,invtsell6=notnull>
+												    	Buy <venda_invtstartqty6> of these for <venda_currsym><venda_invtsell6> each
+												    </venda_block label=344>
+												</div>
+												<br class="clear-all">
+									</div>
+									
+									<form name="form" action="<venda_codehttp>" method="get">
+										<input type="hidden" name="bsref" value="<venda_bsref>">
+										<input type="hidden" name="log" value="22">
+										<input type="hidden" name="mode" value="add">
+										<input type="hidden" name="curpage" value="">
+										<input type="hidden" name="next" value="">
+										<input type="hidden" name="ex" value="co_wizr-shopcart">
+										
+										<!-- "buy" defines sku to add if "ex" is "co_disp-shopc" -->
+										<input type="hidden" name="buy" value="<venda_invtref>">
+										<!-- "invt" defines next step if "ex" is "co_disp-shopc" (sends to home page without this field) - could be set to send to any icat or page instead -->
+										<input type="hidden" name="invt" value="<venda_invtref>">
+										
+										<!-- "ivref" defines sku to add if "ex" is "co_wizr-shopcart" -->
+										<input type="hidden" name="ivref" value="<venda_invtref>">
+										<input type="hidden" name="bklist" value="<venda_bklist>">
+										<input type="hidden" name="layout" value="default">
+										
+										<venda_block label=25,invtavail&gt;0>
+										<!-- if in stock -->
+									<div class="rowqty"><input name="qty" id="qty" type="text" value="1" size="3" maxlength="3"> <label for="qty" class="bold">Qty:</label></div>
+											
+											<venda_block label=700,chkatt=null>
+											<!-- if product doesn't have attributes -->
+												<div class="productdetail_button">
+													<div><input type="image" class="add" src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/bt_addtobasket.gif" alt="Add to Basket" onClick="document.form.ex.value='co_disp-shopc';"></div>
+													<div><input type="image" class="buy" src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/bt_buynow.gif" alt="Buy Now"  onClick="document.form.layout.value='shopcart';"></div>
+												</div>
+											</venda_block label=700>
+										</venda_block label=25>
+									
+										
+										<br class="clear-all">
+										<venda_block label=30,invtpreorder=notnull>
+										<!-- if future release date -->
+											<div class="release">
+										<venda_text id=site.product_detail.not_yet_released>&nbsp;<venda_text id=site.product_detail.release_date>
+										</div>
+			
+										</venda_block label=30>
+		
+									</form><br class="clear-all">
+						</div>
+			</venda_block label=215>
+			
+			
+			<!-- If No multibuy Standard display-->
+			<venda_block label=1225,invtsell2=null>
+				<div id="multibuy_saving">
+							<form name="form" action="<venda_codehttp>" method="get">
+							<input type="hidden" name="bsref" value="<venda_bsref>">
+							<input type="hidden" name="log" value="22">
+							<input type="hidden" name="mode" value="add">
+							<input type="hidden" name="curpage" value="">
+							<input type="hidden" name="next" value="">
+							<input type="hidden" name="ex" value="co_wizr-shopcart">
+							
+							<!-- "buy" defines sku to add if "ex" is "co_disp-shopc" -->
+							<input type="hidden" name="buy" value="<venda_invtref>">
+							<!-- "invt" defines next step if "ex" is "co_disp-shopc" (sends to home page without this field) - could be set to send to any icat or page instead -->
+							<input type="hidden" name="invt" value="<venda_invtref>">
+							
+							<!-- "ivref" defines sku to add if "ex" is "co_wizr-shopcart" -->
+							<input type="hidden" name="ivref" value="<venda_invtref>">
+							<input type="hidden" name="bklist" value="<venda_bklist>">
+							<input type="hidden" name="layout" value="default">
+			
+			
+			<venda_block label=125,invtavail&gt;0>
+					<venda_block label=1700,chkatt=null>
+							<div class="rowqty"><input name="qty" id="qty" type="text" value="1" size="3" maxlength="3" ><label for="qty"><venda_text id=site.quantity></label></div>
+					</venda_block label=1700>
+					
+					
+				<venda_block label=1701,chkatt=notnull>
+						<div class="rowqty"><input name="qty" id="qty" type="text" value="1" size="3" maxlength="3" <venda_block label=7701,chkatt=notnull>onkeypress="if(event.keyCode==13){document.form.ex.value='co_wizr-shopcart'; return getProduct('<venda_invtuuid>').checkAttributes(this.form,''); }"</venda_block label=7701>><label for="qty"><venda_text id=site.quantity></label></div>
+				</venda_block label=1701>
+					
+			</venda_block label=125>
+			
+			<venda_block label=1250,invtavail&lt;0>
+				<venda_block label=1700,chkatt=null>
+					<venda_block label=1234,etadyleft&gt;0>
+					<!-- Special Order-->
+					<!-- May Be Change Add Preorder Button ETA is future -->
+					<div class="rowqty"><input name="qty" id="qty" type="text" value="1" size="3" maxlength="3" ><label for="qty"><venda_text id=site.quantity></label></div>
+					</venda_block label=1234>	
+				</venda_block label=1700>
+			</venda_block label=1250>
+			<venda_block label=30,invtpreorder=notnull>
+			<!-- if future release date -->
+			<div class="release">
+			<venda_text id=site.product_detail.not_yet_released>&nbsp;<venda_text id=site.product_detail.release_date>
+			 </div>								
+			</venda_block label=30>
+
+			<!-- Start product doesn't has attribute -->
+			<venda_block label=70008,chkatt=null>
+			<!-- All Non-'Furniture' and Non-'Furniture Range'  -->
+			<div class="productdetail_button">
+			<venda_block label=323,invtivtype=normal,invtivtype=range,invtivtype=gardenfurniture,invtivtype=gardenfurniturerange,operator=or>
+					<venda_block label=777,invtavail&lt;1,etadyleft=null>
+							<p class="nostock"><a href="<venda_dispview invt=<venda_invtref>>&temp=emailinstock" title="<venda_text id=site.link.title.email_when_in_stock.invt>" id="emwbis_link"><venda_text id=site.link.email_when_in_stock></a>
+							</p>
+					</venda_block label=777>
+					
+			<input type="image" class="add" src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/bt_addtobasket_large.gif" alt="Add to Basket" onClick="document.form.ex.value='co_disp-shopc';">
+			
+					<input type="image" class="buy" src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/bt_buynow_large.gif" alt="Buy Now"  onClick="document.form.layout.value='shopcart';">
+			<br class="clear-all">
+			
+			</venda_block label=323>
+
+			<!-- All 'Furniture' and 'Furniture Range'  -->
+			<venda_block label=333,invtivtype=furniture,invtivtype=furniturerange,operator=or>
+			
+			<!-- Control display by CSS from template availability  -->
+			<p class="nostock"><a href="<venda_dispview invt=<venda_invtref>>&temp=emailinstock" title="<venda_text id=site.link.title.email_when_in_stock.invt>" id="emwbis_link"><venda_text id=site.link.email_when_in_stock></a>
+			</p>
+			<input type="image" class="add" src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/bt_addtobasket_large.gif" alt="Add to Basket" onClick="document.form.ex.value='co_disp-shopc';">
+			<input type="image" class="buy" src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/bt_buynow_large.gif" alt="Buy Now"  onClick="document.form.layout.value='shopcart';">
+			<!-- Control display by CSS  from templates availability-->
+			</venda_block label=333>
+			<br class="clear-all">
+			</div>
+			
+			</venda_block label=70008>
+			<!-- End product doesn't has attribute -->			
+			
+			
+			<venda_block label=70009,chkatt=notnull>
+			<!-- Start product grid includes -->
+			<venda_inctemplate name=productgridajax,type=invt>
+			<div id="targetgrid"></div>
+			<div style="height:10px;">&nbsp;</div>
+			<!-- End product grid includes -->
+			</venda_block label=70009>
+												
+			</form>
+			<br class="clear-all">
+			</div>		
+			<br class="clear-all">
+			</venda_block label=1225>
+
+			<!--  Stat Include Search similar product  -->
+				<venda_inventory ref=<venda_invtref>,temp=similarsearch> 
+			<!-- End Include Search similar product  -->
+			<!-- Start Including TAB -->
+				<venda_inctemplate name=productdetail_tab,type=invt>
+			<!-- End Including TAB -->
+		</div><br class="clear-all">
+</div>
+
+<!-- This tag is used to show the previous review -->
+  	 
+<venda_tpcomment><!-- tpxt for Meta tag --></venda_tpcomment>
+<div class="hide"><venda_category rec=icat,ref=<venda_invtcatref0>,temp=categoryname></div>
+<venda_tpxt mode=set,name=invtname,value=<venda_invtname>>
+<venda_tpxt mode=set,name=pdxtbrowseby,value=<venda_pdxtbrowse>>

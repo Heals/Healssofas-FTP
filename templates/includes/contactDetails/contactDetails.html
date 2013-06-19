@@ -1,0 +1,25 @@
+<venda_block label=250,ohpaytype!=12>
+<p>
+<span class="addrName"><venda_ohtitle> <venda_ohfname><venda_block label=77,ohmname=notnull> <venda_ohmname></venda_block label=77> <venda_ohlname></span><br>
+<span class="companyName"><venda_block label=76,ohcompany=notnull><venda_ohcompany><br></venda_block label=76></span>
+<span class="ohnum"><venda_block label=71,ohnum=notnull><venda_ohnum> </venda_block label=71><venda_ohaddr1>,<br></span> 
+<span class="ohaddr"><venda_block label=74,ohaddr2=notnull><venda_ohaddr2>,<br></venda_block label=74></span>
+
+<!-- if country is US or US entities display this formatting -->
+<venda_block label=999,mode=value,<venda_ohcntry>=United States,<venda_ohcntry>=United States Non-48,<venda_ohcntry>=United States Armed Forces,operator=or>
+<venda_ohcity>, <venda_block label=75,ohstate=notnull><venda_ohstate>,</venda_block label=75> <br><venda_ohzipc><br>
+</venda_block label=999>
+
+<!-- if country is NOT US or US entities display this formatting -->
+<venda_block label=9991,mode=value,<venda_ohcntry>!=United States,<venda_ohcntry>!=United States Non-48,<venda_ohcntry>!=United States Armed Forces,operator=and>
+<venda_ohcity>,
+<span class="ohstate"><venda_block label=751,ohstate=notnull><venda_ohstate>,</venda_block label=751></span><br><venda_ohzipc><br>
+</venda_block label=9991>
+
+<venda_ohcntry><br><span id="tag-contactDetails-usemail" class="hide"><venda_usemail></span>
+<venda_block label=48,workflow=ordlookup><span><venda_usemail></span><br></venda_block label=48>
+<venda_block label=46,workflow=instore,ustype!=P><span id="contactDetails-usemail"><noscript><venda_usemail></noscript></span><br></venda_block label=46>
+<venda_block label=47,workflow!=ordlookup,workflow!=instore><span id="contactDetails-usemail" class="hide"><noscript><venda_usemail></noscript></span><br></venda_block label=47>
+<script type="text/javascript">Venda.Ebiz.splitString(document.getElementById('tag-contactDetails-usemail').innerHTML, 30, 'contactDetails-usemail');</script>
+</p>
+</venda_block label=250>

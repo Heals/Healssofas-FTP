@@ -1,0 +1,40 @@
+<venda_block label=88,flgft=0,realpktot&gt;0,operator=or>
+<venda_block label=116,giftwrapavail=0,giftwrapavail=null,operator=or>
+<venda_block label=80,mode=value,<venda_setting type=ebiz,name=giftmessageonly>!=1>
+<div id="additionalservices">
+<h2><span></span><venda_text id=site.order_confirmation.additional_services></h2>
+<ul>
+	<venda_block label=92,mode=value,<venda_glxt mode=get,name=glxtusertype>!=p><venda_userinfo><venda_block label=165,sesallowmultideladdress=1><li class="itemship"><a href="#" onClick='<venda_wizbutton step=itemship,mode=process,callonly=yes> return false;'><venda_text id=site.order_confirmation.multiple_delivery_addresses></a></li></venda_block label=165></venda_userinfo></venda_block label=92>
+<venda_block label=181,flgft=0>
+<li class="redeemgift"><a href="#" onClick='<venda_wizbutton step=redeemgift,mode=process,callonly=yes> return false;'><venda_text id=site.order_confirmation.redeem_gift_certificate></a></li>
+</venda_block label=181>
+<venda_block label=182,realpktot&gt;0>
+<li class="coupon"><a href="#" onClick='<venda_wizbutton step=coupon,mode=display,callonly=yes> return false;'><venda_text id=site.order_confirmation.redeem_promotion_code></a></li>
+</venda_block label=182>
+</ul>
+</div>
+</venda_block label=80>
+</venda_block label=116>
+<venda_block label=16,mode=value,<venda_giftwrapavail>&gt;0,<venda_setting type=ebiz,name=giftmessageonly>=1,operator=or>
+<div id="additionalservices">
+<h2><span></span><venda_text id=site.order_confirmation.additional_services></h2>
+<ul>
+	<venda_block label=82,realpktot&gt;0>
+	<li class="coupon"><a href="#" onClick='<venda_wizbutton step=coupon,mode=display,callonly=yes> return false;'><venda_text id=site.order_confirmation.redeem_promotion_code></a></li>
+	</venda_block label=82>
+	<venda_block label=81,flgft=0>
+	<li class="redeemgift" style="text-transform: none;"><a href="#" onClick='<venda_wizbutton step=redeemgift,mode=process,callonly=yes> return false;'>Redeem Heals.co.uk e-voucher</a></li>
+	</venda_block label=81>
+<venda_block label=193,mode=value,<venda_setting type=ebiz,name=addgwcombinedpage>!=1>
+	<li class="giftwrap"><span class="giftmessagelabel"><venda_text id=site.order_confirmation.gift_wrapping></span>
+	<venda_extflds exfldtype=order,ref=<venda_ohrfnbr>,group=11,template=orxfields_set,type=includes>
+	</li>
+	<venda_block label=93,mode=value,<venda_glxt mode=get,name=glxtusertype>!=p><venda_userinfo><venda_block label=65,sesallowmultideladdress=1>
+	<li class="itemship"><a href="#" onClick='<venda_wizbutton step=itemship,mode=process,callonly=yes> return false;'><venda_text id=site.order_confirmation.multiple_delivery_addresses></a></li></venda_block label=65></venda_userinfo></venda_block label=93>
+</venda_block label=193>	
+	<venda_block label=933,mode=value,<venda_setting type=ebiz,name=addgwcombinedpage>=1,<venda_glxt mode=get,name=glxtusertype>!=p><venda_userinfo><venda_block label=65,sesallowmultideladdress=1>
+	<li class="itemship"><a href="#" onClick='<venda_wizbutton step=addgiftwrap,mode=process,callonly=yes> return false;'><venda_text id=site.order_confirmation.multiple_delivery_addresses_gift_messages></a></li></venda_block label=65></venda_userinfo></venda_block label=933>
+</ul>
+</div>
+</venda_block label=16>
+</venda_block label=88>

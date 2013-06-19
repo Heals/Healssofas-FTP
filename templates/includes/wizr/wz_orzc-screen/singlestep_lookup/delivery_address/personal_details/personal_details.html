@@ -1,0 +1,27 @@
+<fieldset>
+<legend class="orzcdaddr-personal"><venda_text id=site.contact_address.personal_details></legend>
+<div><label for="title"><venda_text id=site.contact_address.label.title> <span class="required">*</span></label>
+<select name="title" id="title">
+	<option value="Mr" <venda_block label=121,title=Mr>selected</venda_block label=121>>Mr</option>
+	<option value="Mrs" <venda_block label=111,title=Mrs>selected</venda_block label=111>>Mrs</option>
+	<option value="Miss" <venda_block label=101,title=Miss>selected</venda_block label=101>>Miss</option>
+	<option value="Ms" <venda_block label=121,title=Ms>selected</venda_block label=121>>Ms</option>
+	<option value="" <venda_block label=131,title=Other>selected</venda_block label=131>>Other</option>
+</select></div>
+<div><label for="fname"><venda_text id=site.contact_address.label.first_name> <span class="required">*</span></label> <venda_fname field=text,size=25,maxlength=30></div>
+<venda_block label=123,mode=value,<venda_setting type=ebiz,name=showmname>=1>
+<div><label for="mname"><venda_text id=site.contact_address.label.middle_name></label> <venda_mname field=text,size=25,maxlength=30></div>
+</venda_block label=123>
+<div><label for="lname"><venda_text id=site.contact_address.label.last_name> <span class="required">*</span></label> <venda_lname field=text,size=25,maxlength=30></div>
+<!-- Phone Number and fax number-->
+<venda_block label=50,param2!=storeadd>
+<div><div><label for="phone" class="dontFloat"><venda_text id=site.contact_address.label.phone_number></label> <venda_block label=101,mode=value,<venda_setting type=ebiz,name=hidearea>!=1><label for="area" class="dontFloat registerinvisible"><venda_text id=site.delivery_address.label.phone_area_code></label></venda_block label=101></div> <venda_block label=100,mode=value,<venda_setting type=ebiz,name=hidearea>!=1><venda_area field=text,size=4,maxlength=6> </venda_block label=100><venda_phone field=text,size=14,maxlength=20></div>
+</venda_block label=50>
+<venda_block label=51,param2=storeadd>
+<div><div><label for="phone" class="dontFloat"><venda_text id=site.delivery_address.label.telephone_number> <span class="required">*</span></label> <venda_block label=101,mode=value,<venda_setting type=ebiz,name=hidearea>!=1><label for="area" class="dontFloat registerinvisible"><venda_text id=site.delivery_address.label.phone_area_code> <span class="required">*</span></label></venda_block label=101></div> <venda_block label=100,mode=value,<venda_setting type=ebiz,name=hidearea>!=1><venda_area field=text,size=4,maxlength=6,required=yes> </venda_block label=100><venda_phone field=text,size=14,maxlength=20,required=yes></div>
+</venda_block label=51>
+<venda_block label=125,mode=value,<venda_setting type=ebiz,name=showfax>=1>
+<div><div><label for="fax" class="dontFloat"><venda_text id=site.contact_address.label.fax_number></label> <venda_block label=101,mode=value,<venda_setting type=ebiz,name=hidearea>!=1><label for="farea" class="dontFloat registerinvisible"><venda_text id=site.contact_address.label.fax_area_code></label></venda_block label=101></div> <venda_block label=100,mode=value,<venda_setting type=ebiz,name=hidearea>!=1><venda_farea field=text,size=4,maxlength=6> </venda_block label=100><venda_fax field=text,size=18,maxlength=20></div>
+</venda_block label=125>
+<!-- Phone Number and fax number-->
+</fieldset>
