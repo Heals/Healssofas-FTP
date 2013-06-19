@@ -795,6 +795,7 @@ height: 230px;
 .extflds table th {font-size:1.2em;padding:5px 0 5px 5px;}
 .extflds table td.pdxtname {font-weight:bold;padding:0 0 0 5px;color:#777;}
 .extflds table td.pdxtvalue {color:#777;}
+#pdxtstatusresults {display:none;}
 /***************************************/
 /* Alternative Images and Image Zoom */
 /* *************************************/
