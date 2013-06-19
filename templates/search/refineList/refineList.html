@@ -19,12 +19,29 @@
             </span>
             <venda_block label=557,chosen=0,count!=0></a></venda_block label=557></div>
         </venda_block label=results>
+        
+        <venda_block label=pdxtstatus,field=pdxtstatus>
+	<venda_tpcomment><!-- "New In" checkbox if pdxtstatus=6 --></venda_tpcomment>
+	<venda_block label=statusresults,count!=0,facet=6>
+		<div class="termtext<venda_block label=5582,chosen!=0> chosen</venda_block label=5582><venda_block label=5592,count=0> zerocount</venda_block label=5592>"
+             	  data-field="<venda_field>"
+              	 data-facet="<venda_facet>"
+             	  data-url="<venda_faceturl>"
+           	 >
+		<venda_block label=5562,chosen=0,count!=0><a href="<venda_faceturl>" class="updatesearch"></venda_block label=5562>
+			<span class="facet">New In <span class="count">(<venda_count>)</span></span>
+		<venda_block label=5572,chosen=0,count!=0></a></venda_block label=5572>
+		</div>
+	</venda_block label=statusresults>
+    </venda_block label=pdxtstatus>
+    
 </venda_detblock_facet_result>
 
 <venda_detblock_facets>
 
 	<venda_block label=55,totalcount!=0,field!=parentCategoryRef>
 	
+    <venda_block label=notpdxtstatus,field!=pdxtstatus>
 	<h3 id="<venda_field>" class="collateheading">
 <venda_block label=162221,field!=pdxtbrowse,field!=pdxtsize,field!=pdxtmaterial,field!=pdxtbrand,field!=type,field!=pdxtcolour><venda_dispfield></venda_block label=162221>
 
@@ -35,6 +52,7 @@
 <venda_block label=162226,field=pdxtbrand>Brand Name</venda_block label=162226>
 
 </h3>
+</venda_block label=notpdxtstatus>
 
 <venda_block label=pdxtcolour,field=pdxtcolour>
 <venda_block label=issofa1,mode=value,<venda_primarysearchtext>!=sofa,<venda_primarysearchtext>!=sofas>
@@ -83,7 +101,16 @@
 <venda_tpcomment><!-- remove refinement --></venda_tpcomment>
 <venda_detblock_searched_fields>
 	<venda_block label=331,facetref!=*><div id="<venda_field><venda_facetref>" class="refine-list boxContent">
-		<div class="refine-left"><a href="<venda_searchurlremove>" class="removesearch" rel="<venda_field>=<venda_facetref>"><img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/bt_removecollation.gif" alt="<venda_text id=site.button.remove_collation>" title="<venda_text id=site.button.remove_collation>"></a> <span class="refine-text"><venda_dispfield>: </span><a href="<venda_searchurlremove>" rel="<venda_field>=<venda_facetref>" id="remove<venda_field><venda_facetref>" class="refine-link removesearch"><venda_block label=332,field=price><venda_currsym></venda_block label=332><venda_block label=265,facetname=null><venda_facetref></venda_block label=265><venda_block label=266,facetname=notnull><venda_facetname></venda_block label=266></a> <a href="<venda_searchurlremove>" rel="<venda_field>=<venda_facetref>" class="refine-remove removesearch"><venda_text id=site.search_results.refine.remove></a></div>
+		<div class="refine-left"><a href="<venda_searchurlremove>" class="removesearch" rel="<venda_field>=<venda_facetref>"><img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/bt_removecollation.gif" alt="<venda_text id=site.button.remove_collation>" title="<venda_text id=site.button.remove_collation>"></a> <span class="refine-text"><venda_dispfield>: </span><a href="<venda_searchurlremove>" rel="<venda_field>=<venda_facetref>" id="remove<venda_field><venda_facetref>" class="refine-link removesearch">
+		    <venda_block label=refinedbystatus,field=pdxtstatus>
+			New In
+		    </venda_block label=refinedbystatus>
+		    <venda_block label=everythingelse,field!=pdxtstatus>
+			<venda_block label=332,field=price><venda_currsym></venda_block label=332>
+			<venda_block label=265,facetname=null><venda_facetref></venda_block label=265>
+			<venda_block label=266,facetname=notnull><venda_facetname></venda_block label=266>
+		    </venda_block label=everythingelse>
+		</a></div><div class="refine-right"><a href="<venda_searchurlremove>" rel="<venda_field>=<venda_facetref>" class="refine-remove removesearch"><venda_text id=site.search_results.refine.remove></a></div>
 	</div></venda_block label=331>
 	<venda_block label=1671,field=q><venda_tpcomment><!-- stores current keyword value in tpxt:activekeyword --></venda_tpcomment><venda_tpxt mode=set,name=activekeyword,value=<venda_facetref>></venda_block label=1671>
 	<venda_block label=1672,field!=><venda_tpxt mode=set,name=active<venda_field>,value=<venda_facetref>></venda_block label=1672>
