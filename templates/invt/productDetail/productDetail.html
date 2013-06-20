@@ -69,7 +69,7 @@
 <!-- start: product swatch-->
 <div class="product_swatch">
 <form name="form" action="http://www.heals.co.uk/" method="get" name="addproductform" id="addproductform">
-<input type="hidden" name="ex" value="co_wizr-shopcart">
+<input type="hidden" name="ex" value="co_wizr-shopcart2">
 <input type="hidden" name="curpage" value="">
 <input type="hidden" name="buy" value="<venda_invtref>">
 <input type="hidden" name="invt" value="<venda_invtref>">
@@ -209,7 +209,7 @@ $(function(){$("#addproductform").submit(function(){if(jQuery(".qty").val()>0){r
                 
                 <venda_block label=353456,mode=value,<venda_addedmsg msg=<venda_text id=site.addedmsg>>=notnull>
 <venda_block label=ustyper1,ustype=R>
-<a href="<venda_codehttps>?ex=co_wizr-shopcart&bsref=<venda_bsref>&wizard=shopcart&step=confirm&param1=login"></venda_block label=ustyper1><venda_block label=ustyper0,ustype!=R><a href="<venda_codehttps>?ex=co_wizr-shopcart&bsref=<venda_bsref>&wizard=shopcart&step=billtologin&param1=login"></venda_block label=ustyper0><venda_text id=desktop.button.addtobasket></a>
+<a href="<venda_codehttps>?ex=co_wizr-shopcart2&bsref=<venda_bsref>&wizard=shopcart2&step=confirm&param1=login"></venda_block label=ustyper1><venda_block label=ustyper0,ustype!=R><a href="<venda_codehttps>?ex=co_wizr-shopcart2&bsref=<venda_bsref>&wizard=shopcart2&step=billtologin&param1=login"></venda_block label=ustyper0><venda_text id=desktop.button.addtobasket></a>
 </venda_block label=353456>
                 
 					</venda_block label=700>
@@ -237,43 +237,16 @@ $(function(){$("#addproductform").submit(function(){if(jQuery(".qty").val()>0){r
 				<p class="release"><venda_text id=desktop.info.release_date></p>
 				</venda_block label=30>	
 				</venda_block label=25>
-
-			<venda_block label=26,invtavail&lt;1>
-				<!-- if out of stock -->
-				<venda_block label=167,etadyleft&gt;0>
-				<div>
-					<venda_block label=700,chkatt=null>
-					<venda_block label=52,mode=value,<venda_setting type=ebiz,name=stockchecking_basket>=1,<venda_setting type=ebiz,name=stockchecking_orderconfirm>=1,operator=or>
-						<a href="<venda_dispview invt=<venda_invtref>>&temp=emailinstock" title="<venda_text id=desktop.button.email_when_in_stock>" id="emwbis_link" class="emwbisLink button doDialog"><venda_text id=desktop.button.email_when_in_stock></a>				
-					</venda_block label=52>
-					<venda_block label=53,mode=value,<venda_setting type=ebiz,name=stockchecking_basket>!=1,<venda_setting type=ebiz,name=stockchecking_orderconfirm>!=1>
-						<div class="quantity_place"><label for="qty"><venda_text id=desktop.info.qty>: </label><input name="qty" id="qty" type="text" value="1" size="3" maxlength="3" class="qty textInput" ></div>
-						<!-- if product doesn't have attributes -->
-						<input type="submit" class="basketbutton" value="<venda_text id=desktop.button.addtobasket>">
-					</venda_block label=53>				
-					</venda_block label=700>
-				</div>
-                	
-				<!-- <p class="eta"><venda_text id=desktop.info.eta_date></p> -->
-				</venda_block label=167>
-				<venda_block label=168,etadyleft=null>
-				<span class="nostock"><venda_text id=desktop.info.out_of_stock></span>
-				<a href="<venda_dispview invt=<venda_invtref>>&temp=emailinstock" title="<venda_text id=desktop.button.email_when_in_stock>" id="emwbis_link" class="emwbisLink button doDialog"><venda_text id=desktop.button.email_when_in_stock></a>				
-				</venda_block label=168>				
-				</venda_block label=26>
+                
+            <venda_tpcomment><!-- removed: <venda_block label=26,invtavail&lt;1> --></venda_tpcomment>
+			
 				</div>
                 <venda_tpcomment><!-- end: buyControl div --></venda_tpcomment>
                 
-                				<!-- <venda_block label=567,mode=value,<venda_setting type=ebiz,name=powerreviews>!=1>
-				<!-- <div class="box productDetailGradientBox reviews">
-					<p class="writereview" style="margin:0;"><a href="../productdetailsofa/&lt;venda_dispview invt=&lt;venda_invtref&gt;&gt;&amp;temp=writereview" id="writereview_link"><venda_text id=desktop.button.write_review></a></p>
-					<venda_category temp=reviewlink,ref=<venda_invtref>,rec=scat>
-				</div>
-				</venda_block label=567> -->
                 
                 <venda_tpcomment><!-- ATTRIBUTES SETTINGS --></venda_tpcomment>
 			<venda_block label=1000,chkatt=notnull>
-			<div class="attributesForm" id="productdetail" style="display: none;">swatch</div><venda_tpcomment><!-- dropdown, halfswatch, swatch, grid, multiAdd2 --></venda_tpcomment>
+			<div class="attributesForm" id="productdetail" style="display: none;">swatch</div>
 			<div id="invtref" style="display: none;"><venda_invtref></div>
 			<div id="attributeNames">
 				<div class="att1" style="display: none;"><venda_att1></div>
@@ -343,7 +316,7 @@ $(function(){$("#addproductform").submit(function(){if(jQuery(".qty").val()>0){r
 	<div class="grid_12 pull_12 omega">
 	<div class="invtmedia grid_10 push_2 alpha" id="image_<venda_invtuuid>">
 		<div id="sofa-productdetail-image">
-<a itemprop="image" href="<venda_media rec=invt,type=movie-swf-pict,key=large,img=no>" class = 'cloud-zoom' id='zoom1' rel="adjustX: 53, adjustY:-4, zoomWidth: 462" title="<venda_text id=desktop.info.large_image_title>"> <venda_block label=10,med-medium=notnull><venda_media rec=invt,type=movie-swf-pict,key=multi,dyn=yes,default=medium><!-- show "medium" key by default --></venda_block label=10> <venda_block label=11,med-medium=null><img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/no_image_medium.gif" alt="<venda_text id=desktop.info.no_product_image>"></venda_block label=11> </a> <div id="rolloverzoomText" style="position:absolute;top:385px;left:160px;"></div>
+<a itemprop="image" href="<venda_media rec=invt,type=movie-swf-pict,key=large,img=no>" class = 'cloud-zoom' id='zoom1' rel="adjustX: 53, adjustY:-4, zoomWidth: 462" title="<venda_text id=desktop.info.large_image_title>"> <venda_block label=10,med-setmedium=notnull><venda_media rec=invt,type=movie-swf-pict,key=multi,dyn=yes,default=medium><!-- show "medium" key by default --></venda_block label=10> <venda_block label=11,med-setmedium=null><img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/no_image_medium.gif" alt="<venda_text id=desktop.info.no_product_image>"></venda_block label=11> </a> <div id="rolloverzoomText" style="position:absolute;top:385px;left:160px;"></div>
 		</div>
 		<div id="productdetail-swap" style="display:none;"></div>
 		<div id="productdetail-viewlarge" class="enlarge"></div>
