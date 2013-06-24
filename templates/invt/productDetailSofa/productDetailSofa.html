@@ -101,22 +101,14 @@
 
             <venda_block label=200,chkatt=notnull>
 
-               <div class="attrFeedback productselectedwrapper">
+     <div class="attrFeedback productselectedwrapper">
 				<span id="productselected"></span>
-                <span id="productstatus" style="font-size: 16px; color:#666666;"><venda_text id=desktop.info.please_make_selection></span><br/>
-
-<span id="stockstatus"></span> 
-                
-<!-- <span id="atrononhandholder" class="hide"><venda_text id=desktop.info.only><span id="atronhand"></span><venda_text id=desktop.info.left></span> --> 
-               
-                
-                
-			</div>
-            
-            
+                <span id="productstatus"><venda_text id=desktop.info.please_make_selection></span><br/>
+				<span id="stockstatus"></span> 
 
 			<venda_tpcomment><!-- start: price - if product does have attributes --></venda_tpcomment>
 			<div class="productprice" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+            <p style="width:20%;float:left;"><b>Price:</b></p>
 				<meta itemprop="priceCurrency" content="<venda_currencycode>">
 				<venda_block label=instock,invtatrinstock&gt;0><link itemprop="availability" href="http://schema.org/InStock"></venda_block label=instock><venda_block label=outofstock,invtatrinstock&lt;1><link itemprop="availability" href="http://schema.org/OutOfStock"></venda_block label=outofstock>
 				<venda_inctemplate type=includes,name=priceFormat>
@@ -127,7 +119,8 @@
                     <venda_category temp=swatches,ref=swatches,rec=scat>
                     </div>
            
-
+	</div>
+    
 				<venda_tpcomment><!-- start: attributes dropdown --></venda_tpcomment>
 				<div id="attributeInputs" class="attributeInputs">
 					<venda_block label=21,selatt1=notnull>

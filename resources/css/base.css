@@ -332,12 +332,17 @@ div.box.productDetailGradientBox.buyControls {margin:20px 0 5px;}
 p.sku {display:block;margin:5px 0 10px;}
 .invtmedia {text-align:center;z-index:101;}
 .invtatr label {display:inline-block;margin-bottom:10px;width:80px;}
-.oneProduct .priceField {text-align:left;margin:0;}
+.oneProduct .priceField, #stockstatus {text-align: right;margin: 0;width: 70%;float: right;}
 .oneProduct .priceField .priceNow {font-weight:700;color:#C1392D;}
-.oneProduct .priceField .priceIs {font-weight:700;color:#8a9099;}
-.oneProduct .priceField .priceWas {text-decoration:line-through;font-size: 16px;font-weight:normal;color:#8a9099;margin:0 0 0 25px;}
-.oneProduct .priceField #price {font: bold 22px arial;padding: 0 0 12px 0;}
-.productdescription img {width:17%; height:17%; float:left;}
+.oneProduct .priceField .priceIs {font-weight:700;color:#666;}
+.oneProduct .priceField .priceWas {text-decoration:line-through;font-size: 14px;font-weight:normal;color:#8a9099;margin:0 0 0 25px;}
+.priceWas {display:none;}
+.oneProduct .priceField #price {
+font: bold 14px arial;
+padding: 5px 0 5px 0;
+float: right;
+}
+.productdescription img {width:17%; height:17%; float:left;margin-top: 2%;}
 .productdescription p {width:78%; float:right; text-align:left;}
 .enlarge {margin-top:10px;}
 .altImageList .altItem,.altImageListPopup .altItem {border:1px solid #ccc;text-align:center;margin-bottom:2px;}
