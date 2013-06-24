@@ -337,8 +337,8 @@ p.sku {display:block;margin:5px 0 10px;}
 .oneProduct .priceField .priceIs {font-weight:700;color:#8a9099;}
 .oneProduct .priceField .priceWas {text-decoration:line-through;font-size: 16px;font-weight:normal;color:#8a9099;margin:0 0 0 25px;}
 .oneProduct .priceField #price {font: bold 22px arial;padding: 0 0 12px 0;}
-.productdescription img {width:30%; height:30%; float:left;}
-.productdescription p {width:65%; float:right; text-align:left;}
+.productdescription img {width:17%; height:17%; float:left;}
+.productdescription p {width:78%; float:right; text-align:left;}
 .enlarge {margin-top:10px;}
 .altImageList .altItem,.altImageListPopup .altItem {border:1px solid #ccc;text-align:center;margin-bottom:2px;}
 .altImageListPopup {padding-right:10px;width:70px;border-right:1px solid #ccc;height:91%;position:absolute;}
