@@ -44,6 +44,8 @@
 
 <!-- start: description without tab -->
 
+
+
 <div class="sofa-description-text" style="display:block;position:relative;">
 <div class="sofa-maintab">
 <venda_block label=12,invtdesc1=notnull><p class="invtdesc1"><span itemprop="description"><venda_invtdesc1></span></p></venda_block label=12>
@@ -86,7 +88,7 @@
 
 		<venda_tpcomment><!-- ONE PRODUCT --></venda_tpcomment>
 		<div class="oneProduct" id="oneProduct_<venda_invtuuid>">
-			<div class="oneProductContent hide">
+			<div class="oneProductContent">
 			<venda_block label=16,chkatt=null>
 			<div class="priceDetails" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
 				<meta itemprop="priceCurrency" content="<venda_currencycode>">
@@ -101,7 +103,6 @@
 
                <div class="attrFeedback productselectedwrapper">
 				<span id="productselected"></span>
-                <!-- <span id="productdescription" style="font-size: 16px; color:#666666; background-color:#cccccc; height:100px; display:block; width:100%;">INFO INFO INFO</span> -->
                 <span id="productstatus" style="font-size: 16px; color:#666666;"><venda_text id=desktop.info.please_make_selection></span><br/>
 
 <span id="stockstatus"></span> 
@@ -122,6 +123,9 @@
 			</div>
 			<venda_block label=showmultibuy,invtatrminsubsell=0.00,invtatrmaxsubsell=0.00><venda_inctemplate type=includes,name=multibuy></venda_block label=showmultibuy>
 			<venda_tpcomment><!-- end: price - if product does have attributes --></venda_tpcomment>
+                    <div class="productdescription">
+                    <venda_category temp=swatches,ref=swatches,rec=scat>
+                    </div>
            
 
 				<venda_tpcomment><!-- start: attributes dropdown --></venda_tpcomment>
@@ -316,7 +320,7 @@ $(function(){$("#addproductform").submit(function(){if(jQuery(".qty").val()>0){r
 	<div class="grid_12 pull_12 omega">
 	<div class="invtmedia grid_10 push_2 alpha" id="image_<venda_invtuuid>">
 		<div id="sofa-productdetail-image">
-<a itemprop="image" href="<venda_media rec=invt,type=movie-swf-pict,key=large,img=no>" class = 'cloud-zoom' id='zoom1' rel="adjustX: 53, adjustY:-4, zoomWidth: 462" title="<venda_text id=desktop.info.large_image_title>"> <venda_block label=10,med-setmedium=notnull><venda_media rec=invt,type=movie-swf-pict,key=multi,dyn=yes,default=medium><!-- show "medium" key by default --></venda_block label=10> <venda_block label=11,med-setmedium=null><img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/no_image_medium.gif" alt="<venda_text id=desktop.info.no_product_image>"></venda_block label=11> </a> <div id="rolloverzoomText" style="position:absolute;top:385px;left:160px;"></div>
+<a itemprop="image" href="<venda_media rec=invt,type=movie-swf-pict,key=large,img=no>" class = 'cloud-zoom' id='zoom1' rel="adjustX: 53, adjustY:-4, zoomWidth: 462" title="<venda_text id=desktop.info.large_image_title>"> <venda_block label=10,med-setmedium=notnull><venda_media rec=invt,type=movie-swf-pict,key=multi,dyn=yes,default=setmedium><!-- show "medium" key by default --></venda_block label=10> <venda_block label=11,med-setmedium=null><img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/no_image_medium.gif" alt="<venda_text id=desktop.info.no_product_image>"></venda_block label=11> </a> <div id="rolloverzoomText" style="position:absolute;top:385px;left:160px;"></div>
 		</div>
 		<div id="productdetail-swap" style="display:none;"></div>
 		<div id="productdetail-viewlarge" class="enlarge"></div>
@@ -516,8 +520,23 @@ $(window).load(function() {
 <venda_block label=lightbox2, invtref=notnull><script src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/js/lightbox/lightbox.js"></script></venda_block label=lightbox2>
 <link href="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/css/lightbox/lightbox.css" rel="stylesheet" type="text/css" media="screen"/>
 <script type="text/javascript">
-$(function() {
+/*$(function() {
 	// Use this example, or...
 	 $('a[rel*=lightbox]').lightbox(); // Select all links that contains lightbox in the attribute rel
-});
+});*/
+Venda.namespace('swatchInfo');
+Venda.swatchInfo = {
+	options: {
+		
+	},
+	init: function (swatch) {
+		var split = swatch.split('_'),
+			type = split[split.length-1].toLowerCase(),
+			sku = split[0];
+		jQuery('.swatchInfo').hide();
+		jQuery('.'+type+'-info').show(200, function() {
+			jQuery(this).find('img').attr('src','<venda_entmediaadd>/ebiz/<venda_bsref>/invt/<venda_invtref>/'+sku+'_ss.jpg');
+		});
+	}
+}
 </script>

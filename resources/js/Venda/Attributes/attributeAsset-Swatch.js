@@ -36,7 +36,7 @@ Venda.Attributes.UpdateSwatch = function (attName, uID) {
 				if (attName == 'att4') {
 					stockstatus = Venda.Attributes.GetAll(att1, att2, att3, Venda.Attributes.productArr[i].attSet.att4.options[t], 'stockstatus').replace(/ /g,"_");
 				}
-				swatchList += '<li class="'+ (attOption).replace(/ /g,"_") + ' attributeSwatch ' + stockstatus + '" id="attributeSwatch_' + uID + '" data-attName="'+ attName +'" data-attValue="'+ attOption + '"><span class="swatchText">' + attOption + '</span></li>';
+				swatchList += '<li onclick="Venda.swatchInfo.init(\''+ (attOption).replace(/ /g,"_") +'\');" class="'+ (attOption).replace(/ /g,"_") + ' attributeSwatch ' + stockstatus + '" id="attributeSwatch_' + uID + '" data-attName="'+ attName +'" data-attValue="'+ attOption + '"><span class="swatchText">' + attOption + '</span></li>';
 			}
 
 			selectName = "#oneProduct_" + uID + " #swatchList_" + attName;
