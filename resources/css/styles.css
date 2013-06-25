@@ -886,11 +886,7 @@ input.button.buttonArrow.right.submit.submitSwatchRequest:hover {background: #80
 .leftside {font-weight: bold; clear: right;float: left; width: 30%}
 .rightside {float: left; text-align: left; width: 65%;}
 .pdxtrowodd {border-bottom: 1px solid #CCCCCC;float: left; padding: 10px 0; width: 100%;}
-.exclusive_to_heals {float: left;
-    font-size: 16px;
-    margin: 10px;
-    text-align: center;
-    text-transform: uppercase; }
+.exclusive_to_heals, .shipping-badge, .express-badge-holder, #sofa-titlebadges {float: left; margin-top: 2%; width: 20%;}
 .selectionbox{clear:both; border-top:2px solid #B4B4B4; border-bottom:2px solid #B4B4B4; text-align: center;padding: 5px 0;margin: 5px 0;font-size: 14px;text-transform: uppercase;}
 /**********/
 /* PACKAGE */

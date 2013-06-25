@@ -42,7 +42,7 @@
 <!--<span class="sku" itemprop="productID"><span><venda_text id=desktop.info.sku>:</span> <venda_invtref></span>-->
 
 
-<!-- start: description without tab -->
+<venda_tpcomment><!-- start: description without tab --></venda_tpcomment>
 
 <div class="sofa-description-text" style="display:block;position:relative;">
 <div class="sofa-maintab">
@@ -86,7 +86,7 @@
 
 		<venda_tpcomment><!-- ONE PRODUCT --></venda_tpcomment>
 		<div class="oneProduct" id="oneProduct_<venda_invtuuid>">
-			<div class="oneProductContent hide">
+			<div class="oneProductContent">
 			<venda_block label=16,chkatt=null>
 			<div class="priceDetails" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
 				<meta itemprop="priceCurrency" content="<venda_currencycode>">
@@ -99,31 +99,26 @@
 
             <venda_block label=200,chkatt=notnull>
 
-               <div class="attrFeedback productselectedwrapper">
+     <div class="attrFeedback productselectedwrapper">
 				<span id="productselected"></span>
-                <!-- <span id="productdescription" style="font-size: 16px; color:#666666; background-color:#cccccc; height:100px; display:block; width:100%;">INFO INFO INFO</span> -->
-                <span id="productstatus" style="font-size: 16px; color:#666666;"><venda_text id=desktop.info.please_make_selection></span><br/>
-
-<span id="stockstatus"></span> 
-                
-<!-- <span id="atrononhandholder" class="hide"><venda_text id=desktop.info.only><span id="atronhand"></span><venda_text id=desktop.info.left></span> --> 
-               
-                
-                
-			</div>
-            
-            
+                <span id="productstatus"><venda_text id=desktop.info.please_make_selection></span><br/>
+				<span id="stockstatus"></span> 
 
 			<venda_tpcomment><!-- start: price - if product does have attributes --></venda_tpcomment>
 			<div class="productprice" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+            <p style="width:20%;float:left;"><b>Price:</b></p>
 				<meta itemprop="priceCurrency" content="<venda_currencycode>">
 				<venda_block label=instock,invtatrinstock&gt;0><link itemprop="availability" href="http://schema.org/InStock"></venda_block label=instock><venda_block label=outofstock,invtatrinstock&lt;1><link itemprop="availability" href="http://schema.org/OutOfStock"></venda_block label=outofstock>
 				<venda_inctemplate type=includes,name=priceFormat>
 			</div>
 			<venda_block label=showmultibuy,invtatrminsubsell=0.00,invtatrmaxsubsell=0.00><venda_inctemplate type=includes,name=multibuy></venda_block label=showmultibuy>
 			<venda_tpcomment><!-- end: price - if product does have attributes --></venda_tpcomment>
+                    <div class="productdescription">
+                    <venda_category temp=swatches,ref=swatches,rec=scat>
+                    </div>
            
-
+	</div>
+    
 				<venda_tpcomment><!-- start: attributes dropdown --></venda_tpcomment>
 				<div id="attributeInputs" class="attributeInputs">
 					<venda_block label=21,selatt1=notnull>
@@ -316,7 +311,7 @@ $(function(){$("#addproductform").submit(function(){if(jQuery(".qty").val()>0){r
 	<div class="grid_12 pull_12 omega">
 	<div class="invtmedia grid_10 push_2 alpha" id="image_<venda_invtuuid>">
 		<div id="sofa-productdetail-image">
-<a itemprop="image" href="<venda_media rec=invt,type=movie-swf-pict,key=large,img=no>" class = 'cloud-zoom' id='zoom1' rel="adjustX: 53, adjustY:-4, zoomWidth: 462" title="<venda_text id=desktop.info.large_image_title>"> <venda_block label=10,med-setmedium=notnull><venda_media rec=invt,type=movie-swf-pict,key=multi,dyn=yes,default=medium><!-- show "medium" key by default --></venda_block label=10> <venda_block label=11,med-setmedium=null><img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/no_image_medium.gif" alt="<venda_text id=desktop.info.no_product_image>"></venda_block label=11> </a> <div id="rolloverzoomText" style="position:absolute;top:385px;left:160px;"></div>
+<a itemprop="image" href="<venda_media rec=invt,type=movie-swf-pict,key=large,img=no>" class = 'cloud-zoom' id='zoom1' rel="adjustX: 53, adjustY:-4, zoomWidth: 462" title="<venda_text id=desktop.info.large_image_title>"> <venda_block label=10,med-setmedium=notnull><venda_media rec=invt,type=movie-swf-pict,key=multi,dyn=yes,default=setmedium><!-- show "medium" key by default --></venda_block label=10> <venda_block label=11,med-setmedium=null><img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/no_image_medium.gif" alt="<venda_text id=desktop.info.no_product_image>"></venda_block label=11> </a> <div id="rolloverzoomText" style="position:absolute;top:385px;left:160px;"></div>
 		</div>
 		<div id="productdetail-swap" style="display:none;"></div>
 		<div id="productdetail-viewlarge" class="enlarge"></div>
@@ -337,14 +332,6 @@ $(function(){$("#addproductform").submit(function(){if(jQuery(".qty").val()>0){r
 </div>
 
 
-     
-  
-	    <!-- <div id="productdetail-altview" class="grid_2 pull_10 omega">
-    <div id="productdetail-altview" class="widget-slider clearfix altImageList" data-display="4" data-direction="vertical" data-slidenum="1" data-duration="0.5" data-equalheight=""></div>
-		</div>
-    </div>
-	<venda_inctemplate name=alternateviewScript,type=invt> -->
-
 		<venda_tpcomment><!-- start: productCycling V2 --></venda_tpcomment>
         <venda_category temp=productCycling,rec=icat,ref=<venda_curcatref>,center_on=<venda_invtref>,itemsperpage=3>
         <venda_tpcomment><!-- end: productCycling --></venda_tpcomment>
@@ -353,124 +340,99 @@ $(function(){$("#addproductform").submit(function(){if(jQuery(".qty").val()>0){r
 
 	<venda_tpcomment><!-- end: left hand side (picture) --></venda_tpcomment>
         </div>
-<div class="TEST TO SEE IF UPDATES"></div>
+
   <venda_tpcomment><!-- Start:Sofa Information --></venda_tpcomment>
     <div class="clear-all"></div>        
 <div class="sofainfo-holder">
-<div class="sofaInfo-title">
-</div>
+	<div class="sofaInfo-title"></div>
 
-<venda_page page=<venda_invtref>-sofa>
+	<venda_page page=<venda_invtref>-sofa>
 
-<!-- START:PDXT DETAILS
-<div class="sofaInfo-details">
+	<div class="sofaInfo-right">
 
-<venda_block label=800,pdxtstoreavail=1><img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/product-detail/online_only_product.gif" style="position:absolute;bottom:0;"></venda_block label=800>
+		<div class="sofadetails-text">
+		<table width="100%" class="tbl-details">
 
-<div class="sofadetails-text">
-<table width="100%" class="tbl-details">
+		<venda_block label=pir,mode=value,<venda_invtivtype>=FurnitureRange, <venda_invtivtype>=Furniture, operator=or>
+		<p><a href="#rangeProducts" class="scroll" style="color:#333333;">View all <strong><venda_invtatrtot></strong> products in <strong><venda_invtname></strong> range.</a></p>
+		</venda_block label=pir>
+		<venda_extflds template=pdxtlist,group=1,ref=<venda_invtref>,ivtype=<venda_invtivtype>>
 
-<venda_block label=799,pdxtexclusive=1>
-  <p class="exclusive bold"> Exclusive to Heal's</p></venda_block label=799>
+		</table>
 
-<venda_block label=pir,mode=value,<venda_invtivtype>=FurnitureRangeSwatch,operator=or>
-<p><a href="#rangeProducts" class="scroll" style="color:#333333;">View all <strong><venda_invtatrtot></strong> products in <strong><venda_invtname></strong> range.</a></p>
-</venda_block label=pir>
-<venda_extflds template=pdxtlist,group=1,ref=<venda_invtref>,ivtype=<venda_invtivtype>>
-<div class="anyquestion" style="margin-bottom:10px;"><venda_block label=onlineE,pdxtstoreavail=1></venda_block label=onlineE></div>
-</table>
-</div>
+		<div class="anyquestion"><venda_block label=onlineE,pdxtstoreavail=1></venda_block label=onlineE></div>
+		<p class="sku bold" style="text-transform: uppercase; margin-left:2px;"> Product ID : <span itemprop="productID"><venda_invtref></span></p>
 
-END:PDXT DETAILS -->
+		</div>
 
-
-<div class="sofaInfo-right">
-
-<div class="sofadetails-text">
-<table width="100%" class="tbl-details">
-
-<venda_block label=pir,mode=value,<venda_invtivtype>=FurnitureRange, <venda_invtivtype>=Furniture, operator=or>
-<p><a href="#rangeProducts" class="scroll" style="color:#333333;">View all <strong><venda_invtatrtot></strong> products in <strong><venda_invtname></strong> range.</a></p>
-</venda_block label=pir>
-<venda_extflds template=pdxtlist,group=1,ref=<venda_invtref>,ivtype=<venda_invtivtype>>
-
-</table>
-
-<div class="anyquestion"><venda_block label=onlineE,pdxtstoreavail=1></venda_block label=onlineE></div>
-<p class="sku bold" style="text-transform: uppercase; margin-left:2px;"> Product ID : <span itemprop="productID"><venda_invtref></span></p>
-
-</div>
-
-</div>
+	</div>
 
   <venda_tpcomment><!-- Start:Sofa delivery info --></venda_tpcomment>
 <div id="sofa-productdetail-shipping">
-<div class="exclusive_to_heals">
-<venda_block label=799,pdxtexclusive=1>
-  <img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/product-detail/exclusive-to-heals.png"></venda_block label=799>
-  </div>
-<div class="prod-shipping">
-<div class="shipping-badge">
-<venda_block label=parcel1,invtwunits=Standard>
-<a href="http://www.heals.co.uk/page/parcel_delivery&layout=popups&layout=popups" rel="popup console 730 1000" alt="<venda_text id=site.link.title.delivery_charge_from>">
-<img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/product-detail/parcel-delivery-badge-sofa.png"></a>
-</venda_block label=parcel1>
-<venda_block label=specialist1,invtwunits=Fragile>
-<a href="<venda_dispview page=specialist_delivery>&layout=popups" rel="popup console 730 1000" alt="<venda_text id=site.link.title.delivery_charge_from>">
-<img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/product-detail/specialist-delivery-badge-sofa.png"></a>
-</venda_block label=specialist1>
-<venda_block label=furniture1,invtwunits=Furniture>
-<a href="<venda_dispview page=furniture_delivery>&layout=popups" rel="popup console 730 1000" alt="<venda_text id=site.link.title.delivery_charge_from>">
-<img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/product-detail/furniture-delivery-badge-sofa.png"></a>
-</venda_block label=furniture1>
-</div>
-<div class="shipping-logic">
-<venda_block label=parcel11,invtwunits=Standard>
-<venda_page page=deliverycondition>
-</venda_block label=parcel11>
-<venda_block label=specialist11,invtwunits=Fragile>
-<venda_page page=deliverycondition100>
-</venda_block label=specialist11>
-<venda_block label=furniturefree,invtsell&gt;999,invtwunits=Furniture,operator=and>
-<venda_page page=deliverycondition0>
-</venda_block label=furniturefree>
-<venda_block label=furniturecost,invtsell&lt;1000,invtwunits=Furniture,operator=and>
-<venda_page page=deliverycondition50>
-</venda_block label=furniturecost>
-</div>
-</div>
 
-<div class="european-shipping">
+		<div class="exclusive_to_heals">
+		<venda_block label=799,pdxtexclusive=1>
+ 	 	<img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/product-detail/exclusive-to-heals.png"></venda_block label=799>
+  		</div>
 
-<venda_block label=healsexpress,pdxtexpress=1>
-<div class="express-badge-holder">
-<a href="<venda_dispview pcat=expressservice>&layout=popups&layout=popups" rel="popup console 750 1000" alt="Heal's Express"><img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/product-detail/heals-express.gif"></a>
-</div>
-</venda_block label=healsexpress>
+		<div class="shipping-badge">
+		<venda_block label=parcel1,invtwunits=Standard>
+		<a href="http://www.heals.co.uk/page/parcel_delivery&layout=popups&layout=popups" rel="popup console 730 1000" alt="<venda_text id=site.link.title.delivery_charge_from>">
+		<img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/product-detail/parcel-delivery-badge-sofa.png"></a>
+		</venda_block label=parcel1>
+		<venda_block label=specialist1,invtwunits=Fragile>
+		<a href="<venda_dispview page=specialist_delivery>&layout=popups" rel="popup console 730 1000" alt="<venda_text id=site.link.title.delivery_charge_from>">
+		<img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/product-detail/specialist-delivery-badge-sofa.png"></a>
+		</venda_block label=specialist1>
+		<venda_block label=furniture1,invtwunits=Furniture>
+		<a href="<venda_dispview page=furniture_delivery>&layout=popups" rel="popup console 730 1000" alt="<venda_text id=site.link.title.delivery_charge_from>">
+		<img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/product-detail/furniture-delivery-badge-sofa.png"></a>
+		</venda_block label=furniture1>
+		</div>
+        
+		<div class="shipping-logic">
+		<venda_block label=parcel11,invtwunits=Standard>
+		<venda_page page=deliverycondition>
+		</venda_block label=parcel11>
+		<venda_block label=specialist11,invtwunits=Fragile>
+		<venda_page page=deliverycondition100>
+		</venda_block label=specialist11>
+		<venda_block label=furniturefree,invtsell&gt;999,invtwunits=Furniture,operator=and>
+		<venda_page page=deliverycondition0>
+		</venda_block label=furniturefree>
+		<venda_block label=furniturecost,invtsell&lt;1000,invtwunits=Furniture,operator=and>
+		<venda_page page=deliverycondition50>
+		</venda_block label=furniturecost>
+		</div>
 
-<venda_block label=notgiftvouchers,mode=value,<venda_invtcatref0>!=giftvouchers>
-<venda_block label=intshipping,invtcntrygrpref0!=300>
-<div class="european-shipping-badge">
-<a href="http://www.heals.co.uk/page/international_shipping&layout=popups&layout=popups" rel="popup console 740 520" alt="<venda_text id=site.link.title.delivery_charge_from>"><img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/product-detail/international-delivery-badge.gif" border="0"></a>
-</div>
-<div class="european-shipping-logic">
-<a href="http://www.heals.co.uk/page/international_shipping&layout=popups&layout=popups" rel="popup console 740 520" alt="<venda_text id=site.link.title.delivery_charge_from>">
-European: 2-5 Working Days &pound;8.95
-</a>
-</div>
-</venda_block label=intshipping>
-</venda_block label=notgiftvouchers>
-</div>
+		<venda_block label=healsexpress,pdxtexpress=1>
+		<div class="express-badge-holder">
+		<a href="<venda_dispview pcat=expressservice>&layout=popups&layout=popups" rel="popup console 750 1000" alt="Heal's Express"><img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/product-detail/heals-express.gif"></a>
+		</div>
+		</venda_block label=healsexpress>
 
+		<venda_block label=notgiftvouchers,mode=value,<venda_invtcatref0>!=giftvouchers>
+		<venda_block label=intshipping,invtcntrygrpref0!=300>
+		<div class="european-shipping-badge">
+		<a href="http://www.heals.co.uk/page/international_shipping&layout=popups&layout=popups" rel="popup console 740 520" alt="<venda_text id=site.link.title.delivery_charge_from>"><img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/product-detail/international-delivery-badge.gif" border="0"></a>
+		</div>
+        
+		<div class="european-shipping-logic">
+		<a href="http://www.heals.co.uk/page/international_shipping&layout=popups&layout=popups" rel="popup console 740 520" alt="<venda_text id=site.link.title.delivery_charge_from>">
+European: 2-5 Working Days &pound;8.95</a>
+		</div>
+		</venda_block label=intshipping>
+		</venda_block label=notgiftvouchers>
+        
 
-<div class="rollmadeDesigned">
-<venda_block label=designedin,pdxtdesignedin=1>
-<div id="sofa-titlebadges"><img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/product-detail/designed-in-britain-sofa.png" /></div>
-</venda_block label=designedin>
-<venda_block label=madein,pdxtmadein=1>
-<div id="sofa-titlebadges"><img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/product-detail/made-in-britain-sofa.png" /></div>
-</venda_block label=madein>
-</div>
+		<venda_block label=designedin,pdxtdesignedin=1>
+		<div id="sofa-titlebadges"><img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/product-detail/designed-in-britain-sofa.png" /></div>
+		</venda_block label=designedin>
+        
+		<venda_block label=madein,pdxtmadein=1>
+		<div id="sofa-titlebadges"><img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/product-detail/made-in-britain-sofa.png" /></div>
+		</venda_block label=madein>
+		
 
 </div>
 
@@ -516,8 +478,23 @@ $(window).load(function() {
 <venda_block label=lightbox2, invtref=notnull><script src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/js/lightbox/lightbox.js"></script></venda_block label=lightbox2>
 <link href="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/css/lightbox/lightbox.css" rel="stylesheet" type="text/css" media="screen"/>
 <script type="text/javascript">
-$(function() {
+/*$(function() {
 	// Use this example, or...
 	 $('a[rel*=lightbox]').lightbox(); // Select all links that contains lightbox in the attribute rel
-});
+});*/
+Venda.namespace('swatchInfo');
+Venda.swatchInfo = {
+	options: {
+		
+	},
+	init: function (swatch) {
+		var split = swatch.split('_'),
+			type = split[split.length-1].toLowerCase(),
+			sku = split[0];
+		jQuery('.swatchInfo').hide();
+		jQuery('.'+type+'-info').show(200, function() {
+			jQuery(this).find('img').attr('src','<venda_entmediaadd>/ebiz/<venda_bsref>/invt/<venda_invtref>/'+sku+'_ss.jpg');
+		});
+	}
+}
 </script>
