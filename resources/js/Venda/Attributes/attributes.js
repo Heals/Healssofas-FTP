@@ -432,7 +432,7 @@ Venda.Attributes.drawOutputs = function(index, uID) {
 			addproductID.addClass("Re-paint");
 			addproductID.val("Special Order");
 			
-			var stockFeedback = jQuery('#attributes-order').text("Availability:") + "\n" + jQuery('#attributes-order2').text() + "\n" + Venda.Attributes.TimeTillRelease(Venda.Attributes.attsArray[index].atretady, "0" + parseInt(Venda.Attributes.attsArray[index].atretamn - 1), Venda.Attributes.attsArray[index].atretayr, "weeks") + "\n" + "-" + "\n" + Venda.Attributes.TimeTillRelease(Venda.Attributes.attsArray[index].atretady, "0" + parseInt(Venda.Attributes.attsArray[index].atretamn - 1), Venda.Attributes.attsArray[index].atretayr, "weeksplus") + "\n" + "weeks";
+			var stockFeedback = jQuery('#attributes-order').text() + "\n" + jQuery('#attributes-order2').text() + "\n" + Venda.Attributes.TimeTillRelease(Venda.Attributes.attsArray[index].atretady, "0" + parseInt(Venda.Attributes.attsArray[index].atretamn - 1), Venda.Attributes.attsArray[index].atretayr, "weeks") + "\n" + "-" + "\n" + Venda.Attributes.TimeTillRelease(Venda.Attributes.attsArray[index].atretady, "0" + parseInt(Venda.Attributes.attsArray[index].atretamn - 1), Venda.Attributes.attsArray[index].atretayr, "weeksplus") + "\n" + "weeks";
 		
 		break;
 
@@ -442,7 +442,7 @@ Venda.Attributes.drawOutputs = function(index, uID) {
 			addproductID.addClass("Re-paint");
 			addproductID.val("Pre-Order");
 			
-			var stockFeedback = jQuery('#attributes-backorder').text("Availability:") + "\n" + jQuery('#attributes-backorder2').text() + "\n" + Venda.Attributes.TimeTillRelease(Venda.Attributes.attsArray[index].atretady, "0" + parseInt(Venda.Attributes.attsArray[index].atretamn - 1), Venda.Attributes.attsArray[index].atretayr, "weeks") + "\n" + "-" + "\n" + Venda.Attributes.TimeTillRelease(Venda.Attributes.attsArray[index].atretady, "0" + parseInt(Venda.Attributes.attsArray[index].atretamn - 1), Venda.Attributes.attsArray[index].atretayr, "weeksplus") + "\n" + "weeks";
+			var stockFeedback = jQuery('#attributes-backorder').text() + "\n" + jQuery('#attributes-backorder2').text() + "\n" + Venda.Attributes.TimeTillRelease(Venda.Attributes.attsArray[index].atretady, "0" + parseInt(Venda.Attributes.attsArray[index].atretamn - 1), Venda.Attributes.attsArray[index].atretayr, "weeks") + "\n" + "-" + "\n" + Venda.Attributes.TimeTillRelease(Venda.Attributes.attsArray[index].atretady, "0" + parseInt(Venda.Attributes.attsArray[index].atretamn - 1), Venda.Attributes.attsArray[index].atretayr, "weeksplus") + "\n" + "weeks";
 		
 		break;
 		

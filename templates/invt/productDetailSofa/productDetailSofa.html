@@ -189,10 +189,6 @@
                     <venda_block label=250,invtavail&gt;0,etadyleft&gt;0,operator=or>
 					<venda_block label=700,chkatt=null>
                     
-<script>
-$(function(){$("#addproductform").submit(function(){if(jQuery(".qty").val()>0){return true}else{alert(jQuery("#attributes-quantity").text());return false}})})
-</script>
-                    
 					<div class="quantity_place"><label for="qty" style="text-align: center; padding: 5px; float: left; margin-left: 5px; color: #333333;"><venda_text id=desktop.info.qty>: </label><input name="qty" id="qty" type="text" value="1" class="qty textInput" size="3" maxlength="3"></div>
 					<!-- if product doesn't have attributes -->
 				<venda_block label=34,invtpreorder!=1>
@@ -211,6 +207,9 @@ $(function(){$("#addproductform").submit(function(){if(jQuery(".qty").val()>0){r
                     </venda_block label=250>
                     
                     <venda_block label=701,chkatt=notnull>
+                    <script type="text/javascript">
+					$(function(){$("#addproductform").submit(function(){if(jQuery(".qty").val()>0){return true}else{alert(jQuery("#attributes-quantity").text());return false}})})
+					</script>
 
 					<div id="addproductbox" class="addproductbox">
                     <div class="sofa-buybutton">
@@ -218,6 +217,8 @@ $(function(){$("#addproductform").submit(function(){if(jQuery(".qty").val()>0){r
 					<div class="quantity_place"><label for="qty"><venda_text id=desktop.info.qty>: </label><input name="qty" id="qty" type="text" value="1" size="3" maxlength="3" class="qty textInput"></div>
 
 					<venda_tpcomment><!-- Add to basket, PreOrder --></venda_tpcomment>
+                    <input type="hidden" name="VBMTCinput" value="">
+					<input type="hidden" name="VBMSTinput" value="">
 					<input type="submit" value="<venda_text id=desktop.button.addtobasket>" class="basketbutton">
 					</div>
 
