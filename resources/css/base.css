@@ -238,7 +238,7 @@ background: url(../images/bull-point.gif) no-repeat 0px 3px;padding-left: 10px;f
 .availability-badge{height:auto;}
 #productdetail-shipping-multi .shipping-badge {text-align:left;}
 .availability-badge {margin:0;}
-.shipping-logic {height:auto;margin: 0 0 10px 0\9;text-align:right;}
+.shipping-logic {height:auto;margin:0;text-align:right;}
 .availability-logic {background-color: white; text-align: left;margin:-3px 0 0 0 !ie;}
 .availability-logic-container, .attribute-price-container {float: left;clear: both;margin:0;width: 100%;}
 .avail-shipping {height:auto;margin:0;padding:0;clear:both;}
@@ -329,7 +329,7 @@ div.box.productDetailGradientBox.buyControls {margin:20px 0 5px;}
 p.sku {display:block;margin:5px 0 10px;}
 .invtmedia {text-align:center;z-index:101;}
 .invtatr label {display:inline-block;margin-bottom:10px;width:80px;}
-.oneProduct .priceField, #stockstatus {text-align: right;margin: 0;width: 70%;float: right;}
+.oneProduct .priceField,  {text-align: right;margin: 0;width: 70%;float: right;}
 .oneProduct .priceField .priceNow {font-weight:700;color:#C1392D;}
 .oneProduct .priceField .priceIs {font-weight:700;color:#666;}
 .oneProduct .priceField .priceWas {text-decoration:line-through;font-size: 14px;font-weight:normal;color:#8a9099;margin:0 0 0 25px;}
@@ -339,6 +339,7 @@ font: bold 14px arial;
 padding: 5px 0 5px 0;
 float: right;
 }
+.productdescription {float:left;}
 .productdescription img {width:17%; height:17%; float:left;margin-top: 2%;}
 .productdescription p {width:78%; float:right; text-align:left;}
 .enlarge {margin-top:10px;}
