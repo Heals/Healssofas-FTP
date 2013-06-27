@@ -695,7 +695,7 @@ height: 230px;
 /*******************/
 /* PRODUCT DETAILS */
 /*******************/
-.enlarge {text-align:center;display: none;}
+.enlarge {text-align:center;display: block;}
 #productdetail p.price {margin-top:5px;}
 #productdetail .invtcontent {float:right; width:365px;}
 #productdetail .invtmedia {margin:0; float:left; padding-right:10px;}

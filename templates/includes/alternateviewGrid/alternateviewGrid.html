@@ -10,7 +10,9 @@
 		Venda.Attributes.StoreImageSwaps({
 			"param": "<venda_medatrvalue>",
 			"images": {
-				imgS: ["<venda_media rec=invt,type=pict,key=setxsmall,medatr=yes,img=no>","<venda_media rec=invt,type=pict,key=setxsalt1,medatr=yes,img=no>","<venda_media rec=invt,type=pict,key=setxsalt2,medatr=yes,img=no>","<venda_media rec=invt,type=pict,key=setxsalt3,medatr=yes,img=no>","<venda_media rec=invt,type=pict,key=setxsalt4,medatr=yes,img=no>","<venda_media rec=invt,type=pict,key=setxsalt5,medatr=yes,img=no>"],imgM: ["<venda_media rec=invt,type=pict,key=setmedium,medatr=yes,img=no>","<venda_media rec=invt,type=pict,key=setmalt1,medatr=yes,img=no>","<venda_media rec=invt,type=pict,key=setmalt2,medatr=yes,img=no>","<venda_media rec=invt,type=pict,key=setmalt3,medatr=yes,img=no>","<venda_media rec=invt,type=pict,key=setmalt4,medatr=yes,img=no>","<venda_media rec=invt,type=pict,key=setmalt5,medatr=yes,img=no>"],imgL: ["<venda_media rec=invt,type=pict,key=setlarge,medatr=yes,img=no>","<venda_media rec=invt,type=pict,key=setlalt1,medatr=yes,img=no>","<venda_media rec=invt,type=pict,key=setlalt2,medatr=yes,img=no>","<venda_media rec=invt,type=pict,key=setlalt3,medatr=yes,img=no>","<venda_media rec=invt,type=pict,key=setlalt4,medatr=yes,img=no>","<venda_media rec=invt,type=pict,key=setlalt5,medatr=yes,img=no>"]
+				imgS: ["<venda_media rec=invt,type=pict,key=setmedium,medatr=yes,img=no>","<venda_media rec=invt,type=pict,key=medium1,medatr=yes,img=no>","<venda_media rec=invt,type=pict,key=medium2,medatr=yes,img=no>","<venda_media rec=invt,type=pict,key=medium3,medatr=yes,img=no>","<venda_media rec=invt,type=pict,key=medium4,medatr=yes,img=no>","<venda_media rec=invt,type=pict,key=medium5,medatr=yes,img=no>"],
+                imgM: ["<venda_media rec=invt,type=pict,key=setmedium,medatr=yes,img=no>","<venda_media rec=invt,type=pict,key=medium1,medatr=yes,img=no>","<venda_media rec=invt,type=pict,key=medium2,medatr=yes,img=no>","<venda_media rec=invt,type=pict,key=medium3,medatr=yes,img=no>","<venda_media rec=invt,type=pict,key=medium4,medatr=yes,img=no>","<venda_media rec=invt,type=pict,key=medium5,medatr=yes,img=no>"],
+                imgL: ["<venda_media rec=invt,type=pict,key=large,medatr=yes,img=no>","<venda_media rec=invt,type=pict,key=large1,medatr=yes,img=no>","<venda_media rec=invt,type=pict,key=large2,medatr=yes,img=no>","<venda_media rec=invt,type=pict,key=large3,medatr=yes,img=no>","<venda_media rec=invt,type=pict,key=large4,medatr=yes,img=no>","<venda_media rec=invt,type=pict,key=large5,medatr=yes,img=no>"]
 				}
 			});
 		Venda.Attributes.SwatchURL["<venda_medatrvalue>"] = "<venda_media rec=invt,type=pict,key=setswatch,medatr=yes,img=no>";
@@ -20,3 +22,10 @@
 <script type="text/javascript">
 <venda_detail_mediagridrow>
 </script>
+
+<venda_block label=large1,med-large=null>
+<script type="text/javascript">
+function noImage<venda_oiivref>(changeImage){
+changeImage.src = '<venda_entmediaadd>/ebiz/<venda_bsref>/invt/<venda_invtparef>/<venda_invtparef>_sm.jpg';}
+</script>
+</venda_block label=large1>

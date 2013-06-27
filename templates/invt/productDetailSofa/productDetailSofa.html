@@ -310,7 +310,12 @@
 	<div class="grid_12 pull_12 omega">
 	<div class="invtmedia grid_10 push_2 alpha" id="image_<venda_invtuuid>">
 		<div id="sofa-productdetail-image">
-<a itemprop="image" href="<venda_media rec=invt,type=movie-swf-pict,key=large,img=no>" class = 'cloud-zoom' id='zoom1' rel="adjustX: 53, adjustY:-4, zoomWidth: 462" title="<venda_text id=desktop.info.large_image_title>"> <venda_block label=10,med-medium=notnull><venda_media rec=invt,type=movie-swf-pict,key=multi,dyn=yes,default=medium><!-- show "medium" key by default --></venda_block label=10> <venda_block label=11,med-medium=null><img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/no_image_medium.gif" alt="<venda_text id=desktop.info.no_product_image>"></venda_block label=11> </a> <div id="rolloverzoomText" style="position:absolute;top:385px;left:160px;"></div>
+<a itemprop="image" href="<venda_media rec=invt,type=movie-swf-pict,key=large,img=no>" class = 'cloud-zoom' id='zoom1' rel="adjustX: 53, adjustY:-4, zoomWidth: 462" title="<venda_text id=desktop.info.large_image_title>"> 
+<venda_block label=10,med-medium=notnull>
+<img class="cloudzoom" id ="zoom1" src="<venda_media rec=invt,type=movie-swf-pict,key=medium,img=no>" data-cloudzoom="zoomImage: '<venda_media rec=invt,type=movie-swf-pict,key=large,img=no>',zoomPosition: 'inside'">
+</venda_block label=10> 
+
+<venda_block label=11,med-medium=null><img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/no_image_medium.gif" alt="<venda_text id=desktop.info.no_product_image>"></venda_block label=11> </a> <div id="rolloverzoomText" style="position:absolute;top:385px;left:160px;"></div>
 		</div>
 		<div id="productdetail-swap" style="display:none;"></div>
 		<div id="productdetail-viewlarge" class="enlarge"></div>
