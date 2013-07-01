@@ -205,6 +205,9 @@
 					</venda_block label=700>
                     </venda_block label=250>
                     <venda_block label=701,chkatt=notnull>
+                    <script type="text/javascript">
+					$(function(){$("#addproductform").submit(function(){if(jQuery(".qty").val()>0){return true}else{alert(jQuery("#attributes-quantity").text());return false}})})
+					</script>
 
                     <div class="sofa-buybutton">
 
@@ -220,9 +223,6 @@
 					<a id="emwbis_link" href="<venda_dispview invt=<venda_invtref>>&temp=emailinstock" title="<venda_text id=desktop.button.email_when_in_stock>" class="emwbisLink hide button doDialog"><venda_text id=desktop.button.email_when_in_stock></a>
 </div>
 					</venda_block label=701>
-					<script type="text/javascript">
-					$(function(){$("#addproductform").submit(function(){if(jQuery(".qty").val()>0){return true}else{alert(jQuery("#attributes-quantity").text());return false}})})
-					</script>
                 	<venda_tpcomment><!-- end: button link image --></venda_tpcomment>
 					<venda_block label=30,invtpreorder=notnull>
 					<venda_tpcomment><!-- if future release date --></venda_tpcomment>

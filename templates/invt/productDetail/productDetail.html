@@ -101,7 +101,7 @@
      			<div class="attrFeedback productselectedwrapper">
 				<span id="productselected"></span>
                 <span id="productstatus"><venda_text id=desktop.info.please_make_selection></span><br/>
-				<span id="stockstatus"></span> 
+				<span id="stockstatus"><venda_text id=desktop.info.availability></span> 
 
 				<venda_tpcomment><!-- start: price - if product does have attributes --></venda_tpcomment>
 					<div class="productprice" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
@@ -163,7 +163,7 @@
             
           		<div class="box productDetailGradientBox attrFeedback stockFeedbackBox">
 				<span id="productstatus"><venda_text id=desktop.info.please_make_selection></span>
-				<span id="stockstatus"></span> <span id="atrononhandholder" class="hide"><venda_text id=desktop.info.only><span id="atronhand"></span><venda_text id=desktop.info.left></span>
+				<span id="stockstatus"><venda_text id=desktop.info.availability></span> <span id="atrononhandholder" class="hide"><venda_text id=desktop.info.only><span id="atronhand"></span><venda_text id=desktop.info.left></span>
 				</div>
 
 			</venda_block label=200>
@@ -205,6 +205,9 @@
 					</venda_block label=700>
                     </venda_block label=250>
                     <venda_block label=701,chkatt=notnull>
+                    <script type="text/javascript">
+					$(function(){$("#addproductform").submit(function(){if(jQuery(".qty").val()>0){return true}else{alert(jQuery("#attributes-quantity").text());return false}})})
+					</script>
 
                     <div class="sofa-buybutton">
 
@@ -220,9 +223,6 @@
 					<a id="emwbis_link" href="<venda_dispview invt=<venda_invtref>>&temp=emailinstock" title="<venda_text id=desktop.button.email_when_in_stock>" class="emwbisLink hide button doDialog"><venda_text id=desktop.button.email_when_in_stock></a>
 </div>
 					</venda_block label=701>
-					<script type="text/javascript">
-					$(function(){$("#addproductform").submit(function(){if(jQuery(".qty").val()>0){return true}else{alert(jQuery("#attributes-quantity").text());return false}})})
-					</script>
                 	<venda_tpcomment><!-- end: button link image --></venda_tpcomment>
 					<venda_block label=30,invtpreorder=notnull>
 					<venda_tpcomment><!-- if future release date --></venda_tpcomment>
@@ -310,7 +310,12 @@
 	<div class="grid_12 pull_12 omega">
 	<div class="invtmedia grid_10 push_2 alpha" id="image_<venda_invtuuid>">
 		<div id="sofa-productdetail-image">
-<a itemprop="image" href="<venda_media rec=invt,type=movie-swf-pict,key=large,img=no>" class = 'cloud-zoom' id='zoom1' rel="adjustX: 53, adjustY:-4, zoomWidth: 462" title="<venda_text id=desktop.info.large_image_title>"> <venda_block label=10,med-medium=notnull><venda_media rec=invt,type=movie-swf-pict,key=multi,dyn=yes,default=medium><!-- show "medium" key by default --></venda_block label=10> <venda_block label=11,med-medium=null><img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/no_image_medium.gif" alt="<venda_text id=desktop.info.no_product_image>"></venda_block label=11> </a> <div id="rolloverzoomText" style="position:absolute;top:385px;left:160px;"></div>
+<a itemprop="image" href="<venda_media rec=invt,type=movie-swf-pict,key=large,img=no>" class = 'cloud-zoom' id='zoom1' rel="adjustX: 53, adjustY:-4, zoomWidth: 462" title="<venda_text id=desktop.info.large_image_title>"> 
+<venda_block label=10,med-medium=notnull>
+<img class="cloudzoom" id ="zoom1" src="<venda_media rec=invt,type=movie-swf-pict,key=medium,img=no>" data-cloudzoom="zoomImage: '<venda_media rec=invt,type=movie-swf-pict,key=large,img=no>',zoomPosition: 'inside'">
+</venda_block label=10> 
+
+<venda_block label=11,med-medium=null><img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/no_image_medium.gif" alt="<venda_text id=desktop.info.no_product_image>"></venda_block label=11> </a> <div id="rolloverzoomText" style="position:absolute;top:385px;left:160px;"></div>
 		</div>
 		<div id="productdetail-swap" style="display:none;"></div>
 		<div id="productdetail-viewlarge" class="enlarge"></div>
