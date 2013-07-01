@@ -1005,8 +1005,8 @@ fieldset label {float: left; width: 33%; text-align: right; margin-right: 10px;}
 .swatchbutton:hover {background: #804040;}
 #cntrylist {height:32px;}
 .formRow {float: left;clear: both;width: 100%;margin-top: 3%;}
-.swatch_check {ms-transform: scale(2);-moz-transform: scale(2);-webkit-transform: scale(2);-o-transform: scale(2);padding: 10px;margin: auto;clear: both;display: block;}
-.swatch_text {width: 100%;text-align: center;margin: 3% 0 10%;clear: both;}
+.swatch_check {ms-transform: scale(2);-moz-transform: scale(2);-webkit-transform: scale(2);-o-transform: scale(2);padding: 10px;margin: auto;clear: both;display: block; padding-top: 0;}
+.swatch_text {width: 100%;text-align: center;margin: 3% 0 10%;clear: both; font-size: 94%;}
 /**********************************/
 /* Press releases */
 /**********************************/
