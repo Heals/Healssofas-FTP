@@ -132,8 +132,7 @@
 							<venda_inctemplate type=includes,name=multibuy>
 						</venda_block label=16>
 						<venda_tpcomment><!-- end: price - if product doesn't have attributes --></venda_tpcomment>
-
-            			<venda_block label=200,chkatt=notnull>
+                        
 							<venda_block invtivtype=furniturerange>
      						<div class="attrFeedback productselectedwrapper">
                             </venda_block>
@@ -176,16 +175,14 @@
 							<input type="hidden" name="next" value="">
 							<input type="hidden" name="bklist" value="">
 							<input type="hidden" name="layout" value="">
-				
+                            <venda_block label=250,invtavail&gt;0,etadyleft&gt;0,operator=or>
+							<venda_block label=700,chkatt=null>
 							<!-- if in stock -->
 							<venda_extflds exfldtype=orderitem,group=1,template=oixtSet,type=exfields/orderItem,ref=<venda_invtref>>
 							<venda_extflds exfldtype=orderitem,group=2,template=oixtSet,type=exfields/orderItem,ref=<venda_invtref>>
 
 							<venda_tpcomment><!-- start: button link image --></venda_tpcomment>
-							<div id="addproductbox" class="addproductbox">
-                    		<venda_block label=250,invtavail&gt;0,etadyleft&gt;0,operator=or>
-							<venda_block label=700,chkatt=null>
-                    
+							<div id="addproductbox" class="addproductbox">                 
 								<div class="quantity_place"><label for="qty" style="color: #333333;"><venda_text id=desktop.info.qty>: </label><input name="qty" id="qty" type="text" value="1" class="qty textInput" size="3" maxlength="3"></div>
 							<!-- if product doesn't have attributes -->
                 			<input type="hidden" name="VBMTCinput" value="">
@@ -196,10 +193,9 @@
 <venda_block label=ustyper1,ustype=R>
 <a href="<venda_codehttps>?ex=co_wizr-shopcart2&bsref=<venda_bsref>&wizard=shopcart2&step=confirm&param1=login"></venda_block label=ustyper1><venda_block label=ustyper0,ustype!=R><a href="<venda_codehttps>?ex=co_wizr-shopcart2&bsref=<venda_bsref>&wizard=shopcart2&step=billtologin&param1=login"></venda_block label=ustyper0><venda_text id=desktop.button.addtobasket></a>
 </venda_block label=353456>
-
+                    		</div>
 							</venda_block label=700>
                    			</venda_block label=250>
-                    		</div>
                             </form>
                 	</div>
                     </venda_block label=nonrange>
@@ -242,7 +238,6 @@
 							</div>
 							</venda_block label=25>
             
-						</venda_block label=200>
 
 						<venda_block label=52,mode=value,<venda_setting type=ebiz,name=powerreviews>=1,<venda_setting type=ebiz,name=powerreviewsproddetail>=1>
 						<script type="text/javascript" src="../productdetailsofa/&lt;venda_serveradd&gt;/partners/pwr/engine/js/full.js"></script>
