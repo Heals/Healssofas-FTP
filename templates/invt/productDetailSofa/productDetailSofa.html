@@ -239,6 +239,17 @@
                 	</div>
                     </venda_block label=nonrange>
                     
+                	<venda_tpcomment><!-- ATTRIBUTES SETTINGS --></venda_tpcomment>
+					<venda_block label=1000,chkatt=notnull>
+					<div class="attributesForm" id="productdetail" style="display: none;">swatch</div>
+					<div id="invtref" style="display: none;"><venda_invtref></div>
+					<div id="attributeNames">
+					<div class="att1" style="display: none;"><venda_att1></div>
+					</div>
+					<div id="invtrelease" style="display: none;"><venda_invtrelease></div>
+					</venda_block label=1000>
+					<venda_tpcomment><!-- eo ATTRIBUTES SETTINGS --></venda_tpcomment>
+                    
                     <venda_block label=range1,invtivtype=furniturerange>
                 	<div class="box productDetailGradientBox buyControls">
                     	<venda_block label=701,chkatt=notnull>
@@ -279,20 +290,7 @@
 			
 			</div>
                 <venda_tpcomment><!-- end: buyControl div --></venda_tpcomment>
-                
-                
-                <venda_tpcomment><!-- ATTRIBUTES SETTINGS --></venda_tpcomment>
-				<venda_block label=1000,chkatt=notnull>
-				<div class="attributesForm" id="productdetail" style="display: none;">swatch</div>
-				<div id="invtref" style="display: none;"><venda_invtref></div>
-				<div id="attributeNames">
-				<div class="att1" style="display: none;"><venda_att1></div>
-				</div>
-				<div id="invtrelease" style="display: none;"><venda_invtrelease></div>
-				</venda_block label=1000>
-				<venda_tpcomment><!-- eo ATTRIBUTES SETTINGS --></venda_tpcomment>
-                
-                
+
                 <venda_tpcomment><!-- start: share --></venda_tpcomment>
    				<div class="sofa-share">
    					<div class="sofa-email-link"><a href="<venda_dispview invt=<venda_invtref>>&temp=tellafriend" id="tellafriend_link" title="Email this product" target="_blank" class="doDialog" rel="550,450,tellafriend"><img class="sofa-email-pic" src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/site-wide/sofa-email.png" /></a>
