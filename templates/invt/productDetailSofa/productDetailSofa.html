@@ -34,6 +34,42 @@
 
 <div itemscope itemtype="http://schema.org/Product">
 	<div id="sofa-productdetail">
+    <venda_tpcomment><!-- start: left hand side contents --></venda_tpcomment>
+			<div class="grid_12 pull_12 omega">
+				<div class="invtmedia grid_10 push_2 alpha" id="image_<venda_invtuuid>">
+					<div id="sofa-productdetail-image">
+					<a itemprop="image" href="<venda_media rec=invt,type=movie-swf-pict,key=large,img=no>" class = 'cloud-zoom' id='zoom1' rel="adjustX: 53, adjustY:-4, zoomWidth: 462" title="<venda_text id=desktop.info.large_image_title>"> 
+					<venda_block label=10,med-medium=notnull>
+					<img class="cloudzoom" id ="zoom1" src="<venda_media rec=invt,type=movie-swf-pict,key=medium,img=no>" data-cloudzoom="zoomImage: '<venda_media rec=invt,type=movie-swf-pict,key=large,img=no>',zoomPosition: 'inside'">
+					</venda_block label=10> 
+
+					<venda_block label=11,med-medium=null><img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/no_image_medium.gif" alt="<venda_text id=desktop.info.no_product_image>"></venda_block label=11> </a> <div id="rolloverzoomText" style="position:absolute;top:385px;left:160px;"></div>
+					</div>
+					<div id="productdetail-swap" style="display:none;"></div>
+					<div id="productdetail-viewlarge" class="enlarge"></div>
+				</div>
+    
+    			<!-- alt images  -->
+				<div class="alternative_images_slide" style="clear: both;">
+				<venda_inctemplate name=alternateviewArrows,type=invt>
+   					<div class="window_alternative_view">
+        				<div class="image_reel_alternative_view">
+        					<div class="move_width"></div>
+							<ul>
+							<div id="productdetail-altview" class="altImageList"></div>
+							<venda_inctemplate name=alternateviewScript,type=invt>
+							</ul>
+        				</div>
+  					</div>
+				</div>
+
+
+				<venda_tpcomment><!-- start: productCycling V2 --></venda_tpcomment>
+       		 	<venda_category temp=productCycling,rec=icat,ref=<venda_curcatref>,center_on=<venda_invtref>,itemsperpage=3>
+        		<venda_tpcomment><!-- end: productCycling --></venda_tpcomment>
+			</div>
+            
+			<venda_tpcomment><!-- end: left hand side (picture) --></venda_tpcomment>
     <venda_tpcomment><!-- start: right hand side (price, description, etc) --></venda_tpcomment>
     	<div id="sofa-detailzone">
 		<h1 itemprop="name"><venda_invtname></h1>
@@ -305,52 +341,17 @@
                 <div class="sofa-pinterest-link"><a href="http://pinterest.com/pin/create/button/?url=<venda_dispview invt=<venda_invtref>>&media=<venda_media rec=invt,type=movie-swf-pict,key=medium,img=no>&description=<venda_invtname>" class="pin-it-button" count-layout="horizontal"><img border="0" src="//assets.pinterest.com/images/PinExt.png" title="Pin It" /></a>
                 </div>
 			</div>
+            </div>
      		<venda_tpcomment><!-- end: share --></venda_tpcomment>
-            
-            <div class="sofa-swatch-request">
-    		<venda_block label=401,pdxtswatch=1>                       
+            <venda_block label=401,pdxtswatch=1>
+            <div class="sofa-swatch-request">                      
 			<a href="#swatch_request" >REQUEST YOUR SWATCH HERE</a>
-			</venda_block label=401>
 			</div>
+            </venda_block label=401>
             <venda_tpcomment><!-- eo ONE PRODUCT --></venda_tpcomment>
         	<venda_tpcomment><!-- end: product detail contents --></venda_tpcomment>
+            </div>
 			<venda_tpcomment><!-- end: right hand side (price, description, etc) --></venda_tpcomment>
-            <venda_tpcomment><!-- start: left hand side contents --></venda_tpcomment>
-			<div class="grid_12 pull_12 omega">
-				<div class="invtmedia grid_10 push_2 alpha" id="image_<venda_invtuuid>">
-					<div id="sofa-productdetail-image">
-					<a itemprop="image" href="<venda_media rec=invt,type=movie-swf-pict,key=large,img=no>" class = 'cloud-zoom' id='zoom1' rel="adjustX: 53, adjustY:-4, zoomWidth: 462" title="<venda_text id=desktop.info.large_image_title>"> 
-					<venda_block label=10,med-medium=notnull>
-					<img class="cloudzoom" id ="zoom1" src="<venda_media rec=invt,type=movie-swf-pict,key=medium,img=no>" data-cloudzoom="zoomImage: '<venda_media rec=invt,type=movie-swf-pict,key=large,img=no>',zoomPosition: 'inside'">
-					</venda_block label=10> 
-
-					<venda_block label=11,med-medium=null><img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/no_image_medium.gif" alt="<venda_text id=desktop.info.no_product_image>"></venda_block label=11> </a> <div id="rolloverzoomText" style="position:absolute;top:385px;left:160px;"></div>
-					</div>
-					<div id="productdetail-swap" style="display:none;"></div>
-					<div id="productdetail-viewlarge" class="enlarge"></div>
-				</div>
-    
-    			<!-- alt images  -->
-				<div class="alternative_images_slide" style="clear: both;">
-				<venda_inctemplate name=alternateviewArrows,type=invt>
-   					<div class="window_alternative_view">
-        				<div class="image_reel_alternative_view">
-        					<div class="move_width"></div>
-							<ul>
-							<div id="productdetail-altview" class="altImageList"></div>
-							<venda_inctemplate name=alternateviewScript,type=invt>
-							</ul>
-        				</div>
-  					</div>
-				</div>
-
-
-				<venda_tpcomment><!-- start: productCycling V2 --></venda_tpcomment>
-       		 	<venda_category temp=productCycling,rec=icat,ref=<venda_curcatref>,center_on=<venda_invtref>,itemsperpage=3>
-        		<venda_tpcomment><!-- end: productCycling --></venda_tpcomment>
-			</div>
-			<venda_tpcomment><!-- end: left hand side (picture) --></venda_tpcomment>
-         
 
   			<venda_tpcomment><!-- Start:Sofa Information --></venda_tpcomment>
     		<div class="clear-all"></div>        
@@ -466,6 +467,8 @@ European: 2-5 Working Days &pound;8.95</a>
          <!-- possible content end tags -->      
         </div>
 	</div>
+</div>
+</div>
 </div>
 
 
