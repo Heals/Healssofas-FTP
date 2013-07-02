@@ -255,13 +255,13 @@
 						$(function(){$("#addproductform").submit(function(){if(jQuery(".qty").val()>0){return true}else{alert(jQuery("#attributes-quantity").text());return false}})})
 						</script>
 
-                    	<div class="sofa-buybutton">
+                    	<div id="addproductbox" class="addproductbox">
 							<div class="quantity_place"><label for="qty"><venda_text id=desktop.info.qty>: </label><input name="qty" id="qty" type="text" value="1" size="3" maxlength="3" class="qty textInput"></div>
 
 							<venda_tpcomment><!-- Add to basket, PreOrder --></venda_tpcomment>
                     		<input type="hidden" name="VBMTCinput" value="">
 							<input type="hidden" name="VBMSTinput" value="">
-							<input id="buyNow" type="submit" value="<venda_text id=site.button.add_to_basket>" data-track="addtobasket" class="preorder basketbutton">
+							<input type="submit" value="<venda_text id=site.button.add_to_basket>" data-track="addtobasket" class="preorder basketbutton">
                     		<venda_block label=353456,mode=value,<venda_addedmsg msg=<venda_text id=site.addedmsg>>=notnull>
 <venda_block label=ustyper11,ustype=R>
 <a href="<venda_codehttps>?ex=co_wizr-shopcart2&bsref=<venda_bsref>&wizard=shopcart2&step=confirm&param1=login"></venda_block label=ustyper11><venda_block label=ustyper00,ustype!=R><a href="<venda_codehttps>?ex=co_wizr-shopcart2&bsref=<venda_bsref>&wizard=shopcart2&step=billtologin&param1=login"></venda_block label=ustyper00><img style="padding:0 0 0 7px;" src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/product-detail/checkout.gif" alt="Go To Checkout"></a>
