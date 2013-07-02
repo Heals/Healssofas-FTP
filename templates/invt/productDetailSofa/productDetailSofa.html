@@ -202,13 +202,10 @@
                     
 					<div class="quantity_place"><label for="qty" style="color: #333333;"><venda_text id=desktop.info.qty>: </label><input name="qty" id="qty" type="text" value="1" class="qty textInput" size="3" maxlength="3"></div>
 					<!-- if product doesn't have attributes -->
-					<venda_block label=34,invtpreorder!=1>
                 	<input type="hidden" name="VBMTCinput" value="">
 					<input type="hidden" name="VBMSTinput" value="">
 					<input type="hidden" name="htxt" id="htxt" value="<venda_htxt mode=make,sofa=true>"> 
-					<input type="submit" value="<venda_text id=desktop.button.addtobasket>" class="basketbutton">
-					</venda_block label=34>
-                
+					<input type="submit" value="<venda_text id=desktop.button.addtobasket>" class="basketbutton" data-track="addtobasket" class="preorder">             
                 	<venda_block label=353456,mode=value,<venda_addedmsg msg=<venda_text id=site.addedmsg>>=notnull>
 <venda_block label=ustyper1,ustype=R>
 <a href="<venda_codehttps>?ex=co_wizr-shopcart2&bsref=<venda_bsref>&wizard=shopcart2&step=confirm&param1=login"></venda_block label=ustyper1><venda_block label=ustyper0,ustype!=R><a href="<venda_codehttps>?ex=co_wizr-shopcart2&bsref=<venda_bsref>&wizard=shopcart2&step=billtologin&param1=login"></venda_block label=ustyper0><venda_text id=desktop.button.addtobasket></a>
