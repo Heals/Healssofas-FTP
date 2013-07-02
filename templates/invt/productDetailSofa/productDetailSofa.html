@@ -65,9 +65,15 @@
 
 
 </div>
-<venda_block label=furniturerange-attr1,invtivtype=furniturerange>
 <div class="product_swatch">
-<form name="form" action="http://www.heals.co.uk/" method="get" name="addproductform" id="addproductform">
+
+<venda_tpcomment><!-- start: price - if product doesn't have attributes --></venda_tpcomment>
+
+		<venda_tpcomment><!-- ONE PRODUCT --></venda_tpcomment>
+		<div class="oneProduct" id="oneProduct_<venda_invtuuid>">
+			<div class="oneProductContent">
+            <venda_block label=furniturerange-attr1,invtivtype=furniturerange>
+            <form name="form" action="http://www.heals.co.uk/" method="get" name="addproductform" id="addproductform">
 <input type="hidden" name="ex" value="co_wizr-shopcart2">
 <input type="hidden" name="curpage" value="">
 <input type="hidden" name="buy" value="<venda_invtref>">
@@ -80,12 +86,6 @@
 <input type="hidden" name="bklist" value="">
 <input type="hidden" name="layout" value="">
 </venda_block label=furniturerange-attr1>
-
-<venda_tpcomment><!-- start: price - if product doesn't have attributes --></venda_tpcomment>
-
-		<venda_tpcomment><!-- ONE PRODUCT --></venda_tpcomment>
-		<div class="oneProduct" id="oneProduct_<venda_invtuuid>">
-			<div class="oneProductContent">
 			<venda_block label=16,chkatt=null>
 				<div class="priceDetails" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
 				<meta itemprop="priceCurrency" content="<venda_currencycode>">
