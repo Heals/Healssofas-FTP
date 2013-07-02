@@ -161,47 +161,9 @@
 							<span id="productstatus"><venda_text id=desktop.info.please_make_selection></span>
 							<span id="stockstatus"><venda_text id=desktop.info.availability></span> <span id="atrononhandholder" class="hide"><venda_text id=desktop.info.only><span id="atronhand"></span><venda_text id=desktop.info.left></span>
 							</div>
-    
-							<venda_tpcomment><!-- start: attributes dropdown --></venda_tpcomment>
-                            <venda_block label=furniturerange-attribute1,invtivtype=furniturerange>
-							<div id="attributeInputs" class="attributeInputs">
-								<venda_block label=21,selatt1=notnull>
-								<div style="display:none;">
-								<label for="att1"><venda_att1>:</label>
-                                <select name="att1" id="att1_<venda_invtuuid>"><option value=""><venda_text id=site.product_detail.attribute.att1></option><venda_selatt1></select>
-								</div>
-								</venda_block label=21>
-							</div>
-                            </venda_block label=furniturerange-attribute1>
-							<venda_tpcomment><!-- end: attributes dropdown --></venda_tpcomment>
-                
-              				<venda_block label=25,pdxtatrtype=grid>
-							<div class="key">
-							<h3><venda_text id=desktop.info.key></h3>
-							<ul>
-								<li class="In_stock"><venda_text id=desktop.info.in_stock></li>
-								<li class="Not_Available"><venda_text id=desktop.info.out_of_stock></li>
-								<li class="Stock_is_low"><venda_text id=desktop.info.low_stock></li>
-								<li class="Pre_order"><venda_text id=desktop.info.item_preorder></li>
-								<li class="ETA"><venda_text id=desktop.info.no_of_weeks></li>
-								<li class="Out_of_stock"><venda_text id=desktop.info.email_me_when_back_in_stock></li>
-							</ul>
-							</div>
-							</venda_block label=25>
-            
-						</venda_block label=200>
-
-						<venda_block label=52,mode=value,<venda_setting type=ebiz,name=powerreviews>=1,<venda_setting type=ebiz,name=powerreviewsproddetail>=1>
-						<script type="text/javascript" src="../productdetailsofa/&lt;venda_serveradd&gt;/partners/pwr/engine/js/full.js"></script>
-						<!-- power reviews snippet for product reviews
-						<script type="text/javascript">snippet(document);</script> -->
-						</venda_block label=52>
-						</div>
-						
-                        <venda_tpcomment><!-- start: buyControl div --></venda_tpcomment>
-                
-                		<venda_block label=nonrange,invtivtype=furniture>
-						<div class="box productDetailGradientBox buyControls">
+                            
+                            <venda_block label=nonrange,invtivtype=furniture>
+							<div class="box productDetailGradientBox buyControls">
                 			<form name="form" action="http://www.heals.co.uk/" method="get" name="addproductform" id="addproductform">
 							<input type="hidden" name="ex" value="co_wizr-shopcart2">
 							<input type="hidden" name="curpage" value="">
@@ -238,19 +200,59 @@
 							</venda_block label=700>
                    			</venda_block label=250>
                     		</div>
+                            </form>
                 	</div>
                     </venda_block label=nonrange>
-                    
-                	<venda_tpcomment><!-- ATTRIBUTES SETTINGS --></venda_tpcomment>
-					<venda_block label=1000,chkatt=notnull>
-					<div class="attributesForm" id="productdetail" style="display: none;">swatch</div>
-					<div id="invtref" style="display: none;"><venda_invtref></div>
-					<div id="attributeNames">
-					<div class="att1" style="display: none;"><venda_att1></div>
-					</div>
-					<div id="invtrelease" style="display: none;"><venda_invtrelease></div>
-					</venda_block label=1000>
-					<venda_tpcomment><!-- eo ATTRIBUTES SETTINGS --></venda_tpcomment>
+    
+							<venda_tpcomment><!-- start: attributes dropdown --></venda_tpcomment>
+                            <venda_block label=furniturerange-attribute1,invtivtype=furniturerange>
+							<div id="attributeInputs" class="attributeInputs">
+								<venda_block label=21,selatt1=notnull>
+								<div style="display:none;">
+								<label for="att1"><venda_att1>:</label>
+                                <select name="att1" id="att1_<venda_invtuuid>"><option value=""><venda_text id=site.product_detail.attribute.att1></option><venda_selatt1></select>
+								</div>
+								</venda_block label=21>
+							</div>
+                            </venda_block label=furniturerange-attribute1>
+							<venda_tpcomment><!-- end: attributes dropdown --></venda_tpcomment>
+                            
+                            <venda_tpcomment><!-- ATTRIBUTES SETTINGS --></venda_tpcomment>
+							<venda_block label=1000,chkatt=notnull>
+							<div class="attributesForm" id="productdetail" style="display: none;">swatch</div>
+							<div id="invtref" style="display: none;"><venda_invtref></div>
+							<div id="attributeNames">
+							<div class="att1" style="display: none;"><venda_att1></div>
+							</div>
+							<div id="invtrelease" style="display: none;"><venda_invtrelease></div>
+							</venda_block label=1000>
+							<venda_tpcomment><!-- eo ATTRIBUTES SETTINGS --></venda_tpcomment>
+                
+              				<venda_block label=25,pdxtatrtype=grid>
+							<div class="key">
+							<h3><venda_text id=desktop.info.key></h3>
+							<ul>
+								<li class="In_stock"><venda_text id=desktop.info.in_stock></li>
+								<li class="Not_Available"><venda_text id=desktop.info.out_of_stock></li>
+								<li class="Stock_is_low"><venda_text id=desktop.info.low_stock></li>
+								<li class="Pre_order"><venda_text id=desktop.info.item_preorder></li>
+								<li class="ETA"><venda_text id=desktop.info.no_of_weeks></li>
+								<li class="Out_of_stock"><venda_text id=desktop.info.email_me_when_back_in_stock></li>
+							</ul>
+							</div>
+							</venda_block label=25>
+            
+						</venda_block label=200>
+
+						<venda_block label=52,mode=value,<venda_setting type=ebiz,name=powerreviews>=1,<venda_setting type=ebiz,name=powerreviewsproddetail>=1>
+						<script type="text/javascript" src="../productdetailsofa/&lt;venda_serveradd&gt;/partners/pwr/engine/js/full.js"></script>
+						<!-- power reviews snippet for product reviews
+						<script type="text/javascript">snippet(document);</script> -->
+						</venda_block label=52>
+						</div>
+						
+                        <venda_tpcomment><!-- start: buyControl div --></venda_tpcomment>
+                		
                     
                     <venda_block label=range1,invtivtype=furniturerange>
                 	<div class="box productDetailGradientBox buyControls">
