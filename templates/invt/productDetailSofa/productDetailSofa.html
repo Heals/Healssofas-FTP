@@ -123,22 +123,26 @@
 						<input type="hidden" name="bklist" value="">
 						<input type="hidden" name="layout" value="">
 						</venda_block label=furniturerange-attr1>
-						<venda_block label=16,chkatt=null>
-							<div class="priceDetails" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-							<meta itemprop="priceCurrency" content="<venda_currencycode>">
-							<venda_block label=onhand,invtonhand&gt;0><venda_block label=instock,invtpreorder!=1><link itemprop="availability" href="http://schema.org/InStock"></venda_block label=instock><venda_block label=preorder,invtpreorder=1><link itemprop="availability" href="http://schema.org/PreOrder"></venda_block label=preorder></venda_block label=onhand><venda_block label=outofstock,invtonhand&lt;1><link itemprop="availability" href="http://schema.org/OutOfStock"></venda_block label=outofstock>
-							<venda_inctemplate type=includes,name=priceFormat>
-							</div>
-							<venda_inctemplate type=includes,name=multibuy>
-						</venda_block label=16>
-						<venda_tpcomment><!-- end: price - if product doesn't have attributes --></venda_tpcomment>
-                        
-							<venda_block invtivtype=furniturerange>
+                        	<venda_block invtivtype=furniturerange>
      						<div class="attrFeedback productselectedwrapper">
                             </venda_block>
 							<span id="productselected"></span>
                 			<span id="productstatus"><venda_text id=desktop.info.please_make_selection></span><br/>
 							<span id="stockstatus"><venda_text id=desktop.info.availability></span> 
+                                <div class="box productDetailGradientBox attrFeedback stockFeedbackBox">
+							<span id="productstatus"><venda_text id=desktop.info.please_make_selection></span>
+							<span id="stockstatus"><venda_text id=desktop.info.availability></span> <span id="atrononhandholder" class="hide"><venda_text id=desktop.info.only><span id="atronhand"></span><venda_text id=desktop.info.left></span>
+								</div>
+						<venda_block label=16,chkatt=null>
+								<div class="priceDetails" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+							<meta itemprop="priceCurrency" content="<venda_currencycode>">
+							<venda_block label=onhand,invtonhand&gt;0><venda_block label=instock,invtpreorder!=1><link itemprop="availability" href="http://schema.org/InStock"></venda_block label=instock><venda_block label=preorder,invtpreorder=1><link itemprop="availability" href="http://schema.org/PreOrder"></venda_block label=preorder></venda_block label=onhand><venda_block label=outofstock,invtonhand&lt;1><link itemprop="availability" href="http://schema.org/OutOfStock"></venda_block label=outofstock>
+								<venda_inctemplate type=includes,name=priceFormat>
+								</div>
+							<venda_inctemplate type=includes,name=multibuy>
+						</venda_block label=16>
+						<venda_tpcomment><!-- end: price - if product doesn't have attributes --></venda_tpcomment>
+                       
 
 							<venda_tpcomment><!-- start: price - if product does have attributes --></venda_tpcomment>
                             	<venda_block invtivtype=furniturerange>
@@ -155,12 +159,7 @@
                    				<venda_category temp=swatches,ref=swatches,rec=scat>
                     			</div>
 							</div>
-                            
-                            <div class="box productDetailGradientBox attrFeedback stockFeedbackBox">
-							<span id="productstatus"><venda_text id=desktop.info.please_make_selection></span>
-							<span id="stockstatus"><venda_text id=desktop.info.availability></span> <span id="atrononhandholder" class="hide"><venda_text id=desktop.info.only><span id="atronhand"></span><venda_text id=desktop.info.left></span>
-							</div>
-                            
+
                             <venda_block label=nonrange,invtivtype=furniture>
 							<div class="box productDetailGradientBox buyControls">
                 			<form name="form" action="http://www.heals.co.uk/" method="get" name="addproductform" id="addproductform">
