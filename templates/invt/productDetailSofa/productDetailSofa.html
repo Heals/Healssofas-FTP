@@ -176,19 +176,20 @@
 </div>
 				<venda_tpcomment><!-- start: buyControl div --></venda_tpcomment>
                 
+                <venda_block label=nonrange,invtivtype=furniture>
 				<div class="box productDetailGradientBox buyControls">
-                <form name="form" action="http://www.heals.co.uk/" method="get" name="addproductform" id="addproductform">
-				<input type="hidden" name="ex" value="co_wizr-shopcart2">
-				<input type="hidden" name="curpage" value="">
-				<input type="hidden" name="buy" value="<venda_invtref>">
-				<input type="hidden" name="invt" value="<venda_invtref>">
-				<input type="hidden" name="ivref" value="<venda_invtref>">
-				<input type="hidden" name="bsref" value="heals">
-				<input type="hidden" name="log" value="22">
-				<input type="hidden" name="mode" value="add">
-				<input type="hidden" name="next" value="">
-				<input type="hidden" name="bklist" value="">
-				<input type="hidden" name="layout" value="">
+                	<form name="form" action="http://www.heals.co.uk/" method="get" name="addproductform" id="addproductform">
+					<input type="hidden" name="ex" value="co_wizr-shopcart2">
+					<input type="hidden" name="curpage" value="">
+					<input type="hidden" name="buy" value="<venda_invtref>">
+					<input type="hidden" name="invt" value="<venda_invtref>">
+					<input type="hidden" name="ivref" value="<venda_invtref>">
+					<input type="hidden" name="bsref" value="heals">
+					<input type="hidden" name="log" value="22">
+					<input type="hidden" name="mode" value="add">
+					<input type="hidden" name="next" value="">
+					<input type="hidden" name="bklist" value="">
+					<input type="hidden" name="layout" value="">
 				
 					<!-- if in stock -->
 					<venda_extflds exfldtype=orderitem,group=1,template=oixtSet,type=exfields/orderItem,ref=<venda_invtref>>
@@ -199,7 +200,7 @@
                     <venda_block label=250,invtavail&gt;0,etadyleft&gt;0,operator=or>
 					<venda_block label=700,chkatt=null>
                     
-					<div class="quantity_place"><label for="qty" style="color: #333333;"><venda_text id=desktop.info.qty>: </label><input name="qty" id="qty" type="text" value="1" class="qty textInput" size="3" maxlength="3"></div>
+						<div class="quantity_place"><label for="qty" style="color: #333333;"><venda_text id=desktop.info.qty>: </label><input name="qty" id="qty" type="text" value="1" class="qty textInput" size="3" maxlength="3"></div>
 					<!-- if product doesn't have attributes -->
                 	<input type="hidden" name="VBMTCinput" value="">
 					<input type="hidden" name="VBMSTinput" value="">
@@ -212,8 +213,11 @@
 
 					</venda_block label=700>
                     </venda_block label=250>
+                    </div>
+                </div>
+                    </venda_block label=nonrange>
                     <venda_block label=range1,invtivtype=furniturerange>
-                    <div class="box productDetailGradientBox buyControls">
+                <div class="box productDetailGradientBox buyControls">
                     <venda_block label=701,chkatt=notnull>
                     <script type="text/javascript">
 					$(function(){$("#addproductform").submit(function(){if(jQuery(".qty").val()>0){return true}else{alert(jQuery("#attributes-quantity").text());return false}})})
@@ -221,7 +225,7 @@
 
                     <div class="sofa-buybutton">
 
-					<div class="quantity_place"><label for="qty"><venda_text id=desktop.info.qty>: </label><input name="qty" id="qty" type="text" value="1" size="3" maxlength="3" class="qty textInput"></div>
+						<div class="quantity_place"><label for="qty"><venda_text id=desktop.info.qty>: </label><input name="qty" id="qty" type="text" value="1" size="3" maxlength="3" class="qty textInput"></div>
 
 					<venda_tpcomment><!-- Add to basket, PreOrder --></venda_tpcomment>
                     <input type="hidden" name="VBMTCinput" value="">
@@ -238,7 +242,7 @@
 </div>
 					</venda_block label=701>
                     </form>
-                    </div>
+                 </div>
                     </venda_block label=range1>
                 	<venda_tpcomment><!-- end: button link image --></venda_tpcomment>
 					<venda_block label=30,invtpreorder=notnull>
