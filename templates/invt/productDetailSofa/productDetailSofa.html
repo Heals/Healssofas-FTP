@@ -72,7 +72,7 @@
 			<venda_tpcomment><!-- end: left hand side (picture) --></venda_tpcomment>
     <venda_tpcomment><!-- start: right hand side (price, description, etc) --></venda_tpcomment>
     	<div id="sofa-detailzone">
-		<h1 itemprop="name"><venda_invtname></h1>
+		<h1 itemprop="name" id="comp-name<venda_invtref>"><venda_invtname></h1>
 		<venda_block errors=notnull> <h2 class="error"><venda_errors></h2> </venda_block>
 
 <!--<span class="sku" itemprop="productID"><span><venda_text id=desktop.info.sku>:</span> <venda_invtref></span>-->
@@ -134,8 +134,9 @@
 						<venda_tpcomment><!-- end: price - if product doesn't have attributes --></venda_tpcomment>
 
             			<venda_block label=200,chkatt=notnull>
-
+							<venda_block invtivtype=furniturerange>
      						<div class="attrFeedback productselectedwrapper">
+                            </venda_block>
 							<span id="productselected"></span>
                 			<span id="productstatus"><venda_text id=desktop.info.please_make_selection></span><br/>
 							<span id="stockstatus"><venda_text id=desktop.info.availability></span> 
