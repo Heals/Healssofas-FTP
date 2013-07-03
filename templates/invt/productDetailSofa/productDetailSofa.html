@@ -1,39 +1,59 @@
-<venda_tpcomment><!-- tag values used for tell a friend, emwbis, write and read a review popups --></venda_tpcomment>
-<div id="tag-qtymsg" style="display:none;"><venda_text id=desktop.validation.please_enter_quantity></div>
+<style>#content-default_nocoltwothree {background:none;}</style>
+<div id="tag-loadmessage" style="display:none;"><venda_text id=site.loadmessage></div>
+<div id="tag-qtymsg" style="display:none;"><venda_text id=site.productdetail.validate.qty></div>
 <div id="tag-ebizref" style="display:none;"><venda_setting type=ebiz,name=ref></div>
 <div id="tag-ebizurl" style="display:none;"><venda_ebizurl></div>
 <div id="tag-invtref" style="display:none;"><venda_invtref></div>
 <div id="tag-invtname" style="display:none;"><venda_invtname></div>
 <div id="tag-currsym" style="display:none;"><venda_currsym></div>
-
-<venda_tpcomment><!-- Dictionary translations required for attributes JS --></venda_tpcomment>
-<div id="attributes-stockNA" style="display:none;"><venda_text id=desktop.validation.selection_not_available></div>
-<div id="attributes-stockOut" style="display:none;"><venda_text id=desktop.validation.selection_out_of_stock></div>
+<venda_tpcomment><!-- Jotis Attribute Design Translations --></venda_tpcomment>
+<div id="tag-was" style="display:none;">WAS </div>
+<div id="pdxtAttrName" style="display: none;"><!--<venda_pdxtattrname>-->selection</div>
+<div id="attributes-stockNA" style="display:none;">Sorry, the selection you have made is not available</div>
+<div id="pdxtVideoUrl" style="display:none;"><venda_pdxtvideo></div>
+<div id="pdxtVideo-play" style="display:none;"><venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/product-detail/pdxtvideo-play.png</div>
+<div id="attributes-stockOut" style="display:none;">The selection you have made is out of stock</div>
 <div id="attributes-productselected" style="display:none;"></div>
-<div id="attributes-productstatus" style="display:none;"><venda_text id=desktop.validation.please_select_colon></div>
-<div id="attributes-only" style="display:none;"><venda_text id=desktop.validation.only></div>
-<div id="attributes-left" style="display:none;"><venda_text id=desktop.validation.left></div>
-<div id="attributes-optionDefault" style="display:none;"><venda_text id=desktop.validation.please_select_multi_dot></div>
-<div id="attributes-tooltip" style="display:none; z-index:1000;"><venda_text id=desktop.validation.is_out_of_stock></div>
-<div id="attributes-backorder" style="display:none;"><venda_text id=desktop.validation.backorder_text></div>
-<div id="attributes-preorder" style="display:none;"><venda_text id=desktop.validation.preorder_text></div>
+<div id="attributes-productstatus" style="display:none;">Please choose your </div>
+<div id="attributes-only" style="display:none;"></div>
+<div id="attributes-left" style="display:none;"> available</div>
+<div id="attributes-optionDefault" style="display:none;">Please Select...</div>
+<div id="attributes-tooltip" style="display:none;"> is currently out of stock</div>
+<div id="attributes-backorder" style="display:none;">Awaiting Stock</div>
+<div id="attributes-backorder2" style="display:none;">Delivery Due</div>
+<div id="attributes-order" style="display:none;">Special Order</div>
+<div id="attributes-order2" style="display:none;">Item Lead Time</div>
+<div id="attributes-preorder" style="display:none;">Available for Pre-order - Release Date: </div>
 <div id="attributes-quantity" style="display:none;">Please enter a quantity</div>
-<div id="attributes-chooseVariant" style="display:none;"><venda_text id=desktop.validation.choose_variant></div>
-<div id="attributes-addThisProduct" style="display:none;"><venda_text id=desktop.validation.add_this_product></div>
-<div id="attributes-addAllProduct" style="display:none;"><venda_text id=desktop.validation.add_all_product></div>
-<div id="attributes-noneChecked" style="display:none;"><venda_text id=desktop.validation.none_checked></div>
-
-
+<venda_block label=mattress-prod1,invtcatref0=mattresses>
+<div id="attributes-chooseVariant" style="display:none;">Please choose a tension for the mattress you are adding to the basket</div>
+</venda_block label=mattress-prod1>
+<venda_block label=mattress-prod0,invtcatref0!=mattresses>
+<div id="attributes-chooseVariant" style="display:none;">Please choose a varient of the product(s) you are adding to the basket</div>
+</venda_block label=mattress-prod0>
+<div id="attributes-addThisProduct" style="display:none;">Add this Product</div>
+<div id="attributes-addAllProduct" style="display:none;">Add all products</div>
+<div id="attributes-noneChecked" style="display:none;">Please add at least one product</div>
 <venda_tpcomment><!-- VCP switch settings required for attributes JS --></venda_tpcomment>
-<div id="OutOfStockThreshold" style="display: none;" class="INFO"><venda_setting type=ebiz,name=emailmebackthreshold></div><venda_tpcomment><!-- Out of Stock Threshold --></venda_tpcomment>
+<div id="OutOfStockThreshold" style="display: none;"><venda_setting type=ebiz,name=emailmebackthreshold></div><venda_tpcomment><!-- Out of Stock Threshold --></venda_tpcomment>
 <div id="DoNotBackorder" style="display: none;"><venda_setting type=ebiz,name=nobackorderedinclude></div><venda_tpcomment><!-- Do not dispatch backordered items (checked == no backorder)--></venda_tpcomment>
 <div id="emwbisType" style="display: none;"><venda_setting type=ebiz,name=emailmebackcriteria></div><venda_tpcomment><!-- Email me when back in stock criteria (ETA / Release Dates): 4 options: none, eta, release, eta and etarelease --></venda_tpcomment>
-<div id="stockchecking_basket" style="display: none;"><venda_setting type=ebiz,name=stockchecking_basket></div><venda_tpcomment><!-- Confirm Stock Availability at basket --></venda_tpcomment>
-<div id="stockchecking_orderconfirm" style="display: none;"><venda_setting type=ebiz,name=stockchecking_orderconfirm></div><venda_tpcomment><!-- Confirm Stock Availability at Confirm screen --></venda_tpcomment>
 
 
 <div itemscope itemtype="http://schema.org/Product">
 	<div id="sofa-productdetail">
+    
+    	<script type="text/javascript">
+	function deleteVideo(){$("#VideoPlayer")[0].src='';$(".pdxtVideoPlayerContainer").hide();}
+	function LoadVideo(){$("#VideoPlayer")[0].src='http://<venda_pdxtvideo>';$(".pdxtVideoPlayerContainer").show();}
+	</script>
+		<div class="pdxtVideoPlayerContainer" style="display:none;">
+			<div class="pdxtVideoPlayer">
+				<a onclick="deleteVideo()"><img class="close-button" src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/product-detail/wallpaper-close.jpg" alt="Close" title="Close"></a>
+				<iframe id="VideoPlayer" src="" frameborder="0" width="650" height="460" style="margin:0 -20px 0 0;;" /></iframe>
+			</div>
+		</div>
+    
     <venda_tpcomment><!-- start: left hand side contents --></venda_tpcomment>
 			<div class="grid_12 pull_12 omega">
 				<div class="invtmedia grid_10 push_2 alpha" id="image_<venda_invtuuid>">
@@ -69,14 +89,21 @@
         		<venda_tpcomment><!-- end: productCycling --></venda_tpcomment>
 			</div>
             
-			<venda_tpcomment><!-- end: left hand side (picture) --></venda_tpcomment>
+	<venda_tpcomment><!-- end: left hand side (picture) --></venda_tpcomment>
+            
+            
     <venda_tpcomment><!-- start: right hand side (price, description, etc) --></venda_tpcomment>
     	<div id="sofa-detailzone">
+        	<venda_block invtivtype!=furniturerange>
+				<venda_block label=32,mode=value,<venda_addedmsg msg=<venda_text id=site.addedmsg>>=notnull>
+				<div id="tag-addedmsgref" style="text-align:center;border:1px solid #B4B4B4;padding:5px;background-color:#F1F1F1;"><venda_addedmsg msg=You have added addedqty x addedname to your basket></div>
+				<div id="tag-vbminvtaddedtocart" style="display:none;"><venda_invtref></div>
+				</venda_block label=32>
+			</venda_block>
 		<h1 itemprop="name" id="comp-name<venda_invtref>"><venda_invtname></h1>
 		<venda_block errors=notnull> <h2 class="error"><venda_errors></h2> </venda_block>
 
 <!--<span class="sku" itemprop="productID"><span><venda_text id=desktop.info.sku>:</span> <venda_invtref></span>-->
-
 
 			<venda_tpcomment><!-- start: description without tab --></venda_tpcomment>
 
