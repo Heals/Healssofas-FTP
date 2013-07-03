@@ -112,7 +112,6 @@
 				<venda_block label=12,invtdesc1=notnull><p class="invtdesc1"><span itemprop="description"><venda_invtdesc1></span></p></venda_block label=12>
 				<venda_extflds hideempty=0,realseq=0,template=pdxtPromos,group=7,ref=<venda_invtref>,ivtype=<venda_invtivtype>>
 
-
 				<venda_block label=122,invtivtype=Furniture,operator=or>
                 	<div class="avail-shipping">
 						<div class="prod-availability">
@@ -160,10 +159,11 @@
 							<span id="productstatus"><venda_text id=desktop.info.please_make_selection></span>
 							<span id="stockstatus"><venda_text id=desktop.info.availability></span> <span id="atrononhandholder" class="hide"><venda_text id=desktop.info.only><span id="atronhand"></span><venda_text id=desktop.info.left></span>
 								</div>
+						<venda_tpcomment><!-- start: price - if product doesn't have attributes --></venda_tpcomment>
 						<venda_block label=16,chkatt=null>
 								<div class="priceDetails" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-							<meta itemprop="priceCurrency" content="<venda_currencycode>">
-							<venda_block label=onhand,invtonhand&gt;0><venda_block label=instock,invtpreorder!=1><link itemprop="availability" href="http://schema.org/InStock"></venda_block label=instock><venda_block label=preorder,invtpreorder=1><link itemprop="availability" href="http://schema.org/PreOrder"></venda_block label=preorder></venda_block label=onhand><venda_block label=outofstock,invtonhand&lt;1><link itemprop="availability" href="http://schema.org/OutOfStock"></venda_block label=outofstock>
+								<meta itemprop="priceCurrency" content="<venda_currencycode>">
+								<venda_block label=onhand,invtonhand&gt;0><venda_block label=instock,invtpreorder!=1><link itemprop="availability" href="http://schema.org/InStock"></venda_block label=instock><venda_block label=preorder,invtpreorder=1><link itemprop="availability" href="http://schema.org/PreOrder"></venda_block label=preorder></venda_block label=onhand><venda_block label=outofstock,invtonhand&lt;1><link itemprop="availability" href="http://schema.org/OutOfStock"></venda_block label=outofstock>
 								<venda_inctemplate type=includes,name=priceFormat>
 								</div>
 							<venda_inctemplate type=includes,name=multibuy>
@@ -182,9 +182,11 @@
                                 </venda_block>
 								<venda_block label=showmultibuy,invtatrminsubsell=0.00,invtatrmaxsubsell=0.00><venda_inctemplate type=includes,name=multibuy></venda_block label=showmultibuy>
 								<venda_tpcomment><!-- end: price - if product does have attributes --></venda_tpcomment>
+                                
                    				<div class="productdescription">
                    				<venda_category temp=swatches,ref=swatches,rec=scat>
                     			</div>
+                                
 							</div>
 
                             <venda_block label=nonrange,invtivtype=furniture>
@@ -209,7 +211,9 @@
 
 							<venda_tpcomment><!-- start: button link image --></venda_tpcomment>
 							<div id="addproductbox" class="addproductbox">                 
-								<div class="quantity_place"><label for="qty" style="color: #333333;"><venda_text id=desktop.info.qty>: </label><input name="qty" id="qty" type="text" value="1" class="qty textInput" size="3" maxlength="3"></div>
+								<div class="quantity_place">
+                                <label for="qty" style="color: #333333;"><venda_text id=desktop.info.qty>: </label><input name="qty" id="qty" type="text" value="1" class="qty textInput" size="3" maxlength="3">
+                                </div>
 							<!-- if product doesn't have attributes -->
                 			<input type="hidden" name="VBMTCinput" value="">
 							<input type="hidden" name="VBMSTinput" value="">
@@ -283,11 +287,13 @@
 						</script>
 
                     	<div id="addproductbox" class="addproductbox">
-							<div class="quantity_place"><label for="qty"><venda_text id=desktop.info.qty>: </label><input name="qty" id="qty" type="text" value="1" size="3" maxlength="3" class="qty textInput"></div>
-
+							<div class="quantity_place">
+                            <label for="qty"><venda_text id=desktop.info.qty>: </label><input name="qty" id="qty" type="text" value="1" size="3" maxlength="3" class="qty textInput">
+                            </div>
 							<venda_tpcomment><!-- Add to basket, PreOrder --></venda_tpcomment>
                     		<input type="hidden" name="VBMTCinput" value="">
 							<input type="hidden" name="VBMSTinput" value="">
+                            <input type="hidden" name="htxt" id="htxt" value="<venda_htxt mode=make,sofa=true>"> 
 							<input type="submit" value="<venda_text id=site.button.add_to_basket>" data-track="addtobasket" class="preorder basketbutton">
                     		<venda_block label=353456,mode=value,<venda_addedmsg msg=<venda_text id=site.addedmsg>>=notnull>
 <venda_block label=ustyper11,ustype=R>
