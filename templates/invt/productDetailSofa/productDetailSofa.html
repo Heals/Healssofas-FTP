@@ -299,12 +299,6 @@
                             <label for="qty"><venda_text id=desktop.info.qty>: </label><input name="qty" id="qty" type="text" value="1" size="3" maxlength="3" class="qty textInput">
                             </div>
 							<venda_tpcomment><!-- Add to basket, PreOrder --></venda_tpcomment>
-                    		<venda_block label=11211,mode=value,<venda_htxt mode=get,name=avail>!=true>
-							<input type="hidden" id="availHTXT" name="htxt" value="<venda_htxt mode=make,addtobasket=<venda_invtref>>"><!-- Avail  HTXT without avail=true-->
-							</venda_block label=11211>
-							<venda_block label=11212,mode=value,<venda_htxt mode=get,name=avail>=true>	
-							<input type="hidden" id="availHTXT" name="htxt" value="<venda_htxt mode=make,avail=true,addtobasket=<venda_invtref>,recadded=<venda_invtref>>">
-							</venda_block label=11212>
 							<input type="submit" value="<venda_text id=site.button.add_to_basket>" data-track="addtobasket" class="preorder basketbutton">
                     		<venda_block label=353456,mode=value,<venda_addedmsg msg=<venda_text id=site.addedmsg>>=notnull>
 <venda_block label=ustyper11,ustype=R>
