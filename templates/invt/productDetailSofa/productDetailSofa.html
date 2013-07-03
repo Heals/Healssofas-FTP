@@ -135,7 +135,7 @@
 				<venda_tpcomment><!-- ONE PRODUCT --></venda_tpcomment>
                 	<venda_block label=furniturerange-attr1,invtivtype=furniturerange>
 					<div class="oneProduct" id="oneProduct_<venda_invtuuid>">
-						<div class="oneProductContent">
+						<div class="oneProductContent hide">
             			<form name="form" action="http://www.heals.co.uk/" method="get" name="addproductform" id="addproductform">
 						<input type="hidden" name="ex" value="co_wizr-shopcart2">
 						<input type="hidden" name="curpage" value="">
@@ -230,14 +230,16 @@
     
 							<venda_tpcomment><!-- start: attributes dropdown --></venda_tpcomment>
                             <venda_block label=furniturerange-attribute1,invtivtype=furniturerange>
-							<div id="attributeInputs" class="attributeInputs">
-								<venda_block label=21,selatt1=notnull>
-								<div style="display:none;">
-								<label for="att1"><venda_att1>:</label>
-                                <select name="att1" id="att1_<venda_invtuuid>"><option value=""><venda_text id=site.product_detail.attribute.att1></option><venda_selatt1></select>
+                            <div class="attributes">
+								<div id="attributeInputs" class="attributeInputs">
+									<venda_block label=21,selatt1=notnull>
+									<div style="display:none;">
+									<label for="att1"><venda_att1>:</label>
+                                	<select name="att1" id="att1_<venda_invtuuid>"><option value=""><venda_text id=site.product_detail.attribute.att1></option><venda_selatt1></select>
+									</div>
+									</venda_block label=21>
 								</div>
-								</venda_block label=21>
-							</div>
+                            </div>
                             </venda_block label=furniturerange-attribute1>
 							<venda_tpcomment><!-- end: attributes dropdown --></venda_tpcomment>
                             
@@ -299,7 +301,7 @@
                             <label for="qty"><venda_text id=desktop.info.qty>: </label><input name="qty" id="qty" type="text" value="1" size="3" maxlength="3" class="qty textInput">
                             </div>
 							<venda_tpcomment><!-- Add to basket, PreOrder --></venda_tpcomment>
-							<input type="submit" value="<venda_text id=site.button.add_to_basket>" data-track="addtobasket" class="preorder basketbutton">
+							<input type="submit" value="<venda_text id=site.button.add_to_basket>" data-track="addtobasket" class="preorder">
                     		<venda_block label=353456,mode=value,<venda_addedmsg msg=<venda_text id=site.addedmsg>>=notnull>
 <venda_block label=ustyper11,ustype=R>
 <a href="<venda_codehttps>?ex=co_wizr-shopcart2&bsref=<venda_bsref>&wizard=shopcart2&step=confirm&param1=login"></venda_block label=ustyper11><venda_block label=ustyper00,ustype!=R><a href="<venda_codehttps>?ex=co_wizr-shopcart2&bsref=<venda_bsref>&wizard=shopcart2&step=billtologin&param1=login"></venda_block label=ustyper00><img style="padding:0 0 0 7px;" src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/product-detail/checkout.gif" alt="Go To Checkout"></a>
