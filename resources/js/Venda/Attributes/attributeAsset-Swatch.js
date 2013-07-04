@@ -64,7 +64,7 @@ Venda.Attributes.setSelectedClass = function (uID){
 						jQuery("#oneProduct_" + uID + " #attributeInputs .selected").prepend('<div class="selectedArrow-shadow"></div><div class="selectedArrow"></div>');
 					}
 
-					if(jQuery("#attributesForm").length > 0) {
+					if(jQuery(".attributesForm").length > 0) {
 						if(document.getElementById("attributesForm").innerHTML == "halfswatch") {
 							document.getElementById("hiddenInput_" + att).name = att;
 							document.getElementById("hiddenInput_" + att).value = Venda.Attributes.productArr[i].attSet[att].selected;
