@@ -261,7 +261,7 @@ float: left;}
 .attributeInputs label {width:140px;border:1px solid #B4B4B4;height:19px;text-align:center;padding-top:4px;background: url(../images/product-detail/attribute-inputs-gradient.gif) repeat;color:#4a4a4a;}
 .attributeInputs select {margin:0;height:25px;width:321px;border-top:1px solid #b4b4b4;border-right:1px solid #b4b4b4;border-bottom:1px solid #b4b4b4;font:inherit;padding:0 0 0 10px;-webkit-appearance: none;-webkit-border-radius: 0;border-left: none;font-size:17px !ie;font-weight:normal !ie;color: #666 !ie;}
 @media screen and (-webkit-min-device-pixel-ratio:0) {
-.attributeInputs select {background: url(../images/Search/sortby-arrow.gif) no-repeat 290px 1px;background-color:#ffffff;cursor:pointer;}
+.attributeInputs select {background: url(../images/Search/sortby-arrow.gif) no-repeat 390px 1px;background-color:#ffffff;cursor:pointer;}
 .attributeInputs select,  x:-moz-any-link, x:default {vertical-align:middle;}}
 #description {clear:both;}
 #swatchList_att1 {clear: both;}
@@ -357,7 +357,7 @@ float: right;
 .productCyclingHolder span {display:block;}
 .colourSwatch {text-indent:-9999px;}
 .gridBlock,.attributeInputs ul li {cursor:pointer;}
-.attributeInputs {display:inline-block;}
+.attributeInputs {display:inline-block; width:100%}
 .attributeInputs ul li {border:1px solid #b4b4b4;display:inline-block;position:relative;text-align:center;min-width:15px;width:23px;height:23px;cursor:pointer;float:left;background-color:#fff;margin:0 0 0 10px;padding:0;}
 .attributeInputs > div {clear:both;float:left;margin:5px 0;}
 .attributeInputs .selected {border:1px solid #4598ed;}
