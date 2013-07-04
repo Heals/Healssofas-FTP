@@ -843,8 +843,8 @@ Venda.Attributes.updateAttributes = function (uID, what, param) {
 	for(var i = 0; i < Venda.Attributes.productArr.length; i++) {
 		if (Venda.Attributes.productArr[i].attSet.id == uID) {
 			
-			if(document.getElementById("attributesForm")) {
-				if(document.getElementById("attributesForm").innerHTML == "grid") {
+			if(document.getElementByClassName("attributesForm")) {
+				if(document.getElementByClassName("attributesForm").innerHTML == "grid") {
 					
 					if(what != null) {
 						Venda.Attributes.productArr[i].attSet['att1'].selected = what.getAttribute('data-attValue1');
