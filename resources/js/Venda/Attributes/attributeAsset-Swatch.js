@@ -69,7 +69,7 @@ Venda.Attributes.setSelectedClass = function (uID){
 							document.getElementById("hiddenInput_" + att).name = att;
 							document.getElementById("hiddenInput_" + att).value = Venda.Attributes.productArr[i].attSet[att].selected;
 						}
-					if(document.getElementByClassName("attributesForm").innerHTML == "swatch") {
+					if(document.getElementById("attributesForm").innerHTML == "swatch") {
 							document.getElementById("hiddenInput_" + att).name = att;
 							document.getElementById("hiddenInput_" + att).value = Venda.Attributes.productArr[i].attSet[att].selected;
 						}
