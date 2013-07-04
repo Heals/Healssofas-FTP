@@ -153,8 +153,8 @@
                         	<venda_block invtivtype=furniturerange>
      						<div class="attrFeedback productselectedwrapper">
                             </venda_block>
-							<span id="productselected"></span>
-                			<span id="productstatus"><venda_text id=desktop.info.please_make_selection></span><br/>
+							<span id="productselected" style="display: none;"></span>
+                			<span id="productstatus" style="display: none;"><venda_text id=desktop.info.please_make_selection></span><br/>
 							<span id="stockstatus"></span> 
                                 <div class="box productDetailGradientBox attrFeedback stockFeedbackBox">
 							<span id="productstatus"><venda_text id=desktop.info.please_make_selection></span>
@@ -241,7 +241,8 @@
 									<div style="display:none;">
 									<label for="att1"><venda_att1>:</label>
                                     </div>
-                                	<select name="att1" id="att1_<venda_invtuuid>"><option value=""><venda_text id=site.product_detail.attribute.att1></option><venda_selatt1></select>
+                                	<select name="att1" id="att1_<venda_invtuuid>" style="width: 100%;border-left: 1px solid #b4b4b4;">
+                                    <option value=""><venda_text id=site.product_detail.attribute.att1></option><venda_selatt1></select>
 									</venda_block label=21>
 								</div>
                             </div>
