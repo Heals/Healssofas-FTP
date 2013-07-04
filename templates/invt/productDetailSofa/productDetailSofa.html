@@ -301,17 +301,16 @@
                             <label for="qty"><venda_text id=desktop.info.qty>: </label><input name="qty" id="qty" type="text" value="1" size="3" maxlength="3" class="qty textInput">
                             </div>
 							<venda_tpcomment><!-- Add to basket, PreOrder --></venda_tpcomment>
-							<input type="submit" value="<venda_text id=site.button.add_to_basket>" data-track="addtobasket" class="preorder">
+							<input type="image" src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/product-detail/add-to-basket.gif" alt="Add to Basket" value="<venda_text id=site.button.add_to_basket>" data-track="addtobasket" class="preorder">
                     		<venda_block label=353456,mode=value,<venda_addedmsg msg=<venda_text id=site.addedmsg>>=notnull>
 <venda_block label=ustyper11,ustype=R>
 <a href="<venda_codehttps>?ex=co_wizr-shopcart2&bsref=<venda_bsref>&wizard=shopcart2&step=confirm&param1=login"></venda_block label=ustyper11><venda_block label=ustyper00,ustype!=R><a href="<venda_codehttps>?ex=co_wizr-shopcart2&bsref=<venda_bsref>&wizard=shopcart2&step=billtologin&param1=login"></venda_block label=ustyper00><img style="padding:0 0 0 7px;" src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/product-detail/checkout.gif" alt="Go To Checkout"></a>
 </venda_block label=353456>
 						</div>
-
-						<venda_tpcomment><!-- EMWBIS --></venda_tpcomment>
-						<a id="emwbis_link" href="<venda_dispview invt=<venda_invtref>>&temp=emailinstock" title="<venda_text id=desktop.button.email_when_in_stock>" class="emwbisLink hide button doDialog"><venda_text id=desktop.button.email_when_in_stock></a>
 					
 					</venda_block label=701>
+                    <venda_tpcomment><!-- EMWBIS --></venda_tpcomment>
+						<a id="emwbis_link" href="<venda_dispview invt=<venda_invtref>>&temp=emailinstock" title="<venda_text id=desktop.button.email_when_in_stock>" class="emwbisLink hide button doDialog"><venda_text id=desktop.button.email_when_in_stock></a>
                     </div>
                     </form>
                     </venda_block label=range1>
