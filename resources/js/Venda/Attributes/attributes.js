@@ -46,7 +46,7 @@ Venda.Attributes.Initialize = function() {
 		var hiddenInputs  = '<input type="hidden" value="" id="hiddenInput_att1"><input type="hidden" value="" id="hiddenInput_att2"><input type="hidden" value="" id="hiddenInput_att3"><input type="hidden" value="" id="hiddenInput_att4">';
 		jQuery('#addproductform').append(hiddenInputs);
 		
-		var tempUI = (jQuery(".attributesForm").text() == "") ? "halfswatch" : jQuery(".attributesForm").text();
+		var tempUI = (jQuery("#attributesForm").text() == "") ? "halfswatch" : jQuery("#attributesForm").text();
 		var parentUI = (jQuery("#attributesFormMulti").text() == "") ? tempUI : jQuery("#attributesFormMulti").text();
 	
 		var url = jQuery("#tag-ebizurl").text() + '/content/ebiz/heals/resources/js/Venda/Attributes/' + parentUI + '.js';		
