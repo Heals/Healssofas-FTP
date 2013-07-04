@@ -65,7 +65,7 @@ Venda.Attributes.setSelectedClass = function (uID){
 					}
 
 					if(jQuery("#attributesForm").length > 0) {
-						if(document.getElementById("attributesForm").innerHTML == "halfswatch") {
+						if(document.getElementById("attributesForm").innerHTML == "swatch") {
 							document.getElementById("hiddenInput_" + att).name = att;
 							document.getElementById("hiddenInput_" + att).value = Venda.Attributes.productArr[i].attSet[att].selected;
 						}
