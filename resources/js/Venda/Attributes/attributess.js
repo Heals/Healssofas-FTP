@@ -46,20 +46,10 @@ Venda.Attributes.Initialize = function() {
 		var hiddenInputs  = '<input type="hidden" value="" id="hiddenInput_att1"><input type="hidden" value="" id="hiddenInput_att2"><input type="hidden" value="" id="hiddenInput_att3"><input type="hidden" value="" id="hiddenInput_att4">';
 		jQuery('#addproductform').append(hiddenInputs);
 		
-		var attributesUI = jQuery(".js-attributesForm").text();
-        switch(attributesUI) {
-            case "dropdown":
-            case "halfswatch":
-            case "swatch":
-            case "grid":
-            case "multiAdd1":
-            case "multiAdd2":
-            break;
-            default:
-            attributesUI = 'swatch';
-        }
+		var tempUI = (jQuery(".attributesForm").text() == "") ? "halfswatch" : jQuery(".attributesForm").text();
+		var parentUI = (jQuery("#attributesFormMulti").text() == "") ? tempUI : jQuery("#attributesFormMulti").text();
 	
-		var url = jQuery("#tag-ebizurl").text() + '/content/ebiz/heals/resources/js/Venda/Attributes/' + attributesUI + '.js';		
+		var url = jQuery("#tag-ebizurl").text() + '/content/ebiz/heals/resources/js/Venda/Attributes/' + parentUI + '.js';		
 		jQuery.getScript(url, function(Status){ if (!Status){console.warn('Whoops! Your interface type script did not load');} });
 		if(jQuery("#OutOfStockThreshold").text() > Venda.Attributes.Settings.lowStockThreshold) alert("Error: OutOfStockThreshold is higher than lowStockThreshold");
 	};
@@ -535,10 +525,10 @@ Venda.Attributes.GenerateOptionsJSON = function (index, uID) {
 	
 	var newattributes = jQuery.extend({}, attributes);
 		
-	newattributes.attSet.att1.name = jQuery('#oneProduct_' + uID + ' #attributeNames #att1').text();
-	newattributes.attSet.att2.name = jQuery('#oneProduct_' + uID + ' #attributeNames #att2').text();
-	newattributes.attSet.att3.name = jQuery('#oneProduct_' + uID + ' #attributeNames #att3').text();
-	newattributes.attSet.att4.name = jQuery('#oneProduct_' + uID + ' #attributeNames #att4').text();
+	newattributes.attSet.att1.name = jQuery('#oneProduct_' + uID + ' #attributeNames .att1').text();
+	newattributes.attSet.att2.name = jQuery('#oneProduct_' + uID + ' #attributeNames .att2').text();
+	newattributes.attSet.att3.name = jQuery('#oneProduct_' + uID + ' #attributeNames .att3').text();
+	newattributes.attSet.att4.name = jQuery('#oneProduct_' + uID + ' #attributeNames .att4').text();
 	newattributes.attSet.id = uID;
 	
 	/**
