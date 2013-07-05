@@ -842,8 +842,8 @@ a.cloud-zoom {padding:30px 0 40px 92px !important;}
 .grid_12.pull_12.omega {width: 50%;float: left;}
 .box.productDetailGradientBox.attrFeedback.stockFeedbackBox.In_stock_box {display: none;}
 .eta {margin: 3% 25%; display: block; float: left; width: auto;}
-.quantity_place {float: left;display: block;width: 35%;padding:2% 3%;background: #cccccc;}
-.quantity_place label {margin: 5% 8%; float: left;}
+.qtybox {float: left;display: block;width: 35%;padding:2% 3%;background: #cccccc;margin: 2px;}
+.qtybox label {margin: 5% 8%; float: left;}
 .qty.textInput {padding: 3% 0; font-size: 14px; text-align: center; float: right; margin-right: 17px; border: 1px solid #666;}
 .basketbutton, .preorder {background: #7a1636;color: #fff;font-weight: bold;text-transform: uppercase;padding:15px 46px;cursor: pointer; margin-left: 10px;
 border: none; font-size: 14px; float: left;}

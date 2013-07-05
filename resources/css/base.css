@@ -321,8 +321,8 @@ div.box.productDetailGradientBox.buyControls {margin:20px 0 5px;}
 .attribute-list-price .nowprice {color:#C1392D;}
 /* eo Non-Furniture Attribute css */
 /* so Venda Attribute css */
-.addproductbox .qtybox input {height:13px;width:38px;border-top:1px solid #b4b4b4;border-right:1px solid #b4b4b4;border-bottom:1px solid #b4b4b4;border-left:none;text-align:center;padding:5px 3px;margin:-1px 0 0 0 !ie;}
-.addproductbox .qtybox {width:103px;float:left;}
+.addproductbox .qtybox input {height:13px;width:38px;border:1px solid #b4b4b4;text-align:center;padding:7px 3px;margin:-1px 0 0 0 !ie;}
+.addproductbox {width:100%;float:left;}
 .prodMulti .productDetailGradientBox {padding:3px 3px 8px 5px;}
 .buyControls,.buyControlsMulti {text-align:left; clear: both;width: 100%; float: left;}
 .buyControls .button,.buyControlsMulti .button {margin-left:0;}
