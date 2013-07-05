@@ -246,7 +246,7 @@ background: url(../images/bull-point.gif) no-repeat 0px 3px;padding-left: 10px;f
 .european-shipping-badge, .wallpaper-calculator-badge {width:172px;height:auto;padding:0;margin:0;}
 .european-shipping-logic {width:172px;height:auto;padding:0 9px 0 0;}
 #parentprice {font: bold 22px arial;padding:0 0 12px 0;color:#8a9099;}
-.productdetail_was {color: #8a9099;font-size: 16px;margin: 5px 0 0 50px;float: left;}
+.productdetail_was {color: #8a9099;font-size: 14px;margin: 5px 0 0 10px;float: right;}
 .productdetail_was span#was {text-decoration: line-through;}
 .pricenow {color: #C1392D !important;float: left;}
 #attribute-options {clear: both;position:relative;padding:0;}
@@ -334,7 +334,7 @@ p.sku {display:block;margin:5px 0 10px;}
 .oneProduct .priceField .priceIs {font-weight:700;color:#666;}
 .oneProduct .priceField .priceWas {text-decoration:line-through;font-size: 14px;font-weight:normal;color:#8a9099;margin:0 0 0 25px;}
 .priceWas {display:none;}
-.oneProduct .priceField #price {
+.oneProduct .priceField #price, #parentprice, .pricenow {
 font: bold 14px arial;
 padding: 5px 0 5px 0;
 float: right;

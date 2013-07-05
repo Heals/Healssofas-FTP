@@ -120,21 +120,6 @@
 				<div class="sofa-maintab">
 				<venda_block label=12,invtdesc1=notnull><p class="invtdesc1"><span itemprop="description"><venda_invtdesc1></span></p></venda_block label=12>
 
-				<venda_block label=122,invtivtype=furniture>
-                	<div class="avail-shipping">
-						<div class="prod-availability">
-							<div class="availability-badge">
-							<p style="display:none;"><b>Availability:</b></p>
-							</div>
-							<div class="availability-logic">
-                            <venda_block invtivtype=furniture>
-							<venda_inventory ref=<venda_invtref>,temp=availability>
-                            </venda_block>
-							</div>
-						</div>
-                 	</div>
-     			</venda_block label=122>
-
 
 				</div>
                 
@@ -159,25 +144,54 @@
 						<input type="hidden" name="bklist" value="">
 						<input type="hidden" name="layout" value="">
 						</venda_block label=furniturerange-attr1>
-                        	<venda_block invtivtype=furniturerange>
+
      						<div class="attrFeedback productselectedwrapper">
-                            </venda_block>
+                            
 							<span id="productselected" style="display: none;"></span>
-                			<span id="productstatus" style="display: none;"><venda_text id=desktop.info.please_make_selection></span><br/>
-							<span id="stockstatus"></span> 
+                			<span id="productstatus" style="display: none;"><venda_text id=desktop.info.please_make_selection></span>
+							<span id="stockstatus"></span>
+                            <venda_block invtivtype=furniturerange> 
                                 <div class="box productDetailGradientBox attrFeedback stockFeedbackBox">
 							<span id="productstatus"><venda_text id=desktop.info.please_make_selection></span>
 							<span id="stockstatus"><venda_text id=desktop.info.availability></span> <span id="atrononhandholder" class="hide"><venda_text id=desktop.info.only><span id="atronhand"></span><venda_text id=desktop.info.left></span>
-								</div>
-						<venda_tpcomment><!-- start: price - if product doesn't have attributes --></venda_tpcomment>
-						<venda_block label=16,invtivtype=furniture>
-								<div class="priceDetails" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-								<meta itemprop="priceCurrency" content="<venda_currencycode>">
-								<venda_block label=onhand,invtonhand&gt;0><venda_block label=instock,invtpreorder!=1><link itemprop="availability" href="http://schema.org/InStock"></venda_block label=instock><venda_block label=preorder,invtpreorder=1><link itemprop="availability" href="http://schema.org/PreOrder"></venda_block label=preorder></venda_block label=onhand><venda_block label=outofstock,invtonhand&lt;1><link itemprop="availability" href="http://schema.org/OutOfStock"></venda_block label=outofstock>
-								<venda_inctemplate type=includes,name=priceFormat>
-								</div>
-							<venda_inctemplate type=includes,name=multibuy>
-						</venda_block label=16>
+							</div>
+                            </venda_block>
+                        
+                        		<venda_block label=122,invtivtype=furniture>
+                				<div class="avail-shipping">
+									<div class="prod-availability">
+										<div class="availability-badge">
+										<p style="display:none;"><b>Availability:</b></p>
+										</div>
+										<div class="availability-logic">
+                            			<venda_block invtivtype=furniture>
+											<venda_inventory ref=<venda_invtref>,temp=availability>
+                            			</venda_block>
+										</div>
+									</div>
+                 				</div>
+     							</venda_block label=122>
+                                						
+                        <venda_tpcomment><!-- start: price - if product doesn't have attributes --></venda_tpcomment>
+                        
+								<venda_block label=attributes0,chkatt=null>
+                                <div class="productprice">
+                                	<venda_block label=wasprice1,invtwas=notnull>
+									<div itemprop="offers" itemscope itemtype="http://schema.org/AggregateOffer">
+                                    <p style="width:20%;float:left;"><b>Price:</b></p>
+                                    	<div class="productdetail_was">WAS <span id="was"><span itemprop="highPrice"><venda_currsym><venda_invtwas></span></span></div>
+										<div id="parentprice" class="pricenow"><span itemprop="lowPrice"><venda_currsym><venda_invtsell></span></div>
+									</div>
+									</venda_block label=wasprice1>
+									<venda_block label=wasprice0,invtwas=null>
+									<div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                                    <p style="width:20%;float:left;"><b>Price:</b></p>
+										<div id="parentprice"><span itemprop="price"><venda_currsym><venda_invtsell></span></div>
+									</div>
+									</venda_block label=wasprice0>
+							 	</div>
+								</venda_block label=attributes0>
+                        
 						<venda_tpcomment><!-- end: price - if product doesn't have attributes --></venda_tpcomment>
                        
 
@@ -191,7 +205,7 @@
 								</div>
                                 </venda_block>
 								<venda_block label=showmultibuy,invtatrminsubsell=0.00,invtatrmaxsubsell=0.00><venda_inctemplate type=includes,name=multibuy></venda_block label=showmultibuy>
-								<venda_tpcomment><!-- end: price - if product does have attributes --></venda_tpcomment>
+							<venda_tpcomment><!-- end: price - if product does have attributes --></venda_tpcomment>
                                 
                    				<div class="productdescription">
                    				<venda_category temp=swatches,ref=swatches,rec=scat>
