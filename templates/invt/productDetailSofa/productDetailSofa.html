@@ -1,4 +1,8 @@
-<style>#content-default_nocoltwothree {background:none;}</style>
+<style type="text/css">#content-default_nocoltwothree {background:none;}</style>
+<venda_block label=share1,invtivtype!=furniturerange>
+<style type="text/css">.sofa-share {width: 41%;float: right;clear: none;}</style>
+</venda_block label=share1>
+
 <div id="tag-loadmessage" style="display:none;"><venda_text id=site.loadmessage></div>
 <div id="tag-qtymsg" style="display:none;"><venda_text id=site.productdetail.validate.qty></div>
 <div id="tag-ebizref" style="display:none;"><venda_setting type=ebiz,name=ref></div>
@@ -59,11 +63,16 @@
 				<div class="invtmedia grid_10 push_2 alpha" id="image_<venda_invtuuid>">
 					<div id="sofa-productdetail-image">
 					<a itemprop="image" href="<venda_media rec=invt,type=movie-swf-pict,key=large,img=no>" class = 'cloud-zoom' id='zoom1' rel="adjustX: 53, adjustY:-4, zoomWidth: 462" title="<venda_text id=desktop.info.large_image_title>"> 
-					<venda_block label=10,med-medium=notnull>
+					<venda_block label=10,med-setmedium=notnull>
+					<img class="cloudzoom" id ="zoom1" src="<venda_media rec=invt,type=movie-swf-pict,key=setmedium,img=no>" data-cloudzoom="zoomImage: '<venda_media rec=invt,type=movie-swf-pict,key=large,img=no>',zoomPosition: 'inside'">
+					</venda_block label=10>
+                    <venda_block label=102,med-setmedium=null>
 					<img class="cloudzoom" id ="zoom1" src="<venda_media rec=invt,type=movie-swf-pict,key=medium,img=no>" data-cloudzoom="zoomImage: '<venda_media rec=invt,type=movie-swf-pict,key=large,img=no>',zoomPosition: 'inside'">
-					</venda_block label=10> 
-
-					<venda_block label=11,med-medium=null><img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/no_image_medium.gif" alt="<venda_text id=desktop.info.no_product_image>"></venda_block label=11> </a> <div id="rolloverzoomText" style="position:absolute;top:385px;left:160px;"></div>
+					</venda_block label=102> 
+					<venda_block label=11,med-medium=null><img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/no_image_medium.gif" alt="<venda_text id=desktop.info.no_product_image>">
+                    </venda_block label=11> 
+                    </a> 
+                    <div id="rolloverzoomText" style="position:absolute;top:385px;left:160px;"></div>
 					</div>
 					<div id="productdetail-swap" style="display:none;"></div>
 					<div id="productdetail-viewlarge" class="enlarge"></div>
@@ -209,8 +218,8 @@
 							<!-- if in stock -->
 							<venda_tpcomment><!-- start: button link image --></venda_tpcomment>
 							<div id="addproductbox" class="addproductbox">                 
-								<div id="quantity_place">
-                                <label id="qtybox" class="qtybox" style="color: #333333;"><venda_text id=desktop.info.qty>: </label><input name="qty" id="qty" type="text" value="1" class="qty textInput" size="3" maxlength="3">
+								<div id="qtybox" class="qtybox">
+                                <label for="qty"><venda_text id=desktop.info.qty>: </label><input name="qty" id="qty" type="text" value="1" class="qty textInput" size="3" maxlength="3">
                                 </div>
 							<!-- if product doesn't have attributes -->
 							<input type="hidden" name="htxt" id="htxt" value="<venda_htxt mode=make,sofa=true>"> 
