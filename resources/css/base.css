@@ -157,7 +157,7 @@ label.search_label {font-weight: normal;font-size:11px;}
 #priceslider {margin-left: 8px;}
 #pricerange fieldset {padding-bottom: 0px;}
 .boxContent {margin: 10px;}
-.search_label input[type="checkbox"] {margin: 1px 3px 8px 4px; border: 1px solid #666;}
+.search_label input[type="checkbox"] {margin: 1px 3px 8px 4px;}
 select#sortby {-webkit-appearance: none;-webkit-border-radius: 0;border: 1px solid #CCC;color: #666;cursor:pointer;padding-top: 1px;height:25px;background:url("../images/Search/sortby-arrow.gif") right no-repeat; margin-left: 0;padding-left: 2px;}
 #searchresults1 h4 {padding:14px 0 5px 0; margin:0px; float: left; font-size: 1.090em; color: #333333; height:24px; width:590px; background-color:#ffffff; display:none;}
 #searchResults .sort, #searchresults1 .sort{float: right; width: 340px; margin: 9px 0 0 0;font-size:1.1em;text-align:right;}
