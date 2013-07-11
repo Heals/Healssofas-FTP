@@ -1,6 +1,29 @@
 <a name="content" id="content"></a><a id="content-top"></a>
-
-
+<script type="text/javascript">
+<!-- Hide
+var stopclick=0;
+function Step2(form1,func1,mode1,param1,param2,win,check,target,wizr1,param3) {
+if (stopclick == 0) {
+stopclick = 1;
+form1.action = "https://www.heals.co.uk/bin/venda";
+form1.trrfnbr.value = "";
+form1.wizard.value = wizr1;
+form1.step.value = func1;
+form1.mode.value = mode1;
+form1.param1.value = param1;
+form1.param2.value = param2;
+form1.param3.value = param3;
+form1.trrfext.value = "1";
+form1.check.value = check;
+form1.target = target;
+form1.submit();
+}
+}
+//End Javascript-->
+</script>
+<script type="text/javascript">
+var availDoubleCheck = "";
+</script>
 
 <div id="content-default_nocoltwothree">
 	<div id="searchresults1">
@@ -40,6 +63,7 @@
 </div>
 <div class="clear-all"></div>
 
+<venda_block label=151,mode=value,<venda_setting type=ebiz,name=powerreviews>=1,<venda_setting type=ebiz,name=powerreviewsproddetail>=1><script type="text/javascript"><venda_inctemplate type=includes,name=powerreviewscripts></script></venda_block label=151>
 <venda_page page=swapimage_js>
 <div id="tag-searchkeyword" style="display:none;"><venda_primarysearchtext></div>
 
@@ -94,7 +118,11 @@
 		</div>
 
 	</div>
-
+		<script>
+			if(location.hash) {
+				document.getElementById("searchResults").style.display = "none";
+			};
+		</script>
 
 <venda_inctemplate name=hbxlocalvars5,type=includes/tracking>
 <venda_inctemplate name=hitboxOthers,type=includes/tracking>
