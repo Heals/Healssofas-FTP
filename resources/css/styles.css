@@ -55,26 +55,31 @@ float: left;
 margin: 10px 0 0;
 line-height: 30px;
 text-align: center;
-background:#7e7969;
+background:#fff;
 color:#fff;
 width: 100%;
+border-top: 1px solid #747679;
 }
 
 .mm_ul li {
 float: left;
 font-weight: normal;
 position: relative;
-width: 14.28%;
+width: auto;
+padding: 0 3% 0 1%;
+font-family:"Times New Roman", Times, serif;
+font-weight:bold;
+font-style:italic;
 }
 
 .mm_ul li a {
-background: #7e7969;
-border-right: 1px solid #666666;
-color: #fff;
+background: #fff;
+border-right: 0px solid #747679;
+color: #747679;
 display: block;
 text-decoration: none;
-text-transform: uppercase;
-font-size: 90%;
+font-size: 1.2em;
+text-align: left;
 }
 
 
@@ -127,8 +132,9 @@ width: 156px;
 }
 
 #mm_ul li a:hover{
-background:#bcb29a;
+opacity:0.6;
 cursor:pointer;
+background:#fff;
 }
 
 .mm_sub .mm_subheader, .mm_subheader h2 {

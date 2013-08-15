@@ -4,7 +4,7 @@ img {-ms-interpolation-mode: bicubic;}
 #admin, #admin a {position:relative;background-color:#7e7969;}
 /* eo admin area */
 /* so multiSite area */
-.multiSite {background-color:#bcb29a;}
+.multiSite {background-color:#fff;display: none;}
 .multiSite-content {margin:0 auto;text-align:left;width:940px;padding:0.5em 0;}
 .multiSite-content ul {list-style-type: none;}
 .multiSite-main {border-right:1px solid #333;padding:0 5px 0 0;float:left;margin:0 5px 0 0;}
@@ -22,7 +22,7 @@ ul#topnav li div span.dropdown  a:hover {text-decoration:underline;z-index:6000;
 ul#topnav li div span.dropdown {width:940px;height:130px;background:#f6f4f5;position:absolute;top:26px;display:none;left:0;background-image:url("../images/topnav/topnav-gradient.png");background-repeat:repeat-x;z-index:6000; padding-top:20px;}
 .arrow {width:21px;height:17px;background-image:url("../images/topnav/arrow.png");background-repeat:no-repeat;position:absolute;top:26px;display:none;z-index:6001;margin:0 0 0 53px;margin:0 0 0 -10px !ie;}
 .arrow,  x:-moz-any-link, x:default {margin:0 0 0 -10px;}
-.topnav-gradient {z-index:1;height:7px;width:940px;float:left;background-image:url("../images/topnav/topnav-gradient.png");background-repeat:repeat; margin-top:0px; margin-right:0px; margin-bottom:10px; margin-left:0px;}
+/*.topnav-gradient {z-index:1;height:7px;width:940px;float:left;background-image:url("../images/topnav/topnav-gradient.png");background-repeat:repeat; margin-top:0px; margin-right:0px; margin-bottom:10px; margin-left:0px;}*/
 .dropdown-gradient {height:7px;width:940px;float:left;position:absolute;top:149px;left:0;background-image:url("../images/topnav/topnav-gradient.png");background-repeat:repeat;}
 .navContainer {width:920px;height:110px;padding:10px;z-index:6000;}
 .navColumn {width:234px;height:120px;float:left;border-right:1px solid #444;}
@@ -31,18 +31,18 @@ ul#topnav li div span.dropdown {width:940px;height:130px;background:#f6f4f5;posi
 .navColumn li {width:214px !important;text-align:left;margin: 5px 0 0 !important;}
 /* eo Top Navigation */
 /* so Header */
-.header-background {background-color:#7e7969;}
-.header-background2 {background-color:#ffffff;}
-#header {width:940px;height:77px;margin:0 auto;font-size:0.9em;z-index:1;text-align:left;}
+.header-background {background-color:#fff;}
+.header-background2 {background-color:#fff;}
+#header {width:940px;margin:0 auto;font-size:0.9em;z-index:1;text-align:left;}
 .header-grey {background-color:#565656;height:77px;width:100%;}
-.header-left {float:left;width:495px;background-color:#565656;}
-.header-logo {height:77px;}
+.header-left {float:left;width:495px;background-color:#fff;}
+.header-logo {}
 .header-logo img {border: 0;}
-.header-center {float:right;width:445px;padding-top:10px;}
+.header-center {float:right;width:445px;padding-top:5px;}
 ul.header-links {float:right;overflow:hidden;border-left:1px solid #757575;margin-left:5px;padding:0 0 0 5px;}
 ul.header-links li {float:left;}
 ul.header-links li a {color:#fff;}
-p.welcome {float:right;margin:0;padding:0 0 0 5px;color:#fff;}
+p.welcome {float:right;margin:0;padding:0 0 0 5px;color:#747679;}
 ul.header-links li.myaccount {border-right:1px solid #757575;padding:0 5px 0 0;}
 ul.header-links li.logout {padding-left: 4px;}
 .header-right {padding-top:13px;height:auto;float:right;position:relative;}
@@ -54,9 +54,9 @@ ul.basket-contents {margin-bottom:0px;float:right;padding:0;}
 .basket-items,.basket-price {display:inline;float:right;margin:0;padding:2px 0 2px 7px;font-weight:normal;}
 .basket-price {padding-right:5px;}
 li.viewbasket-button {float:right;margin:0;padding:2px 5px;border-right:1px solid #757575;}
-li.viewbasket-button a {display:block;color:#fff;}
+li.viewbasket-button a {display:block;color:#747679;}
 li.checkout-button {float:right;padding:2px 26px 2px 5px;background:url(../images/header/checkout-basket.png) no-repeat right -2px;height:25px;}
-li.checkout-button a {display:block;color:#fff;}
+li.checkout-button a {display:block;color:#747679;}
 .basket-items a,.basket-price a {
 color:#fff !important;}
 .searchbox {float:right;}
@@ -72,13 +72,13 @@ color:#fff !important;}
 .Lcattree {margin:0 auto; padding:0; text-transform: lowercase; line-height:1.9em;font-size:0.9em;width:940px;text-align:left;}
 /* eo Header */
 /* so Footer */
-.footer-background {background-color:#7e7969;;margin-top:15px;clear:both;}
+.footer-background {background-color:#fff;;margin-top:15px;clear:both;}
 #footer {z-index:1;width:940px;text-align:left;margin:0 auto !important;clear: both;}
-#footerLinks {float:left;width:940px;margin-top:2px;font-size:12px;color:#fff;padding-bottom:5px; clear:both;}
-#footerLinks a {color:#fff;}
-#footerLinks .name {padding-bottom: 0;font-size:15px;color:#eeeeee;font-weight:bold; margin: 8px 0 15px;}
+#footerLinks {float:left;width:940px;margin-top:2px;font-size:12px;color:#747679;padding-bottom:5px; clear:both;}
+#footerLinks a {color:#747679;}
+#footerLinks .name {padding-bottom: 0;font-size:15px;color:#747679;font-weight:bold; margin: 8px 0 15px;}
 #footerLinks #bullet li {background:url(../images/footer/footer-link-right.png) 0 3px no-repeat;padding-left:10px;margin:5px 0; line-height: 15px;}
-#footerLinks #bullet li a {color:#fff;}
+#footerLinks #bullet li a {color:#747679;}
 .footer-grey-line {background:none;padding:0;border-bottom:1px solid #ccc;margin:0;height:1px;line-height:1px;font-size:0;}
 .footerLinksCols {margin:10px 0 10px 40px; width: 19.8%;}
 .footerNewsletterSignup {float:left;height:23px;width:185px;}
@@ -86,7 +86,7 @@ color:#fff !important;}
 .footerNewsletterSignup fieldset {margin:0;border:0;padding:0;}
 .footerNewsletterSignup label {display: block;width:0;line-height:26px;}
 .footerNewsletterSignup #EMAIL_FIELD {float:left;border: 1px solid #ccc;width: 147px;color: #666;font-size: 11px;*height: 21px;*line-height:18px;height: 21px;line-height:19px;padding:0 0 0 3px;}
-#footerEssentials {padding:10px 0;clear:both;color:#eee; line-height: 11px;}
+#footerEssentials {padding:10px 0;clear:both;color:#747679; line-height: 11px;}
 #footerEssentials a {color:#ccc;}
 #footerLogos {padding:10px 0 0 0;clear:both;height: 30px;}
 /**********/
