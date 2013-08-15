@@ -35,10 +35,10 @@ ul#topnav li div span.dropdown {width:940px;height:130px;background:#f6f4f5;posi
 .header-background2 {background-color:#fff;}
 #header {width:940px;margin:0 auto;font-size:0.9em;z-index:1;text-align:left;}
 .header-grey {background-color:#565656;height:77px;width:100%;}
-.header-left {float:left;width:495px;background-color:#fff;}
+.header-left {float:left;width:495px;background-color:#fff;margin-top: 1%;}
 .header-logo {}
 .header-logo img {border: 0;}
-.header-center {float:right;width:445px;padding-top:5px;}
+.header-center {float:right;width:445px;padding-top:5px;margin-top: 1%;}
 ul.header-links {float:right;overflow:hidden;border-left:1px solid #757575;margin-left:5px;padding:0 0 0 5px;}
 ul.header-links li {float:left;}
 ul.header-links li a {color:#fff;}
@@ -47,7 +47,7 @@ ul.header-links li.myaccount {border-right:1px solid #757575;padding:0 5px 0 0;}
 ul.header-links li.logout {padding-left: 4px;}
 .header-right {padding-top:13px;height:auto;float:right;position:relative;}
 .header-bottom {clear:both;padding:0;padding-top:7px;width:940px;margin:0 auto;}
-#q {margin:0px 0px 0px 116px;height:15px;width:212px;border:1px solid #ccc;color:#666;padding-left:5px;padding-top:4px;padding-bottom:4px;font-size:12px;}
+#q {margin:0px 0px 0px 116px;height:15px;width:212px;border:1px solid #747679;color:#747679;padding-left:5px;padding-top:4px;padding-bottom:4px;font-size:12px;}
 @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {#q {width:207px;}}
 @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {#q {width:207px;}}
 ul.basket-contents {margin-bottom:0px;float:right;padding:0;}
@@ -74,18 +74,21 @@ color:#fff !important;}
 /* so Footer */
 .footer-background {background-color:#fff;;margin-top:15px;clear:both;}
 #footer {z-index:1;width:940px;text-align:left;margin:0 auto !important;clear: both;}
-#footerLinks {float:left;width:940px;margin-top:2px;font-size:12px;color:#747679;padding-bottom:5px; clear:both;}
+#footerLinks {float:left;width:940px;margin-top:2px;font-size:12px;color:#747679;padding-bottom:5px; clear:both; border-top:1px solid #747679;}
 #footerLinks a {color:#747679;}
-#footerLinks .name {padding-bottom: 0;font-size:15px;color:#747679;font-weight:bold; margin: 8px 0 15px;}
-#footerLinks #bullet li {background:url(../images/footer/footer-link-right.png) 0 3px no-repeat;padding-left:10px;margin:5px 0; line-height: 15px;}
-#footerLinks #bullet li a {color:#747679;}
+#footerLinks .name {font-size: 1.2em;font-family: times new roman, serif;font-style: italic;font-weight: bold;line-height: 1.5em;}
+#footerLinks #bullet li {background: #ffffff;margin: 2% 0;text-transform: uppercase;font-size: 0.9em; line-height: 1.3em;}
+#footerLinks #bullet li a {background: #ffffff;margin: 2% 0;text-transform: uppercase;font-size: 0.9em;}
+li.contactnumber {padding: 2%;border: 1px solid #999;width: 120px;height: 17px;margin: 4px;vertical-align: middle;font-family: times new roman, serif;font-size: 1.2em !important;}
 .footer-grey-line {background:none;padding:0;border-bottom:1px solid #ccc;margin:0;height:1px;line-height:1px;font-size:0;}
 .footerLinksCols {margin:10px 0 10px 40px; width: 19.8%;}
 .footerNewsletterSignup {float:left;height:23px;width:185px;}
 .footerNewsletterSignup legend {display:none;}
 .footerNewsletterSignup fieldset {margin:0;border:0;padding:0;}
 .footerNewsletterSignup label {display: block;width:0;line-height:26px;}
-.footerNewsletterSignup #EMAIL_FIELD {float:left;border: 1px solid #ccc;width: 147px;color: #666;font-size: 11px;*height: 21px;*line-height:18px;height: 21px;line-height:19px;padding:0 0 0 3px;}
+.footerNewsletterSignup #EMAIL_FIELD {float: left;border: none;width: 82%;color: #747679;font-size: 12px;height: 21px;line-height: 19px;padding: 0 0 0 3px;border: 1px solid #747679;}
+#footerNewsletterGo {background: #747679;color: #ffffff;width: 10%;padding: 3%;padding: 1.6% 2%;font-size: 1.1em;border: 1px solid #747679;margin: 0;cursor: pointer;float: right;}
+#footerNewsletterGo:hover {opacity: 0.6;}
 #footerEssentials {padding:10px 0;clear:both;color:#747679; line-height: 11px;}
 #footerEssentials a {color:#ccc;}
 #footerLogos {padding:10px 0 0 0;clear:both;height: 30px;}
@@ -96,17 +99,18 @@ color:#fff !important;}
 #socnetlinks li{margin:0;padding:0;list-style:none;position:absolute;top:0;}
 #socnetlinks li, #socnetlinks a{height:22px;display:block;}
 #socnetfacebook{left:0px;width:22px;float: left;}
-#socnetfacebook{background:url(../images/footer/soc-net-links.png) 0 0; border: 1px solid #cccccc;}
+#socnetfacebook{background:url(../images/footer/soc-net-links.png) 0 0;margin: 2% 2%;}
 #socnettwitter{left:26px;width:22px; float: left; margin-left: 5px;}
-#socnettwitter{background:url(../images/footer/soc-net-links.png) -26px 0; border: 1px solid #cccccc;}
+#socnettwitter{background:url(../images/footer/soc-net-links.png) -26px 0;margin: 2% 2%;}
 #socnetflickr{left:52px;width:22px;float: left; margin-left: 5px;}
-#socnetflickr{background:url(../images/footer/soc-net-links.png) -52px 0; border: 1px solid #cccccc;}
+#socnetflickr{background:url(../images/footer/soc-net-links.png) -52px 0;margin: 2% 2%;}
 #socnetgoogleplus{left:78px;width:22px;float: left; margin-left: 5px;}
-#socnetgoogleplus{background:url(../images/footer/soc-net-links.png) -78px 0; border: 1px solid #cccccc;}
+#socnetgoogleplus{background:url(../images/footer/soc-net-links.png) -78px 0;margin: 2% 2%;}
 #socnetpinterest{left:104px;width:22px;float: left; margin-left: 5px;}
-#socnetpinterest{background:url(../images/footer/soc-net-links.png) -105px 0; border: 1px solid #cccccc;;}
+#socnetpinterest{background:url(../images/footer/soc-net-links.png) -105px 0;margin: 2% 2%;}
 #socnetinstagram{left:130px;width:22px;float: left; margin-left: 5px; }
-#socnetinstagram{background:url(../images/footer/soc-net-links.png) -133px 0; border: 1px solid #cccccc; }
+#socnetinstagram{background:url(../images/footer/soc-net-links.png) -133px 0;margin: 2% 2%; }
+#socnetpinterest:hover, #socnetinstagram:hover, #socnetgoogleplus:hover, #socnetflickr:hover, #socnettwitter:hover, #socnetfacebook:hover {opacity:0.6;}
 /* eo Footer */
 /* so Search */
 #content-search {position:relative;}
@@ -350,7 +354,7 @@ float: right;
 .multiList {padding:10px 0 10px 0;}
 .prodMulti {padding-bottom:10px;margin-bottom:10px;border-bottom:1px solid #ccc;overflow:hidden;}
 .prodMulti .attributeImage,.prodMulti .image {float:left;padding-right:10px;}
-#productdetail-altview a img {width:120px; height:120px; border:1px solid #d9d9d9;}
+#productdetail-altview a img {width:120px; height:120px; border:1px solid #747679;}
 .prodMulti .attributeDetail p {margin:0;}
 .prodMulti .price {display:block;margin:10px 0 5px;}
 .productCyclingHolder {border-top:1px solid #ccc;clear:both;margin-left:75px;padding-bottom:15px;padding-top:15px;text-align:center;}
