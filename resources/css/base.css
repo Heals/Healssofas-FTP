@@ -115,7 +115,7 @@ li.contactnumber {padding: 2%;border: 1px solid #999;width: 120px;height: 17px;m
 /* so Search */
 #content-search {position:relative;}
 label.search_label {font-weight: normal;font-size:11px;}
-#collate h3 {color: #333333; background: url(../images/Search/sprite.png) -1px -521px no-repeat; padding-left: 13px; margin-left: 10px; font-size: 12px;font-weight:normal;}
+#collate h3 {color: #747679; background: url(../images/Search/sprite.png) -1px -521px no-repeat; padding-left: 13px; margin-left: 10px; font-size: 1.2em;font-weight:bold; text-transform:none;}
 .viewScroll {height:200px;overflow-y:auto;overflow-x: hidden;}
 .typeresults, .brandresults, .parentCategoryNameresults, .atrattrvalue1results, .atrattrvalue2results{border:1px solid #cccccc;}
 #typeform, #filtertype {/*margin-left:12px;width:150px;*/}
@@ -123,8 +123,8 @@ label.search_label {font-weight: normal;font-size:11px;}
 #loadingsearch{background:#FFFFFF none repeat scroll 0 0;height:100%;position:absolute;top:0;width:100%;filter:alpha(opacity=70);-moz-opacity:.70;opacity:.70; z-index: 2001;}
 #loadingsearch img{display:block;margin:350px auto;}
 #content-search #col-two {position:relative;}
-#collate h3.collateheading {cursor:pointer;padding:7px 0 5px 10px;}
-.toggleviewall {padding-left:12px;}
+#collate h3.collateheading {cursor:pointer;padding:7px 0 5px 15px;}
+.toggleviewall {padding-left:12px; font-family:"Times New Roman", Times, serif; font-style:italic;text-transform: none;font-weight: bold;margin-top: 7px;}
 #pricerange p {text-transform:capitalize;}
 .pricecollateresult {padding-left:7px;width:180px;}
 .brandcollateresult .termtext a {display:block;padding:0;width:163px;}
@@ -169,11 +169,20 @@ select#sortby {-webkit-appearance: none;-webkit-border-radius: 0;border: 1px sol
 #searchResults .prods ul li, #productlist ul.products li {float: left;margin: 0 20px 15px 0;}
 .new {
 position: relative;
-width: 232px !important;
-height: 306px !important;
-background-color: #e6e6e6;
+width: 224px;
+height: 295px;
+background-color: #ffffff;
+border: 1px solid #747679;
 }
-.title {float:left; height: 32px;vertical-align:text-top;padding:5px 0 0 0;}
+.title {
+float: left;
+height: 15px;
+vertical-align: text-top;
+padding: 5px 5px 0;
+border-top: 1px solid #747679;
+margin: 7px 5px 0;
+width: 204px;
+}
 .left-side p {line-height: 20px !important;}
 .right-side {
 width: 440px;
@@ -214,7 +223,12 @@ margin: 5px 0 26px 0;
 #productlist ul.products li h2 {text-transform:normal;text-align:left;padding: 0px 4px 0px 4px;font-size:12px;font-weight:normal;}
 #searchResults .prods ul li .details,
 #availprodrecs .prods ul li .details,
-#productlist ul.products li .details {width:220px;text-align:left;float:left;}
+#productlist ul.products li .details {
+width: 210px;
+text-align: left;
+float: left;
+padding: 5px;
+}
 #searchResults .prods ul li .priceattr .fromsaleprice,
 #productlist ul.products li .priceattr .fromsaleprice,
 #availprodrecs .prods ul li .priceattr .fromsaleprice {display:block;height:15px;text-transform:uppercase;color:#ad1e10;font-size:0.9em;margin:0;padding:20px 0 0 0;float:right;}

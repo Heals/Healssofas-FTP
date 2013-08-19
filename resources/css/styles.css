@@ -617,30 +617,59 @@ font-size:11px;
 #searchResults .prods ul li, #productlist ul.products li, .searchresult {
 float: left;
 width: 224px;
-height: 306px;
+height: 295px;
 margin: 0 20px 15px 0;
 }
 #availprodrecs .prods ul li {float:left;width:224px;height:285px;margin:0 15px 15px 0;}
 #searchResults .prods ul li h2,
 #availprodrecs .prods ul li h2,
-#productlist ul.products li h2 {text-transform: uppercase;
+#productlist ul.products li h2 {
 text-align: left;
-padding: 0 4px 0px 4px;
-font-size: 11px;
-font-weight: bold;}
+padding: 0px 4px 0px 4px;
+}
 #searchResults .prods ul .image, #productlist ul.products .image, #availprodrecs .prods ul .image {
 border: none;
 float: left;
-width: 230px;
-height: 230px;
+width: 220px;
+height: 220px;
 }
 .cornerorientation {width:116px;background:url(../images/gradient.gif) 0px 0px;border: 1px solid #EBE9EA;padding: 4px 2px 4px 2px;}
-.onlineonly {position: absolute; margin-top:213px; margin-left:2px;z-index:250;}
-.onlineonly2 {position: absolute; margin-top:213px; z-index:500; padding: 0 6px;background: #a05959; }
-.discount50 {position: absolute; margin-top:2px; margin-left:2px;z-index:500;}
-.special_purchase {position: absolute; margin-top:2px; margin-left:2px;z-index:600;}
-.newproduct {position: absolute; margin-top:2px; margin-left:173px;z-index:500;}
-.heals_express {position: absolute; margin-top:2px; margin-left:173px;z-index:600;}
+.onlineonly {
+position: absolute;
+margin-top: 207px;
+margin-left: 5px;
+z-index: 250;
+}
+.onlineonly2 {
+position: absolute;
+margin-top: 207px;
+margin-left: 5px;
+z-index: 500;
+}
+.discount50 {
+position: absolute;
+margin-top: 5px;
+margin-left: 5px;
+z-index: 500;
+}
+.special_purchase {
+position: absolute;
+margin-top: 5px;
+margin-left: 5px;
+z-index: 600;
+}
+.newproduct {
+position: absolute;
+margin-top: 5px;
+margin-left: 150px;
+z-index: 500;
+}
+.heals_express {
+position: absolute;
+margin-top: 5px;
+margin-left: 150px;
+z-index: 600;
+}
 #availprodrecs .exh2 {background-color:#bbb7b1;color:#fff;font-size:1em;font-weight:bold;margin:0;padding:2px 10px;text-align:left;text-transform:uppercase;width:940px;}
 #searchResults .prods ul li .details .moreinfo,
 #availprodrecs .prods ul li .details .moreinfo,
@@ -685,7 +714,15 @@ height: 230px;
 #availprodrecs .prods ul li .nostock {display:none;height:0px;margin:0;padding:0;}
 #searchResults .prods ul li .priceattr .fromprice,
 #productlist ul.products li .priceattr .fromprice,
-#availprodrecs .prods ul li .priceattr .fromprice {display:block;height:30px;text-transform:uppercase;font-size:0.9em;margin:0;padding:20px 0 0 0;float:right;}
+#availprodrecs .prods ul li .priceattr .fromprice {
+display: block;
+height: 15px;
+text-transform: uppercase;
+font-size: 0.9em;
+margin: 0;
+padding: 20px 0 0 4px;
+float: right;
+}
 #searchResults .prods ul li .priceattr .fromprice span,
 #productlist ul.products li .priceattr .fromprice span,
 #availprodrecs .prods ul li .priceattr .fromprice span {font-weight: bold;font-size:1.09em;margin:0;padding:0;}
@@ -707,12 +744,12 @@ height: 230px;
 /* Disable product attribute doesn't display button and selected */
 #collate, #term {padding-bottom:5px;}
 #term  #pcatid .refine-text {display: none;}
-#term  #pcatid .refine-termtext{background: url(../images/img_removesearch.gif) 0 2px no-repeat; padding-left: 12px; text-transform: uppercase; color: #333333; font: bold 0.9em Arial;}
+#term  #pcatid .refine-termtext{padding-left: 12px; text-transform: uppercase; color: #747679; font: bold 0.9em Arial;}
 #collate ul, #term p {padding:0 10px 0 10px;}
 #collate .termtext, #collate .viewall {margin-left:22px;padding:0;}
 #term, #collate {margin:4px 0 5px 0; width:100%; text-transform: uppercase;}
-#term div.exh2, #collate div.exh2 {font-size: 0.9em; color: #333333; margin-left: 5px;font-weight:bold; padding:5px 0 5px 4px;}
-#term h3 {color: #333333; background: url(../images/Search/sprite.png) -1px -521px no-repeat; padding-left: 13px; margin-left: 10px; font-size: 0.9em;}
+#term div.exh2, #collate div.exh2 {font-size: 0.9em; color: #747679; margin-left: 5px;font-weight:bold; padding:5px 0 5px 4px;}
+#term h3 {color: #747679; background: url(../images/Search/sprite.png) -1px -521px no-repeat; padding-left: 13px; margin-left: 10px; font-size: 1.2em;text-transform: none;margin-bottom: 5px;}
 #term .refine-text {display:none;}
 #term .refine-remove {text-transform:lowercase;}
 #collate .termtext{margin-left: 16px;}
