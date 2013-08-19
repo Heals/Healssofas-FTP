@@ -48,6 +48,29 @@ html > body #col-two-no-three { /* IE7 - Moz */
 /**********/
 #content-norecord #col-one{display:none;}
 #content-norecord #col-two-three{float:left;padding:6px}
+
+.mainheader {
+width: 100%;
+margin: 3% 0 3%;
+vertical-align: text-middle;
+background: url(http://www.heals.co.uk/content/ebiz/heals/resources/images/header-stripe.gif)repeat-x center top;
+display: block;
+}
+
+.mainheader h1{
+background: #ffffff;
+text-transform: uppercase;
+font-size: 2em;
+color: #747679;
+font-family:"Times New Roman", Times, serif;
+font-weight: normal;
+border: 1px solid #747679;
+padding: 0.5% 5%;
+margin: auto;
+width: 33%;
+text-align: center;
+}
+
 /* tabs styles */
 
 .mm_ul{
@@ -329,7 +352,12 @@ table.wizrtable,
 table.wizrtable th {border-color:#FFF;}
 /* 5. This sets the default html elements -- Start styles_color.css */
 body {margin:0; padding:0;color:#747679}
-h2, h3 {margin:0;padding:5px 0 5px 4px;}
+h2, h3 {
+margin: 0;
+padding: 5px 0 5px 4px;
+font-family: "Times New Roman", Times, serif;
+font-style: italic;
+}
 p {margin:.5em 0; padding:0;}
 img {border:none;}
 a:active,a:link,a:visited{color:#747679; outline:0;}
@@ -893,6 +921,51 @@ input.button.buttonArrow.right.submit.submitSwatchRequest:hover {background: #80
 .pdxtrowodd {border-bottom: 1px solid #747679;float: left; padding: 10px 0; width: 100%;}
 .exclusive_to_heals, .shipping-badge, .express-badge-holder, #sofa-titlebadges {float: left; margin-top: 2%; width: 20%;}
 .selectionbox{clear:both; border-top:2px solid #B4B4B4; border-bottom:2px solid #B4B4B4; text-align: center;padding: 5px 0;margin: 5px 0;font-size: 14px;text-transform: uppercase;}
+
+/*************************
+ SOFA STYLES LANDING PAGES 
+ ************************/
+#sofa-cats {text-transform: uppercase;display: inline;text-align: center;padding: 0 15px 0 0!important;line-height: 14px;margin-right: 15px;border-right: 1px solid #747679; font-family:"Times New Roman", Times, serif;}
+.sofa-styles-holder {display: block;list-style: none;overflow: hidden;margin: 0;padding: 0;zoom: 1;clear: both;}
+#tabs div {background: #fff;clear: both;}
+#tabs ul.menu {display: block;width: 100%;height: 32px;margin: 0;margin-bottom: 13px;padding: 0;line-height: 20px;text-align: center;}
+.sofa-container {width: 100%;background: #FFF;overflow: hidden;}
+.sofa-styles-holder li {float: left;margin: 0.5% 0.1%;display: block;width: 231px;border: 1px solid #747679;}
+.sofa-styles-holder li a {display: block;text-align: center;}
+.sofa-styles-holder img {width: auto;height: auto;vertical-align: -3px;}
+.sofa-decrip_dsr {display: block;height: 45px;position: relative;background-color: #ffffff;}
+.sofa-decrip {display: block;height: 35px;position: relative;background-color: #ffffff;}
+.sofa-decrip h2, .sofa-decrip_dsr h2 {font-weight:normal;}
+.percent {position:absolute;z-index:200;width:53px;height:53px;border:none;margin-left:1px;margin-top:1px;}
+.sofa-decrip h2 {position:none;top:9px;left:8px;}
+.sofa-decrip span {position:absolute;right:9px;bottom:5px;display:block;font-weight:bold;text-align:right;}
+.sofaholder {float:left;display:block;width:231px;height:147px;}
+.sofa-styles-holder-offers {display:block;list-style:none;overflow:hidden;margin:0;padding:0;clear:both;}
+.sofa-styles-holder-offers li {float:left;display:block;width:290px;height:270px;border-bottom:1px solid #747679;border-top:1px solid #747679;vertical-align:text-middle;background:#fff;list-style: none outside none;margin:5px 0 10px 17px;text-align:center;}
+.sofa-styles-holder-offers img {width:auto;height:auto;vertical-align: -3px;margin-top:15px;}
+.sofa-styles-holder-offers li a {display:block;clear:both;font-weight: normal;}
+a.offers:hover, a.offers:active, a.offers:visited {float:left;display:block;width:290px;height:270px;border-bottom:1px solid #747679;vertical-align:text-middle;list-style: none outside none;text-align:center;background:#efe9e5;clear:both;}
+.sofa-styles-holder-brands {display:block;list-style:none;overflow:none;margin:0;padding:0;clear:both;}
+.sofa-styles-holder-brands li {float:left;display:block;width:290px;height:154px;border-bottom:1px solid #747679;border-top:1px solid #747679;vertical-align:text-middle;background:#fff;list-style: none outside none;margin:5px 0 10px 17px;text-align:center;}
+.sofa-styles-holder-brands img {width:auto;height:124px;vertical-align: -3px;margin-top:15px;}
+.sofa-styles-holder-brands li a {display:block;clear:both;}
+a.sofa-brands:hover, a.sofa-brands:active, a.sofa-brands:visited {float:left;display:block;width:290px;height:154px;border-bottom:1px solid #747679;vertical-align:text-middle;list-style: none outside none;text-align:center;background:#efe9e5;}
+.brandsholder {float:left;display:block;width:290px;height:154px;border-bottom:1px solid #ffffff;border-top:1px solid #ffffff;vertical-align:text-middle;background:#fff;list-style: none outside none;text-align:center;}
+.brandsholder:hover, .brandsholder:active, .brandsholder:visited {float:left;display:block;width:290px;height:154px;border-bottom:1px solid #ffffff;border-top:1px solid #ffffff;vertical-align:text-middle;background:#fff;list-style: none outside none;text-align:center;}
+.selectionbox{clear:both; border-top:2px solid #747679; border-bottom:2px solid #747679; text-align: center;padding: 5px 0;margin: 5px 0;font-size: 14px;text-transform: uppercase;}
+.right-side h2 {margin:0;padding-bottom: 8px;color:#FF0000;font-size:1.2em;margin:0 5px 8px 0;font-weight:bold;width:250px;float:right; text-align:right;}
+.logo {margin:0;padding-bottom: 8px;margin:0 0 8px 0;font-weight:bold;text-align:left;float:left;}
+.right-side .hero-lifestyle img {border:1px solid #747679;}
+.right-side p {clear:both;}
+.right-side span {font-weight:bold;color:#747679;font-size:14px;}
+.right-side {width:440px;float:left;margin: -38px 0 0 15px;}
+.sofa-desc {margin: 0;padding: 43px 0 0;}
+.hero-lifestyle {margin:0 0 24px 0;}
+.outer-section {width:940px;overflow:hidden;background:#FFF;margin:10px 0 0 0;}
+.left-side {width:470px;float:right;margin:5px 0 26px 0;}
+.left-side span {font-weight: bold;}
+
+
 /**********/
 /* PACKAGE */
 /**********/
