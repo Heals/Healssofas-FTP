@@ -1,31 +1,29 @@
 <div class="header-background">
-<div id="header">
-<venda_inctemplate name=header-logo,type=menu>
-<venda_inctemplate name=header-basket,type=menu>
-<venda_inctemplate name=searchbox,type=menu>
-</div>
+	<div id="header">
+	<venda_inctemplate name=header-logo,type=menu>
+	<venda_inctemplate name=header-basket,type=menu>
+	<venda_inctemplate name=searchbox,type=menu>
+	</div>
 </div>
 
 <venda_block label=notshopcart,mode=value,workflow!=shopcart>
 
 <div class="header-background">
-<div class="topNavigation">
-<venda_inctemplate name=topNavigation,type=mainincludes>
-<div class="topnav-gradient"></div>
-</div>
+	<div class="topNavigation">
+	<venda_inctemplate name=topNavigation,type=mainincludes>
+    	<div class="topnav-gradient"></div>
+	</div>
 </div>
 
 <br clear="all" />
 
 <div class="header-background2">
-<div class="catref" style="display:none;"><venda_icatref><venda_invtcatref0></div>
-<div class="pcatref" style="display:none;"><venda_pcatref></div>
-<venda_inctemplate name=crumbtrail,type=includes>
+	<div class="catref" style="display:none;"><venda_icatref><venda_invtcatref0></div>
+	<div class="pcatref" style="display:none;"><venda_pcatref></div>
+	<venda_inctemplate name=crumbtrail,type=includes>
 </venda_block label=notshopcart>
 <venda_block label=isshopcart,mode=value,workflow=shopcart>
-<br /><br />
+	<br /><br />
 </venda_block label=isshopcart>
 
-
-</div>
 </div>
