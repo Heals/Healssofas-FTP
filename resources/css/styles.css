@@ -123,13 +123,14 @@ position: absolute;
 text-align: left;
 top: 30px;
 z-index: 1001;
-width: 910% !important;
+width: 940px !important;
 height: auto;
 }
 
 .mm_left .mm_sub {
 left: 0;
 right: 0;
+position: absolute;
 
 }
 
