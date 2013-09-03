@@ -82,7 +82,7 @@ text-align: center;
 float: left;
 margin: 10px 0 0;
 line-height: 30px;
-text-align: center;
+text-align: left;
 background:#fff;
 color:#fff;
 width: 100%;
@@ -219,6 +219,17 @@ height: 220px;
 .mm_active_2 {
 font-weight: bold;
 }
+
+/*IE changes/*
+<!--[if IE]>
+.heals {left:0 !important;}
+.mm_ul>li {
+width:13%;];
+}
+<br />
+<![endif]-->
+
+
 /* 3. Fonts, styles and sizes if > 0px - Start styles_typography.css */
 /****************/
 /* GLOBAL FONTS */
