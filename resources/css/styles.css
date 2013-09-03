@@ -25,6 +25,11 @@ display: block;
 /*************************************************/
 /* #col-two-three = #col-two + 10px + #col-three */
 /*************************************************/
+div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, th, td {
+margin: 0;
+padding: 0;
+direction: ltr;
+}
 #col-two-three {width: 740px; float: right; }
 html > body #col-two-three { /* IE7 - Moz */width: 740px; margin-top: 0; }
 #col-two {width:740px; padding-left: 0px; float: left;}
@@ -86,8 +91,6 @@ border-top: 1px solid #747679;
 
 .mm_ul li {
 float: left;
-font-weight: normal;
-position: relative;
 padding: 0 2% 0 1%;
 font-family:"Times New Roman", Times, serif;
 font-weight:bold;
@@ -98,17 +101,21 @@ font-style:italic;
 background: #fff;
 border-right: 0px solid #747679;
 color: #747679;
-display: block;
 text-decoration: none;
 text-align: left;
 font-size: 1.2em;
+}
+
+.mm_ul>li {
+float: left;
+position:relative;
 }
 
 .mm_subcat a {font-size:0.8em; font-style:normal;}
 
 .mm_ul li a:hover,
 li.mm_liSelected a {
-    background-position: 0 -130px;
+    /*background-position: 0 -130px;*/
     border-left-color: transparent;
 }
 

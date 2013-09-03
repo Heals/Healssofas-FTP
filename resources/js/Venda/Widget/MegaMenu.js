@@ -110,7 +110,7 @@ Venda.Widget.MegaMenu.mmTouch = function (element) {
             if ((offset.left + jQuery(that).parent().outerWidth()) < checkWidthClass) {
                 jQuery(that).parent().find(".mm_sub").css({
                         "right" :  - (offset.right),
-                        "left" : "0 !important"
+                        "left" : "auto !important"
                     });
             } else {
                 jQuery(that).parent().addClass("mm_left");
@@ -208,7 +208,7 @@ Venda.Widget.MegaMenu.mmHover = function () {
             if ((offset.left + jQuery(this).outerWidth()) < checkWidthClass) {
                 jQuery(this).find(".mm_sub").css({
                         "right" :  - (offset.right),
-                        "left" : "0 !important"
+                        "left" : "auto !important"
                     });
             } else {
                 jQuery(this).addClass("mm_left");
