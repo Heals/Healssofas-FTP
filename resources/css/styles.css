@@ -20,6 +20,8 @@ margin: 20px 0;
 background: url(http://www.heals.co.uk/content/ebiz/heals/resources/images/header-stripe.gif)repeat-x center top;
 display: block;
 }
+.subheader{width: 100%;vertical-align: text-middle;margin: 2% 0;background: url(http://www.heals.co.uk/content/ebiz/heals/resources/images/header-stripe.gif)repeat-x center top;display: block;float:left;}
+.subheader h1 {background: #ffffff;text-transform: uppercase;color: #747679;font-family: "Times New Roman", Times, serif;font-weight: normal;padding:1%;margin: auto;width: 27%;text-align: center;line-height: 1.5em;}
 #col-one{margin-top: -30px;;width:200px; float: left;}	
 #myacc-col-one {float:left;width:200px;}
 /*************************************************/
@@ -74,6 +76,13 @@ padding: 0.5% 5%;
 margin: auto;
 width: 33%;
 text-align: center;
+}
+
+.midbreak {
+height: 1.0em;
+border-top: 1px solid #747679;
+margin-top: 10px;
+clear: both;
 }
 
 /* tabs styles */
@@ -962,9 +971,9 @@ input.basketbutton {height: 100%; font-size: 14px; margin-bottom: 0; -webkit-app
 .sofa-swatch-request {}
 #TITLE_FIELD {padding:5px 0 0 !important;}
 .swatch_request {}
-.sofa-swatch-request a {text-align: center;background: #aaaaaa;margin-top: 5px;color: #fff;float: left;cursor:pointer; font-weight: bold; padding: 1% 38.5%; font-size: 14px;}
-.sofa-swatch-request a:hover, .sofa-swatch-request:hover{text-transform:none; cursor:pointer; background: #666666; text-decoration:none;}
-input.button.buttonArrow.right.submit.submitSwatchRequest {background: #7a1636; color: #fff; font-weight: bold; text-transform: uppercase;padding: 2% 23%; cursor: pointer;;border: none;font-size: 14px;float: left;  margin:5% 6% 1%;  -webkit-appearance: none; --moz-appearance:none;}
+.sofa-swatch-request a {text-align: center;background: #747679;margin-top: 5px;color: #fff;float: left;cursor:pointer; font-weight: bold; padding: 1% 38.5%; font-size: 14px;}
+.sofa-swatch-request a:hover, .sofa-swatch-request:hover{text-transform:none; cursor:pointer; opacity:0.6; text-decoration:none;}
+input.button.buttonArrow.right.submit.submitSwatchRequest {background: #747679; color: #fff; text-transform: uppercase;padding: 2% 23%; cursor: pointer;;border: none;font-size: 14px;float: left;  margin:5% 6% 1%;  -webkit-appearance: none; --moz-appearance:none;}
 input.button.buttonArrow.right.submit.submitSwatchRequest:hover {background: #804040;}
 .box.productDetailGradientBox.attrFeedback.stockFeedbackBox {display: none;}
 .back_to_top {text-align:center; font-weight:bold; padding: 0 40%;}
@@ -1023,10 +1032,14 @@ a.sofa-brands:hover, a.sofa-brands:active, a.sofa-brands:visited {float:left;dis
 .brandsholder:hover, .brandsholder:active, .brandsholder:visited {float:left;display:block;width:290px;height:154px;border-bottom:1px solid #ffffff;border-top:1px solid #ffffff;vertical-align:text-middle;background:#fff;list-style: none outside none;text-align:center;}
 .selectionbox{clear:both; border-top:2px solid #747679; border-bottom:2px solid #747679; text-align: center;padding: 5px 0;margin: 5px 0;font-size: 14px;text-transform: uppercase;}
 .sofa-first-row {float:left; margin: 1% 0 0;}
-.sofa-second-row {float: left;width: 99%;margin: 1% 0 3% 1%;}
-.sofa-third-row {float: left;width: 100%; margin: 1% 0;}
-.sofa-links {float:right;}
-.sofa-swatches {float: left;width: 50%;}
+.sofa-second-row {float: left;width: 99%;margin: 0 0 3% 1%;}
+.sofa-third-row {float: left;width: 100%;}
+#sofa-links {float:right; width: 49%;}
+#sofa-link-section1 {width: 50%;float: left;}
+#sofa-link-section2 {width: 48%;float: right;border: 1px solid #747679;padding: 2% 0 0 0;height: 305px;}
+#sofa-link-section2 h3 {text-transform:none !important; font-weight:bold!important; font-style:italic!important; text-align:left!important;}
+.sofa-swatches {float: left;width: 50%;text-align: center;}
+.sofa-swatches h3, #sofa-links h3 {text-transform:uppercase; font-weight:normal; font-style:normal;}
 #sofa-swatch-range{width: 450px;height: 280px;overflow:hidden;position:relative;float:left;}
 .right-side h2 {margin:0;padding-bottom: 8px;color:#FF0000;font-size:1.2em;margin:0 5px 8px 0;font-weight:bold;width:250px;float:right; text-align:right;}
 .logo {margin:0;padding-bottom: 8px;margin:0 0 8px 0;font-weight:bold;text-align:left;float:left;}
@@ -1035,12 +1048,12 @@ a.sofa-brands:hover, a.sofa-brands:active, a.sofa-brands:visited {float:left;dis
 .right-side span {font-weight:bold;color:#747679;font-size:14px;}
 .right-side {width:440px;float:left;margin: -38px 0 0 15px;}
 .sofa-desc {margin: 0;padding: 0; width: 50%;float: right;}
-.hero-lifestyle {margin:0 0 24px 0; float:left;}
-#sofa-links {float:right;margin-bottom: 1%;margin-right: 1%;}
-.outer-section {width:940px;overflow:hidden;background:#FFF;margin:10px 0 0 0;}
+.hero-lifestyle {float:left;}
+#sofa-links {float:right;margin-bottom: 1%;margin-right: 1%; text-align:center;}
+.outer-section {width:940px;overflow:hidden;background:#FFF;}
 .left-side {width:470px;float:right;margin:5px 0 26px 0;}
 .left-side span {font-weight: bold;}
-.sofa-info-row {float: left;width: 98%;margin: 1%;}
+.sofa-info-row {float: left;width: 98%;margin:0 1%;}
 .ui-corner-all {-webkit-border-radius:0; -moz-border-radius:0; border-radius:0;}
 .ui-widget-content {border: none;background: #ffffff;color: #747679;}
 .ui-tabs .ui-tabs-nav li.ui-tabs-active {margin-bottom: -1px;padding-bottom: 1px;border: 1px solid #747679;border-bottom: 1px solid #fff;background: #fff;}
