@@ -971,8 +971,9 @@ input.basketbutton {height: 100%; font-size: 14px; margin-bottom: 0; -webkit-app
 .sofa-swatch-request {}
 #TITLE_FIELD {padding:5px 0 0 !important;}
 .swatch_request {}
-.sofa-swatch-request a {text-align: center;background: #747679;margin-top: 5px;color: #fff;float: left;cursor:pointer; font-weight: bold; padding: 1% 38.5%; font-size: 14px; font-family:"Times New Roman", Times, serif;}
-.sofa-swatch-request a:hover, .sofa-swatch-request:hover{text-transform:none; cursor:pointer; opacity:0.6; text-decoration:none;}
+.sofa-swatch-requestbutton a {text-align: center;background: #747679;margin-top: 5px;color: #fff;float: left;cursor:pointer; font-weight: bold; padding: 1% 38.5%; font-size: 14px; font-family:"Times New Roman", Times, serif;}
+.sofa-swatch-request a {text-align: center;background: #747679;margin-top: 5px;color: #fff;float: left;cursor:pointer; font-weight: bold; padding: 1% 17%; font-size: 14px; font-family:"Times New Roman", Times, serif;}
+.sofa-swatch-request a:hover, .sofa-swatch-request:hover, .sofa-swatch-requestbutton a:hover {text-transform:none; cursor:pointer; opacity:0.6; text-decoration:none;}
 input.button.buttonArrow.right.submit.submitSwatchRequest {background: #747679; color: #fff; text-transform: uppercase;padding: 2% 23%; cursor: pointer;;border: none;font-size: 14px;float: left;  margin:5% 6% 1%;  -webkit-appearance: none; --moz-appearance:none;}
 input.button.buttonArrow.right.submit.submitSwatchRequest:hover {opacity:0.6;}
 .box.productDetailGradientBox.attrFeedback.stockFeedbackBox {display: none;}
