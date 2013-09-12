@@ -143,7 +143,7 @@
 						<input type="hidden" name="next" value="">
 						<input type="hidden" name="bklist" value="">
 						<input type="hidden" name="layout" value="">
-						<venda_block label=sofas,mode=value,<venda_glxt mode=get,name=sofas>!=><input type="hidden" name="glxt" value="<venda_glxt mode=get,name=sofas>"></venda_block label=sofas>
+						<!-- glxt area --><input type="hidden" name="glxt" value="sofas">
 						</venda_block label=furniturerange-attr1>
                         
 
@@ -237,6 +237,7 @@
 							<input type="hidden" name="next" value="">
 							<input type="hidden" name="bklist" value="">
 							<input type="hidden" name="layout" value="">
+                            <!-- glxt area --><input type="hidden" name="glxt" value="sofas">
                             <venda_block label=250,invtavail&gt;0,etadyleft&gt;0,operator=or>
 							<venda_block label=700,chkatt=null>
 							<!-- if in stock -->
@@ -385,7 +386,7 @@
             </div>
      		<venda_tpcomment><!-- end: share --></venda_tpcomment>
             <venda_block label=401,pdxtswatch=1>
-            <div class="sofa-swatch-request">                     
+            <div class="sofa-swatch-requestbutton">                     
             <a href="<venda_dispview page=sofa_swatch_request>&layout=popups&layout=popups" rel="popup console 970 1000" alt="Request your swatch here">
             REQUEST YOUR SWATCH HERE
             </a>
