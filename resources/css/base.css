@@ -357,8 +357,8 @@ font: bold 14px arial;
 padding: 5px 0 5px 0;
 float: right;
 }
-.productdescription, .productdescription-nonrange {float:left;}
-.productdescription img, .productdescription-nonrange img {width:17%; height:17%; float:left;margin-top: 2%;}
+.productdescription, .productdescription-nonrange {float:left;clear:both;width:100%;}
+.productdescription img, .productdescription-nonrange img {width:17%;width:20%\9; height:17%; height:30%\9; float:left;margin-top: 2%;}
 .productdescription p, .productdescription-nonrange p {width:78%; float:right; text-align:left;}
 .enlarge {margin-top:10px;}
 .altImageList .altItem,.altImageListPopup .altItem {border:1px solid #ccc;text-align:center;margin-bottom:2px;}

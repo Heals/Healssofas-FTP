@@ -957,7 +957,7 @@ a.cloud-zoom {padding:30px 0 40px 92px !important;}
 .qtybox {float: left;display: block;width: 35%;padding:2% 3%;background: #747679;margin: 2px; color:#fff;}
 .qtybox label {margin: 5% 8%; float: left;}
 .qty.textInput {padding: 3% 0; font-size: 14px; text-align: center; float: right; margin-right: 17px; border: 1px solid #666;}
-.basketbutton, .preorder {background: #f47920;color: #fff;font-weight: bold;text-transform: uppercase;padding:3.7% 12%;cursor: pointer; margin-left: 10px;border: none; font-size: 14px; float: left; -webkit-appearance: none; --moz-appearance:none; font-family:"Times New Roman", Times, serif}
+.basketbutton, .preorder {background: #f47920;color: #fff;font-weight: bold;text-transform: uppercase;padding:3.7% 12%; padding:3.7% 5%\9; cursor: pointer; margin-left: 10px;border: none; font-size: 14px; float: left; -webkit-appearance: none; --moz-appearance:none; font-family:"Times New Roman", Times, serif}
 input.basketbutton {height: 100%; font-size: 14px; margin-bottom: 0; -webkit-appearance: none; --moz-appearance:none;}
 .basketbutton:hover, .preorder:hover {opacity:0.6;}
 .sofa-share {border-top: 1px solid #747679;padding: 20px 18px 15px;margin: 20px 0 5px;width: 91%;opacity: 0.6; filter:alpha(opacity=60); /* For IE8 and earlier */ float: left;clear: both;}
@@ -984,10 +984,10 @@ input.button.buttonArrow.right.submit.submitSwatchRequest:hover {opacity:0.6;}
 #sofa-productdetail-shipping img {margin-left: auto; margin-right: auto; display: block;}
 .express-badge-holder {float:left;}
 .sofaInfo-left {float:left;width:45%;margin-left: 4%;}
-.sofaInfo-right {float:right;width:47%;}
+.sofaInfo-right {float:left;width:47%;}
 .sofaInfo-details {padding-bottom: 15px; padding-right: 15px}
 .sofaInfo-text {
-    padding: 5px 0 0 !important;
+    padding: 5px 0 0 !important; float:left; width:100%;
 }
 .sofaInfo-text p b {}
 .sofaInfo-text p {}
@@ -997,7 +997,7 @@ input.button.buttonArrow.right.submit.submitSwatchRequest:hover {opacity:0.6;}
 .sofaInfo-title p {float:left; font-weight:bold; text-transform:uppercase; margin-left: 2%;}
 .leftside {font-weight: bold; clear: right;float: left; width: 30%}
 .rightside {float: left; text-align: left; width: 65%;}
-.pdxtrowodd {border-bottom: 1px solid #747679;float: left; padding: 10px 0; width: 100%;}
+.pdxtrowodd {border-bottom: 1px solid #747679;float: left; padding: 10px 0; width: 100%;clear:both;width:100%;}
 .exclusive_to_heals, .shipping-badge, .express-badge-holder, #sofa-titlebadges {float: left; margin-top: 2%; width: 20%;}
 .selectionbox{clear:both; border-top:2px solid #B4B4B4; border-bottom:2px solid #B4B4B4; text-align: center;padding: 5px 0;margin: 5px 0;font-size: 14px;text-transform: uppercase;}
 
@@ -1012,7 +1012,7 @@ input.button.buttonArrow.right.submit.submitSwatchRequest:hover {opacity:0.6;}
 .sofa-styles-holder li {float: left;margin: 0.5% 0.1%;display: block;width: 231px;border: 1px solid #747679;}
 .sofa-styles-holder li a {display: block;text-align: center;}
 .sofa-styles-holder img {width: auto;height: auto;vertical-align: -3px;}
-.sofa-decrip_dsr {display: block;height: 45px;position: relative;background-color: #ffffff;}
+.sofa-decrip_dsr {display: block;position: relative;background-color: #ffffff;}
 .sofa-decrip {display: block;height: 35px;position: relative;background-color: #ffffff;}
 .sofa-decrip h2, .sofa-decrip_dsr h2 {font-weight:normal;}
 .percent {position:absolute;z-index:200;width:53px;height:53px;border:none;margin-left:1px;margin-top:1px;}
