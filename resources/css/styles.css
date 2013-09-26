@@ -143,10 +143,11 @@ width: 940px !important;
 height: auto;
 }
 
-.mm_left .mm_sub {
+.popupIframe {display:none;}
+
+.mm_left, .mm_sub {
 left: 0;
 right: 0;
-position: absolute;
 
 }
 

@@ -351,7 +351,12 @@ p.sku {display:block;margin:5px 0 10px;}
 .oneProduct .priceField .priceNow {font-weight:700;color:#C1392D;}
 .oneProduct .priceField .priceIs {font-weight:700;color:#666;}
 .oneProduct .priceField .priceWas {text-decoration:line-through;font-size: 14px;font-weight:normal;color:#8a9099;margin:0 0 0 25px;}
-.priceWas {display:none;}
+.priceWas {
+    display: block;
+    float: right;
+    padding-right: 5%;
+    padding-top: 1%;
+}
 .oneProduct .priceField #price, #parentprice, .pricenow {
 font: bold 14px arial;
 padding: 5px 0 5px 0;
