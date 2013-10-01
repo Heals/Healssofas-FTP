@@ -231,7 +231,8 @@ padding: 5px;
 }
 #searchResults .prods ul li .priceattr .fromsaleprice,
 #productlist ul.products li .priceattr .fromsaleprice,
-#availprodrecs .prods ul li .priceattr .fromsaleprice {display:block;height:15px;text-transform:uppercase;color:#ad1e10;font-size:0.9em;margin:0;padding:20px 0 0 0;float:right;}
+#availprodrecs .prods ul li .priceattr .fromsaleprice {display:block;height:15px;text-transform:uppercase;color:#b64710;font-size:0.9em;margin:0;padding:20px 0 0 0;float:right;}
+p.fromsaleprice, .nowprice {display:block;height:15px;text-transform:uppercase;color:#b64710;font-size:0.9em;margin:0;padding:20px 0 0 0;float:right; font-weight:bold;}
 /* eo Search */
 /* so Product Detail Mattress */
 #productdetail {margin:0 5px 0 0; padding-bottom: 10px; width:940px; background-color: #FFFFFF;}

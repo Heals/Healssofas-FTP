@@ -452,7 +452,7 @@ padding: 1%;}
 .smsbox{display:none;}
 .thirdpartybox {}
 /* Public Style */
-.red{color: #CC0000 !important;}
+.red{color: #b64710 !important;}
 #catlandingcover {background-color: #FFFFFF;}
 /*************/
 /* HOME PAGE */
@@ -511,7 +511,7 @@ html > body .featcats ul li { /* IE7 - Moz */
 #irel .featprods ul li .nostock {margin: 21px 0 0 0; *margin-top: 24px;}
 #irel .featprods ul li .priceattr .fromprice {margin: 62px 0 0 0; *margin-top: 59px; text-transform: uppercase;}
 #irel .featprods ul li .priceattr .fromprice span {font-weight: bold; font-size: 1.09em;}
-#irel .featprods ul li .priceattr .fromsaleprice {margin: 62px 0 0 0; *margin-top: 59px; color: #CC0000; text-transform: uppercase;}
+#irel .featprods ul li .priceattr .fromsaleprice {margin: 62px 0 0 0; *margin-top: 59px; color: #b64710; text-transform: uppercase;}
 #irel .featprods ul li .priceattr .fromsaleprice span {font-weight: bold; font-size: 1.09em;}
 #irel .featprods ul li .priceattr .attrmoreinfo {margin: 21px 0 0 0;}
 /*****************/

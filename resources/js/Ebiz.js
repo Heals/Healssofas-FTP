@@ -24,7 +24,7 @@ function swapImage(obj,target,event) {
 // FROM ./templates/invt/productdetail/productdetail.html
 jQuery(function () {
 	Venda.Ebiz.initialDialog({
-		createDialogList : '.emwbisLink, #tellafriend_link',
+		createDialogList : '.emwbisLink, #tellafriend_link,
 		closeDialogList : '#back_link',
 		settings : {
 			'width' : '500',
