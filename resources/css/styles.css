@@ -662,6 +662,7 @@ width: 224px;
 height: 295px;
 margin: 0 20px 15px 0;
 }
+#searchResults .prods ul li a:hover, li.searchResult a:hover{opacity:1.0;}
 #availprodrecs .prods ul li {float:left;width:224px;height:285px;margin:0 15px 15px 0;}
 #searchResults .prods ul li h2,
 #availprodrecs .prods ul li h2,
