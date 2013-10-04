@@ -1,4 +1,5 @@
 <venda_tpcomment><!-- ATTRIBUTE --></venda_tpcomment>
+<venda_block label=attributes1,chkatt=notnull>
 <venda_block label=att,invtatrtot&gt;0>
 
 	<venda_tpcomment><!-- no savings --></venda_tpcomment>
@@ -68,3 +69,18 @@
 	</venda_block label=att_savings>
 	
 </venda_block label=att>
+</venda_block label=attributes1>
+<venda_tpcomment><!-- start: price - if product doesn't have attributes --></venda_tpcomment>
+                        
+								<venda_block label=attributes0,chkatt=null>
+								<p class="priceField">
+                                	<venda_block label=wasprice1,invtwas=notnull>
+										<span class="priceNow"><span id="price" itemprop="price"><venda_currsym><venda_invtsell></span></span>
+									</venda_block label=wasprice1>
+									<venda_block label=wasprice0,invtwas=null>
+										<span class="priceNow"><span id="price" itemprop="price"><venda_currsym><venda_invtsell></span></span>
+									</venda_block label=wasprice0>
+							 	</p>
+								</venda_block label=attributes0>
+                        
+						<venda_tpcomment><!-- end: price - if product doesn't have attributes --></venda_tpcomment>
