@@ -669,6 +669,8 @@ margin: 0 20px 15px 0;
 #productlist ul.products li h2 {
 text-align: left;
 padding: 0px 4px 0px 4px;
+font-size: 1.1em;
+font-weight: normal;
 }
 #searchResults .prods ul .image, #productlist ul.products .image, #availprodrecs .prods ul .image {
 border: none;
