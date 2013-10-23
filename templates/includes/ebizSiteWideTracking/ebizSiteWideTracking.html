@@ -1,0 +1,17 @@
+<venda_block label=gtmnotbasket,workflow!=shopcart2>
+<venda_block label=gtmhome,pageref=home>
+<venda_inctemplate name=home,type=includes/tracking/gtm>
+</venda_block label=gtmhome>
+
+<venda_block label=gtmgeneric,pageref!=home,rtype!=invt>
+<venda_inctemplate name=generic,type=includes/tracking/gtm>
+</venda_block label=gtmgeneric>
+
+<venda_block label=gtmproduct,pageref!=home,rtype=invt>
+<venda_inctemplate name=product,type=includes/tracking/gtm>
+</venda_block label=gtmproduct>
+</venda_block label=gtmnotbasket>
+
+<venda_block label=gtmbasket,workflow=shopcart2>
+<venda_inctemplate name=basket,type=includes/tracking/gtm>
+</venda_block label=gtmbasket>
