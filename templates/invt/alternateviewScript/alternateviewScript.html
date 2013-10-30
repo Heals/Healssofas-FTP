@@ -24,18 +24,3 @@
 	});
 </script>
 </venda_block label=rolloverimage0>
-
-<script type="text/javascript">
-objLinkArea: (document.getElementById("productdetail-viewlarge")) ? document.getElementById("productdetail-viewlarge") : "productdetail-image" // define a div ID that need to match with the ID of link above
-    });
-Venda.ProductDetail.init("configDefault",{
-    viewLargeTitle: "<venda_text id=site.product_detail.view_large_image.title>", // define a tile text of "+ View Large Image" link (default value is "Large image of Clae Rollins Hi Top Lace - opens in a new window")
-    viewLargeText: "<venda_text id=site.product_detail.view_large_image>", // define a text link (default value is "+ View Large Image")
-    enableViewLargeImage: true, // set 'false' if you don't want a main image linked to see a lightboxes popup
-    enableViewLargeLink: true // set 'false' if you don't want to show '+ View Large Image' link
-    });
-Venda.ProductDetail.init("configPopupPanel",{
-    popupHeader: "<venda_invtname>", // a product name will be used for a lightboxes image popup header
-    closeTextLink: "<venda_text id=site.product_detail.enlarge_panel.close_window_textlink>"
-});
-</script>
