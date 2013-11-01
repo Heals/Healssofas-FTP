@@ -302,8 +302,8 @@ div.box.productDetailGradientBox.buyControls {margin:20px 0 5px;}
 /* eo Product Detail Mattress */
 /* so Alternative Images and Image Zoom */
 .cloud-zoom-lens {border: 1px solid #EBEAE8;margin:0;background-color:#fff;cursor:crosshair;}
-.cloud-zoom-big {border:1px solid #EBEAE8;overflow:hidden; height:550px !important}
-.mousetrap {height:500px !important;}
+.cloud-zoom-big {border:1px solid #EBEAE8;overflow:hidden; height:440px !important;left:0 !important;}
+.mousetrap {height:440px !important;width:430px !important;}
 .alternative_images_slide {float: left;position: relative;margin:0 0 34px 0;height:122px;}
 .window_alternative_view {height:142px;width: 456px;overflow: hidden;position: absolute;left:14px;top:0;}
 .image_reel_alternative_view {position: absolute;top: 0;left: 0;}
