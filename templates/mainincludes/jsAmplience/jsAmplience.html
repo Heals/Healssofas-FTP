@@ -1,0 +1,21 @@
+
+<!-- start:embed code script call -->
+<venda_block label=123,mode=value,<venda_protocol>=http>
+<script type="text/javascript" src="http://cdn-media.amplience.com/heals/swfobject.min.js"> </script>  
+<script type="text/javascript" src="http://cdn-media.amplience.com/heals/interact.min.js"> </script>
+</venda_block label=123> 
+<venda_block label=234,mode=value,<venda_protocol>=https>
+<script type="text/javascript" src="https://cdn-media.amplience.com/heals/swfobject.min.js"> </script>  
+<script type="text/javascript" src="https://cdn-media.amplience.com/heals/interact.min.js"> </script>
+</venda_block label=234>
+<!-- end:embed code script call -->
+
+<!-- start: 3rd party intergration script call -->
+<script language="javascript">
+    function tencmsInvokeAction(data,areaID,context){
+        if(data){
+Venda.Widget.QuickBuy.addParam(<venda_invtname>, "Quick Buy", "quickView");
+}
+}
+</script>
+<!-- end: 3rd party intergration script call -->

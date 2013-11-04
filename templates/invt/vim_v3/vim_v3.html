@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<product>
+<sku><venda_invtref></sku>
+<name><![CDATA[<venda_invtname>]]></name>
+<description><venda_block invtdesc1=notnull><![CDATA[<venda_invtdesc1>]]></venda_block></description>
+<link><venda_dispview invt=<venda_invtref>></link>
+<price><![CDATA[<venda_encode><venda_currsym><venda_invtsell></venda_encode>]]></price>
+<wasprice><![CDATA[<venda_block invtwas=notnull><venda_encode><venda_currsym><venda_invtwas></venda_encode></venda_block>]]></wasprice>
+<instock><venda_block chkatt=null,invtavail&gt;0>true</venda_block><venda_block chkatt=notnull,invtatrinstock&gt;0>true</venda_block></instock>
+<images default="medium">
+<thumb><venda_media rec=invt,type=pict,key=thumb,img=no></thumb>
+<small><venda_media rec=invt,type=pict,key=small,img=no></small>
+<xsmall><venda_media rec=invt,type=pict,key=xsmall,img=no></xsmall>
+<medium><venda_media rec=invt,type=pict,key=medium,img=no></medium>
+<large><venda_media rec=invt,type=pict,key=large,img=no></large>
+</images>
+</product>
