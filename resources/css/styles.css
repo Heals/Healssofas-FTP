@@ -943,7 +943,7 @@ a.cloud-zoom {padding:30px 0 40px 92px !important;}
 /*************************************************/
 #sofa-detailzone {}
 #sofa-productdetail {background: #fff;height: auto;}
-#sofa-detailzone h1 {color: #747679; font-family:"Times New Roman", Times, serif; float: right; font-weight: normal;width: 45%; -webkit-margin-before: 0.1em;margin-top: 2%;}
+#sofa-detailzone h4 {color: #747679; font-family:"Times New Roman", Times, serif; float: right; font-weight: normal;width: 45%; -webkit-margin-before: 0.1em;font-size: 1.2em}
 .sofa-description-text {display: block;position: relative;width: 45%;float: right;}
 #productselected, #productstatus, .availability-logic {font-size: 14px; color: #747679; font-weight: bold; font-style:italic; clear: both; float: left; width: 100%; margin-bottom: 3%; font-family:"Times New Roman", Times, serif;}
 #stockstatus {font-size:14px; font-weight:bold; text-align: left;margin: 0;float: left; font-weight: bold; font-style:italic; font-family:"Times New Roman", Times, serif;}
@@ -968,14 +968,18 @@ input.basketbutton {height: 100%; font-size: 14px; margin-bottom: 0; -webkit-app
 .sofa-twitter-link {width:43px;float:left;height:25px;margin:2px 0 0 8px;}
 .sofa-facebook-link {width:60px;float:left;margin:2px 0 0 25px;}
 .sofa-pinterest-link {width:40px;float:left;margin:2px 0 0 18px;}
-.sofa-bookmark-link {margin-top:0px;padding:4px 5px;width:100px;float:left;border:1px solid #b4b4b4;background:url(../images/gradient.gif);background-repeat-x: repeat;background-repeat-y: norepeat;background-position-x: 0px;background-position-y: 0px;font-size:11px;}
-.sofa-email-link, .sofa-print-link {margin-top: 0px;margin-left: 10px;padding: 4px 5px;float: left;border: 1px solid #b4b4b4;}
+.sofa-bookmark-link {margin-top:0px;padding:4px 5px;width:100px;float:left;border:1px solid #747679;background:url(../images/gradient.gif);background-repeat-x: repeat;background-repeat-y: norepeat;background-position-x: 0px;background-position-y: 0px;font-size:11px;}
+.sofa-email-link {margin-top: 0px;margin-left: 20px;padding: 4px 5px;float: left;border: 1px solid #747679;}
+.sofa-print-link {margin-top: 0px;margin-left: 10px;padding: 4px 5px;float: left;border: 1px solid #747679;}
 .sofa-google-plus-link {margin-top: 2px;margin-left: 10px;float: left;width: 60px;}
 .toolTip_wrap {display:block;z-index:1500;}
+.sofa-guarantee {padding:1%; margin: 5% 0;float: left;width: 98%;border-top:1px solid #747679;border-bottom:1px solid #747679; text-align:center;}
+.sofa-guarantee a:hover {opacity:0.6;}
 .sofa-swatch-request {}
+.sofa-swatch-requestbutton {width:100%; float:right;margin-top: 2%;}
 #TITLE_FIELD {padding:5px 0 0 !important;}
 .swatch_request {}
-.sofa-swatch-requestbutton a {text-align: center;background: #747679;margin-top: 5px;color: #fff;float: left;cursor:pointer; font-weight: bold; padding: 1% 38.5%; font-size: 14px; font-family:"Times New Roman", Times, serif;}
+.sofa-swatch-requestbutton a {text-align: center;background: #747679;margin-top: 5px;color: #fff;float: left;cursor:pointer; font-weight: bold; padding: 3% 14.5%; font-size: 1.2em; font-family:"Times New Roman", Times, serif;}
 .sofa-swatch-request a {text-align: center;background: #747679;margin-top: 5px;color: #fff;float: left;cursor:pointer; font-weight: bold; padding: 1% 17%; font-size: 14px; font-family:"Times New Roman", Times, serif;}
 .sofa-swatch-request a:hover, .sofa-swatch-request:hover, .sofa-swatch-requestbutton a:hover {text-transform:none; cursor:pointer; opacity:0.6; text-decoration:none;}
 input.button.buttonArrow.right.submit.submitSwatchRequest {background: #747679; color: #fff; text-transform: uppercase;padding: 2% 23%; cursor: pointer;;border: none;font-size: 14px;float: left;  margin:5% 6% 1%;  -webkit-appearance: none; --moz-appearance:none;}
@@ -996,7 +1000,7 @@ input.button.buttonArrow.right.submit.submitSwatchRequest:hover {opacity:0.6;}
 .sofaInfo-text p b {}
 .sofaInfo-text p {}
 .sofadetails-text {}
-.sofainfo-holder {min-height:380px; background: #fff; margin: 20px 0; border-bottom: 0px solid #747679;  float: left; height: auto; margin: 20px 0; padding: 5px 0 20px 0;}
+.sofainfo-holder {min-height:380px; background: #fff; border-bottom: 0px solid #747679;  float: left; height: auto; margin: 1% 0; padding: 5px 0 20px 0;}
 .sofaInfo-title {color: #747679;height: auto;padding: 15px 0 0 10px;width: 930px;border-top:1px solid #747679;}
 .sofaInfo-title p {float:left; font-weight:bold; text-transform:uppercase; margin-left: 2%;}
 .leftside {font-weight: bold; clear: right;float: left; width: 30%}
