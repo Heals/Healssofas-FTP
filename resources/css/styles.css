@@ -712,7 +712,7 @@ z-index: 500;
 .heals_express {
 position: absolute;
 margin-top: 5px;
-margin-left: 150px;
+margin-left: 5px;
 z-index: 600;
 }
 #availprodrecs .exh2 {background-color:#bbb7b1;color:#fff;font-size:1em;font-weight:bold;margin:0;padding:2px 10px;text-align:left;text-transform:uppercase;width:940px;}
