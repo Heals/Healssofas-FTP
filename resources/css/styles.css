@@ -958,13 +958,13 @@ a.cloud-zoom {padding:30px 0 40px 92px !important;}
 .grid_12.pull_12.omega {width: 50%;float: left;}
 .box.productDetailGradientBox.attrFeedback.stockFeedbackBox.In_stock_box {display: none;}
 .eta {margin: 3% 25%; display: block; float: left; width: auto;}
-.qtybox {float: left;display: block;width: 35%;padding:2% 3%;background: #747679;margin: 2px; color:#fff;}
+.qtybox {float: left;display: block;width: 145px;padding:2% 3%;background: #747679;margin: 2px; color:#fff;}
 .qtybox label {margin: 5% 8%; float: left;}
 .qty.textInput {padding: 3% 0; font-size: 14px; text-align: center; float: right; margin-right: 17px; border: 1px solid #666;}
-.basketbutton, .preorder {background: #f47920;color: #fff;font-weight: bold;text-transform: uppercase;padding:3.7% 12%; padding:3.7% 5%\9; cursor: pointer; margin-left: 10px;border: none; font-size: 14px; float: left; -webkit-appearance: none; --moz-appearance:none; font-family:"Times New Roman", Times, serif}
+.basketbutton, .preorder {background: #f47920;color: #fff;font-weight: bold;text-transform: uppercase;padding:14px 61px; cursor: pointer; margin-left: 10px;border: none; font-size: 14px; float: left; -webkit-appearance: none; --moz-appearance:none; font-family:"Times New Roman", Times, serif}
 input.basketbutton {height: 100%; font-size: 14px; margin-bottom: 0; -webkit-appearance: none; --moz-appearance:none;}
 .basketbutton:hover, .preorder:hover {opacity:0.6;}
-.sofa-share {border-top: 1px solid #747679;padding: 20px 18px 15px;margin: 20px 0 5px;width: 91%;opacity: 0.6; filter:alpha(opacity=60); /* For IE8 and earlier */ float: left;clear: both;}
+.sofa-share {border-top: 1px solid #747679;padding: 20px 18px 15px;margin: 20px 0 5px;width: 91% !important;opacity: 0.6; filter:alpha(opacity=60); /* For IE8 and earlier */ float: left;clear: both !important;}
 .sofa-twitter-link {width:43px;float:left;height:25px;margin:2px 0 0 8px;}
 .sofa-facebook-link {width:60px;float:left;margin:2px 0 0 25px;}
 .sofa-pinterest-link {width:40px;float:left;margin:2px 0 0 18px;}
@@ -973,13 +973,13 @@ input.basketbutton {height: 100%; font-size: 14px; margin-bottom: 0; -webkit-app
 .sofa-print-link {margin-top: 0px;margin-left: 10px;padding: 4px 5px;float: left;border: 1px solid #747679;}
 .sofa-google-plus-link {margin-top: 2px;margin-left: 10px;float: left;width: 60px;}
 .toolTip_wrap {display:block;z-index:1500;}
-.sofa-guarantee {padding:1%; margin: 5% 0;float: left;width: 98%;border-top:1px solid #747679;border-bottom:1px solid #747679; text-align:center;}
+.sofa-guarantee {padding:10px 70px; margin: 25px 0;float:right;border-top:1px solid #747679;border-bottom:1px solid #747679; text-align:center;}
 .sofa-guarantee a:hover {opacity:0.6;}
 .sofa-swatch-request {}
-.sofa-swatch-requestbutton {width:100%; float:right;margin-top: 2%;}
+.sofa-swatch-requestbutton {float:right;margin-top: 10px;}
 #TITLE_FIELD {padding:5px 0 0 !important;}
 .swatch_request {}
-.sofa-swatch-requestbutton a {text-align: center;background: #747679;margin-top: 5px;color: #fff;float: left;cursor:pointer; font-weight: bold; padding: 3% 14.5%; font-size: 1.2em; font-family:"Times New Roman", Times, serif;}
+.sofa-swatch-requestbutton a {text-align: center;background: #747679;margin-top: 5px;color: #fff;float: right;cursor:pointer; font-weight: bold; padding: 10px 63px; font-size: 1.2em; font-family:"Times New Roman", Times, serif;}
 .sofa-swatch-request a {text-align: center;background: #747679;margin-top: 5px;color: #fff;float: left;cursor:pointer; font-weight: bold; padding: 1% 17%; font-size: 14px; font-family:"Times New Roman", Times, serif;}
 .sofa-swatch-request a:hover, .sofa-swatch-request:hover, .sofa-swatch-requestbutton a:hover {text-transform:none; cursor:pointer; opacity:0.6; text-decoration:none;}
 input.button.buttonArrow.right.submit.submitSwatchRequest {background: #747679; color: #fff; text-transform: uppercase;padding: 2% 23%; cursor: pointer;;border: none;font-size: 14px;float: left;  margin:5% 6% 1%;  -webkit-appearance: none; --moz-appearance:none;}
